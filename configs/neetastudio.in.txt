@@ -1,0 +1,31 @@
+#
+#
+#
+
+sudo mkdir -p /var/www/neetastudio.in/public_html
+sudo chown -R $USER:$USER /var/www/neetastudio.in/public_html
+sudo chmod -R 755 /var/www/neetastudio.in
+
+
+sudo vi /etc/apache2/sites-available/neetastudio.in.conf
+
+<VirtualHost 192.168.1.40:80>
+        ServerAdmin webmaster@neetastudio.in
+        ServerName neetastudio.in
+        ServerAlias www.neetastudio.in
+        DocumentRoot /var/www/neetastudio.in/public_html
+
+        <Directory /var/www/neetastudio.in/public_html>
+            Options Indexes FollowSymLinks
+            AllowOverride None
+            Require all granted
+        </Directory>
+
+        ErrorLog ${APACHE_LOG_DIR}/creativelights_error.log
+        CustomLog ${APACHE_LOG_DIR}/creativelights_access.log combined
+</VirtualHost>
+
+#
+sudo a2ensite neetastudio.in.conf
+
+sudo systemctl reload apache2
