@@ -25,7 +25,7 @@
 
         <!-- Favicons
         ================================================== -->
-        <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="/images/ns_logo_003.png" type="image/x-icon">
         <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
         <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
         <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
@@ -67,13 +67,31 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a class="page-scroll" href="#banner">HOME</a></li>
-                        <li class=""><a class="page-scroll" href="#vision">MATERNITY SHOOTS</a></li>
-                        <li class=""><a class="page-scroll" href="#portfolio">PORTRAITS</a></li>
-                        <li class=""><a href="/htmls/workshops.php?_dc=fdfs&page=workshops&sTgt=site">COMMERCIAL SHOOTS</a></li>
-                        <li class=""><a href="/htmls/courses.php?_dc=fdfs&page=courses&sTgt=site">PHOTOGRAPHERS</a></li>
+                        <li class=""><a class="page-scroll" href="#maternity">MATERNITY SHOOTS</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">PORTRAITS<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a style="color:#777;" href="#portraits">Kids & Children</a></li>
+                                <li><a style="color:#777;" href="#portraits">Personal - Woman</a></li>
+                                <li><a style="color:#777;" href="#portraits">Personal - Man</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">EVENTS<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a style="color:#777;" href="#photo-events">Engagement</a></li>
+                                <li><a style="color:#777;" href="#photo-events">Wedding</a></li>
+                                <li><a style="color:#777;" href="#photo-events">Birthdays</a></li>
+                            </ul>
+                        </li>
+                        <li class=""><a class="page-scroll" href="#portfolio">Portfolio</a></li>
                         <li class=""><a class="page-scroll" href="#about">About</a></li>
                         <li class=""><a class="page-scroll" href="#footer">Contact</a></li>
+                        <!--
+                        <li class=""><a href="/htmls/workshops.php?_dc=fdfs&page=workshops&sTgt=site">COMMERCIAL SHOOTS</a></li>
+                        <li class=""><a href="/htmls/courses.php?_dc=fdfs&page=courses&sTgt=site">PHOTOGRAPHERS</a></li>
                         <li><a href="/htmls/blog.php?_dc=fdfs&page=blog&sTgt=site">Blog</a></li>
+                        -->
                     </ul>
                 </div><!-- End navbar-collapse -->
             </div><!-- End container -->
@@ -86,7 +104,7 @@
             <div class="carousel-inner"><!-- Inner wrapper for slides -->
 
                 <div class="item active"> <!-- Second item slider -->
-                    <img src="/images/maternity-005.jpeg" alt="banner-img" width="1360px" height="760px"> <!-- Second item background image slider -->
+                    <img src="/images/maternity_008.jpg" alt="banner-img" width="1360px" height="760px"> <!-- Second item background image slider -->
                     <div class="carousel-caption">
                         <div class="content">
                             <div class="text wow bounceIn animated" style="visibility: visible; animation-name: bounceIn;">
@@ -133,7 +151,7 @@
                     </div> <!-- End fifth item background image slider -->
                 </div> <!-- End fifth item slider -->
                 <div class="item"> <!-- Sixth item slider -->
-                    <img src="/images/portraits-man_001.jpg" alt="banner-img" width="1360px" height="760px"> <!-- Fifth item background image slider -->
+                    <img src="/images/portraits-man_006.jpg" alt="banner-img" width="1360px" height="760px"> <!-- Fifth item background image slider -->
                     <div class="carousel-caption">
                         <div class="content">
                             <div class="text wow bounceIn animated" style="visibility: visible; animation-name: bounceIn;">
@@ -153,6 +171,268 @@
                 <img src="/images/05_right.png" alt="next-img"> <!-- Right controls -->
             </a>
         </header>
+
+        <!-- Maternity Section
+        ================================================== -->
+        <section id="maternity"> <!-- Start about -->
+            <div class="about-content" style="background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;">
+                <div class="container"> <!-- Container -->
+                    <h2>Portfolio of Maternity</h2> 
+                    <div class="about-text">
+                        <p class="atext">
+                            We want to give you maternity photos you'll love, pictures that will remind you of this time for years to come. We understand these aren't just snapshots; they're about the love and excitement you're feeling right now. We'll use our experience to make sure you have a great experience and get photos that truly capture how special this time is.
+                            <br/><br/>
+                            Our goal is to create stunning and memorable maternity pictures that you will cherish for a lifetime. We believe that these photographs are not just about capturing a moment; they are about capturing the love, excitement, and anticipation that come with the miracle of new life. With our expertise and commitment to excellence, we are confident that we can deliver a photography experience that exceeds your expectations and preserves the essence of this special time in your life.
+                        </p>
+                    </div>
+                    <!-- Your name or agency name here -->
+                    <div class="about-text">
+                        <p class="large"></p> <!-- Your address -->
+                    </div>
+                    <h4>Full details about our maternity photo sessions</h4>
+                    <div class="about-text" style="padding-left:20px;">
+                        <p class="small">
+                            Prior to booking, get in touch and let us know your estimated due date. I can then pencil you in and wait to hear from you with the news of your new arrival!
+                            Upon booking, I will ask you what style of shoot you were wanting: natural, formal, fun, crazy etc. I will have sent your information on what to wear so that you are prepared for your shoot.
+                        </p> <!-- Your address -->
+                    </div>
+                    <br>
+                    <h4>What to expect when you arrive ?</h4>
+                    <div class="about-text" style="padding-left:20px;">
+                        <p class="small">A DSLR Camera of any make .</p> <!-- Your address -->
+                    </div>
+                    <div class="about-text" style="padding-left:20px;">
+                        <p class="small">Tripod is mandatory for attending this workshop.</p> <!-- Your address -->
+                    </div>
+                    <h4>General Advisories/Information</h4> 
+                    <div class="about-text" style="padding-left:20px;">
+                        <p class="small">Many different styles of photoshoot are available.A variety of backdrops are available.
+                        Talk to me about outfit choices and colour tones and I will advise you on what works well to achieve the best images.
+                        Please wear appropriate footwear.
+                        Also consider umbrellas for mildly rainy days.
+                        Sun cream and insect repellent are also key for summer outside shoots.
+                        For the colder months, wrap up warm as we always perform to our best when we are comfortable.
+                        </p>
+                    </div>
+                    <h4>Workshop Schedule</h4> 
+                    <div class="about-text"></div>
+                    <br>
+                    <div class="clearfix"></div>
+                    <div class="col-lg-8 text-center col-lg-offset-4">
+                        <div id="success"></div>
+                        <button type="submit" class="btn btn-faq" href="#faqModal1" class="portfolio-link" data-toggle="modal">FAQ</button>
+                        <button type="submit" class="btn btn-faq" href="#feesModal1" class="portfolio-link" data-toggle="modal">Fees</button>
+                        <a role="button" class="btn btn-faq" href="#contact" data-target="#contact">Enroll</a>
+                    </div>
+                </div>
+            </div> <!-- End container -->
+        </section> 
+
+        <!-- Portraits Section
+        ================================================== -->
+        <section id="portraits"> <!-- Start about -->
+            <div class="about-content" style="background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;">
+                <div class="container"> <!-- Container -->
+                    <h2>Night Photography Workshop</h2> 
+                    <div class="about-text">
+                        <p class="atext">
+                            Join photographer Neeta Dhakad as she describes the tools, creative options, 
+                            and special considerations involved in shooting with a DSLR camera 
+                            at night or in low-light conditions, such as sunset or candlelight. 
+                            The course addresses exposure decisions such as choice of aperture and 
+                            shutter speed and how they impact depth of field and the camera's ability to freeze motion.
+                            <br>
+                            Neeta also shows how to obtain accurate color balance in tungsten and fluorescent lighting situations, 
+                            and how to postprocess the images in Lightroom to remove noise caused by higher ISO settings. 
+                            He also demonstrates accessories that can greatly expand your low-light photography options.
+                        </p>
+                    </div>
+                    <!-- Your name or agency name here -->
+                    <div class="about-text">
+                        <p class="large">This Workshop Includes</p> <!-- Your address -->
+                    </div>
+                    <div class="about-text" style="padding-left:20px;">
+                        <p class="small">Understanding how low light affects exposure, shutter speed, color temperature</p> <!-- Your address -->
+                    </div>
+                    <div class="maternity-text" style="padding-left:20px;">
+                        <p class="small">Preparing for a low-light shoot</p>
+                    </div>
+                    <div class="maternity-text" style="padding-left:20px;">
+                        <p class="small">Focusing in low light</p> 
+                    </div>
+                    <div class="maternity-text" style="padding-left:20px;">
+                        <p class="small">Light painting</p> 
+                    </div>
+                    <div class="maternity-text" style="padding-left:20px;">
+                        <p class="small">Manipulating long shutter speeds</p> 
+                    </div>
+                    <div class="maternity-text" style="padding-left:20px;">
+                        <p class="small">Sharpening and noise reduction</p> 
+                    </div>
+                    <br><br>
+                    <h4>Required Accessories </h4>
+                    <div class="about-text" style="padding-left:20px;">
+                        <p class="small">A DSLR Camera of any make .</p> <!-- Your address -->
+                    </div>
+                    <div class="about-text" style="padding-left:20px;">
+                        <p class="small">Tripod is mandatory for attending this workshop.</p> <!-- Your address -->
+                    </div>
+                    <div class="about-text" style="padding-left:20px;">
+                        <p class="small">Prime or Zoom Lense with Minimum Aperture f/16.</p> <!-- Your address -->
+                    </div>
+                    <h4>Who is the target audience?</h4> 
+                    <div class="about-text" style="padding-left:20px;">
+                        <p class="small">Take this course if you want to learn a new skill</p>
+                    </div>
+                    <div class="about-text" style="padding-left:20px;">
+                        <p class="small">Take this course if you want to revive a 100 year art</p>
+                    </div>
+                    <div class="about-text" style="padding-left:20px;">
+                        <p class="small">Take this course if you want to improve and maximise your photography skills</p>
+                    </div>
+                    <div class="about-text" style="padding-left:20px;">
+                        <p class="small">Don't take this course if you like boredom and rules.</p>
+                    </div>
+                    <div class="about-text" style="padding-left:20px;">
+                        <p class="small">This course is about learning the 'rules' and then breaking them!</p>
+                    </div>
+                    <h4>Workshop Schedule</h4> 
+                    <div class="about-text">
+                        <table style="width:100%">
+                            <tbody>
+                                <tr>
+                                    <td width="10%" style="padding-top: 20px;">
+                                        <div class="about-text">
+                                            <p class="small">Mumbai</p>
+                                        </div>
+                                    </td>
+                                    <td width="90%" style="padding-top: 20px;" class="small">
+                                        <div class="about-text" style="padding-left:20px;">
+                                            <p class="small">&nbsp; Sun, 09 April 2017 (06.30 P.M. - 08:30 P.M)</p>
+                                            <br>
+                                            <p class="small">&nbsp; Sun, 07 May 2017 (06.30 P.M. - 08:30 P.M)</p>
+                                            <br>
+                                            <p class="small">&nbsp; Sun, 04 Jun 2017 (06.30 P.M. - 08:30 P.M)</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br><br><br>
+                    <div class="clearfix"></div>
+                    <div class="col-lg-8 text-center col-lg-offset-4">
+                        <div id="success"></div>
+                        <button type="submit" class="btn btn-faq" href="#faqModal1" class="portfolio-link" data-toggle="modal">FAQ</button>
+                        <button type="submit" class="btn btn-faq" href="#feesModal1" class="portfolio-link" data-toggle="modal">Fees</button>
+                        <a role="button" class="btn btn-faq" href="#contact" data-target="#contact">Enroll</a>
+                    </div>
+                </div>
+            </div> <!-- End container -->
+        </section> 
+
+        <!-- Event Section
+        ================================================== -->
+        <section id="photo-events"> <!-- Start about -->
+            <div class="about-content" style="background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;">
+                <div class="container"> <!-- Container -->
+                    <h2>Night Photography Workshop</h2> 
+                    <div class="about-text">
+                        <p class="atext">
+                            Join photographer Neeta Dhakad as she describes the tools, creative options, 
+                            and special considerations involved in shooting with a DSLR camera 
+                            at night or in low-light conditions, such as sunset or candlelight. 
+                            The course addresses exposure decisions such as choice of aperture and 
+                            shutter speed and how they impact depth of field and the camera's ability to freeze motion.
+                            <br>
+                            Neeta also shows how to obtain accurate color balance in tungsten and fluorescent lighting situations, 
+                            and how to postprocess the images in Lightroom to remove noise caused by higher ISO settings. 
+                            He also demonstrates accessories that can greatly expand your low-light photography options.
+                        </p>
+                    </div>
+                    <!-- Your name or agency name here -->
+                    <div class="about-text">
+                        <p class="large">This Workshop Includes</p> <!-- Your address -->
+                    </div>
+                    <div class="about-text" style="padding-left:20px;">
+                        <p class="small">Understanding how low light affects exposure, shutter speed, color temperature</p> <!-- Your address -->
+                    </div>
+                    <div class="maternity-text" style="padding-left:20px;">
+                        <p class="small">Preparing for a low-light shoot</p>
+                    </div>
+                    <div class="maternity-text" style="padding-left:20px;">
+                        <p class="small">Focusing in low light</p> 
+                    </div>
+                    <div class="maternity-text" style="padding-left:20px;">
+                        <p class="small">Light painting</p> 
+                    </div>
+                    <div class="maternity-text" style="padding-left:20px;">
+                        <p class="small">Manipulating long shutter speeds</p> 
+                    </div>
+                    <div class="maternity-text" style="padding-left:20px;">
+                        <p class="small">Sharpening and noise reduction</p> 
+                    </div>
+                    <br><br>
+                    <h4>Required Accessories </h4>
+                    <div class="about-text" style="padding-left:20px;">
+                        <p class="small">A DSLR Camera of any make .</p> <!-- Your address -->
+                    </div>
+                    <div class="about-text" style="padding-left:20px;">
+                        <p class="small">Tripod is mandatory for attending this workshop.</p> <!-- Your address -->
+                    </div>
+                    <div class="about-text" style="padding-left:20px;">
+                        <p class="small">Prime or Zoom Lense with Minimum Aperture f/16.</p> <!-- Your address -->
+                    </div>
+                    <h4>Who is the target audience?</h4> 
+                    <div class="about-text" style="padding-left:20px;">
+                        <p class="small">Take this course if you want to learn a new skill</p>
+                    </div>
+                    <div class="about-text" style="padding-left:20px;">
+                        <p class="small">Take this course if you want to revive a 100 year art</p>
+                    </div>
+                    <div class="about-text" style="padding-left:20px;">
+                        <p class="small">Take this course if you want to improve and maximise your photography skills</p>
+                    </div>
+                    <div class="about-text" style="padding-left:20px;">
+                        <p class="small">Don't take this course if you like boredom and rules.</p>
+                    </div>
+                    <div class="about-text" style="padding-left:20px;">
+                        <p class="small">This course is about learning the 'rules' and then breaking them!</p>
+                    </div>
+                    <h4>Workshop Schedule</h4> 
+                    <div class="about-text">
+                        <table style="width:100%">
+                            <tbody>
+                                <tr>
+                                    <td width="10%" style="padding-top: 20px;">
+                                        <div class="about-text">
+                                            <p class="small">Mumbai</p>
+                                        </div>
+                                    </td>
+                                    <td width="90%" style="padding-top: 20px;" class="small">
+                                        <div class="about-text" style="padding-left:20px;">
+                                            <p class="small">&nbsp; Sun, 09 April 2017 (06.30 P.M. - 08:30 P.M)</p>
+                                            <br>
+                                            <p class="small">&nbsp; Sun, 07 May 2017 (06.30 P.M. - 08:30 P.M)</p>
+                                            <br>
+                                            <p class="small">&nbsp; Sun, 04 Jun 2017 (06.30 P.M. - 08:30 P.M)</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br><br><br>
+                    <div class="clearfix"></div>
+                    <div class="col-lg-8 text-center col-lg-offset-4">
+                        <div id="success"></div>
+                        <button type="submit" class="btn btn-faq" href="#faqModal1" class="portfolio-link" data-toggle="modal">FAQ</button>
+                        <button type="submit" class="btn btn-faq" href="#feesModal1" class="portfolio-link" data-toggle="modal">Fees</button>
+                        <a role="button" class="btn btn-faq" href="#contact" data-target="#contact">Enroll</a>
+                    </div>
+                </div>
+            </div> <!-- End container -->
+        </section> 
 
 
         <!-- Vision/Mission 

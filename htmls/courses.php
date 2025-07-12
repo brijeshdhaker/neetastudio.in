@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js ng-scope js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" data-ng-app="commonsApps" lang="en" xmlns:ng="http://angularjs.org">
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en">
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <!-- Basic Page Needs
@@ -20,12 +20,12 @@
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="/css/animate.css">
         <link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
-        <link rel="stylesheet" type="text/css" href="/css/workshop.css">
+        <link rel="stylesheet" type="text/css" href="/css/courses.css">
         <link rel="stylesheet" type="text/css" href="/css/responsiveness.css">
 
         <!-- Favicons
         ================================================== -->
-        <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="/images/ns_logo_003.png" type="image/x-icon">
         <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
         <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
         <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
@@ -38,10 +38,9 @@
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-
     </head>
 
-    <body id="pageBody" data-ng-controller="CommonActionController" data-ng-init="master.rolenm = s;master.roleid = 20;" style="overflow: visible;">
+    <body style="overflow: visible;">
         <!-- Preloader
         ================================================== -->
         <div id="preloader" style="display: none;">
@@ -61,19 +60,20 @@
                         <span class="icon-bar"></span>              
                     </button>
                     <a class="navbar-brand" href="/htmls/home.php?_dc=fdfs&page=blog&sTgt=site">
-                        <img src="/img/cs_11x.png" alt="logo"></a> <!-- Your logo here-->
+                        <img src="/images/ns_logo_003.png" alt="logo"></a> <!-- Your logo here-->
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/htmls/home.php?_dc=fdfssfdeqwfs&page=blog&sTgt=home" class="page-scroll" href="#banner">Home</a></li>
-                        <li class="active"><a href="/htmls/workshops.php?_dc=fdfssfdeqwfs&page=workshops&sTgt=site">Workshop</a></li>
-                        <li class=""><a class="page-scroll" href="#night_workshop">Night</a></li>
-                        <li class=""><a class="page-scroll" href="#people_workshop">People</a></li>
-                        <li class=""><a class="page-scroll" href="#brid_workshop">Bird</a></li>
-                        <li class=""><a class="page-scroll" href="#contact">Enroll</a></li>
-                        <li><a href="/htmls/blog.php?_dc=fdfssfdeqwfs&page=blog&sTgt=site">Blog</a></li>
+                        <li class="active"><a class="page-scroll" href="#banner">HOME</a></li>
+                        <li class=""><a class="page-scroll" href="#vision">MATERNITY SHOOTS</a></li>
+                        <li class=""><a class="page-scroll" href="#portfolio">PORTRAITS</a></li>
+                        <li class=""><a href="/htmls/workshops.php?_dc=fdfs&page=workshops&sTgt=site">COMMERCIAL SHOOTS</a></li>
+                        <li class=""><a href="/htmls/courses.php?_dc=fdfs&page=courses&sTgt=site">PHOTOGRAPHERS</a></li>
+                        <li class=""><a class="page-scroll" href="#about">About</a></li>
+                        <li class=""><a class="page-scroll" href="#footer">Contact</a></li>
+                        <li><a href="/htmls/blog.php?_dc=fdfs&page=blog&sTgt=site">Blog</a></li>
                     </ul>
                 </div><!-- End navbar-collapse -->
             </div><!-- End container -->
@@ -86,23 +86,35 @@
             <div class="carousel-inner"><!-- Inner wrapper for slides -->
 
                 <div class="item active"> <!-- Second item slider -->
-                    <img src="/images/02_bg.jpg" alt="banner-img" width="1360px" height="760px"> <!-- Second item background image slider -->
+                    <img src="/images/maternity-005.jpeg" alt="banner-img" width="1360px" height="760px"> <!-- Second item background image slider -->
                     <div class="carousel-caption">
                         <div class="content">
                             <div class="text wow bounceIn animated" style="visibility: visible; animation-name: bounceIn;">
-                                <h1>Night Photography Workshop</h1>
+                                <h1>MATERNITY SHOOTS</h1>
                                 <hr>
                             </div>
                         </div>
                     </div> <!-- End second item background image slider -->
                 </div> <!-- End second item slider -->
 
-                <div class="item"> <!-- Fourth item slider -->
-                    <img src="/images/04_bg.jpg" alt="banner-img" width="1360px" height="760px"> <!-- Fourth item background image slider -->
+                <div class="item"> <!-- Third item slider -->
+                    <img src="/images/nw_baby_001.jpg" alt="banner-img" width="1360px" height="760px"> <!-- Third item background image slider -->
                     <div class="carousel-caption">
                         <div class="content">
                             <div class="text wow bounceIn animated" style="visibility: visible; animation-name: bounceIn;">
-                                <h1>Nature Photography Workshop</h1>
+                                <h1>Portraits - Newborn Baby</h1>
+                                <hr>
+                            </div>
+                        </div>
+                    </div> <!-- End third item background image slider -->
+                </div> <!-- End third item slider -->
+
+                <div class="item"> <!-- Fourth item slider -->
+                    <img src="/images/portraits-kids_001.jpg" alt="banner-img" width="1360px" height="760px"> <!-- Fourth item background image slider -->
+                    <div class="carousel-caption">
+                        <div class="content">
+                            <div class="text wow bounceIn animated" style="visibility: visible; animation-name: bounceIn;">
+                                <h1>Portraits- Childrens</h1>
                                 <hr>
                             </div>
                         </div>
@@ -110,23 +122,22 @@
                 </div> <!-- End fourth item slider -->
 
                 <div class="item"> <!-- Fifth item slider -->
-                    <img src="/images/05_bg.jpg" alt="banner-img" width="1360px" height="760px"> <!-- Fifth item background image slider -->
+                    <img src="/images/portraits-women_003.jpg" alt="banner-img" width="1360px" height="760px"> <!-- Fifth item background image slider -->
                     <div class="carousel-caption">
                         <div class="content">
                             <div class="text wow bounceIn animated" style="visibility: visible; animation-name: bounceIn;">
-                                <h1>Flowers Photography Workshop</h1>
+                                <h1>Portraits - Women</h1>
                                 <hr>
                             </div>
                         </div>
                     </div> <!-- End fifth item background image slider -->
                 </div> <!-- End fifth item slider -->
-
                 <div class="item"> <!-- Sixth item slider -->
-                    <img src="/images/DSC_0222.jpg" alt="banner-img" width="1360px" height="760px"> <!-- Fifth item background image slider -->
+                    <img src="/images/portraits-man_001.jpg" alt="banner-img" width="1360px" height="760px"> <!-- Fifth item background image slider -->
                     <div class="carousel-caption">
                         <div class="content">
                             <div class="text wow bounceIn animated" style="visibility: visible; animation-name: bounceIn;">
-                                <h1>People Photography Workshop</h1>
+                                <h1>Portraits - Man</h1>
                                 <hr>
                             </div>
                         </div>
@@ -207,102 +218,138 @@
                 </div>
             </div>
         </section>
-        <!-- Night Workshop Section
+        <!-- Basic Section
         ================================================== -->
-        <section id="night_workshop"> <!-- Start about -->
-            <div class="about-content" style="background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;">
+        <section id="basic_course"> <!-- Start about -->
+            <div class="about-content">
                 <div class="container"> <!-- Container -->
-                    <h2>Night Photography Workshop</h2> 
+                    <h2>Basic Photography</h2> 
                     <div class="about-text">
-                        <p class="atext">
-                            Join photographer Neeta Dhakad as she describes the tools, creative options, 
-                            and special considerations involved in shooting with a DSLR camera 
-                            at night or in low-light conditions, such as sunset or candlelight. 
-                            The course addresses exposure decisions such as choice of aperture and 
-                            shutter speed and how they impact depth of field and the camera's ability to freeze motion.
-                            <br>
-                            Neeta also shows how to obtain accurate color balance in tungsten and fluorescent lighting situations, 
-                            and how to postprocess the images in Lightroom to remove noise caused by higher ISO settings. 
-                            He also demonstrates accessories that can greatly expand your low-light photography options.
+                        <p class="atext">Basic is aimed for rank beginners, who have either recently bought a camera and would like to improve 
+                            their travel and family photographs. Or as first steps for beginners who want to take eventually shoot like a professional. 
+                            However the course is not recommended for casual shooters who use mobile phone cameras or aim and shoot camera
                         </p>
                     </div>
                     <!-- Your name or agency name here -->
                     <div class="about-text">
-                        <p class="large">This Workshop Includes</p> <!-- Your address -->
+                        <p class="large">Day - 1 : Basic About Photography</p> <!-- Your address -->
+                        <p class="atext">
+                            Discussing choices in photography as a profession. 
+                            Understanding the camera and its components, Brief history of camera and photography, 
+                            Understanding DSLR. Understanding light. Understanding Film and digital Sensor, 
+                            Understanding digital photography, Image recording and storage devices. 
+                        </p>
                     </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Understanding how low light affects exposure, shutter speed, color temperature</p> <!-- Your address -->
+                    <div class="about-text">
+                        <p class="large">Day - 2 : Exposure & Camera Modes</p> 
+                        <p class="atext">Basic is aimed for rank beginners, who have either recently bought a camera and would like to improve 
+                            their travel and family photographs. Or as first steps for beginners who want to take eventually shoot like a professional. 
+                            However the course is not recommended for casual shooters who use mobile phone cameras or aim and shoot camera
+                        </p>
                     </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Preparing for a low-light shoot</p>
+                    <div class="about-text">
+                        <p class="large">Day - 3 : Exposure Compensation & Metering</p> 
+                        <p class="atext">Basic is aimed for rank beginners, who have either recently bought a camera and would like to improve 
+                            their travel and family photographs. Or as first steps for beginners who want to take eventually shoot like a professional. 
+                            However the course is not recommended for casual shooters who use mobile phone cameras or aim and shoot camera
+                        </p>
                     </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Focusing in low light</p> 
+                    <div class="about-text">
+                        <p class="large">Day - 4 : White Balance & Creativity</p> 
+                        <p class="atext">Basic is aimed for rank beginners, who have either recently bought a camera and would like to improve 
+                            their travel and family photographs. Or as first steps for beginners who want to take eventually shoot like a professional. 
+                            However the course is not recommended for casual shooters who use mobile phone cameras or aim and shoot camera
+                        </p>
                     </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Light painting</p> 
+                    <div class="about-text">
+                        <p class="large">Day - 5 : Lens & Usage</p> 
+                        <p class="atext">Basic is aimed for rank beginners, who have either recently bought a camera and would like to improve 
+                            their travel and family photographs. Or as first steps for beginners who want to take eventually shoot like a professional. 
+                            However the course is not recommended for casual shooters who use mobile phone cameras or aim and shoot camera
+                        </p>
                     </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Manipulating long shutter speeds</p> 
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Sharpening and noise reduction</p> 
-                    </div>
-                    <br><br>
-                    <h4>Required Accessories </h4>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">A DSLR Camera of any make .</p> <!-- Your address -->
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Tripod is mandatory for attending this workshop.</p> <!-- Your address -->
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Prime or Zoom Lense with Minimum Aperture f/16.</p> <!-- Your address -->
+                    <div class="about-text">
+                        <p class="large">Day - 6 : Photo Retouching & Tools</p> 
+                        <p class="atext">Basic is aimed for rank beginners, who have either recently bought a camera and would like to improve 
+                            their travel and family photographs. Or as first steps for beginners who want to take eventually shoot like a professional. 
+                            However the course is not recommended for casual shooters who use mobile phone cameras or aim and shoot camera
+                        </p>
                     </div>
                     <br><br>
                     <h4>Who is the target audience?</h4> 
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Take this course if you want to learn a new skill</p>
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Take this course if you want to revive a 100 year art</p>
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Take this course if you want to improve and maximise your photography skills</p>
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Don't take this course if you like boredom and rules.</p>
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">This course is about learning the 'rules' and then breaking them!</p>
-                    </div>
-                    <br><br>
-                    <h4>Workshop Schedule</h4> 
                     <div class="about-text">
                         <table style="width:100%">
                             <tbody>
                                 <tr>
-                                    <td width="10%" style="padding-top: 20px;">
+                                    <td width="5%" style="">&nbsp;</td>
+                                    <td width="90%">
                                         <div class="about-text">
-                                            <p class="small">Mumbai</p>
+                                            <p class="small">Take this course if you want to learn a new skill</p>
                                         </div>
                                     </td>
-                                    <td width="90%" style="padding-top: 20px;" class="small">
-                                        <div class="about-text" style="padding-left:20px;">
-                                            <p class="small">&nbsp; Sun, 09 April 2017 (06.30 P.M. - 08:30 P.M)</p>
-                                            <br>
-                                            <p class="small">&nbsp; Sun, 07 May 2017 (06.30 P.M. - 08:30 P.M)</p>
-                                            <br>
-                                            <p class="small">&nbsp; Sun, 04 Jun 2017 (06.30 P.M. - 08:30 P.M)</p>
+                                </tr>
+                                <tr>
+                                    <td width="5%" style="">&nbsp;</td>
+                                    <td width="90%">
+                                        <div class="about-text">
+                                            <p class="small">Take this course if you want to revive a 100 year art</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="5%" style="">&nbsp;</td>
+                                    <td width="90%">
+                                        <div class="about-text">
+                                            <p class="small">Take this course if you want to improve and maximise your photography skills</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="5%" style="">&nbsp;</td>
+                                    <td width="90%">
+                                        <div class="about-text">
+                                            <p class="small">Don't take this course if you like boredom and rules. </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="5%" style="">&nbsp;</td>
+                                    <td width="90%">
+                                        <div class="about-text">
+                                            <p class="small">This course is about learning the 'rules' and then breaking them!</p>
                                         </div>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <br><br><br>
+                    <br><br>
+                    <h4>Basic Course Schedule</h4> 
+                    <div class="about-text">
+                        <table style="width:100%">
+                            <tbody>
+                                <tr>
+                                    <td width="10%" class="large">Mumbai</td>
+                                    <td width="90%" class="small">
+                                        <br>Basic -&nbsp; Sun, 04 Dec &nbsp; -&nbsp; Sat,&nbsp; 24 Sat '16&nbsp; (04.00 P.M. - 07:00 P.M)
+                                        <br>Basic -&nbsp; Sun, 22 Jan &nbsp;&nbsp; -&nbsp; Sat,&nbsp; 11 Feb' 17 (03.00 P.M. - 06:00 P.M)
+                                        <br>Basic -&nbsp; Sat, 04 Mar &nbsp;&nbsp; -&nbsp; Sun,&nbsp; 19 Mar' 17 (04.00 P.M. - 07.00 P.M)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="10%" style="">Delhi</td>
+                                    <td width="90%">
+                                        <br>Basic -&nbsp; Sun, 04 Dec &nbsp; -&nbsp; Sat,&nbsp; 24 Sat '16&nbsp; (04.00 P.M. - 07:00 P.M)
+                                        <br>Basic -&nbsp; Sun, 22 Jan &nbsp;&nbsp; -&nbsp; Sat,&nbsp; 11 Feb' 17 (03.00 P.M. - 06:00 P.M)
+                                        <br>Basic -&nbsp; Sat, 04 Mar &nbsp;&nbsp; -&nbsp; Sun,&nbsp; 19 Mar' 17 (04.00 P.M. - 07.00 P.M)
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <div class="clearfix"></div>
                     <div class="col-lg-8 text-center col-lg-offset-4">
+                        <br>
                         <div id="success"></div>
                         <button type="submit" class="btn btn-faq" href="#faqModal1" class="portfolio-link" data-toggle="modal">FAQ</button>
                         <button type="submit" class="btn btn-faq" href="#feesModal1" class="portfolio-link" data-toggle="modal">Fees</button>
@@ -311,196 +358,7 @@
                 </div>
             </div> <!-- End container -->
         </section> 
-        <!-- People Workshop Section
-        ================================================== -->
-        <section id="people_workshop"> <!-- Start about -->
-            <div class="about-content" style="background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;">
-                <div class="container"> <!-- Container -->
-                    <h2>People Photography Workshop</h2> 
-                    <div class="about-text">
-                        <p class="atext">
-                            Join photographer Neeta Dhakad as she describes the tools, creative options, 
-                            and special considerations involved in shooting with a DSLR camera 
-                            at night or in low-light conditions, such as sunset or candlelight. 
-                            The course addresses exposure decisions such as choice of aperture and 
-                            shutter speed and how they impact depth of field and the camera's ability to freeze motion.
-                            <br>
-                            Neeta also shows how to obtain accurate color balance in tungsten and fluorescent lighting situations, 
-                            and how to postprocess the images in Lightroom to remove noise caused by higher ISO settings. 
-                            He also demonstrates accessories that can greatly expand your low-light photography options.
-                        </p>
-                    </div>
-                    <!-- Your name or agency name here -->
-                    <div class="about-text">
-                        <p class="large">This Workshop Includes</p> <!-- Your address -->
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Understanding how low light affects exposure, shutter speed, color temperature</p> <!-- Your address -->
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Preparing for a low-light shoot</p>
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Focusing in low light</p> 
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Light painting</p> 
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Manipulating long shutter speeds</p> 
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Sharpening and noise reduction</p> 
-                    </div>
-                    <br><br>
-                    <h4>Who is the target audience?</h4> 
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Take this course if you want to learn a new skill</p>
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Take this course if you want to revive a 100 year art</p>
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Take this course if you want to improve and maximise your photography skills</p>
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Don't take this course if you like boredom and rules.</p>
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">This course is about learning the 'rules' and then breaking them!</p>
-                    </div>
-                    <br><br>
-                    <h4>Workshop Schedule</h4> 
-                    <div class="about-text">
-                        <table style="width:100%">
-                            <tbody>
-                                <tr>
-                                    <td width="10%" class="large">
-                                        <div class="about-text">
-                                            <p class="small">Mumbai</p>
-                                        </div>
-                                    </td>
-                                    <td width="90%" class="small">
-                                        <div class="about-text" style="padding-left:20px;">
-                                            <p class="small">&nbsp; Sun, 09 April 2017 (06.30 P.M. - 08:30 P.M)</p>
-                                            <br>
-                                            <p class="small">&nbsp; Sun, 07 May 2017 (06.30 P.M. - 08:30 P.M)</p>
-                                            <br>
-                                            <p class="small">&nbsp; Sun, 04 Jun 2017 (06.30 P.M. - 08:30 P.M)</p>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <br><br><br>
-                    <div class="clearfix"></div>
-                    <div class="col-lg-8 text-center col-lg-offset-4">
-                        <div id="success"></div>
-                        <button type="submit" class="btn btn-faq" href="#faqModal1" class="portfolio-link" data-toggle="modal">FAQ</button>
-                        <button type="submit" class="btn btn-faq" href="#feesModal1" class="portfolio-link" data-toggle="modal">Fees</button>
-                        <a role="button" class="btn btn-faq" href="#contact" data-target="#contact">Enroll</a>
-                    </div>
-                </div>
-            </div> <!-- End container -->
-        </section>
-        <!-- Bird Workshop Section
-        ================================================== -->
-        <section id="brid_workshop"> <!-- Start about -->
-            <div class="about-content" style="background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;">
-                <div class="container"> <!-- Container -->
-                    <h2>Brids Photography Workshop</h2> 
-                    <div class="about-text">
-                        <p class="atext">
-                            Join Brijesh Dhaker & Neeta Dhakad and the birds in the rural location of Bhandup Pumping Station,Mumbai.
-                            A variety of birds of prey will be available to photograph, including majestic Herons, King Fisher, Little Owl, Myna 
-                            and the beautifully marked Kestrel. You will see black-headed gulls fighting against puffins with beaks full of eels.
-                            You might also see seals popping out of the water. The site has some lovely natural settings and old farm buildings, 
-                            so we'll get some genuinely wild looking images. You'll also have the opportunity to try your hand at some flight shots.
-                            Myself & Neeta will be available to offer guidance and tips where needed and you'll be sure to come away with some superb shots.
 
-                            We limit the workshops to 25 people so as not to get in each others way and ultimately to keep disturbance 
-                            to the birds to a minimum.
-                        </p>
-                    </div>
-                    <!-- Your name or agency name here -->
-                    <br><br>
-                    <h4>This Workshop Includes </h4>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Understanding how low light affects exposure, shutter speed, color temperature</p> <!-- Your address -->
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Preparing for a low-light shoot</p>
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Focusing in low light</p> 
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Light painting</p> 
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Manipulating long shutter speeds</p> 
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Sharpening and noise reduction</p> 
-                    </div>
-                    <br><br>
-                    <h4>Required Accessories </h4>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Having a DSLR Camera & Tripod are mandatory for attending this workshop.</p> <!-- Your address -->
-                    </div>
-                    <br><br>
-                    <h4>Who is the target audience?</h4> 
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Take this course if you want to learn a new skill</p>
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Take this course if you want to revive a 100 year art</p>
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Take this course if you want to improve and maximise your photography skills</p>
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">Don't take this course if you like boredom and rules.</p>
-                    </div>
-                    <div class="about-text" style="padding-left:20px;">
-                        <p class="small">This course is about learning the 'rules' and then breaking them!</p>
-                    </div>
-                    <br><br>
-                    <h4>Workshop Schedule</h4> 
-                    <div class="about-text">
-                        <table style="width:100%">
-                            <tbody>
-                                <tr>
-                                    <td width="10%" class="large">
-                                        <div class="about-text">
-                                            <p class="small">Mumbai</p>
-                                        </div>
-                                    </td>
-                                    <td width="90%" class="small">
-                                        <div class="about-text" style="padding-left:20px;">
-                                            <p class="small">&nbsp; Sun, 23 April 2017 (07.30 A.M. - 10:30 A.M)</p>
-                                            <br>
-                                            <p class="small">&nbsp; Sun, 21 May 2017 (07.30 A.M. - 10:30 A.M)</p>
-                                            <br>
-                                            <p class="small">&nbsp; Sun, 18 Jun 2017 (07.30 A.M. - 10:30 A.M)</p>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <br><br><br>
-                    <div class="clearfix"></div>
-                    <div class="col-lg-8 text-center col-lg-offset-4">
-                        <div id="success"></div>
-                        <button type="submit" class="btn btn-faq" href="#faqModal1" class="portfolio-link" data-toggle="modal">FAQ</button>
-                        <button type="submit" class="btn btn-faq" href="#feesModal1" class="portfolio-link" data-toggle="modal">Fees</button>
-                        <a role="button" class="btn btn-faq" href="#contact" data-target="#contact">Enroll</a>
-                    </div>
-                </div>
-            </div> <!-- End container -->
-        </section>
         <!-- Portfolio Modals -->
         <!-- Use the modals below to showcase details about your portfolio projects! -->
 
@@ -521,6 +379,10 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-8 col-lg-offset-2" style="text-align: left;">
+                            <p>
+
+                            </p>
+                            <p>Anyone who has passed 12th standard and is above the age of 18.</p>
                             <div class="about-text">
                                 <p class="large">1) Who can enroll for the one-year courses ? </p> 
                                 <p class="small">Anyone who has passed 12th standard and is above the age of 18.</p>
@@ -528,12 +390,12 @@
                                 <p class="small">There is no criteria for enrollment. But if the person is below 18 years of age, he or she will have to get a letter from his or her guardian.</p>
                                 <p class="large">3) Does the courses guarantee jobs or placements ? </p> 
                                 <p class="small">We does not guarantee jobs or placements, but will assist in every way possible to see that the students are able to start their career at the earliest and in the best possible way.
-                                    For students of one-year photojournalism course, Creative Lights will try to get internships for all its students in leading newspapers and magazines. Thats an opportunity for the students to prove themselves and join the organization. Many leading photojournalists have started their careers in similar fashion. We also have a in-house news photography agency called 'Indus Images' - several of our former students are employed there.
+                                    For students of one-year photojournalism course, Udaan will try to get internships for all its students in leading newspapers and magazines. Thats an opportunity for the students to prove themselves and join the organisation. Many leading photojournalists have started their careers in similiar fashion. We also have a in-house news photography agency called 'Indus Images' - several of our former students are employed there.
                                 </p>
                                 <p class="large">4) What all do I require to bring to the one-year course ? </p> 
-                                <p class="small">The students joining the one-year courses will have to bring at least one laptop, one  DSLR camera, one wide zoom, one tele zoom and one flash. And preferably a tripod and a remote trigger, though thats not a must.</p>
+                                <p class="small">The students joining the one-year courses will have to bring at least one laptop, one  DSLR camera, one wide zoom, one tele zoom and one flash. And prefereably a tripod and a remote trigger, though thats not a must.</p>
                                 <p class="large">5) What all do I require to bring to the weekend course ? </p> 
-                                <p class="small">A DSLR camera with the kit lense is preferable, though thats not a must. Creative Lights does provide cameras to a select few, on a first come, first serve basis.</p>
+                                <p class="small">A DSLR camera with the kit lense is preferable, though thats not a must. Udaan does provide cameras to a select few, on a first come, first serve basis.</p>
                                 <p class="large">6) Is the certificate given by My Photography recognized by the Indian government ? </p> 
                                 <p class="small">No. But in the field of photography, photographer's portfolio is the biggest certificate. Infact in commercial photography, there is no concept of a job and most of the successful photographers are independent photographers.
                                     And in photojournalism, most of the photo-editors do not bother much about certificates, but about your portfolio and your ability to shoot on the ground.
@@ -541,7 +403,7 @@
                                 <p class="large">7) Can I pay the course fee in installment ? </p> 
                                 <p class="small">Yes, one can pay in three installments, but it will also make the fee costlier</p>
                                 <p class="large">8) Will the school help me in getting an accommodation in Mumbai ? </p> 
-                                <p class="small">Please see Students Resource Center</p>
+                                <p class="small">Please see Students Resource Centre</p>
                                 <p class="atext"></p>
                             </div>
                         </div>
@@ -619,6 +481,138 @@
             </div>
         </div>
         <!-- End about -->
+        <!-- Advance Section
+        ================================================== -->
+        <section id="advance_course"> <!-- Start about -->
+            <div class="about-content">
+                <div class="container"> <!-- Container -->
+                    <h2>Advance Photography</h2> 
+                    <div class="about-text">
+                        <p class="atext">This course is meant for photographers who understand the basics of photography 
+                            and have been shooting for a while and want to upgrade their skills to next level. 
+                            The students who complete the advance photography course should be able to produce images 
+                            that look out of the ordinary. 
+                            The advanced photography course is aimed for serious photographers, 
+                            who either want to take up photography as their profession or are serious amateur who wants to produce 
+                            stunning images of professional standards.
+                        </p>
+                    </div>
+                    <!-- Your name or agency name here -->
+                    <div class="about-text">
+                        <p class="large">Day - 1 : Composition & Techniques</p> <!-- Your address -->
+                        <p class="atext">
+                            Discussing choices in photography as a profession. 
+                            Understanding the camera and its components, Brief history of camera and photography, 
+                            Understanding DSLR. Understanding light. Understanding Film and digital Sensor, 
+                            Understanding digital photography, Image recording and storage devices. 
+                        </p>
+                    </div>
+                    <div class="about-text">
+                        <p class="large">Day - 2 : Light Theory</p> 
+                        <p class="atext">Basic is aimed for rank beginners, who have either recently bought a camera and would like to improve 
+                            their travel and family photographs. Or as first steps for beginners who want to take eventually shoot like a professional. 
+                            However the course is not recommended for casual shooters who use mobile phone cameras or aim and shoot camera
+                        </p>
+                    </div>
+                    <div class="about-text">
+                        <p class="large">Day - 3 : Studio Lights & Light Meter</p> 
+                        <p class="atext">Basic is aimed for rank beginners, who have either recently bought a camera and would like to improve 
+                            their travel and family photographs. Or as first steps for beginners who want to take eventually shoot like a professional. 
+                            However the course is not recommended for casual shooters who use mobile phone cameras or aim and shoot camera
+                        </p>
+                    </div>
+                    <div class="about-text">
+                        <p class="large">Day - 4 : Studio shoot</p> 
+                        <p class="atext">Basic is aimed for rank beginners, who have either recently bought a camera and would like to improve 
+                            their travel and family photographs. Or as first steps for beginners who want to take eventually shoot like a professional. 
+                            However the course is not recommended for casual shooters who use mobile phone cameras or aim and shoot camera
+                        </p>
+                    </div>
+                    <br><br>
+                    <h4>Advance Course Schedule</h4> 
+                    <div class="about-text">
+                        <table style="width:100%">
+                            <tbody>
+                                <tr>
+                                    <td width="10%" style="">Mumbai</td>
+                                    <td width="90%">
+                                        <br>Basic -&nbsp; Sun, 04 Dec &nbsp; -&nbsp; Sat,&nbsp; 24 Sat '16&nbsp; (04.00 P.M. - 07:00 P.M)
+                                        <br>Basic -&nbsp; Sun, 22 Jan &nbsp;&nbsp; -&nbsp; Sat,&nbsp; 11 Feb' 17 (03.00 P.M. - 06:00 P.M)
+                                        <br>Basic -&nbsp; Sat, 04 Mar &nbsp;&nbsp; -&nbsp; Sun,&nbsp; 19 Mar' 17 (04.00 P.M. - 07.00 P.M)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="10%" style="">Delhi</td>
+                                    <td width="90%">
+                                        <br>Basic -&nbsp; Sun, 04 Dec &nbsp; -&nbsp; Sat,&nbsp; 24 Sat '16&nbsp; (04.00 P.M. - 07:00 P.M)
+                                        <br>Basic -&nbsp; Sun, 22 Jan &nbsp;&nbsp; -&nbsp; Sat,&nbsp; 11 Feb' 17 (03.00 P.M. - 06:00 P.M)
+                                        <br>Basic -&nbsp; Sat, 04 Mar &nbsp;&nbsp; -&nbsp; Sun,&nbsp; 19 Mar' 17 (04.00 P.M. - 07.00 P.M)
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br><br>
+                    <h4>Who is the target audience?</h4> 
+                    <div class="about-text">
+                        <table style="width:100%">
+                            <tbody>
+                                <tr>
+                                    <td width="5%" style="">&nbsp;</td>
+                                    <td width="90%">
+                                        <div class="about-text">
+                                            <p class="small">Take this course if you want to learn a new skill</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="5%" style="">&nbsp;</td>
+                                    <td width="90%">
+                                        <div class="about-text">
+                                            <p class="small">Take this course if you want to revive a 100 year art</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="5%" style="">&nbsp;</td>
+                                    <td width="90%">
+                                        <div class="about-text">
+                                            <p class="small">Take this course if you want to improve and maximise your photography skills</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="5%" style="">&nbsp;</td>
+                                    <td width="90%">
+                                        <div class="about-text">
+                                            <p class="small">Don't take this course if you like boredom and rules. </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="5%" style="">&nbsp;</td>
+                                    <td width="90%">
+                                        <div class="about-text">
+                                            <p class="small">This course is about learning the 'rules' and then breaking them!</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br><br>
+                    <div class="clearfix"></div>
+                    <div class="col-lg-8 text-center col-lg-offset-4">
+                        <br>
+                        <div id="success"></div>
+                        <button type="submit" class="btn btn-faq" href="#faqModal1" class="portfolio-link" data-toggle="modal">FAQ</button>
+                        <button type="submit" class="btn btn-faq" href="#feesModal1" class="portfolio-link" data-toggle="modal">Fees</button>
+                        <a role="button" class="btn btn-faq" href="#contact" data-target="#contact">Enroll</a>
+                    </div>
+                </div>
+            </div> <!-- End container -->
+        </section> 
+        <!-- End about -->
         <!-- Toggle Contact Section
         ================================================== -->
         <section id="contact">  <!-- Start contact -->
@@ -632,11 +626,10 @@
                 </div>
                 <div class="row" style="padding-top: 20px;padding-bottom:50px;">
                     <div class="col-md-12">
-                        <p class="small">Our weekend workshop runs over 3 hours with all live photo shoot in field with 15-20 candidates. However, one can also enroll for multiple Workshops.</p>
+                        <p class="small">Our complete course (weekends) consist of two modules - Basic photography, Advanced photography . It runs over two months with a total of 10 classes. However, one can also enroll for separate modules.</p>
                     </div>
                 </div>
-                <!-- Contact form -->
-                <form name="sentMessage" id="contactForm" novalidate="" action="/resources/CommonServiceResource.php/common/register?_dc=6tgsfc5">  
+                <form name="sentMessage" id="contactForm" novalidate="">  <!-- Contact form -->
                     <div class="row">
                         <div class="col-md-6"> <!-- 6 column grid left form -->
                             <div class="form-group"> <!-- Your name input -->
@@ -653,13 +646,12 @@
                             </div>
                         </div> <!-- End 6 column grid left form -->
                         <div class="col-md-6"> <!-- 6 column grid right form-->
-                            <input class="form-control" id="courseType" type="hidden" value="Workshop">
+                            <input class="form-control" id="courseType" type="hidden" value="Class">
                             <div class="form-group">
-                                <select autocomplete="off" class="form-control" placeholder="Workshop Type *" id="course" required="" data-validation-required-message="Please enter Workshop Type." >
-                                    <option id="01" value="01">Night Photography Workshop</option>
-                                    <option id="02" value="02">People Photography Workshop</option>
-                                    <option id="03" value="03">Birds Photography Workshop</option>
-                                    <option id="04" value="04">Landscape Photography Workshop</option>
+                                <select autocomplete="off" class="form-control" placeholder="Course Type *" id="courseType" required="" data-validation-required-message="Please enter Course Type." >
+                                    <option id="01" value="01">Basic Photography</option>
+                                    <option id="02" value="02">Advance Photography</option>
+                                    <option id="03" value="03">Studio Lighting 101</option>
                                 </select>
                             </div>
                             <div class="form-group"> <!-- Your message input -->
@@ -684,7 +676,7 @@
                 <p>To get the latest update of me and my works</p>
                 <p> &gt;&gt; <span class="follow"> Follow Me </span>  &lt;&lt; </p>
                 <ol class="social">
-                    <li><a href="https://www.facebook.com/Creative-Lights-Photography-354830644911805"><i class="fa fa-facebook fa-2x"></i></a></li> <!-- Change # with your facebook link -->
+                    <li><a href="https://www.facebook.com/brijeshdhaker"><i class="fa fa-facebook fa-2x"></i></a></li> <!-- Change # with your facebook link -->
                     <li><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li> <!-- Change # with your twitter link -->
                     <li><a href="#"><i class="fa fa-behance fa-2x"></i></a></li> <!-- Change # with your behance link -->
                     <li><a href="#"><i class="fa fa-dribbble fa-2x"></i></a></li> <!-- Change # with your dribbble link -->
@@ -725,23 +717,23 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script type="text/javascript" src="/scripts/bootstrap.js"></script>
 
-        <script type="text/javascript" src="/scripts/wow.js"></script><!-- Content Animation -->
+        <script src="/scripts/wow.js"></script><!-- Content Animation -->
         <script type="text/javascript" src="/scripts/SmoothScroll.js"></script> <!-- Smooth scrolling page-->
         <script type="text/javascript" src="/scripts/jquery.js"></script>
         <script type="text/javascript" src="/scripts/cbpAnimatedHeader.js"></script>
         <script type="text/javascript" src="/scripts/classie.js"></script>
 
         <!-- Parallax Effects-->
-        <script type="text/javascript" src="/scripts/skrollr.js"></script>
-        <script type="text/javascript" src="/scripts/imagesloaded.js"></script>
+        <script src="/scripts/skrollr.js"></script>
+        <script src="/scripts/imagesloaded.js"></script>
 
         <!-- Contact page-->
         <script type="text/javascript" src="/scripts/jqBootstrapValidation.js"></script>
-        <script type="text/javascript" src="/scripts/workshop.js?ver=1.0"></script>
+        <script type="text/javascript" src="/scripts/courses.js"></script>
 
         <!-- My Custom Plugin JavaScript -->
         <script type="text/javascript" src="/scripts/main.js"></script>
-
         <?php include_once("analyticstracking.php") ?>
+
     </body>
 </html>

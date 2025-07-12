@@ -378,7 +378,7 @@ opacity: .9;
     height: 580px;
 }
 .dark-overlay {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.5);
     height: 420px;
     padding-top: 150px;
 }
@@ -449,7 +449,7 @@ opacity: .9;
     height: 420px;
 }
 .dark-overlay {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.5);
     height: 420px;
     padding-top: 150px;
     color: #ffffff;
@@ -1064,10 +1064,46 @@ figure.effect-portfolio:hover img {
     transition: all ease .5s;
 }
 /**************************
-****** About Section ******
+****** Basic Course Section ******
 **************************/
-#about {
-    background-image: url('../images/studio-005.jpg');
+#night_workshop {
+    background-image: url('../images/02_bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: auto;
+    max-height: 2000px;
+    min-height: 720px;
+    color: #ffffff;
+    margin-top: -1px;
+    opacity: 50%;
+}
+#people_workshop {
+    background-image: url('../images/02_people.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: auto;
+    max-height: 2000px;
+    min-height: 720px;
+    color: #ffffff;
+    margin-top: -1px;
+}
+
+#brid_workshop {
+    background-image: url('../images/03_bird.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: auto;
+    max-height: 2000px;
+    min-height: 720px;
+    color: #ffffff;
+    margin-top: -1px;
+}
+
+#advance_course {
+    background-image: url('../img/06_advance_course.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -1078,7 +1114,7 @@ figure.effect-portfolio:hover img {
     margin-top: -1px;
 }
 .about-content {
-    padding-top: 15%;
+    padding-top: 2%;
     padding-bottom: 5%;
 }
 #about-parallax .about-content {
@@ -1098,7 +1134,45 @@ figure.effect-portfolio:hover img {
     -webkit-font-smoothing: antialiased !important;
 }
 .about-text{
-    margin-top: 7%;
+    margin-top: 1%;
+    position: relative;
+}
+/**************************
+****** About Section ******
+**************************/
+#about {
+    background-image: url('../img/03_about.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: auto;
+    max-height: 2000px;
+    min-height: 720px;
+    color: #ffffff;
+    margin-top: -1px;
+}
+.about-content {
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+#about-parallax .about-content {
+    padding-top: 12%;
+    padding-bottom: 10%;
+}
+#about h2,
+#about-parallax h2 {
+    position: absolute;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 44px;
+    line-height: 30px;
+    text-transform: uppercase;
+    border: 2px solid #ffffff;
+    padding: 20px;
+    white-space: nowrap;
+    -webkit-font-smoothing: antialiased !important;
+}
+.about-text{
+    margin-top: 1%;
     position: relative;
 }
 /**************************
@@ -1183,7 +1257,7 @@ ol {
     padding-top: 5%;
     padding-bottom: 2%;
 }
-#footer h2 {
+#contact h2 {
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     font-size: 46px;
     width: 480px;
@@ -1195,7 +1269,7 @@ ol {
     margin: 0 auto;
     -webkit-font-smoothing: antialiased !important;
 }
-#footer h2:hover {
+#contact h2:hover {
     border: 2px solid #fec503;
     color: #fec503;
     -webkit-transition: all ease .8s;
@@ -1223,6 +1297,22 @@ ol {
 /**************************
 ****** Contact Form *******
 **************************/
+.btn-faq:hover,
+.btn-faq {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 15px;
+    width: 120px;
+    line-height: 10px;
+    text-transform: uppercase;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 15px;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased !important;
+    background: transparent;
+    border-radius: 0px;
+}
+
 .btn-send {
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     font-size: 16px;
@@ -1284,8 +1374,10 @@ section#contact .section-heading { color: #fff }
 section#contact .form-group { margin-bottom: 25px }
 section#contact .form-group input,
 section#contact .form-group textarea { padding: 20px }
+section#contact .form-group select { height: 60px }
+section#contact .form-group select.form-control { padding: 20px }
 section#contact .form-group input.form-control { height: auto }
-section#contact .form-group textarea.form-control { height: 236px }
+section#contact .form-group textarea.form-control { height: 150px }
 section#contact .form-control:focus {
     border-color: #fec503;
     box-shadow: none;
