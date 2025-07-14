@@ -21,8 +21,8 @@ sudo vi /etc/apache2/sites-available/neetastudio.in.conf
             Require all granted
         </Directory>
 
-        ErrorLog ${APACHE_LOG_DIR}/creativelights_error.log
-        CustomLog ${APACHE_LOG_DIR}/creativelights_access.log combined
+        ErrorLog ${APACHE_LOG_DIR}/neetastudio_error.log
+        CustomLog ${APACHE_LOG_DIR}/neetastudio_access.log combined
 </VirtualHost>
 
 #
