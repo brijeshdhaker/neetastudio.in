@@ -1292,7 +1292,7 @@ ol {
 #footer h2 {
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     font-size: 46px;
-    width: 480px;
+    /*width: 480px;*/
     line-height: 30px;
     text-transform: uppercase;
     border: 2px solid #ffffff;

@@ -361,7 +361,6 @@
 
         <!-- Portfolio Modals -->
         <!-- Use the modals below to showcase details about your portfolio projects! -->
-
         <!-- FAQ Modal 1 -->
         <div class="portfolio-modal modal fade" id="faqModal1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
