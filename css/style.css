@@ -452,7 +452,7 @@ opacity: .9;
     min-height: 720px;
     color: #ffffff;
     margin-top: -1px;
-    opacity: 50%;
+    /*opacity: 50%; */
 }
 
 .maternity-text{
@@ -461,10 +461,10 @@ opacity: .9;
 }
 
 /**************************
-********** maternity *******
+********** newborn *******
 **************************/
-#portraits {
-    background-image: url('../images/portraits-man_009.jpg');
+#newborn {
+    background-image: url('../images/nw_baby_003.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -473,7 +473,28 @@ opacity: .9;
     min-height: 720px;
     color: #ffffff;
     margin-top: -1px;
-    opacity: 50%;
+    /*opacity: 50%; */
+}
+
+.newborn-text{
+    margin-top: 2%;
+    position: relative;
+}
+
+/**************************
+********** portraits *******
+**************************/
+#portraits {
+    background-image: url('../images/portraits-women_004.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: auto;
+    max-height: 2000px;
+    min-height: 720px;
+    color: #ffffff;
+    margin-top: -1px;
+    opacity: 100%;
 }
 
 .portraits-text{
@@ -482,10 +503,10 @@ opacity: .9;
 }
 
 /**************************
-********** maternity *******
+********** kids *******
 **************************/
-#photo-events {
-    background-image: url('../images/wedding-event_004.jpg');
+#kids {
+    background-image: url('../images/portraits-kids_000.avif');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -494,7 +515,28 @@ opacity: .9;
     min-height: 720px;
     color: #ffffff;
     margin-top: -1px;
-    opacity: 90%;
+    opacity: 100%;
+}
+
+.kids-text{
+    margin-top: 1%;
+    position: relative;
+}
+
+/**************************
+********** wedding *******
+**************************/
+#photo-events {
+    background-image: url('../images/bridal_pose_002.avif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: auto;
+    max-height: 2000px;
+    min-height: 720px;
+    color: #ffffff;
+    margin-top: -1px;
+    opacity: 100%;
 }
 
 .photo-events-text{
@@ -1480,4 +1522,54 @@ border-color: #E3B106;
 #about-parallax .bcg {
     background-image:url('../img/09_about_parallax.jpg');
     color: #ffffff;
+}
+
+/**************************
+****** Contact Form *******
+**************************/
+.btn-faq:hover,
+.btn-faq {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 15px;
+    width: 120px;
+    line-height: 10px;
+    text-transform: uppercase;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 15px;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased !important;
+    background: transparent;
+    border-radius: 0px;
+}
+
+.btn-send {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 16px;
+    width: 180px;
+    line-height: 10px;
+    text-transform: uppercase;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 15px;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased !important;
+    background: transparent;
+    border-radius: 0px;
+}
+.btn-send:hover,
+.btn:focus {
+    border: 1px solid #fec503;
+    color: #fec503;
+    -webkit-transition: all ease .8s;
+    -moz-transition: all ease .8s;
+    transition: all ease .8s;
+}
+.btn:focus { text-decoration: none }
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus {
+    outline: none;
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
 }
