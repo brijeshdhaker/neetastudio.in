@@ -72,7 +72,7 @@
                             <li><a href="/htmls/newborn.php?_dc=fdfs&page=newborn&sTgt=site">New Born</a></li>
                             <li><a href="/htmls/kids.php?_dc=fdfs&page=kids&sTgt=site">Kids</a></li>
                             <li><a href="/htmls/portraits.php?_dc=fdfs&page=kids&sTgt=site">Portraits</a></li> 
-							<li><a href="/htmls/portfolio.php?_dc=fdfs&page=portfolio&sTgt=site">Our Portfolio</a></li> 							
+                            <li><a href="/htmls/portfolio.php?_dc=fdfs&page=portfolio&sTgt=site">Our Portfolio</a></li> 							
                             <li><a href="/htmls/aboutus.php?_dc=fdfs&page=about&sTgt=site">About Us</a></li>
                             <li><a href="/htmls/blog.php?_dc=fdfs&page=blog&sTgt=site">Blog</a></li>                                    
                             <li><a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site">Contact</a></li>                    

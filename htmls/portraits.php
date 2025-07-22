@@ -107,6 +107,13 @@
                                     </p>
 
                                 </div>
+
+                                <br/>
+                                <br/>
+                                <a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site#contact" class="btn btn-default m-top-40">Availability <i class="fa fa-long-arrow-right"></i></a>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site#contact" class="btn btn-default m-top-40">Packages <i class="fa fa-long-arrow-right"></i></a>
+                                
                             </div>
 
                             <div class="col-md-6">
@@ -172,13 +179,13 @@
                     <div class="row">
                         <div class="main_simple text-center">
                             <div class="col-md-12">
-                                <h2>Simplicity isn’t simple</h2>
+                                <h2>Timelessly Beautiful: Women's Portrait Photography</h2>
                                 <p>
                                     Celebrate your confidence and grace with our portraits for women. Perfect for personal milestones or simply to celebrate yourself, 
                                     these portraits showcase your personality with elegance and sophistication.
                                 </p>
 
-                                <a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site" class="btn btn-default m-top-40">Contact Us <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site#contact" class="btn btn-default m-top-40">Contact Us <i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>

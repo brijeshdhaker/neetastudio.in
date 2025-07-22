@@ -107,6 +107,12 @@
                                         months and then yearly. 
                                         I will leave it up to you to schedule when your child does something new that you would like to remember.</p>
                                 </div>
+                                <br/>
+                                <br/>
+                                <a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site#contact" class="btn btn-default m-top-40">Availability <i class="fa fa-long-arrow-right"></i></a>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site#contact" class="btn btn-default m-top-40">Packages <i class="fa fa-long-arrow-right"></i></a>
+
                             </div>
 
                             <div class="col-md-6">
@@ -175,7 +181,7 @@
                                 <h2>Baby & Child Photography</h2>
                                 <p>A Creative Session Fee of ₹2,500 is due at the time of booking to secure your session date on the calendar. This fee is credited to your final balance.</p>
 
-                                <a href="/htmls/aboutus.php?_dc=fdfs&page=about&sTgt=site" class="btn btn-default m-top-40">Contact Us <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site#contact" class="btn btn-default m-top-40">Contact Us <i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>

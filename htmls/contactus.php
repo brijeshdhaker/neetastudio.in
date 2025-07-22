@@ -124,7 +124,7 @@
             </div><!-- End off Map section-->
 
             <!-- Collaborate With Us Section-->
-            <section id="contact" class="contact fix">
+            <section id="collaborate" class="contact fix">
                 <div class="container">
                     <div class="row">
                         <div class="main_contact p-top-100">
@@ -214,7 +214,7 @@
             </section><!--End off Contact Section-->
             
             <!--Newsletter Us Section-->
-            <section id="contact" class="contact fix">
+            <section id="newsletter" class="contact fix">
                 <div class="container">
                     <div class="row">
                         <div class="main_contact p-top-100">
@@ -303,7 +303,7 @@
                                 <div class="main_models text-center">
                                     <div class="col-md-12">
                                             <div class="head_title text-left sm-text-center wow fadeInDown" style="visibility: hidden; animation-name: none;">
-                                                <h2>Let’s Chat! </h2>
+                                                <h2>Let’s us know about your plan ! </h2>
                                                 <h5><em></em></h5>
                                                 <div class="separator_left"></div>
                                             </div>
