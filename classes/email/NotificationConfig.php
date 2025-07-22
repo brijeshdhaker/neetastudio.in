@@ -20,9 +20,9 @@ class NotificationConfig {
         
         $this->environment = OnclickEnv::getEnvName();
         $this->enabled = TRUE;
-        $this->testGroup = 'photoes@creativelights.in';
-        $this->from = array('email' => 'photoes@creativelights.in', 'name' => 'Creative Lights');
-        $this->replyTo = array('email' => 'photoes@creativelights.in', 'name' => 'Creative Lights');
+        $this->testGroup = 'brijeshdhaker@gmail.com';
+        $this->from = array('email' => 'brijeshdhaker@gmail.com', 'name' => 'Neeta Studio');
+        $this->replyTo = array('email' => 'brijeshdhaker@gmail.com', 'name' => 'Neeta Studio');
         
     }
 

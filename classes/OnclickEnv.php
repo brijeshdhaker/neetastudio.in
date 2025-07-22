@@ -43,19 +43,19 @@ class OnclickEnv {
         $domain = "";
         switch (self::getEnvName()) {
             case CONSTANTS::ONCLICK_PROD:
-                $domain = 'http://olprdrepo.onclickonline.com';
+                $domain = 'http://neetastudio.in';
                 break;
             case CONSTANTS::ONCLICK_UAT:
-                $domain = 'http://oluatrepo.onclickonline.com';
+                $domain = 'http://neetastudio.in';
                 break;
             case CONSTANTS::ONCLICK_SIT:
-                $domain = 'http://olsitrepo.onclickonline.com';
+                $domain = 'http://neetastudio.in';
                 break;
             case CONSTANTS::ONCLICK_DEV:
-                $domain = 'http://oldevrepo.onclickonline.com';
+                $domain = 'http://neetastudio.in';
                 break;
             default:
-                $domain = 'http://oldevrepo.onclickonline.com';
+                $domain = 'http://neetastudio.in';
                 break;
         }
         return $domain;
@@ -65,27 +65,27 @@ class OnclickEnv {
         $ftpinfo = new FTPInfo();
         switch (self::getEnvName()) {
             case CONSTANTS::ONCLICK_PROD:
-                $ftpinfo->setRemoteHost("olprdsrv.onclickonline.com");
+                $ftpinfo->setRemoteHost("olprdsrv.neetastudio.in");
                 $ftpinfo->setRemoteUser("batchuser");
                 $ftpinfo->setRemotePasswd("accoo7ak47");
                 break;
             case CONSTANTS::ONCLICK_UAT:
-                $ftpinfo->setRemoteHost("oluatsrv.onclickonline.com");
+                $ftpinfo->setRemoteHost("oluatsrv.neetastudio.in");
                 $ftpinfo->setRemoteUser("batchuser");
                 $ftpinfo->setRemotePasswd("accoo7ak47");
                 break;
             case CONSTANTS::ONCLICK_SIT:
-                $ftpinfo->setRemoteHost("oluatsrv.onclickonline.com");
+                $ftpinfo->setRemoteHost("oluatsrv.neetastudio.in");
                 $ftpinfo->setRemoteUser("batchuser");
                 $ftpinfo->setRemotePasswd("accoo7ak47");
                 break;
             case CONSTANTS::ONCLICK_DEV:
-                $ftpinfo->setRemoteHost("oluatsrv.onclickonline.com");
+                $ftpinfo->setRemoteHost("oluatsrv.neetastudio.in");
                 $ftpinfo->setRemoteUser("batchuser");
                 $ftpinfo->setRemotePasswd("accoo7ak47");
                 break;
             default:
-                $ftpinfo->setRemoteHost("olprdsrv.onclickonline.com");
+                $ftpinfo->setRemoteHost("olprdsrv.neetastudio.in");
                 $ftpinfo->setRemoteUser("batchuser");
                 $ftpinfo->setRemotePasswd("accoo7ak47");
                 break;
@@ -135,7 +135,7 @@ class OnclickEnv {
             'AUTH_TYPE',
             'PATH_INFO',
             'ORIG_PATH_INFO'
-                );
+        );
 
         echo '<table cellpadding="10">';
         foreach ($indicesServer as $arg) {

@@ -14,8 +14,8 @@ class LogHelper {
     public static function  init($logger='root') {
         
         $env = OnclickEnv::getEnvName();
-        $logdir ="/logs/";
-        $logfile="creativelights";
+        $logdir ="/var/log/neetastudio.in/";
+        $logfile="neetastudio";
                 
         $logconfig = array(
             'threshold' => 'ALL',
@@ -36,7 +36,7 @@ class LogHelper {
                     ),
                     'params' => array(
                         'file' => $logdir.$logfile.'-default.log',
-                        'append' => FALSE
+                        'append' => true
                     )
                 ),
                 'file-appender' => array(
@@ -49,7 +49,7 @@ class LogHelper {
                     ),
                     'params' => array(
                         'file' => $logdir.$logfile.'-%s.log',
-                        'append' => FALSE,
+                        'append' => true,
                         'datePattern'=>'Y-m-d'
                     )
                 ),
@@ -63,7 +63,7 @@ class LogHelper {
                     ),
                     'params' => array(
                         'file' => $logdir.$logfile.'-err-%s.log',
-                        'append' => FALSE,
+                        'append' => true,
                         'datePattern'=>'Y-m-d'
                     )
                 )

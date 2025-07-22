@@ -159,7 +159,7 @@ class OnclickUtils {
             unset($object->$property);
         }
         unset($value);
-        $object = (unset) $object;
+        //$object = (unset) $object;
         return $new;
     }
 

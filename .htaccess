@@ -1,0 +1,3 @@
+#RewriteEngine on
+#RewriteRule ^$ controllers/ [L]
+#RewriteRule (.*) controllers/$1 [L]

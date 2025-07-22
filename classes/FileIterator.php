@@ -3,7 +3,10 @@
  * Description of FileIterator
  *
  * @author brijeshdhaker
-try{
+ **/
+ 
+/*
+ try{
     $fIterator=new FileIterator(‘test.txt’);
     // reset pointer to beginning of file
     $fIterator->rewind();
@@ -24,7 +27,8 @@ catch(Exception $e){
     echo $e->getMessage();
     exit();
 }
- */
+*/
+
 class FileIterator {
 
     private $iterator;
