@@ -1,58 +1,97 @@
+### Setup directories /var/www/neetastudio.in
+```bash
+sudo mkdir -p /var/www/neetastudio.in
+sudo chown -R $USER:$USER /var/www/neetastudio.in
+sudo chmod -R 755 /var/www/neetastudio.in
+
+sudo mkdir -p /var/log/neetastudio.in
+sudo touch /var/log/neetastudio.in/neetastudio-2025-07-21.log
+sudo touch /var/log/neetastudio.in/neetastudio-default.log
+sudo touch /var/log/neetastudio.in/neetastudio-err.log
+sudo chown -R $USER:$USER /var/log/neetastudio.in
+sudo chmod -R 777 /var/log/neetastudio.in
+```
+
+### Setup Virtualhost
+```bash
+sudo vi /etc/apache2/sites-available/neetastudio.in.conf
+
+<VirtualHost _default_:80>
+        #
+        ServerAdmin admin@neetastudio.in
+        ServerName neetastudio.in
+        ServerAlias www.neetastudio.in
+        DocumentRoot /var/www/neetastudio.in
+        
+        #
+        SetEnv APP_ENV "DEV"
+        SetEnv APP_NAME "ONLINE"
+        
+        #
+        <Directory /var/www/neetastudio.in>
+            Options Indexes FollowSymLinks
+            AllowOverride All
+            Require all granted
+        </Directory>
+        
+        #
+        ErrorLog ${APACHE_LOG_DIR}/neetastudio_error.log
+        CustomLog ${APACHE_LOG_DIR}/neetastudio_access.log combined
+</VirtualHost>
+```
+
+
+### Restart Apache Server 
+```
+sudo a2ensite neetastudio.in.conf
+sudo systemctl reload apache2
+
 #
-# neetastudio.in
-neetastudio.in
-
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+sudo a2enmod rewrite
+sudo a2enmod actions
+sudo systemctl restart apache2
+sudo systemctl status apache2
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### /var/www/neetastudio.in/controllers/.htaccess
+RewriteEngine On
+RewriteBase /controllers
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### /var/www/neetastudio.in/.htaccess (Optional)
+RewriteEngine on
+RewriteRule ^$ neetastudio.in/ [L]
+RewriteRule (.*) neetastudio.in/$1 [L]
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+### setup php-debugger
+sudo apt install php-xdebug
+
+
+#### Install required packages
 ```
+#
+composer require slim/slim:"4.*"
+composer require slim/psr7
+composer require nyholm/psr7 nyholm/psr7-server
+composer require guzzlehttp/psr7 "^2"
+composer require laminas/laminas-diactoros
+#
+composer require apache/log4php "2.3.0"
+#
+composer require phpmailer/phpmailer "~6.0"
+#
+composer require phpoffice/phpspreadsheet
+#
+composer require php-di/php-di
+```
+
+###
+http://neetastudio.in/phpinfo.php
+
+###
+http://neetastudio.in
+
+###
+http://neetastudio.in/controllers/hello/brijesh

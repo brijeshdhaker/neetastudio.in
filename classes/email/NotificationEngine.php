@@ -64,7 +64,7 @@ class NotificationEngine {
         $status = TRUE;
         try {
             if (is_null(self::$config)) {
-                self::$config = new NotificationConfig("creativelights.in");
+                self::$config = new NotificationConfig("neetastudio.in");
             }
             if (!is_null($emailObj)) {
                 $notifyObj = null;

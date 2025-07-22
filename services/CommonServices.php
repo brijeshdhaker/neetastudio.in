@@ -14,7 +14,8 @@ class CommonServices extends BaseService {
         //
         $logger = Logger::getLogger('RegistrationService');
         //$dbHelper = self::getDAOHelper();
-
+        $logger->info('$request -- ');
+        
         $firstName = OnclickUtils::getProperty('firstName', $request);
         $name = OnclickUtils::getProperty('name', $request);
         $email = OnclickUtils::getProperty('email', $request);
@@ -33,12 +34,12 @@ class CommonServices extends BaseService {
             //
             $emailObj = new Notification();
             $emailObj->setTo($email);
-            $emailObj->setFrom("photoes@creativelights.in", "Creative Lights Photography");
-            $emailObj->setReplyTo("photoes@creativelights.in", "Creative Lights Photography");
-            $emailObj->setSubject("Thanks for writing Creative Lights Photography");
+            $emailObj->setFrom("brijeshdhaker@gmail.com", "Neeta Studio");
+            $emailObj->setReplyTo("brijeshdhaker@gmail.com", "Neeta Studio");
+            $emailObj->setSubject("Thanks for writing to neetastudio.in");
             $emailObj->setBody($tpl);
             //$emailObj->setFooter("This is Test Footer Message");
-            $emailObj->setCc("brijeshdhaker@gmail.com");
+            //$emailObj->setCc("brijeshdhaker@gmail.com");
             $status = NotificationEngine::send($emailObj);
             if ($status) {
                 $logger->info("Email Notification successfully send.");

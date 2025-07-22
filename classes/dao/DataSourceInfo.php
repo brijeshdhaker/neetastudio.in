@@ -22,46 +22,34 @@ class DataSourceInfo {
             
             case CONSTANTS::ONCLICK_DEV:
                 
-                $this->dbhostname = "localhost";
-                $this->dbusername = "onclickusr";
-                $this->dbpassword = "Accoo7@k47";
-                $this->dbname = "ONCLICK_DEVOL";
+                $this->dbhostname = "mysqlserver.sandbox.net";
+                $this->dbusername = "mysqladmin";
+                $this->dbpassword = "mysqladmin";
+                $this->dbname = "NEETASTUDIO";
                 
                 break;
             case CONSTANTS::ONCLICK_SIT:
                 
-                $this->dbhostname = "olsitsrv.onclickonline.com";
-                $this->dbusername = "onclickusr";
-                $this->dbpassword = "Accoo7@k47";
-                $this->dbname = "ONCLICK_DEVOL";
+                $this->dbhostname = "mysqlserver.sandbox.net";
+                $this->dbusername = "mysqladmin";
+                $this->dbpassword = "mysqladmin";
+                $this->dbname = "NEETASTUDIO";
                 
                 break;
             case CONSTANTS::ONCLICK_UAT:
-                /*
-                $this->dbhostname = "ONCLICKONLINE.db.6818300.hostedresource.com";
-                $this->dbusername = "ONCLICKONLINE";
-                $this->dbpassword = "Accoo7@k47";
-                $this->dbname = "ONCLICKONLINE";
-                */
-                $this->dbhostname = "oluatsrv.onclickonline.com";
-                $this->dbusername = "onclickusr";
-                $this->dbpassword = "Accoo7@k47";
-                $this->dbname = "ONCLICK_UATOL";
+
+                $this->dbhostname = "mysqlserver.sandbox.net";
+                $this->dbusername = "mysqladmin";
+                $this->dbpassword = "mysqladmin";
+                $this->dbname = "NEETASTUDIO";
                 
                 break;
             case CONSTANTS::ONCLICK_PROD:
                 
-                /*
-                $this->dbhostname = "ONCLICKRESUMES.db.8615798.hostedresource.com";
-                $this->dbusername = "ONCLICKRESUMES";
-                $this->dbpassword = "Accoo7@k47";
-                $this->dbname = "ONCLICKRESUMES";
-                */
-                
-                $this->dbhostname = "olprdsrv.onclickonline.com";
-                $this->dbusername = "onclickusr";
-                $this->dbpassword = "Accoo7@k47";
-                $this->dbname = "ONCLICK_PRDOL";
+                $this->dbhostname = "mysqlserver.sandbox.net";
+                $this->dbusername = "mysqladmin";
+                $this->dbpassword = "mysqladmin";
+                $this->dbname = "NEETASTUDIO";
                 
                 break;
             default:

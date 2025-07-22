@@ -1,12 +1,18 @@
 <?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
 //
-require('phpmail/PHPMailerAutoload.php');
+#require('phpmail/PHPMailerAutoload.php');
+require __DIR__ . '/../../vendor/autoload.php';
 
-smtpmailer('brijeshdhaker@gmail.com','photoes@creativelights.in','Creative Lights', 'Seperate Email Service', 'Seperate Email Service!');
+smtpmailer('neetadhk@gmail.com','brijeshdhaker@gmail.com','Neeta Studio', 'Test Neeta Studio Email Service', 'Thanks for reaching out to us !!!');
 
 
-define('GUSER', 'services@onclickresumes.com'); // GMail username
-define('GPWD', 'accoo7ak47'); // GMail password
+define('GUSER', 'brijeshdhaker@gmail.com'); // GMail username
+define('GPWD', 'kypa ftth zhgc xhxk'); // GMail password
 function smtpmailer($to, $from, $from_name, $subject, $body) { 
 	global $error;
 	// create a new object
@@ -14,22 +20,17 @@ function smtpmailer($to, $from, $from_name, $subject, $body) {
 	// enable SMTP
 	$mail->IsSMTP(); 
 	// debugging: 1 = errors and messages, 2 = messages only
-        $mail->Debugoutput = 'html';
-        $mail->SMTPDebug = TRUE;
-        //$mail->do_debug = 0;
-	
-        $mail->Host = 'localhost';
-        $mail->Port = 25; 
-        
-        // authentication enabled
-        // secure transfer enabled REQUIRED for GMail
-	//$mail->SMTPSecure = 'ssl'; 
-	//$mail->Host = 'smtpout.secureserver.net';
-        //$mail->SMTPAuth = true;  
-        //$mail->Host = 'hostmaster.onclickresumes.com';
-	//$mail->Port = 25; 
-	//$mail->Username = 'services@onclickresumes.com';  
-	//$mail->Password = 'accoo7ak47';
+	$mail->Debugoutput = 'html';
+	$mail->SMTPDebug = TRUE;
+	//$mail->do_debug = 0;
+
+	$mail->Host = 'smtp.gmail.com';
+	$mail->SMTPAuth = true;
+	$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+	$mail->Port = 587;
+	$mail->Username = 'brijeshdhaker@gmail.com';
+	$mail->Password = 'kypa ftth zhgc xhxk';
+
     
 	$mail->SetFrom($from, $from_name);
 	$mail->Subject = $subject;

@@ -1,260 +1,315 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<!-- saved from url=(0046)/blog.html -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" lang="en" style=""><!--<![endif]-->
     <head>
-        <!-- Basic Page Needs
-        ================================================== -->
-        <meta charset="utf-8">
-        <meta name="google-site-verification" content="WElV2MKhH3KRYue20AwpiXJ_YSijLmhGGdewNbYvUYg" />
-        <title>Creative Lights Photography</title>
-        <meta name="description" content="Creative Lights Photography">
-        <meta name="keywords" content="Photography, Lights,Portfolio, Photography, creative">
-        <meta name="author" content="Brijesh K Dhaker">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>neetastudio.in - Maternity Photography Studio in Pune</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="/images/ns_logo_50.jpg">
 
-        <!-- Mobile Specific Metas
-        ================================================== -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!--Google Fonts link-->
+        <link href="/css/css" rel="stylesheet">
+        <link href="/css/css_01" rel="stylesheet">
+        <link href="/css/css_02" rel="stylesheet">
 
-        <!-- Stylesheet
-        ================================================== -->
-        <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="/css/animate.css">
-        <link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
-        <link rel="stylesheet" type="text/css" href="/css/style.css">
-        <link rel="stylesheet" type="text/css" href="/css/responsiveness.css">
+        <link rel="stylesheet" href="/css/slick.css">
+        <link rel="stylesheet" href="/css/slick-theme.css">
+        <link rel="stylesheet" href="/css/animate.css">
+        <link rel="stylesheet" href="/css/fonticons.css">
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/magnific-popup.css">
+        <link rel="stylesheet" href="/css/bootsnav.css">
 
-        <!-- Favicons
-        ================================================== -->
-        <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-        <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
 
-        <script type="text/javascript" src="/scripts/modernizr.js"></script>
+        <!--For Plugins external css-->
+        <!--<link rel="stylesheet" href="assets/css/plugins.css" />-->
 
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
+        <!--Theme custom css -->
+        <link rel="stylesheet" href="/css/style.css">
+        <!--<link rel="stylesheet" href="assets/css/colors/maron.css">-->
+
+        <!--Theme Responsive css-->
+        <link rel="stylesheet" href="/css/responsive.css">
+
+        <script src="/scripts/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
 
-    <body>
-        <!-- Preloader
-        ================================================== -->
-        <div id="preloader">
-            <div id="status">&nbsp;</div>
-        </div>
+    <body data-spy="scroll" data-target=".navbar-collapse"><div class="wrapper">
 
-        <!-- Navigation
-        ================================================== -->
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header page-scroll">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>              
-                    </button>
-                    <a class="navbar-brand" href="http://creativephotography.net.in/htmls/home.php?_dc=fdfssfdeqwfs&&page=blog&sTgt=site">
-                        <img src="/img/cs_11x.png" alt="logo">
-                    </a> <!-- Your logo here-->
-                </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/htmls/home.php?_dc=fdfs&page=blog&sTgt=site">Home</a></li>
-                        <li><a href="/htmls/home.php#vision">Vision</a></li>
-                        <li><a href="/htmls/home.php#portfolio">Portfolio</a></li>
-                        <li><a href="/htmls/home.php#about">About</a></li>
-                        <li><a href="/htmls/home.php#footer">Contact</a></li>
-                        <li class="active"><a href="#">Blog</a></li>
-                    </ul>
-                </div><!-- End navbar-collapse -->
-            </div><!-- End container -->
-        </nav>
-
-        <!-- Blog
-        ================================================== -->
-        <section id="blog">
-            <div class="dark-overlay vision">
-                <div class="centered vision-border wow bounceIn">
-                    <h4>Welcome to</h4>
-                    <h2>My Blog</h2>
-                    <h6>The daily photo journal with stories.</h6>
+        <!-- Preloader -->
+        <div id="loading" style="display: none;">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_four"></div>
                 </div>
             </div>
-        </section>
+        </div><!--End off Preloader -->
 
-        <!-- Blog Posts
-        ================================================== -->
-        <div class="blog">
-            <div class="container">
-                <div class="row">
-                    <!-- Blog post 1 -->
-                    <div class="blog-posts">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <div class="post wow fadeIn" data-wow-duration="2s">
-                                <h2>Love is Everywhere</h2>
-                                <ul class="list-inline">
-                                    <li>Post By: <a href="#">Admin</a></li>
-                                    <li>Date: <a href="#">August 23, 2014</a></li>
-                                    <li>Category: <a href="#">Graphic Design</a></li>
-                                </ul>
-                                <img class="img-responsive" src="/images/01.jpg" alt="Image">
-                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                <p><strong>Want these theme for your portfolio?</strong> Awesome Photography/Portfolio Template is a bootstrap based awesome photography portfolio template. Creatively designed to present your artwork beautifully and clean. Catch more visitors and potential clients by using Solstice Photography/Portfolio Template to showcase your photography and crafts. This is mobile responsive template, very easy to use and well-documented codes.</p>
-                                <a href="blog/love-is-everywhere.html" class="btn btn-primary">Read More</a>
+
+        <div class="culmn">
+            <!--Home page style-->
+            <?php include_once("nav.php") ?>
+
+            <!--Home Sections-->
+
+            <section id="hello" class="blog-banner bg-mega">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="main_home text-center">
+                            <div class="about_text">
+                                <h1 class="text-white text-uppercase">Blog</h1>
+                                <ol class="breadcrumb">
+                                    <li><a href="/htmls/home.php?_dc=fdfs&page=home&sTgt=site">Home</a></li>
+                                    <li class="active"><a href="/htmls/blog.php?_dc=fdfs&page=blog&sTgt=site">Blog</a></li>
+                                </ol>
                             </div>
                         </div>
-                        <div class="clearfix"></div>
-                        <div class="divider"></div>
-                    </div>
+                    </div><!--End off row-->
+                </div><!--End off container -->
+            </section> <!--End off Home Sections-->
 
-                    <!-- Blog post 2 -->
-                    <div class="blog-posts">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <div class="post wow fadeIn" data-wow-duration="4s">
-                                <h2>Things that Connect Us</h2>
-                                <ul class="list-inline">
-                                    <li>Post By: <a href="#">Admin</a></li>
-                                    <li>Date: <a href="#">August 20, 2014</a></li>
-                                    <li>Category: <a href="#">Graphic Design</a></li>
-                                </ul>
-                                <div class="videoWrapper">
-                                    <iframe src="http://www.youtube.com/embed/aZpV2Cor0rE" allowfullscreen></iframe> <!-- Your Youtube URL Here -->
+
+            <!--Blog Features Section-->
+            <section id="blog_fashion" class="blog_fashion roomy-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_blog_fashion">
+                            <div class="col-md-8">
+                                <div class="blog_fashion_left">
+                                    <div class="blog_fashion_img">
+                                        <img src="/images/fashion-img1.jpg" alt="">
+                                    </div>
+                                    <div class="blog_fashion_content">
+                                        <ol class="breadcrumb">
+                                            <li><a href="/htmls/blog.php?_dc=fdfs&page=blog&sTgt=site" class="text-black">Fashion</a></li>
+                                            <li><a href="/htmls/blog.php?_dc=fdfs&page=blog&sTgt=site" class="text-black">Feb 28th 2015</a></li>
+                                            <li><a href="/htmls/blog.php?_dc=fdfs&page=blog&sTgt=site" class="text-black">2 comments</a></li>
+                                        </ol>
+                                        <a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site"><h2>Client Feedback for Maternity &amp; Sessions</h2></a>
+                                        <p>
+                                            We are thrilled to share the incredible feedback we have received from our clients through 
+                                            Google reviews and video testimonials for our exceptional maternity photography services. 
+                                            We take pride in the positive experiences and lasting memories we have created for expectant mothers like yourself....
+                                        </p>
+                                        <a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site" class="btn btn-default m-top-20"> Read More <i class="fa fa-long-arrow-right"></i></a>
+                                    </div>
                                 </div>
-                                <div class="clearfix"></div>
-                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                <p>
-                                    <strong>Want these theme for your portfolio?</strong> Awesome Photography/Portfolio Template is a bootstrap based awesome photography portfolio template. Creatively designed to present your artwork beautifully and clean. Catch more visitors and potential clients by using Solstice Photography/Portfolio Template to showcase your photography and crafts. This is mobile responsive template, very easy to use and well-documented codes. <a href="#">here</a>.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="blog_fashion_right">
+                                    <div class="fashion_test text-center">
+                                        <img class="img-circle" src="/images/blog-test-img1.jpg" alt="">
 
-                                <a href="blog/things-that-connect-us.html" class="btn btn-primary">Read More</a>
+                                        <h6 class="m-top-20">Pouseidon - From OCean</h6>
+                                        <p class="m-top-20">With the waves from somewhere so far. 
+                                            We comes with elegants and beautiful. 
+                                            Just do what we love and always love what we do</p>
+                                        <img class="m-top-20" src="/images/blog-sign.png" alt="">
+                                    </div>
+
+                                    <div class="fashion_praspect m-top-40">
+                                        <div class="fashion_praspect_inner bg-black">
+                                            <p class="text-white">Good design is making something intelligible and memorable. 
+                                                Great design is making something memorable and meaningful.</p>
+                                            <p class="text-white">_ Dieter Rams</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="clearfix"></div>
-                        <div class="divider"></div>
+
+                    </div><!-- End off row -->
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="blog_area fix" style="position: relative; height: 1331.45px;">
+                            <div class="col-md-4" style="position: absolute; left: 0px; top: 0px;">
+                                <div class="blog_item m-top-30">
+                                    <div class="blog_item_img">
+                                        <img src="/images/1.jpg" alt="">
+                                    </div>
+                                    <ol class="breadcrumb">
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Fashion</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Feb 28th 2015</a></li>
+                                    </ol>
+                                    <h5>Street Girl with skate</h5>
+                                    <p class="m-top-20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+                                        nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat....</p>
+                                </div>
+                            </div><!-- End off col-md-4 -->
+                            <div class="col-md-4" style="position: absolute; left: 390px; top: 0px;">
+                                <div class="blog_item m-top-30">
+                                    <div class="blog_item_img">
+                                        <img src="/images/2.jpg" alt="">
+                                    </div>
+                                    <ol class="breadcrumb">
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Fashion</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Feb 28th 2015</a></li>
+                                    </ol>
+                                    <h5>Street Girl with skate</h5>
+                                    <p class="m-top-20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+                                        nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat....</p>
+                                </div>
+                            </div><!-- End off col-md-4 -->
+                            <div class="col-md-4" style="position: absolute; left: 780px; top: 0px;">
+                                <div class="blog_item m-top-30">
+                                    <div class="blog_item_img">
+                                        <img src="/images/3.jpg" alt="">
+                                    </div>
+                                    <ol class="breadcrumb">
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Fashion</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Feb 28th 2015</a></li>
+                                    </ol>
+                                    <h5>Street Girl with skate</h5>
+                                    <p class="m-top-20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+                                        nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat....</p>
+                                </div>
+                            </div><!-- End off col-md-4 -->
+                            <div class="col-md-4" style="position: absolute; left: 780px; top: 408px;">
+                                <div class="blog_item m-top-30">
+                                    <div class="blog_item_img">
+                                        <img src="/images/4.jpg" alt="">
+                                    </div>
+                                    <ol class="breadcrumb">
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Fashion</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Feb 28th 2015</a></li>
+                                    </ol>
+                                    <h5>Street Girl with skate</h5>
+                                    <p class="m-top-20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+                                        nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat....</p>
+                                </div>
+                            </div><!-- End off col-md-4 -->
+                            <div class="col-md-4" style="position: absolute; left: 0px; top: 409px;">
+                                <div class="blog_item m-top-30">
+                                    <div class="blog_item_img">
+                                        <img src="/images/5.jpg" alt="">
+                                    </div>
+                                    <ol class="breadcrumb">
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Fashion</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Feb 28th 2015</a></li>
+                                    </ol>
+                                    <h5>Street Girl with skate</h5>
+                                    <p class="m-top-20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+                                        nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat....</p>
+                                </div>
+                            </div><!-- End off col-md-4 -->
+                            <div class="col-md-4" style="position: absolute; left: 390px; top: 528px;">
+                                <div class="blog_item m-top-30">
+                                    <div class="blog_item_img">
+                                        <img src="/images/6.jpg" alt="">
+                                    </div>
+                                    <ol class="breadcrumb">
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Fashion</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Feb 28th 2015</a></li>
+                                    </ol>
+                                    <h5>Street Girl with skate</h5>
+                                    <p class="m-top-20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+                                        nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat....</p>
+                                </div>
+                            </div><!-- End off col-md-4 -->
+                            <div class="col-md-4" style="position: absolute; left: 0px; top: 799px;">
+                                <div class="blog_item m-top-30">
+                                    <div class="blog_item_img">
+                                        <img src="/images/7.jpg" alt="">
+                                    </div>
+                                    <ol class="breadcrumb">
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Fashion</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Feb 28th 2015</a></li>
+                                    </ol>
+                                    <h5>Street Girl with skate</h5>
+                                    <p class="m-top-20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+                                        nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat....</p>
+                                </div>
+                            </div><!-- End off col-md-4 -->
+                            <div class="col-md-4" style="position: absolute; left: 780px; top: 816px;">
+                                <div class="blog_item m-top-30">
+                                    <div class="blog_item_img">
+                                        <img src="/images/8.jpg" alt="">
+                                    </div>
+                                    <ol class="breadcrumb">
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Fashion</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Feb 28th 2015</a></li>
+                                    </ol>
+                                    <h5>Street Girl with skate</h5>
+                                    <p class="m-top-20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+                                        nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat....</p>
+                                </div>
+                            </div><!-- End off col-md-4 -->
+                            <div class="col-md-4" style="position: absolute; left: 390px; top: 922px;">
+                                <div class="blog_item m-top-30">
+                                    <div class="blog_item_img">
+                                        <img src="/images/9.jpg" alt="">
+                                    </div>
+                                    <ol class="breadcrumb">
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Fashion</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Feb 28th 2015</a></li>
+                                    </ol>
+                                    <h5>Street Girl with skate</h5>
+                                    <p class="m-top-20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+                                        nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat....</p>
+                                </div>
+                            </div><!-- End off col-md-4 -->
+                        </div>
                     </div>
 
-                    <!-- Blog post 3 -->
-                    <div class="blog-posts">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <div class="post wow fadeIn" data-wow-duration="6s">
-                                <h2>Freedom for Everyone</h2>
-                                <ul class="list-inline">
-                                    <li>Post By: <a href="#">Admin</a></li>
-                                    <li>Date: <a href="#">August 15, 2014</a></li>
-                                    <li>Category: <a href="#">Graphic Design</a></li>
-                                </ul>
-                                <img class="img-responsive" src="/images/02.jpg" alt="Image">
-                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                <p>
-                                    <strong>Want these theme for your portfolio?</strong> Awesome Photography/Portfolio Template is a bootstrap based awesome photography portfolio template. Creatively designed to present your artwork beautifully and clean. Catch more visitors and potential clients by using Solstice Photography/Portfolio Template to showcase your photography and crafts. This is mobile responsive template, very easy to use and well-documented codes. <a href="#">here</a>.</p>
+                </div><!-- End off container -->
+            </section><!-- End off blog Fashion -->
 
-                                <a href="blog/freedom-for-everyone.html" class="btn btn-primary">Read More</a>
-                            </div>
+            <!--Company section-->
+            <section id="company" class="company bg-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_company roomy-100 text-center">
+                            <h3 class="text-uppercase">neetastudio.in.</h3>
+                            <p>A2-803 - Acolade Building - Hadapsar Bypass - Pune - MH, India</p>
+                            <p>(+91). 9820937445/8  -  info@neetastudio.in</p>
                         </div>
-                        <div class="clearfix"></div>
-                        <div class="divider"></div>
-                    </div>
-
-                    <!-- Blog post 4 -->
-                    <div class="blog-posts">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <div class="post wow fadeIn" data-wow-duration="8s">
-                                <h2>I love Beaches</h2>
-                                <ul class="list-inline">
-                                    <li>Post By: <a href="#">Admin</a></li>
-                                    <li>Date: <a href="#">August 1, 2014</a></li>
-                                    <li>Category: <a href="#">Graphic Design</a></li>
-                                </ul>
-                                <img class="img-responsive" src="/images/04.jpg" alt="Image">
-                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                <p>
-                                    <strong>Want these theme for your portfolio?</strong> Awesome Photography/Portfolio Template is a bootstrap based awesome photography portfolio template. Creatively designed to present your artwork beautifully and clean. Catch more visitors and potential clients by using Solstice Photography/Portfolio Template to showcase your photography and crafts. This is mobile responsive template, very easy to use and well-documented codes. <a href="#">here</a>.</p>
-
-                                <a href="blog/i-love-paris.html" class="btn btn-primary">Read More</a>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="divider"></div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <!-- Pagination -->
-            <ul class="pagination">
-                <li><a href="#">&laquo;</a></li>
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">&raquo;</a></li>
-            </ul>
+
+            <!-- scroll up-->
+            <div class="scrollup">
+                <a href="/htmls/blog.php?_dc=fdfs&page=blog&sTgt=site"><i class="fa fa-chevron-up"></i></a>
+            </div>
+            <!-- End off scroll up -->
+
+            <?php include_once("footer.php") ?>
+
         </div>
 
-        <!-- About Section
-        ================================================== -->
-        <section id="bsocials">
-            <div class="container wow bounceIn" data-wow-delay="0.8s">
-                <p>To get the latest update of me and my works</p>
-                <p> >> <span class="follow"> Follow Me </span>  &lt;&lt; </p>
-                <ol class="social">
-                    <li><a href="#"><i class="fa fa-facebook fa-2x"></i></a></li> <!-- Change # with your facebook link -->
-                    <li><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li> <!-- Change # with your twitter link -->
-                    <li><a href="#"><i class="fa fa-behance fa-2x"></i></a></li> <!-- Change # with your behance link -->
-                    <li><a href="#"><i class="fa fa-dribbble fa-2x"></i></a></li> <!-- Change # with your dribbble link -->
-                    <li><a href="#"><i class="fa fa-flickr fa-2x"></i></a></li> <!-- Change # with your flickr link -->
-                    <li><a href="#"><i class="fa fa-google-plus fa-2x"></i></a></li> <!-- Change # with your googleplus link -->
-                    <li><a href="#"><i class="fa fa-instagram fa-2x"></i></a></li> <!-- Change # with your instagram link -->
-                </ol>
-            </div>
-        </section>
+        <!-- JS includes -->
 
-        <div id="footer-nav">  <!-- Copyright notice on the bottom -->
-            <div class="row">
-                <div class="col-md-2">
-                    <span><h6>© 2017 All Rights Reserved.</h6></span>
-                </div>
-                <div class="col-md-2">
-                    <span><h6><a style="color:#fec503;text-decoration:none;" href="/htmls/usage-terms.php?_dc=34gs55">FAQ</a></h6></span>
-                </div>
-                <div class="col-md-2">
-                    <span><h6><a style="color:#fec503;text-decoration:none;" href="/htmls/usage-terms.php?_dc=34gs55">Terms of Use</a></h6></span>
-                </div>
-                <div class="col-md-2">
-                    <span><h6><a style="color:#fec503;text-decoration:none;" href="/htmls/privacy-comments.php?_dc=34gs55">Privacy Policy</a></h6></span>
-                </div>
-                <div class="col-md-4">
-                    <span><h6>Power By : Onclick Information Services (P) Ltd.</h6></span>
-                </div>
-            </div>
+        <script src="/scripts/jquery-1.11.2.min.js"></script>
+        <script src="/scripts/bootstrap.min.js"></script>
+
+        <script src="/scripts/isotope.min.js"></script>
+        <script src="/scripts/jquery.magnific-popup.js"></script>
+        <script src="/scripts/jquery.easing.1.3.js"></script>
+        <script src="/scripts/slick.min.js"></script>
+        <script src="/scripts/jquery.collapse.js"></script>
+        <script src="/scripts/bootsnav.js"></script>
+        <script src="/scripts/masonry.min.js"></script>
+        
+        <script type="text/javascript">
+            var msnry = new Masonry('.blog_area');
+        </script>
+        
+        <script src="/scripts/plugins.js"></script>
+        <script src="/scripts/main.js"></script>
+
+    
+
         </div>
-
-        <!-- jQuery / JavaScript plugins
-        ================================================== -->
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script type="text/javascript" src="/scripts/jquery-1.js"></script>
-
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script type="text/javascript" src="/scripts/bootstrap.js"></script>
-
-        <script src="/scripts/wow.js"></script><!-- Content Animation -->
-        <script type="text/javascript" src="/scripts/SmoothScroll.js"></script> <!-- Smooth scrolling page-->
-        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-        <script type="text/javascript" src="/scripts/cbpAnimatedHeader.js"></script>
-        <script type="text/javascript" src="/scripts/classie.js"></script>
-        <!-- Contact page-->
-        <script type="text/javascript" src="/scripts/jqBootstrapValidation.js"></script>
-        <script type="text/javascript" src="/scripts/contact.js"></script>
-
-        <!-- My Custom Plugin JavaScript -->
-        <script type="text/javascript" src="/scripts/main.js"></script>
-        <?php include_once("analyticstracking.php") ?>
     </body>
 </html>

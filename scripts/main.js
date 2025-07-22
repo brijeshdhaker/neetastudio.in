@@ -1,64 +1,182 @@
-// Hello.
-//
-// This is The Scripts used for Awesome Photography/Portfolio Template
-//
-//
+"use strict";
+jQuery(document).ready(function ($) {
 
-function main() {
 
-(function () {
-   'use strict';
+    //==========================================
+    //for Preloader
+    //=========================================
 
-   //Page Loader
-        //<![CDATA[
-      $(window).load(function() {    // makes sure the whole site is loaded
-        $('#status').fadeOut();      // will first fade out the loading animation
-        $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
-        $('body').delay(350).css({'overflow':'visible'});
-      });
-      //]]>
-      
-   // Contact form toggle hide/show
-    $(document).ready(function(){
-      $("#show").click(function(){
-        $("#contact").slideToggle("slow,swing");
-      });
+    $(window).load(function () {
+        $("#loading").fadeOut(500);
     });
 
-    // Wow animation
-    new WOW().init();
 
-    // Header/Vision carousel slider
-    $('.carousel').carousel({
-      interval: 3000
+    //==========================================
+    // Mobile menu
+    //=========================================
+    $('#navbar-menu').find('a[href*="#"]:not([href="#"])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: (target.offset().top - 80)
+                }, 1000);
+                if ($('.navbar-toggle').css('display') != 'none') {
+                    $(this).parents('.container').find(".navbar-toggle").trigger("click");
+                }
+                return false;
+            }
+        }
     });
 
-    // jQuery for page scrolling feature - requires jQuery Easing plugin
-      $(function() {
-        $('a.page-scroll').bind('click', function(event) {
-          var $anchor = $(this);
-          $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top - 70
-            }, 900, 'easeInOutExpo');
-          event.preventDefault();
+
+
+    //==========================================
+    // wow
+    //=========================================
+
+    var wow = new WOW({
+        mobile: false 
+    });
+    wow.init();
+
+
+    // =========================================
+    // magnificPopup
+    // =========================================
+
+    $('.popup-img').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true
+        }
+    });
+
+    $('.video-link').magnificPopup({
+        type: 'iframe'
+    });
+
+
+    // =========================================
+    //      featured slider
+    // =========================================       
+
+
+    $('.featured_slider').slick({
+        centerMode: true,
+        dote: true,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        speed: 1500,
+        index: 2,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+
+
+    // =========================================
+    // Counter
+    // =========================================   
+
+    $('.statistic-counter').counterUp({
+        delay: 10,
+        time: 2000
+    });
+
+
+
+    // =========================================
+    // Scroll Up
+    // =========================================   
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 600) {
+            $('.scrollup').fadeIn('slow');
+        } else {
+            $('.scrollup').fadeOut('slow');
+        }
+    });
+    $('.scrollup').click(function () {
+        $("html, body").animate({scrollTop: 0}, 1000);
+        return false;
+    });
+
+
+    // =========================================
+    // About us accordion 
+    // =========================================   
+
+    $("#faq_main_content").collapse({
+        accordion: true,
+        open: function () {
+            this.addClass("open");
+            this.css({height: this.children().outerHeight()});
+        },
+        close: function () {
+            this.css({height: "0px"});
+            this.removeClass("open");
+        }
+    });
+
+    // =========================================
+    // Team Skillbar active js
+    // =========================================   
+    jQuery('.teamskillbar').each(function () {
+        jQuery(this).find('.teamskillbar-bar').animate({
+            width: jQuery(this).attr('data-percent')
+        }, 6000);
+    });
+
+    //End
+
+});
+
+
+    // =========================================
+    //  Portfolio Isotop
+    // =========================================   
+
+    $(function () {
+        // Initialize Isotope
+        var $notes = $(".grid").isotope({
+            itemSelector: ".grid-item"
         });
-      });
 
-    // Highlight the top nav as scrolling occurs
-    $('body').scrollspy({
-        target: '.navbar-fixed-top' ,
-        offset: 75
+        // On filter button click
+        $(".filters-button-group .button").on("click", function (e) {
+            var $this = $(this);
+
+            // Prevent default behaviour
+            e.preventDefault();
+
+            // Toggle the active class on the correct button
+            $(".filters-button-group .button").removeClass("is-checked");
+            $this.addClass("is-checked");
+
+            // Get the filter data attribute from the button
+            $notes.isotope({
+                filter: $this.attr("data-filter")
+            });
+
+        });
     });
-      
-    //Close Modal Stop Video Plugin Script
-    //-----------------------------------
-    $('.modal').on('hidden.bs.modal', function () {
-          var src = $(this).find('iframe').attr('src');
-          $(this).find('iframe').attr('src', '');
-          $(this).find('iframe').attr('src', src);
-    });
-
-}());
-}
-main();
-

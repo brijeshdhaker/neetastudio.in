@@ -1,5 +1,13 @@
 <?php
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+//
+#require('phpmail/PHPMailerAutoload.php');
+require __DIR__ . '/../../vendor/autoload.php';
+
 class MailHelper {
 
     /**
@@ -28,30 +36,35 @@ class MailHelper {
                 case CONSTANTS::ONCLICK_DEV:
                     //$mail->Host = 'relay-hosting.secureserver.net';
                     //$mail->Host = 'smtpout.secureserver.net';
-                    $mail->Host = 'smtpout.asia.secureserver.net';
+                    $mail->Host = 'smtp.gmail.com';
                     // Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
+                    //$mail->Port = 3535;
                     //$mail->SMTPSecure = 'ssl';
+                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                     //$mail->Port = 465;
-                    $mail->Port = 3535;
+                    $mail->Port = 587;
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'photoes@creativelights.in';
-                    $mail->Password = 'accoo7ak47';
+                    $mail->Username = 'brijeshdhaker@gmail.com';
+                    $mail->Password = 'kypa ftth zhgc xhxk';
 
                     break;
                 case CONSTANTS::ONCLICK_PROD:
-                    //$mail->Host = 'localhost';
-                    //$mail->Port = 25;
-                    
-                    $mail->Host = 'smtpout.asia.secureserver.net';
-                    $mail->Port = 3535;
+
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'photoes@creativelights.in';
-                    $mail->Password = 'accoo7ak47';
+                    $mail->Host = 'smtp.gmail.com';
+                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+                    $mail->Port = 587;
+                    $mail->Username = 'brijeshdhaker@gmail.com';
+                    $mail->Password = 'kypa ftth zhgc xhxk';
                     
                     break;
                 default:
-                    $mail->Host = 'localhost';
-                    $mail->Port = 25;
+                    $mail->SMTPAuth = true;
+                    $mail->Host = 'smtp.gmail.com';
+                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+                    $mail->Port = 587;
+                    $mail->Username = 'brijeshdhaker@gmail.com';
+                    $mail->Password = 'kypa ftth zhgc xhxk';
                     break;
             }
             

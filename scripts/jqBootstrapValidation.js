@@ -14,15 +14,15 @@
 
 	var defaults = {
 		options: {
-			prependExistingHelpBlock: false,
-			sniffHtml: true, // sniff for 'required', 'maxlength', etc
-			preventSubmit: true, // stop the form submit event from firing if validation fails
-			submitError: false, // function called if there is an error when trying to submit
-			submitSuccess: false, // function called just before a successful submit event is sent to the server
-            semanticallyStrict: false, // set to true to tidy up generated HTML output
-			autoAdd: {
-				helpBlocks: true
-			},
+                    prependExistingHelpBlock: false,
+                    sniffHtml: true, // sniff for 'required', 'maxlength', etc
+                    preventSubmit: true, // stop the form submit event from firing if validation fails
+                    submitError: false, // function called if there is an error when trying to submit
+                    submitSuccess: false, // function called just before a successful submit event is sent to the server
+                    semanticallyStrict: false, // set to true to tidy up generated HTML output
+                    autoAdd: {
+                            helpBlocks: true
+                    },
             filter: function () {
                 // return $(this).is(":visible"); // only validate elements you can see
                 return true; // validate everything

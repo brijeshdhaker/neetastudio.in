@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns="http://logging.apache.org/log4php/">
+
+    <!--Appender logs message to a file-->
+    <appender name="default-appender" class="LoggerAppenderFile">
+                <!--Layout of the message-->
+        <layout class="LoggerLayoutPattern">
+            <param name="conversionPattern" value="%date %logger %-5level %msg%n" />
+        </layout>
+        <param name="file" value="/var/log/apache2/neetastudio.log" /> <!-- This is the log file-->
+        <param name="append" value="true" />
+    </appender>
+
+    <!--Logger used for logging-->
+    <logger name="main-logger">
+        <level value="info" /> <!--Severity level-->
+        <appender_ref ref="default-appender" /> <!--Reference to the Appender-->
+    </logger>
+
+</configuration>
