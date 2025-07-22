@@ -25,14 +25,11 @@ class OnclickEnv {
     public static function getRepositoryPath() {
         $env = OnclickEnv::getEnvName();
         $repopath = "/export/repository/{$env}/";
-        if ($env == CONSTANTS::ONCLICK_DEV) {
-            $repopath = "D:/export/repository/{$env}/";
-        }
         return $repopath;
     }
 
     public static function getDomain() {
-        $domain = "http://creativelights.in";
+        $domain = "http://neetastudio.in";
         if (self::isWebRequest()) {
             $domain = "http://".$_SERVER['SERVER_NAME'];
         }

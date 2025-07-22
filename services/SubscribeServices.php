@@ -12,9 +12,9 @@ class SubscribeServices extends BaseService {
      */
     public function forNewletter($request, &$response){
         //
-        $logger = Logger::getLogger('ContactusServices');
+        $logger = Logger::getLogger('SubscribeServices');
         //$dbHelper = self::getDAOHelper();
-        $logger->info('-- ContactusServices -- ');
+        $logger->info('-- SubscribeServices -- ');
         
         $firstName = OnclickUtils::getProperty('firstName', $request);
         $name = OnclickUtils::getProperty('name', $request);
@@ -61,9 +61,9 @@ class SubscribeServices extends BaseService {
 
     public function forCollaboration($request, &$response){
         //
-        $logger = Logger::getLogger('ContactusServices');
+        $logger = Logger::getLogger('SubscribeServices');
         //$dbHelper = self::getDAOHelper();
-        $logger->info('-- ContactusServices -- ');
+        $logger->info('-- SubscribeServices -- ');
         
         $firstName = OnclickUtils::getProperty('firstName', $request);
         $name = OnclickUtils::getProperty('name', $request);

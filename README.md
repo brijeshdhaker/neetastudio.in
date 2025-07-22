@@ -71,6 +71,9 @@ sudo apt install php-xdebug
 
 #### Install required packages
 ```
+composer outdated --minor-only
+composer update
+
 #
 composer require slim/slim:"4.*"
 composer require slim/psr7
@@ -82,10 +85,30 @@ composer require apache/log4php "2.3.0"
 #
 composer require phpmailer/phpmailer "~6.0"
 #
+composer require phpfastcache/phpfastcache
+#
 composer require phpoffice/phpspreadsheet
 #
 composer require php-di/php-di
+#
+composer require --dev phpunit/phpunit
+composer require --dev phpunit/phpunit-skeleton-generator:*
 ```
+
+### PHPUnit Test Setup
+```
+sudo apt install php-cli \
+                 php-json \
+                 php-mbstring \
+                 php-xml \
+                 php-pcov \
+                 php-xdebug
+
+sudo apt-get install php-mysql
+
+```
+
+phpunit test.php
 
 ###
 http://neetastudio.in/phpinfo.php
@@ -95,3 +118,24 @@ http://neetastudio.in
 
 ###
 http://neetastudio.in/controllers/hello/brijesh
+
+#
+/etc/php/8.3/apache2/php.ini
+; PHPUnit
+error_reporting=-1
+zend.assertions=1
+assert.exception=1
+emory_limit=-1
+extension=mbstring
+
+; xdebug-2.0
+xdebug.remote_enable=on
+xdebug.remote_handler=dbgp
+xdebug.remote_host=localhost
+xdebug.remote_port=9003
+
+; xdebug-3.0
+xdebug.mode=debug
+xdebug.client_host=localhost
+xdebug.client_port=9003
+xdebug.idekey="netbeans-xdebug"

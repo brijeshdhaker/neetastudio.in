@@ -203,7 +203,7 @@
 
                             <div class="col-md-6">
                                 <div class="contact_img">
-                                    <img src="/images/collobrate-001.avif" alt="">
+                                    <img src="/images/collaboration-005.jpg" alt="">
                                 </div>
                             </div>
 
@@ -249,12 +249,12 @@
 
                                         <div class="col-sm-6">
                                             <div class="form-group"> 
-                                                <label>What type of session are looking for ? *</label>
+                                                <label>What is your interest ? *</label>
                                                 <select id="first_name" name="name" type="text" class="form-control" required="">
-                                                    <option value="Maternity">Maternity</option>
-                                                    <option value="New Born">New Born</option>
-                                                    <option value="Baby">Kids</option>
-                                                    <option value="Family">Portraits</option>
+                                                    <option value="maternity">Maternity</option>
+                                                    <option value="newborn">New Born</option>
+                                                    <option value="kids">Kids</option>
+                                                    <option value="portraits">Portraits</option>
                                                 </select>
                                             </div>
                                         </div>

@@ -161,7 +161,7 @@ $app->post('/contactus', function (Request $request, Response $response, $connec
     $payload = json_encode($rdata);
     
     $logger = Logger::getLogger('ResourceController');
-    $rest_response = new RestResponse();
+    $restResponse = new RestResponse();
     try {
         /*
         // Get the session from the request
@@ -218,29 +218,29 @@ $app->post('/contactus', function (Request $request, Response $response, $connec
             
             $dataObj = json_decode($dataStr);
             $commonServices = $this->get('commonServices');
-            $commonServices->contactUs($dataObj,$rest_response);
+            $commonServices->contactUs($dataObj,$restResponse);
             
             $msg = Message::Success("Email Notification successfully send.");
-            $rest_response->addMessages($msg);
-            $rest_response->setData($dataObj);
-            $rest_response->setMessage("You have successfully registered.");
-            $rest_response->setStatus(TRUE);
+            $restResponse->addMessages($msg);
+            $restResponse->setData($dataObj);
+            $restResponse->setMessage("You have successfully registered.");
+            $restResponse->setStatus(TRUE);
         } else {
             //header('HTTP/1.0 404 Not Found');
             //$app->notFound();
-            $rest_response->setMessage("System error occurred while processing your request");
-            $rest_response->setStatus(FALSE);
+            $restResponse->setMessage("System error occurred while processing your request");
+            $restResponse->setStatus(FALSE);
         }
     } catch (Exception $ex) {
         //header('HTTP/1.0 500 Internal Server Error');
         $logger->error("System error occurred while processing your request " . $ex->getTraceAsString());
         $msg = Message::Error("System error occurred while processing your request." .$ex->getTraceAsString());
-        $rest_response->addMessages($msg);
-        $rest_response->setMessage("System error occurred while processing your request");
-        $rest_response->setStatus(FALSE);
+        $restResponse->addMessages($msg);
+        $restResponse->setMessage("System error occurred while processing your request");
+        $restResponse->setStatus(FALSE);
     }
     
-    $response->getBody()->write(json_encode($rest_response));
+    $response->getBody()->write(json_encode($restResponse));
     return $response
             ->withHeader('Content-Type', 'application/json')
             ->withStatus(200);
@@ -252,15 +252,15 @@ $app->post('/contactus', function (Request $request, Response $response, $connec
  * 
  * 
  */
+$container->set('subscribeServices', function () {
+    $settings = [];
+    return new SubscribeServices();
+});
 $subcribeArgs = array('param1' => "hello");
 $app->post('/subcribe', function (Request $request, Response $response, $subcribeArgs) {
     
-    $data = array('name' => 'Bob', 'age' => 40);
-    $rdata = array('data' => $data, 'message' => 'your request successfully processed.');
-    $payload = json_encode($rdata);
-    
     $logger = Logger::getLogger('ResourceController');
-    $rest_response = new RestResponse();
+    $restResponse = new RestResponse();
     try {
         
         $jsonObj = $request->getBody();
@@ -272,30 +272,85 @@ $app->post('/subcribe', function (Request $request, Response $response, $subcrib
         if (!is_null($dataStr) && isset($dataStr)) {
             
             $dataObj = json_decode($dataStr);
-            $commonServices = $this->get('commonServices');
-            $commonServices->contactUs($dataObj,$rest_response);
+            $subscribeServices = $this->get('subscribeServices');
+            $subscribeServices->forNewletter($dataObj,$restResponse);
             
             $msg = Message::Success("Email Notification successfully send.");
-            $rest_response->addMessages($msg);
-            $rest_response->setData($dataObj);
-            $rest_response->setMessage("You have successfully registered.");
-            $rest_response->setStatus(TRUE);
+            $restResponse->addMessages($msg);
+            $restResponse->setData($dataObj);
+            $restResponse->setMessage("You have successfully subcribed for our newsletters.");
+            $restResponse->setStatus(TRUE);
         } else {
             //header('HTTP/1.0 404 Not Found');
             //$app->notFound();
-            $rest_response->setMessage("System error occurred while processing your request");
-            $rest_response->setStatus(FALSE);
+            $restResponse->setMessage("System error occurred while processing your request");
+            $restResponse->setStatus(FALSE);
         }
     } catch (Exception $ex) {
         //header('HTTP/1.0 500 Internal Server Error');
         $logger->error("System error occurred while processing your request " . $ex->getTraceAsString());
         $msg = Message::Error("System error occurred while processing your request." .$ex->getTraceAsString());
-        $rest_response->addMessages($msg);
-        $rest_response->setMessage("System error occurred while processing your request");
-        $rest_response->setStatus(FALSE);
+        $restResponse->addMessages($msg);
+        $restResponse->setMessage("System error occurred while processing your request");
+        $restResponse->setStatus(FALSE);
     }
     
-    $response->getBody()->write(json_encode($rest_response));
+    $response->getBody()->write(json_encode($restResponse));
+    return $response
+            ->withHeader('Content-Type', 'application/json')
+            ->withStatus(200);
+});
+
+
+/**
+ *
+ * 
+ * 
+ */
+$container->set('collaborationServices', function () {
+    $settings = [];
+    return new SubscribeServices();
+});
+$subcribeArgs = array('param1' => "hello");
+$app->post('/collaboration', function (Request $request, Response $response, $subcribeArgs) {
+    
+    $logger = Logger::getLogger('ResourceController');
+    $restResponse = new RestResponse();
+    try {
+        
+        $jsonObj = $request->getBody();
+        $logger->info('body type -- '. gettype($jsonObj));
+        $logger->info('json-object -- '. $jsonObj);
+
+        $dataStr = "$jsonObj";
+        $logger->info('$dataStr -- '. $dataStr);
+        if (!is_null($dataStr) && isset($dataStr)) {
+            
+            $dataObj = json_decode($dataStr);
+            $collaborationServices = $this->get('collaborationServices');
+            $collaborationServices->forCollaboration($dataObj,$restResponse);
+            
+            $msg = Message::Success("Email Notification successfully send.");
+            $restResponse->addMessages($msg);
+            $restResponse->setData($dataObj);
+            $restResponse->setMessage("Your collobration request shared for review.");
+            $restResponse->setStatus(TRUE);
+        } else {
+            //header('HTTP/1.0 404 Not Found');
+            //$app->notFound();
+            $restResponse->setMessage("System error occurred while processing your request");
+            $restResponse->setStatus(FALSE);
+        }
+    } catch (Exception $ex) {
+        //header('HTTP/1.0 500 Internal Server Error');
+        $logger->error("System error occurred while processing your request " . $ex->getTraceAsString());
+        $msg = Message::Error("System error occurred while processing your request." .$ex->getTraceAsString());
+        $restResponse->addMessages($msg);
+        $restResponse->setMessage("System error occurred while processing your request");
+        $restResponse->setStatus(FALSE);
+    }
+    
+    $response->getBody()->write(json_encode($restResponse));
     return $response
             ->withHeader('Content-Type', 'application/json')
             ->withStatus(200);
