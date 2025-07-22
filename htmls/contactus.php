@@ -41,7 +41,6 @@
 
 
         <!-- Preloader -->
-
         <div id="loading" style="display: none;">
             <div id="loading-center">
                 <div id="loading-center-absolute">
@@ -67,7 +66,6 @@
             <?php include_once("nav.php") ?>
 
             <!--Home Sections-->
-
             <section id="hello" class="contact-banner bg-mega">
                 <div class="overlay"></div>
                 <div class="container">
@@ -125,7 +123,97 @@
                 <div class="ourmap"></div>
             </div><!-- End off Map section-->
 
-            <!--Contact Us Section-->
+            <!-- Collaborate With Us Section-->
+            <section id="contact" class="contact fix">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_contact p-top-100">
+                            <div class="row">
+                                <div class="main_models text-center">
+                                    <div class="col-md-12">
+                                            <div class="head_title text-left sm-text-center wow fadeInDown" style="visibility: hidden; animation-name: none;">
+                                                <h2>Collaborate with Us</h2>
+                                                <h5><em>Our way of working is highly collaborative. Our belief is that we can do more together. Get in touch with us at partners@neetastudio.in to see how we can join forces.</em></h5>
+                                                <div class="separator_left"></div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 sm-m-top-30">
+                                <form id="collaborateForm" name="collaborateForm" class="" action="/htmls/collaborate.php?_dc=fdfs&page=contact&sTgt=site">
+                                    <input id="action" name="action" type="hidden" value="collaborate">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group"> 
+                                                <label>Your Name *</label>
+                                                <input id="name" name="name" type="text" class="form-control" required="" data-validation-required-message="Please enter your name." value="Brijesh Dhaker">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>Your Email *</label>
+                                                <input id="email" name="email" type="email" class="form-control" required="" data-validation-required-message="Please enter your email address." value="brijeshdhaker@gmail.com">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-sm-6">
+                                            <div class="form-group"> 
+                                                <label>Your Phone *</label>
+                                                <input id="phone" name="phone" type="text" class="form-control" required="" data-validation-required-message="Please enter your email address." value="+919820937445">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-sm-6">
+                                            <div class="form-group"> 
+                                                <label>What type of services you provides ? *</label>
+                                                <select id="first_name" name="name" type="text" class="form-control" required="" data-validation-required-message="Please enter your email address.">
+                                                    <option value="photographer">Photographer</option>
+                                                    <option value="makeup-artist">Makeup Artist</option>
+                                                    <option value="beauty-products">Beauty Products</option>
+                                                    <option value="props-rental">Prop Rental</option>
+                                                    <option value="dress-rental">Dress Rental</option>
+                                                    <option value="studio-rental">Studio Rental</option>
+                                                    <option value="gears-rental">Gears Rental</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <label>Upload 5 images as a zip file of your best work *</label>
+                                                <input id="files" name="files" type="file" class="form-control" required="" data-validation-required-message="Please upload a file.">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12">
+                                            <div class="form-group"> 
+                                                <label>Your Message *</label>
+                                                <textarea id="message" name="message" class="form-control" rows="6" required="" data-validation-required-message="Please enter a message.">We want to collaborate for our services.</textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <a href="/htmls/collaborate.php?_dc=fdfs&page=contact&sTgt=site" class="btn btn-default">SEND MESSAGE <i class="fa fa-long-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </form>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="contact_img">
+                                    <img src="/images/collobrate-001.avif" alt="">
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div><!--End off row -->
+                </div><!--End off container -->
+            </section><!--End off Contact Section-->
+            
+            <!--Newsletter Us Section-->
             <section id="contact" class="contact fix">
                 <div class="container">
                     <div class="row">
@@ -143,6 +231,7 @@
                             </div>
                             <div class="col-md-6 sm-m-top-30">
                                 <form class="" action="/subcribe.php">
+                                    <input id="action" name="action" type="hidden" value="newsletter">
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group"> 
@@ -195,7 +284,7 @@
 
                             <div class="col-md-6">
                                 <div class="contact_img">
-                                    <img src="/images/porfolio-2.jpg" alt="">
+                                    <img src="/images/newsletter-004.avif" alt="">
                                 </div>
                             </div>
 
@@ -223,42 +312,63 @@
                             </div>
                             <div class="col-md-6 sm-m-top-30">
                                 <form class="" action="/subcribe.php">
+                                    <input id="action" name="action" type="hidden" value="connect-us">
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group"> 
                                                 <label>Your Name *</label>
-                                                <input id="first_name" name="name" type="text" class="form-control" required="">
+                                                <input id="name" name="name" type="text" class="form-control" required="" data-validation-required-message="Please enter your name." value="Brijesh Dhaker">
                                             </div>
                                         </div>
 
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>Your Email *</label>
-                                                <input id="email" name="email" type="text" class="form-control">
+                                                <input id="email" name="email" type="email" class="form-control" required="" data-validation-required-message="Please enter your email address." value="brijeshdhaker@gmail.com">
                                             </div>
                                         </div>
-
+                                        
                                         <div class="col-sm-6">
                                             <div class="form-group"> 
-                                                <label>What type of session are looking for ? *</label>
-                                                <input id="first_name" name="name" type="text" class="form-control" required="">
+                                                <label>Your Phone *</label>
+                                                <input id="phone" name="phone" type="text" class="form-control" required="" data-validation-required-message="Please enter your email address." value="+919820937445">
                                             </div>
                                         </div>
-
+                                        
                                         <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label>How did you hear about us ?</label>
-                                                <input id="email" name="email" type="text" class="form-control">
+                                            <div class="form-group"> 
+                                                <label>Photo Session Type *</label>
+                                                <select id="session_type" name="session_type" type="text" class="form-control" required="" data-validation-required-message="Please select photo session type" value="portraits">
+                                                    <option value="maternity">Maternity</option>
+                                                    <option value="newborn">New Born</option>
+                                                    <option value="kids">Kids</option>
+                                                    <option value="portraits">Portraits</option>
+                                                </select>
                                             </div>
                                         </div>
 
                                         <div class="col-sm-12">
                                             <div class="form-group"> 
                                                 <label>Your Message *</label>
-                                                <textarea class="form-control" rows="6"></textarea>
+                                                <textarea id="message" name="message" class="form-control" rows="6" required="" data-validation-required-message="Please enter a message."> Hello Test </textarea>
                                             </div>
+                                            <!--
                                             <div class="form-group">
-                                                <a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site" class="btn btn-default">SEND MESSAGE <i class="fa fa-long-arrow-right"></i></a>
+                                                <a href="https://technext.github.io/pouseidon/index.html" class="btn btn-default">SEND MESSAGE <i class="fa fa-long-arrow-right"></i></a>
+                                                <button type="submit" class="btn btn-send">Send Message</button>
+                                            </div>
+                                            -->
+                                        </div>
+                                        
+                                        <div class="clearfix"></div>
+                                        
+                                        <div class="col-sm-12">
+                                            <div id="success"></div>
+                                        </div>
+                                        
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <a href="#" class="btn btn-default">SEND MESSAGE <i class="fa fa-long-arrow-right"></i></a>
                                             </div>
                                         </div>
 
@@ -269,7 +379,7 @@
 
                             <div class="col-md-6">
                                 <div class="contact_img">
-                                    <img src="/images/contact-img.png" alt="">
+                                    <img src="/images/lettalk-001.jpg" alt="">
                                 </div>
                             </div>
 
@@ -281,17 +391,7 @@
 
 
             <!--Company section-->
-            <section id="company" class="company bg-light">
-                <div class="container">
-                    <div class="row">
-                        <div class="main_company roomy-100 text-center">
-                            <h3 class="text-uppercase">neetastudio.in.</h3>
-                            <p>A2-803 - Acolade Building - Hadapsar Bypass - Pune - MH, India</p>
-                            <p>(+91). 9820937445/8  -  info@neetastudio.in</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <?php include_once("company.php") ?>
 
 
             <!-- scroll up-->
@@ -341,6 +441,10 @@
         <script src="/scripts/plugins.js"></script>
         <script src="/scripts/main.js"></script>
 
+        <!-- Contact page-->
+        <script type="text/javascript" src="/scripts/jqBootstrapValidation.js"></script>
+        <script type="text/javascript" src="/scripts/contact-us.js"></script>
+        
         </div>
     </body>
 </html>

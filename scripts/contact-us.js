@@ -23,8 +23,9 @@ $(function() {
             };
             
             // Check for white space in name for Success/Fail message
-            if (firstName.indexOf(' ') >= 0) {
+            if (name.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
+                _data['firstName'] = firstName;
             }
             if (window.console) {
                 console.log(_data);
@@ -64,7 +65,7 @@ $(function() {
         },
         filter: function() {
             return $(this).is(":visible");
-        },
+        }
     });
 
     $("a[data-toggle=\"tab\"]").click(function(e) {

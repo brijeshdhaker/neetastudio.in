@@ -42,7 +42,8 @@ require('../classes/email/NotificationEngine.php');
 //
 require('../services/BaseService.php');
 require('../services/CommonServices.php');
-require('../services/RegistrationService.php');
+require('../services/ContactusServices.php');
+require('../services/SubscribeServices.php');
 
 //
 LogHelper::init();
@@ -142,16 +143,15 @@ $app->get('/hello/{name}', function (Request $request, Response $response, $args
 });
 
 
-/*
+/**
  *
+ * 
+ * 
  */
-//$commonServices = new CommonServices();
-
 $container->set('commonServices', function () {
     $settings = [];
     return new CommonServices();
 });
- 
 
 $connectArgs = array('param1' => "hello");
 $app->post('/contactus', function (Request $request, Response $response, $connectArgs) {
@@ -246,31 +246,61 @@ $app->post('/contactus', function (Request $request, Response $response, $connec
             ->withStatus(200);
 });
 
-/*
-$app->post('/common/contact', function() use ($app, $commonServices) {
-    $logger = Logger::getLogger('CommonServiceResource');
-    $response = new RestResponse();
+
+/**
+ *
+ * 
+ * 
+ */
+$subcribeArgs = array('param1' => "hello");
+$app->post('/subcribe', function (Request $request, Response $response, $subcribeArgs) {
+    
+    $data = array('name' => 'Bob', 'age' => 40);
+    $rdata = array('data' => $data, 'message' => 'your request successfully processed.');
+    $payload = json_encode($rdata);
+    
+    $logger = Logger::getLogger('ResourceController');
+    $rest_response = new RestResponse();
     try {
-        $jsonStr = $app->request()->getBody();
-        if (!is_null($jsonStr) && isset($jsonStr)) {
-            $request = json_decode($jsonStr);
-            $commonServices->contactUs($request,$response);
+        
+        $jsonObj = $request->getBody();
+        $logger->info('body type -- '. gettype($jsonObj));
+        $logger->info('json-object -- '. $jsonObj);
+
+        $dataStr = "$jsonObj";
+        $logger->info('$dataStr -- '. $dataStr);
+        if (!is_null($dataStr) && isset($dataStr)) {
+            
+            $dataObj = json_decode($dataStr);
+            $commonServices = $this->get('commonServices');
+            $commonServices->contactUs($dataObj,$rest_response);
+            
+            $msg = Message::Success("Email Notification successfully send.");
+            $rest_response->addMessages($msg);
+            $rest_response->setData($dataObj);
+            $rest_response->setMessage("You have successfully registered.");
+            $rest_response->setStatus(TRUE);
         } else {
             //header('HTTP/1.0 404 Not Found');
             //$app->notFound();
-            $response->setMessage("System error occurred while processing your request");
-            $response->setStatus(FALSE);
+            $rest_response->setMessage("System error occurred while processing your request");
+            $rest_response->setStatus(FALSE);
         }
-    } catch (Exception $exc) {
+    } catch (Exception $ex) {
         //header('HTTP/1.0 500 Internal Server Error');
-        $logger->error("System error occurred while processing your request " . $exc->getTraceAsString());
-        $msg = Message::Error("System error occurred while processing your request." .$exc->getTraceAsString());
-        $response->addMessages($msg);
-        $response->setMessage("System error occurred while processing your request");
-        $response->setStatus(FALSE);
+        $logger->error("System error occurred while processing your request " . $ex->getTraceAsString());
+        $msg = Message::Error("System error occurred while processing your request." .$ex->getTraceAsString());
+        $rest_response->addMessages($msg);
+        $rest_response->setMessage("System error occurred while processing your request");
+        $rest_response->setStatus(FALSE);
     }
-    echo json_encode($response);
+    
+    $response->getBody()->write(json_encode($rest_response));
+    return $response
+            ->withHeader('Content-Type', 'application/json')
+            ->withStatus(200);
 });
-*/
+
+
 // Run app
 $app->run();
