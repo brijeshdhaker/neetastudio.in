@@ -133,9 +133,10 @@ xdebug.remote_enable=on
 xdebug.remote_handler=dbgp
 xdebug.remote_host=localhost
 xdebug.remote_port=9003
+xdebug.idekey="netbeans-xdebug"
 
 ; xdebug-3.0
 xdebug.mode=debug
 xdebug.client_host=localhost
 xdebug.client_port=9003
-xdebug.idekey="netbeans-xdebug"
+xdebug.idekey=netbeans-xdebug
