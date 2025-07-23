@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <!-- saved from url=(0051)/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site -->
 <html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" lang="en" style=""><!--<![endif]-->
     <head>
@@ -23,18 +22,15 @@
         <link rel="stylesheet" href="/css/magnific-popup.css">
         <link rel="stylesheet" href="/css/bootsnav.css">
 
-
-        <!--For Plugins external css-->
-        <!--<link rel="stylesheet" href="assets/css/plugins.css" />-->
-
         <!--Theme custom css -->
         <link rel="stylesheet" href="/css/style.css">
-        <!--<link rel="stylesheet" href="assets/css/colors/maron.css">-->
 
         <!--Theme Responsive css-->
         <link rel="stylesheet" href="/css/responsive.css">
-
         <script src="/scripts/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <!--google-map css-->
+        <link rel="stylesheet" type="text/css" href="/css/google-map.css" />
+        <script src="/scripts/google-map.js" type="module"></script>
     </head>
 
     <body data-spy="scroll" data-target=".navbar-collapse"><div class="wrapper">
@@ -57,10 +53,8 @@
                 </div>
             </div>
         </div>
-
         <!--End off Preloader -->
-
-
+        
         <div class="culmn">
             <!--Home page style-->
             <?php include_once("nav.php") ?>
@@ -87,6 +81,21 @@
             <!--Call To Action Section-->
             <section id="action" class="action roomy-100">
                 <div class="container">
+                    <div class="row">
+                        <div class="main_contact p-top-100">
+                            <div class="row">
+                                <div class="main_models text-center">
+                                    <div class="col-md-12">
+                                            <div class="head_title text-left sm-text-center wow fadeInDown" style="visibility: hidden; animation-name: none;">
+                                                <h2></h2>
+                                                <h5><em>Portraits and Commercial Photography Studio in Pune</em></h5>
+                                                <div class="separator_left"></div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="main_action text-center">
                             <div class="col-md-4">
@@ -119,9 +128,30 @@
             </section>
 
             <!-- map section-->
-            <div id="map" class="map">
-                <div class="ourmap"></div>
-            </div><!-- End off Map section-->
+            <section id="section-map" class="contact fix">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_contact p-top-100">
+                            <div class="row">
+                                <div class="main_models text-center">
+                                    <div class="col-md-12">
+                                            <div class="head_title text-left sm-text-center wow fadeInDown" style="visibility: hidden; animation-name: none;">
+                                                <h2>Studio Google Location</h2>
+                                                <h5><em>Our studio is located in Kharadi, Pune, 411014</em></h5>
+                                                <div class="separator_left"></div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 sm-m-top-30">
+                                <div id="map" class="map"></div>
+                            </div>
+                        </div>
+                    </div><!--End off row -->
+                </div><!--End off container -->
+            </section>
+            
+            <!-- End off Map section-->
 
             <!-- Collaborate With Us Section-->
             <section id="collaborate" class="contact fix">
@@ -295,7 +325,7 @@
 
                             <div class="col-md-6">
                                 <div class="contact_img">
-                                    <img src="/images/newsletter-004.avif" alt="">
+                                    <img src="/images/contact-us-005.jpg" alt="">
                                 </div>
                             </div>
 
@@ -426,36 +456,16 @@
         <script src="/scripts/slick.min.js"></script>
         <script src="/scripts/jquery.collapse.js"></script>
         <script src="/scripts/bootsnav.js"></script>
-
-
-        <!-- paradise slider js -->
-        <script src="/scripts/js"></script>
-        <script src="/scripts/gmaps.min.js"></script>
-        <script>
-            var map = new GMaps({
-                el: '.ourmap',
-                lat: -12.043333,
-                lng: -77.028333,
-                scrollwheel: false,
-                zoom: 15,
-                zoomControl: true,
-                panControl: false,
-                
-                streetViewControl: false,
-                mapTypeControl: false,
-                overviewMapControl: false,
-                clickable: false,
-                styles: [{'stylers': [{'hue': 'gray'}, {saturation: -100}, {gamma: 0.80}]}]
-            });
-        </script>
-
         <script src="/scripts/plugins.js"></script>
         <script src="/scripts/main.js"></script>
 
-        <!-- Contact page-->
+        <!-- Contact page AIzaSyBoT0dA7eeng8HA1wWfdlbN7_qWYTDlwxI -->
         <script type="text/javascript" src="/scripts/jqBootstrapValidation.js"></script>
         <script type="text/javascript" src="/scripts/contact-us.js"></script>
         
         </div>
+        <!-- prettier-ignore -->
+        <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+            ({key: "AIzaSyBoT0dA7eeng8HA1wWfdlbN7_qWYTDlwxI", v: "weekly"});</script>
     </body>
 </html>
