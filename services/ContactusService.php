@@ -13,18 +13,33 @@ class ContactusService extends BaseService {
     public function contactUs($request, &$response){
         //
         $logger = Logger::getLogger('ContactusServices');
-        //$dbHelper = self::getDAOHelper();
         $logger->info('-- ContactusServices -- ');
         
         $firstName = OnclickUtils::getProperty('firstName', $request);
         $name = OnclickUtils::getProperty('name', $request);
         $email = OnclickUtils::getProperty('email', $request);
         $phone = OnclickUtils::getProperty('phone', $request);
+        $session = OnclickUtils::getProperty('session_type', $request);
         $message = OnclickUtils::getProperty('message', $request);
         $rTyp = OnclickUtils::getProperty('rTyp', $request);
         $uTyp = OnclickUtils::getProperty('uTyp', $request);
-        $tpl = file_get_contents('../email-tpl/T_USER_CONTACTUS.html');
         
+        $dbHelper = self::getDAOHelper();
+        if(!OnclickUtils::isEmpty($request)){
+            $mapping = array(
+                "ID" => "id",
+                "NAME" => "name",
+                "EMAIL" => "email",
+                "PHONE" => "phone",
+                "INTERSET_TYPE" => "interest",
+                "MESSAGE" => "message",
+                "ADD_TS" => "addTs"
+            );
+            $procedure = "call proc_add_customer_enquiry('".$name."', '".$email."', '".$phone."', '".$session."', '".$message. "', @code, @message);";
+            $results = $dbHelper->processQuery($procedure, $mapping);
+        }
+        
+        $tpl = file_get_contents('../email-tpl/T_USER_CONTACTUS.html');
         if (!OnclickUtils::isEmpty($tpl)) {
 
             $tpl = str_replace("{{fname}}", $firstName, $tpl);

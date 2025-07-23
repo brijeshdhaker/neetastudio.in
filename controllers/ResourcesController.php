@@ -365,7 +365,7 @@ $container->set('bookingService', function () {
     return new BookingService();
 });
 $bookingArgs = array('param' => "bookingService");
-$app->post('/photo-session', function (Request $request, Response $response, $bookingArgs) {
+$app->post('/book-session', function (Request $request, Response $response, $bookingArgs) {
     
     $logger = Logger::getLogger('ResourcesController');
     $param = $bookingArgs['param'] ?? "bookingService";

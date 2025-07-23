@@ -47,23 +47,20 @@ class PDOHelper {
         return $results;
     }
     
-    function processQuery($procedure, $mapping, $mappertype) {
-        $results = null;
+    public function processQuery($procedure, $mapping) {
+        
         $resultset = $this->execute($procedure, PDO::FETCH_ASSOC, TRUE);
         $inouts = $this->execute("SELECT @code as code, @message as message;", PDO::FETCH_ASSOC, FALSE);
-        if (!is_null($resultset) && !is_null($inouts)) {
-            if($inouts['code'] !=0 ){
-                throw new Exception($inouts['message'],$inouts['code']);
-            }
-            if (count($resultset) == 1 && $mappertype == 1) {
-                $results = $this->recordMapper($mapping, $resultset[0]);
-            } else {
-                $results = $this->resultsetMapper($mapping, $resultset);
-            }
+        
+        if (!is_null($inouts) && $inouts['code'] != 0) {
+            throw new Exception($inouts['message'],$inouts['code']);
         }
-        return $results;
+        
+        return $this->resultMapper($resultset, $mapping);
+        
     }
     
+    /*
     public function processResultSet($procedure, $mapping, $mappertype) {
         $response = null;
         $resultset = $this->execute($procedure, PDO::FETCH_ASSOC, TRUE);
@@ -90,6 +87,8 @@ class PDOHelper {
         }
         return $response;
     }
+
+    */
     
     public function processMultiResults($procedure, $rsmapper, $mappertypes, $mappings) {
         $results = array();
@@ -115,32 +114,35 @@ class PDOHelper {
         return $results;
     }
 
-    private function resultsetMapper($mapping, $data) {
+    /**
+     * 
+     * @param type $resultset
+     * @param type $mapping
+     * @return type
+     */
+    private function resultMapper($resultset, $mapping){
         $output = array();
-        if ((null != $mapping) && (null != $data)) {
-            if(is_array($data)){
-                $datalength = count($data);
-                for ($x = 0; $x < $datalength; $x++) {
-                    $record = $data[$x];
-                    if($record) {
-                        array_push($output, $this->recordMapper($mapping, $record));
-                    }
+        if ((null != $mapping) && (null != $resultset)) {
+            if(count($resultset) == 1){
+                $output = $this->recordMapper($resultset[0], $mapping);
+            } else{
+                for ($x = 0; $x < count($resultset); $x++) {
+                    $record = $resultset[$x];
+                    array_push($output, $this->recordMapper($record, $mapping));
                 }
-            }else{
-                $output = $this->recordMapper($mapping, $data);
-            }
+            } 
         }
         return $output;
     }
-
-    private function recordMapper($mapping, $data) {
+    
+    private function recordMapper($record, $mapping) {
         $output = array();
-        if ((null != $mapping) && (null != $data)) {
+        if (null != $record) {
             foreach ($mapping as $x => $x_value) {
                 try {
-                    $val = $data[$x];
+                    $val = $record[$x];
                     if(!is_null($val)) {
-                       $output[$x_value] = $data[$x];
+                       $output[$x_value] = $record[$x];
                     }else{
                        $output[$x_value] = '';
                     }
@@ -152,7 +154,7 @@ class PDOHelper {
         return $output;
     }
     
-    function processDataList($table, $datafields, $data) {
+    public function processDataList($table, $datafields, $data) {
         $insert_values = array();
         $status = TRUE;
         try {

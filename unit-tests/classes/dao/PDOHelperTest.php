@@ -45,8 +45,7 @@ final class PDOHelperTest extends TestCase {
         //$this->markTestIncomplete('This test has not been implemented yet.');
     }
 
-    public static function additionProvider(): array
-    {
+    public static function additionProvider(): array {
         return [
             [null, PDO::FETCH_BOTH, TRUE, null],
             ['', PDO::FETCH_BOTH, TRUE, null],
@@ -58,11 +57,47 @@ final class PDOHelperTest extends TestCase {
      * @todo   Implement testExecute().
      */
     #[DataProvider('additionProvider')]
-    public function testExecute($sql, $fetchmode, $isAll, $expected): void 
-    {
+    public function testExecute($sql, $fetchmode, $isAll, $expected): void {
+        
         $this->assertSame($expected, $this->pdoHelper->execute($sql, $fetchmode, $isAll));
+        
     }
 
+    /**
+     * @covers PDOHelper::execute
+     * @todo   Implement testExecute().
+     */
+    public function testProcessQuery(): void {
+        
+        $reqObj = array(
+            "firstName" => "Brijesh K.",
+            "name" => "Brijesh Dhaker",
+            "email" => "brijeshdhaker@gmail.com",
+            "phone" => "+919820937445",
+            "interest" => "maternity",
+            "message" => "I am looking for maternity news letters",
+            "rTyp" => "src",
+            "uTyp" => "site",
+        );
+        
+        $mapping = array(
+            "ID" => "id",
+            "NAME" => "name",
+            "EMAIL" => "email",
+            "PHONE" => "phone",
+            "INTERSET_TYPE" => "interest",
+            "MESSAGE" => "message",
+            "ADD_TS" => "addTs"
+        );
+        
+        $procedure = "call proc_add_customer_subscription('".$reqObj['name']."', '".$reqObj['email']."', '".$reqObj['phone']."', '".$reqObj['interest']."', '".$reqObj['message']. "', @code, @message);";
+        
+        $results = $this->pdoHelper->processQuery($procedure, $mapping);
+        
+        $this->assertNotNull($results['id']);
+        $this->assertSame("Brijesh Dhaker", $results['name']);
+        
+        
+    }
     
-
 }

@@ -144,7 +144,7 @@ class UserInfo {
             "ROLENAME" => "roleName"
         );
         $procedure = "call P_GET_USER_ENTITLEMENTS(".$this->userid.", @code, @message);";
-        $entitlements = $dbHelper->processQuery($procedure, $mapping, 10);
+        $entitlements = $dbHelper->processQuery($procedure, $mapping);
         if (!is_null($entitlements)) {
             $datalength = count($entitlements);
             for ($x = 0; $x < $datalength; $x++) {

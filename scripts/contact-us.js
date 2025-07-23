@@ -51,9 +51,19 @@ $(function() {
                   interest_type = $("select#interest_type").val();
                   _data['interest_type'] = interest_type;
                   break;                  
-                case 'photosession':
-                  submit_url = "/controllers/photo-session?_dc=6t48fc5&_src=site";
-                  form_name  = "#photoSessionForm";
+                case 'booksession':
+                    
+                    submit_url = "/controllers/book-session?_dc=6t48fc5&_src=site";
+                    form_name  = "#sessionBookingForm";
+                    var session_type = $("select#session_type").val();
+                    var package_type = $("select#package_type").val();
+                    var session_date = $("input#session_date").val();
+                    var session_time = $("input#session_time").val();
+                    _data['session_type'] = session_type;
+                    _data['package_type'] = package_type;
+                    _data['session_date'] = session_date;
+                    _data['session_time'] = session_time;
+                    
                   break;
                 // ... more case statements
                 default:

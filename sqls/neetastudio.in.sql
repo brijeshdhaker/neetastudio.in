@@ -71,8 +71,11 @@ BEGIN
     INSERT INTO `NEETASTUDIO`.`PARTNER_COLLABORATION` (`NAME`, `EMAIL`, `PHONE`, `SERVICE`, `MESSAGE`, `ADD_TS`) VALUES
     (input_name, input_email, input_phone, input_stype, input_message, now());
 
-    SET @code = SQRT(2);
-    SET out_code = (SELECT last_insert_id());
+    SET @code = (SELECT last_insert_id());
+
+    select * from `NEETASTUDIO`.`PARTNER_COLLABORATION` where `ID` = @code;
+
+    SET out_code = 0;
     SET out_message= 'Recodred successfully added.';
 
 END$$
@@ -91,7 +94,7 @@ call proc_add_partner_collaboration(
     @message
 );
 
-SELECT @code,@message ;
+SELECT @code, @message ;
 
 ----
 ---- CUSTOMER_ENQUIRIES
@@ -133,8 +136,11 @@ BEGIN
     INSERT INTO `NEETASTUDIO`.`CUSTOMER_ENQUIRIES` (`NAME`, `EMAIL`, `PHONE`, `SESSION_TYPE`, `MESSAGE`, `ADD_TS`) VALUES
     (input_name, input_email, input_phone, input_stype, input_message, now());
 
-    SET @code = SQRT(2);
-    SET out_code = (SELECT last_insert_id());
+    SET @code = (SELECT last_insert_id());
+
+    select * from `NEETASTUDIO`.`CUSTOMER_ENQUIRIES` where `ID` = @code;
+
+    SET out_code = 0;
     SET out_message= 'Recodred successfully added.';
 
 END$$
@@ -153,7 +159,7 @@ call proc_add_customer_enquiry(
     @message
 );
 
-SELECT @code,@message ;
+SELECT @code, @message ;
 
 ----
 ---- CUSTOMER_SUBSCRIPTIONS
@@ -195,8 +201,11 @@ BEGIN
     INSERT INTO `NEETASTUDIO`.`CUSTOMER_SUBSCRIPTIONS` (`NAME`, `EMAIL`, `PHONE`, `INTERSET_TYPE`, `MESSAGE`, `ADD_TS`) VALUES
     (input_name, input_email, input_phone, input_interest, input_message, now());
 
-    SET @code = SQRT(2);
-    SET out_code = (SELECT last_insert_id());
+    SET @code = (SELECT last_insert_id());
+
+    select * from `NEETASTUDIO`.`CUSTOMER_SUBSCRIPTIONS` where `ID` = @code;
+
+    SET out_code = 0;
     SET out_message= 'Recodred successfully added.';
 
 END$$
@@ -215,4 +224,101 @@ call proc_add_customer_subscription(
     @message
 );
 
-SELECT @code,@message ;
+SELECT @code, @message ;
+
+----
+---- CUSTOMER_ENQUIRIES
+----
+
+DROP TABLE `NEETASTUDIO`.`CUSTOMER_BOOKINGS`;
+
+CREATE TABLE `NEETASTUDIO`.`CUSTOMER_BOOKINGS`(
+    `ID` MEDIUMINT NOT NULL AUTO_INCREMENT,
+    `NAME` VARCHAR(255) NOT NULL,
+    `EMAIL` VARCHAR(64) NOT NULL,
+    `PHONE` VARCHAR(16) NOT NULL,
+    `SESSION_TYPE` VARCHAR(16) NOT NULL,
+    `PACKAGE_TYPE` VARCHAR(16) NOT NULL,
+    `SESSION_DATE` VARCHAR(32) NOT NULL,
+    `SESSION_TIME` VARCHAR(32) NOT NULL,
+    `MESSAGE` VARCHAR(512),
+    `ADD_TS` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (`ID`)
+);
+
+INSERT INTO `NEETASTUDIO`.`CUSTOMER_BOOKINGS` (`NAME`, `EMAIL`, `PHONE`, `SESSION_TYPE`, `PACKAGE_TYPE`,`SESSION_DATE`, `SESSION_TIME`, `MESSAGE`, `ADD_TS`) VALUES
+('Deepika D.', 'deepikadhaker@gmail.com', '+91 9820937445', 'maternity', 'basic', '2025-07-23', '2:00 PM - 5:00 PM', 'I am looking for maternity photoshoot', now());
+
+select * from `NEETASTUDIO`.`CUSTOMER_BOOKINGS`;
+
+----
+
+DELIMITER $$
+
+DROP PROCEDURE IF EXISTS proc_add_customer_booking$$
+CREATE PROCEDURE proc_add_customer_booking(
+    input_name VARCHAR(256), 
+    input_email VARCHAR(64), 
+    input_phone VARCHAR(16),
+    input_stype VARCHAR(16),
+    input_ptype VARCHAR(16),
+    input_sdate VARCHAR(32),
+    input_stime VARCHAR(32),
+    input_message VARCHAR(512),   
+    OUT out_code INT,
+    OUT out_message VARCHAR(256)
+)
+BEGIN
+
+    ---
+    INSERT INTO `NEETASTUDIO`.`CUSTOMER_BOOKINGS` (
+        `NAME`, 
+        `EMAIL`, 
+        `PHONE`, 
+        `SESSION_TYPE`, 
+        `PACKAGE_TYPE`,
+        `SESSION_DATE`, 
+        `SESSION_TIME`, 
+        `MESSAGE`, 
+        `ADD_TS`
+    ) VALUES (
+        input_name, 
+        input_email, 
+        input_phone, 
+        input_stype, 
+        input_ptype, 
+        input_sdate, 
+        input_stime, 
+        input_message, 
+        now()
+    );
+
+
+    SET @code = (SELECT last_insert_id());
+
+    select * from `NEETASTUDIO`.`CUSTOMER_BOOKINGS` where `ID` = @code;
+
+    SET out_code = 0;
+    SET out_message= 'Your photo session successfully booking.';
+
+END$$
+
+DELIMITER ;
+
+SET @code = 0;
+SET @message = "";
+
+call proc_add_customer_booking(
+    'Tejas D.', 
+    'tejasdhaker@gmail.com', 
+    '+91 9820937445', 
+    'maternity',
+    'basic', 
+    '2025-07-23', 
+    '2:00 PM - 5:00 PM', 
+    'I am looking for maternity photoshoot', 
+    @code, 
+    @message
+);
+
+SELECT @code, @message ;

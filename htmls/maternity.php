@@ -305,7 +305,7 @@
                                 <h2>Maternity Pictures by Neeta Studios</h2>
                                 <p>This is the day to celebrate how strong your body is and all the hard work it has done over the last 9 months. This time deserves to be documented.</p>
 
-                                <a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site#contact" class="btn btn-default m-top-40">Contact Us <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="/htmls/book-session.php?_dc=fdfs&page=contact&sTgt=site#contact" class="btn btn-default m-top-40">Contact Us <i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
