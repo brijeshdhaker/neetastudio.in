@@ -4,7 +4,7 @@
  *
  * @author brijeshdhaker
  */
-class CommonServices extends BaseService {
+class CommonService extends BaseService {
     /**
      * 
      * @param type $request

@@ -222,7 +222,7 @@
                                 <div class="main_models text-center">
                                     <div class="col-md-12">
                                             <div class="head_title text-left sm-text-center wow fadeInDown" style="visibility: hidden; animation-name: none;">
-                                                <h2>Join the Exclusives list</h2>
+                                                <h2>Join the Exclusives NewsLetter</h2>
                                                 <h5><em>You will be the first to know about any limited edition sessions & exclusive offers and promotions.</em></h5>
                                                 <div class="separator_left"></div>
                                             </div>
@@ -230,7 +230,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 sm-m-top-30">
-                                <form class="" action="/subcribe.php">
+                                <form id="subcribeForm" name="subcribeForm" class=""  action="/controllers/subcribe-services?_dc=6t47fc5&_src=site">
                                     <input id="action" name="action" type="hidden" value="newsletter">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -311,7 +311,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 sm-m-top-30">
-                                <form class="" action="/subcribe.php">
+                                <form id="contactForm" name="contactForm" class="" action="/controllers/contactus?_dc=6t45fc5&_src=site">
                                     <input id="action" name="action" type="hidden" value="connect-us">
                                     <div class="row">
                                         <div class="col-sm-6">

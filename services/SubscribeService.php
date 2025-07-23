@@ -4,7 +4,7 @@
  *
  * @author brijeshdhaker
  */
-class SubscribeServices extends BaseService {
+class SubscribeService extends BaseService {
     /**
      * 
      * @param type $request

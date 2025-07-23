@@ -1,6 +1,6 @@
 <?php
 
-#set_include_path ($_SERVER["DOCUMENT_ROOT"].'/includes');
+
 use DI\Container;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
@@ -8,54 +8,10 @@ use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface as RequestHandler;
 use Slim\Factory\AppFactory;
 
-//
-require __DIR__ . '/../vendor/autoload.php';
-
 #
-require('../classes/CONSTANTS.php');
-require('../classes/OnclickEnv.php');
-require('../classes/userinfo.php');
-require('../classes/onclickresponse.php');
-#
-require('../classes/dao/DBHelper.php');
-require('../classes/dao/DataSourceInfo.php');
-require('../classes/dao/PDOHelper.php');
-require('../classes/dao/MappingHelper.php');
-#
-require('../classes/utils/CacheHelper.php');
-require('../classes/utils/DocumentHelper.php');
-require('../classes/utils/LogHelper.php');
-require('../classes/utils/OnclickUtils.php');
-require('../classes/utils/PagingHelper.php');
-require('../classes/utils/PasswordHelper.php');
-require('../classes/utils/ServiceAccessFilter.php');
-#
-require('../classes/models/Message.php');
-require('../classes/models/OnclickUser.php');
-require('../classes/models/RestResponse.php');
-#
-require('../classes/email/MailHelper.php');
-require('../classes/email/Notification.php');
-require('../classes/email/NotificationConfig.php');
-require('../classes/email/NotificationEngine.php');
+require './BaseResource.php';
 
-//
-require('../services/BaseService.php');
-require('../services/CommonServices.php');
-require('../services/ContactusServices.php');
-require('../services/SubscribeServices.php');
 
-//
-LogHelper::init();
-
-//$logger = Logger::getLogger('default');
-//Log message
-//$logger->info("Message to be logged");
-//$logger->info('Testing');
-
-#CacheHelper::init();
-#$cache = phpFastCache();
-#phpFastCache::setup("storage","auto");
 
 class JsonBodyParserMiddleware implements MiddlewareInterface {
     
@@ -148,7 +104,7 @@ $app->get('/hello/{name}', function (Request $request, Response $response, $args
  * 
  * 
  */
-$container->set('commonServices', function () {
+$container->set('contactusServices', function () {
     $settings = [];
     return new CommonServices();
 });
@@ -156,11 +112,8 @@ $container->set('commonServices', function () {
 $connectArgs = array('param1' => "hello");
 $app->post('/contactus', function (Request $request, Response $response, $connectArgs) {
     
-    $data = array('name' => 'Bob', 'age' => 40);
-    $rdata = array('data' => $data, 'message' => 'your request successfully processed.');
-    $payload = json_encode($rdata);
-    
     $logger = Logger::getLogger('ResourceController');
+    $param = $connectArgs['param'] ?? "subscribeServices";
     $restResponse = new RestResponse();
     try {
         /*
@@ -256,10 +209,11 @@ $container->set('subscribeServices', function () {
     $settings = [];
     return new SubscribeServices();
 });
-$subcribeArgs = array('param1' => "hello");
-$app->post('/subcribe', function (Request $request, Response $response, $subcribeArgs) {
+$subcribeArgs = array('param' => "subscribeServices");
+$app->post('/subcribe-services', function (Request $request, Response $response, $subcribeArgs) {
     
     $logger = Logger::getLogger('ResourceController');
+    $param = $subcribeArgs['param'] ?? "subscribeServices";
     $restResponse = new RestResponse();
     try {
         
@@ -311,10 +265,11 @@ $container->set('collaborationServices', function () {
     $settings = [];
     return new SubscribeServices();
 });
-$subcribeArgs = array('param1' => "hello");
-$app->post('/collaboration', function (Request $request, Response $response, $subcribeArgs) {
+$collaborationArgs = array('param' => "collaborationServices");
+$app->post('/collaboration', function (Request $request, Response $response, $collaborationArgs) {
     
     $logger = Logger::getLogger('ResourceController');
+    $param = $collaborationArgs['param'] ?? "bookingServices";
     $restResponse = new RestResponse();
     try {
         
@@ -357,5 +312,67 @@ $app->post('/collaboration', function (Request $request, Response $response, $su
 });
 
 
-// Run app
+/**
+ *
+ * 
+ * 
+ */
+$container->set('bookingServices', function () {
+    $settings = [];
+    return new SubscribeServices();
+});
+$bookingArgs = array('param' => "bookingServices");
+$app->post('/photo-session', function (Request $request, Response $response, $bookingArgs) {
+    
+    $logger = Logger::getLogger('ResourceController');
+    $param = $bookingArgs['param'] ?? "bookingServices";
+    
+    $restResponse = new RestResponse();
+    try {
+        
+        $jsonObj = $request->getBody();
+        $logger->info('body type -- '. gettype($jsonObj));
+        $logger->info('json-object -- '. $jsonObj);
+
+        $dataStr = "$jsonObj";
+        $logger->info('$dataStr -- '. $dataStr);
+        if (!is_null($dataStr) && isset($dataStr)) {
+            
+            $dataObj = json_decode($dataStr);
+            $collaborationServices = $this->get('bookingServices');
+            $collaborationServices->forCollaboration($dataObj,$restResponse);
+            
+            $msg = Message::Success("Email Notification successfully send.");
+            $restResponse->addMessages($msg);
+            $restResponse->setData($dataObj);
+            $restResponse->setMessage("Your collobration request shared for review.");
+            $restResponse->setStatus(TRUE);
+        } else {
+            //header('HTTP/1.0 404 Not Found');
+            //$app->notFound();
+            $restResponse->setMessage("System error occurred while processing your request");
+            $restResponse->setStatus(FALSE);
+        }
+    } catch (Exception $ex) {
+        //header('HTTP/1.0 500 Internal Server Error');
+        $logger->error("System error occurred while processing your request " . $ex->getTraceAsString());
+        $msg = Message::Error("System error occurred while processing your request." .$ex->getTraceAsString());
+        $restResponse->addMessages($msg);
+        $restResponse->setMessage("System error occurred while processing your request");
+        $restResponse->setStatus(FALSE);
+    }
+    
+    $response->getBody()->write(json_encode($restResponse));
+    return $response
+            ->withHeader('Content-Type', 'application/json')
+            ->withStatus(200);
+});
+
+
+
+/**
+ *
+ * // Run app
+ * 
+ */
 $app->run();

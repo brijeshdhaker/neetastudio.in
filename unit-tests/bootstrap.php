@@ -50,13 +50,16 @@ require(__DIR__ . '/../classes/email/NotificationConfig.php');
 require(__DIR__ . '/../classes/email/NotificationEngine.php');
 
 //
-require __DIR__ . '/../services/BaseService.php';
-require __DIR__ . '/../services/CommonServices.php';
-require __DIR__ . '/../services/RegistrationService.php';
-require __DIR__ . '/../services/SubscribeServices.php';
+require(__DIR__ . '/../services/BaseService.php');
+require(__DIR__ . '/../services/CommonService.php');
+require(__DIR__ . '/../services/ContactusService.php');
+require(__DIR__ . '/../services/SubscribeService.php');
+require(__DIR__ . '/../services/RegistrationService.php');
 require __DIR__ . '/../services/Greeter.php';
+
 //
-//LogHelper::init();
+LogHelper::init();
+
 //
 //$cache = phpFastCache();
 //phpFastCache::setup("storage","auto");

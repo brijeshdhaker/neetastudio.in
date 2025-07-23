@@ -17,7 +17,7 @@ try {
     die();
 }
 
-$query = "SELECT fname, lname, dtob, country, emailid FROM user_details where gender = 'M'";
+$query = "select * from `NEETASTUDIO`.`PARTNER_COLLABORATION`";
 
 $stmt = $conn->prepare($query);
 

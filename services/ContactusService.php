@@ -4,7 +4,7 @@
  *
  * @author brijeshdhaker
  */
-class ContactusServices extends BaseService {
+class ContactusService extends BaseService {
     /**
      * 
      * @param type $request

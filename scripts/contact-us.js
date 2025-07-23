@@ -8,6 +8,7 @@ $(function() {
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
             // get values from FORM
+            var action = $("input#action").val();
             var name = $("input#name").val();
             var email = $("input#email").val();
             var phone = $("input#phone").val();
@@ -19,7 +20,8 @@ $(function() {
                 phone: phone, 
                 email: email, 
                 message:message,
-                session_type: session_type
+                session_type: session_type,
+                action: action
             };
             
             // Check for white space in name for Success/Fail message
@@ -30,6 +32,30 @@ $(function() {
             if (window.console) {
                 console.log(_data);
             }
+            
+            switch (action) {
+                case 'connect-us':
+                  submit_url = "/controllers/contactus?_dc=6t45fc5&_src=site";
+                  form_name  = "#contactForm";
+                  break;
+                case 'collaborate':
+                  submit_url = "/controllers/collaboration?_dc=6t46fc5&_src=site";
+                  form_name  = "#collaborateForm";
+                  break;
+                case 'newsletter':
+                  submit_url = "/controllers/subcribe-services?_dc=6t47fc5&_src=site";
+                  form_name  = "#subcribeForm";
+                  break;                  
+                case 'photosession':
+                  submit_url = "/controllers/photo-session?_dc=6t48fc5&_src=site";
+                  form_name  = "#photoSessionForm";
+                  break;
+                // ... more case statements
+                default:
+                  submit_url = "/controllers/contactus?_dc=6t45fc5&_src=site";
+                  form_name  = "#contactForm";
+            }
+            
             $.ajax({
                 url: "/controllers/contactus?_dc=6t45fc5&key1=value",
                 type: "POST",
