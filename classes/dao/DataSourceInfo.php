@@ -23,16 +23,16 @@ class DataSourceInfo {
             case CONSTANTS::ONCLICK_DEV:
                 
                 $this->dbhostname = "mysqlserver.sandbox.net";
-                $this->dbusername = "mysqladmin";
-                $this->dbpassword = "mysqladmin";
+                $this->dbusername = "neetastudio";
+                $this->dbpassword = "Accoo7@k47";
                 $this->dbname = "NEETASTUDIO";
                 
                 break;
             case CONSTANTS::ONCLICK_SIT:
                 
                 $this->dbhostname = "mysqlserver.sandbox.net";
-                $this->dbusername = "mysqladmin";
-                $this->dbpassword = "mysqladmin";
+                $this->dbusername = "neetastudio";
+                $this->dbpassword = "Accoo7@k47";
                 $this->dbname = "NEETASTUDIO";
                 
                 break;
@@ -47,8 +47,8 @@ class DataSourceInfo {
             case CONSTANTS::ONCLICK_PROD:
                 
                 $this->dbhostname = "mysqlserver.sandbox.net";
-                $this->dbusername = "mysqladmin";
-                $this->dbpassword = "mysqladmin";
+                $this->dbusername = "neetastudio";
+                $this->dbpassword = "Accoo7@k47";
                 $this->dbname = "NEETASTUDIO";
                 
                 break;

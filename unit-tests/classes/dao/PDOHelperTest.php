@@ -18,7 +18,7 @@ final class PDOHelperTest extends TestCase {
      * This method is called before a test is executed.
      */
     #[\Override]
-    protected function setUp() {
+    protected function setUp() : void {
         $this->pdoHelper = new PDOHelper;
     }
 
@@ -37,8 +37,12 @@ final class PDOHelperTest extends TestCase {
      * @todo   Implement testGetConnection().
      */
     public function testGetConnection() : void  {
-        $this->pdoHelper->getConnection();
-        $this->assertSame(true, true);
+        //
+        $connection = $this->pdoHelper->getConnection();
+        //
+        $this->assertNotNull($connection);
+        // Remove the following lines when you implement this test.
+        //$this->markTestIncomplete('This test has not been implemented yet.');
     }
 
     public static function additionProvider(): array
