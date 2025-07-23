@@ -12,7 +12,11 @@ use Slim\Factory\AppFactory;
 require './BaseResource.php';
 
 
-
+/**
+ * Create Container using PHP-DI
+ * 
+ * 
+ */
 class JsonBodyParserMiddleware implements MiddlewareInterface {
     
     public function process(Request $request, RequestHandler $handler): Response{
@@ -29,10 +33,18 @@ class JsonBodyParserMiddleware implements MiddlewareInterface {
     }
 }
 
-// Create Container using PHP-DI
+/**
+ * Create Container using PHP-DI
+ * 
+ * 
+ */
 $container = new Container();
 
-// Set container to create App with on AppFactory
+/**
+ * Set container to create App with on AppFactory
+ * 
+ * 
+ */
 AppFactory::setContainer($container);
 
 /**
@@ -44,6 +56,11 @@ AppFactory::setContainer($container);
  */
 $app = AppFactory::create();
 
+/**
+ *
+ * 
+ * 
+ */
 $app->setBasePath('/controllers');
 /*
 $app->setBasePath((function () {
@@ -58,11 +75,14 @@ $app->setBasePath((function () {
     return '';
 })());
 */
+
+
 /**
   * The routing middleware should be added earlier than the ErrorMiddleware
   * Otherwise exceptions thrown from it will not be handled by the middleware
   */
 $app->addRoutingMiddleware();
+
 
 /**
  * Add Error Middleware
@@ -78,19 +98,32 @@ $app->addRoutingMiddleware();
 $errorMiddleware = $app->addErrorMiddleware(true, true, true);
 
 
-#$registrationService = new RegistrationService();
-
+/**
+ *
+ * 
+ * 
+ */
 $app->get('/', function (Request $request, Response $response, $args) {
     $response->getBody()->write("Hello, You request for / rest endpoint.");
     return $response;
 });
 
+/**
+ *
+ * 
+ * 
+ */
 // Define app routes
 $app->get('/hello', function (Request $request, Response $response, $args) {
     $response->getBody()->write("Hello, You request for /hello rest endpoint.");
     return $response;
 });
 
+/**
+ *
+ * 
+ * 
+ */
 // Define app routes
 $app->get('/hello/{name}', function (Request $request, Response $response, $args) {
     $name = $args['name'];
@@ -104,16 +137,16 @@ $app->get('/hello/{name}', function (Request $request, Response $response, $args
  * 
  * 
  */
-$container->set('contactusServices', function () {
+$container->set('contactusService', function () {
     $settings = [];
-    return new CommonServices();
+    return new ContactusService();
 });
 
-$connectArgs = array('param1' => "hello");
+$connectArgs = array('param' => "contactusServices");
 $app->post('/contactus', function (Request $request, Response $response, $connectArgs) {
     
-    $logger = Logger::getLogger('ResourceController');
-    $param = $connectArgs['param'] ?? "subscribeServices";
+    $logger = Logger::getLogger('ResourcesController');
+    $param = $connectArgs['param'] ?? "contactusService";
     $restResponse = new RestResponse();
     try {
         /*
@@ -170,8 +203,9 @@ $app->post('/contactus', function (Request $request, Response $response, $connec
         if (!is_null($dataStr) && isset($dataStr)) {
             
             $dataObj = json_decode($dataStr);
-            $commonServices = $this->get('commonServices');
-            $commonServices->contactUs($dataObj,$restResponse);
+            
+            $contactusService = $this->get('contactusService');
+            $contactusService->contactUs($dataObj, $restResponse);
             
             $msg = Message::Success("Email Notification successfully send.");
             $restResponse->addMessages($msg);
@@ -205,15 +239,15 @@ $app->post('/contactus', function (Request $request, Response $response, $connec
  * 
  * 
  */
-$container->set('subscribeServices', function () {
+$container->set('subscribeService', function () {
     $settings = [];
-    return new SubscribeServices();
+    return new SubscribeService();
 });
-$subcribeArgs = array('param' => "subscribeServices");
+$subcribeArgs = array('param' => "subscribeService");
 $app->post('/subcribe-services', function (Request $request, Response $response, $subcribeArgs) {
     
-    $logger = Logger::getLogger('ResourceController');
-    $param = $subcribeArgs['param'] ?? "subscribeServices";
+    $logger = Logger::getLogger('ResourcesController');
+    $param = $subcribeArgs['param'] ?? "subscribeService";
     $restResponse = new RestResponse();
     try {
         
@@ -226,8 +260,17 @@ $app->post('/subcribe-services', function (Request $request, Response $response,
         if (!is_null($dataStr) && isset($dataStr)) {
             
             $dataObj = json_decode($dataStr);
-            $subscribeServices = $this->get('subscribeServices');
-            $subscribeServices->forNewletter($dataObj,$restResponse);
+            
+            //
+            $subscribeService = $this->get('subscribeService');
+            if(!is_null($dataStr) && $dataStr['action'] == "newsletter"){
+                $subscribeService->forNewletter($dataObj, $restResponse);
+            }
+            
+            //
+            if(!is_null($dataStr) && $dataStr['action'] == "collaborate"){
+                $subscribeService->forCollaboration($dataObj, $restResponse);
+            }
             
             $msg = Message::Success("Email Notification successfully send.");
             $restResponse->addMessages($msg);
@@ -261,15 +304,15 @@ $app->post('/subcribe-services', function (Request $request, Response $response,
  * 
  * 
  */
-$container->set('collaborationServices', function () {
+$container->set('collaborationService', function () {
     $settings = [];
-    return new SubscribeServices();
+    return new SubscribeService();
 });
-$collaborationArgs = array('param' => "collaborationServices");
+$collaborationArgs = array('param' => "collaborationService");
 $app->post('/collaboration', function (Request $request, Response $response, $collaborationArgs) {
     
-    $logger = Logger::getLogger('ResourceController');
-    $param = $collaborationArgs['param'] ?? "bookingServices";
+    $logger = Logger::getLogger('ResourcesController');
+    $param = $collaborationArgs['param'] ?? "collaborationService";
     $restResponse = new RestResponse();
     try {
         
@@ -282,13 +325,13 @@ $app->post('/collaboration', function (Request $request, Response $response, $co
         if (!is_null($dataStr) && isset($dataStr)) {
             
             $dataObj = json_decode($dataStr);
-            $collaborationServices = $this->get('collaborationServices');
-            $collaborationServices->forCollaboration($dataObj,$restResponse);
+            $collaborationService = $this->get('collaborationService');
+            $collaborationService->forCollaboration($dataObj, $restResponse);
             
             $msg = Message::Success("Email Notification successfully send.");
             $restResponse->addMessages($msg);
             $restResponse->setData($dataObj);
-            $restResponse->setMessage("Your collobration request shared for review.");
+            $restResponse->setMessage("Thank You !, Your collobration request shared for review.");
             $restResponse->setStatus(TRUE);
         } else {
             //header('HTTP/1.0 404 Not Found');
@@ -317,15 +360,15 @@ $app->post('/collaboration', function (Request $request, Response $response, $co
  * 
  * 
  */
-$container->set('bookingServices', function () {
+$container->set('bookingService', function () {
     $settings = [];
-    return new SubscribeServices();
+    return new BookingService();
 });
-$bookingArgs = array('param' => "bookingServices");
+$bookingArgs = array('param' => "bookingService");
 $app->post('/photo-session', function (Request $request, Response $response, $bookingArgs) {
     
-    $logger = Logger::getLogger('ResourceController');
-    $param = $bookingArgs['param'] ?? "bookingServices";
+    $logger = Logger::getLogger('ResourcesController');
+    $param = $bookingArgs['param'] ?? "bookingService";
     
     $restResponse = new RestResponse();
     try {
@@ -339,8 +382,9 @@ $app->post('/photo-session', function (Request $request, Response $response, $bo
         if (!is_null($dataStr) && isset($dataStr)) {
             
             $dataObj = json_decode($dataStr);
-            $collaborationServices = $this->get('bookingServices');
-            $collaborationServices->forCollaboration($dataObj,$restResponse);
+            
+            $bookingService = $this->get('bookingService');
+            $bookingService->photoSession($dataObj,$restResponse);
             
             $msg = Message::Success("Email Notification successfully send.");
             $restResponse->addMessages($msg);

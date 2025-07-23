@@ -12,7 +12,7 @@
  * @author brijeshdhaker
  */
 class BaseService {
-    /*
+    
     protected static $dbHelper;
     
     protected static function getDAOHelper(){
@@ -21,6 +21,5 @@ class BaseService {
         }
         return self::$dbHelper;
     }
-    * 
-    */
+    
 }

@@ -756,7 +756,7 @@
                                             <div id="success"></div>
                                         </div>
                                         <div class="col-sm-6">
-                                            <button type="submit" class="btn btn-send">Send Message</button> <!-- Send button -->
+                                            <button type="submit" class="btn btn-send btn-default">Send Message <i class="fa fa-long-arrow-right"></i></button> <!-- Send button -->
                                         </div>
                                     </div>
 

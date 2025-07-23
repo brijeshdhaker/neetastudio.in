@@ -166,8 +166,8 @@
                                         
                                         <div class="col-sm-6">
                                             <div class="form-group"> 
-                                                <label>What type of services you provides ? *</label>
-                                                <select id="first_name" name="name" type="text" class="form-control" required="" data-validation-required-message="Please enter your email address.">
+                                                <label>What services you provides ? *</label>
+                                                <select id="service_type" name="service_type" type="text" class="form-control" required="" data-validation-required-message="Please select service type.">
                                                     <option value="photographer">Photographer</option>
                                                     <option value="makeup-artist">Makeup Artist</option>
                                                     <option value="beauty-products">Beauty Products</option>
@@ -191,11 +191,16 @@
                                                 <label>Your Message *</label>
                                                 <textarea id="message" name="message" class="form-control" rows="6" required="" data-validation-required-message="Please enter a message.">We want to collaborate for our services.</textarea>
                                             </div>
-                                            <div class="form-group">
-                                                <a href="/htmls/collaborate.php?_dc=fdfs&page=contact&sTgt=site" class="btn btn-default">SEND MESSAGE <i class="fa fa-long-arrow-right"></i></a>
-                                            </div>
                                         </div>
-
+                                        
+                                        <div class="clearfix"></div>
+                                        <div class="col-sm-12">
+                                            <div id="success"></div>
+                                        </div>
+                                        
+                                        <div class="col-sm-6">
+                                            <button type="submit" class="btn btn-send btn-default">Send Message <i class="fa fa-long-arrow-right"></i></button> <!-- Send button -->
+                                        </div>
                                     </div>
 
                                 </form>
@@ -250,7 +255,7 @@
                                         <div class="col-sm-6">
                                             <div class="form-group"> 
                                                 <label>What is your interest ? *</label>
-                                                <select id="first_name" name="name" type="text" class="form-control" required="">
+                                                <select id="interest_type" name="interest_type" type="text" class="form-control" required="" data-validation-required-message="Please select interset type.">
                                                     <option value="maternity">Maternity</option>
                                                     <option value="newborn">New Born</option>
                                                     <option value="kids">Kids</option>
@@ -272,9 +277,15 @@
                                                 <label>Your Message *</label>
                                                 <textarea class="form-control" rows="6"></textarea>
                                             </div>
-                                            <div class="form-group">
-                                                <a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site" class="btn btn-default">SEND MESSAGE <i class="fa fa-long-arrow-right"></i></a>
-                                            </div>
+                                        </div>
+                                        
+                                        <div class="clearfix"></div>
+                                        <div class="col-sm-12">
+                                            <div id="success"></div>
+                                        </div>
+                                        
+                                        <div class="col-sm-6">
+                                            <button type="submit" class="btn btn-send btn-default">Send Message <i class="fa fa-long-arrow-right"></i></button> <!-- Send button -->
                                         </div>
 
                                     </div>

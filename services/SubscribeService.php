@@ -13,18 +13,26 @@ class SubscribeService extends BaseService {
     public function forNewletter($request, &$response){
         //
         $logger = Logger::getLogger('SubscribeServices');
-        //$dbHelper = self::getDAOHelper();
-        $logger->info('-- SubscribeServices -- ');
+        
+        $logger->info('-- SubscribeServices::forNewletter -- ');
         
         $firstName = OnclickUtils::getProperty('firstName', $request);
         $name = OnclickUtils::getProperty('name', $request);
         $email = OnclickUtils::getProperty('email', $request);
         $phone = OnclickUtils::getProperty('phone', $request);
+        $service_type = OnclickUtils::getProperty('service_type', $request);
         $message = OnclickUtils::getProperty('message', $request);
         $rTyp = OnclickUtils::getProperty('rTyp', $request);
         $uTyp = OnclickUtils::getProperty('uTyp', $request);
         $tpl = file_get_contents('../email-tpl/T_USER_CONTACTUS.html');
         
+        $dbHelper = self::getDAOHelper();
+        if(!OnclickUtils::isEmpty($request)){
+            
+            $procedure = "call P_GET_USER_ENTITLEMENTS(".$this->userid.", @code, @message);";
+            $entitlements = $dbHelper->processQuery($procedure, $mapping, 10);
+            
+        }
         if (!OnclickUtils::isEmpty($tpl)) {
 
             $tpl = str_replace("{{fname}}", $firstName, $tpl);
@@ -63,7 +71,7 @@ class SubscribeService extends BaseService {
         //
         $logger = Logger::getLogger('SubscribeServices');
         //$dbHelper = self::getDAOHelper();
-        $logger->info('-- SubscribeServices -- ');
+        $logger->info('-- SubscribeServices::forCollaboration -- ');
         
         $firstName = OnclickUtils::getProperty('firstName', $request);
         $name = OnclickUtils::getProperty('name', $request);
@@ -112,7 +120,7 @@ class SubscribeService extends BaseService {
         //
         $logger = Logger::getLogger('ContactusServices');
         //$dbHelper = self::getDAOHelper();
-        $logger->info('-- ContactusServices -- ');
+        $logger->info('-- ContactusServices::forWorkWithUs -- ');
         
         $firstName = OnclickUtils::getProperty('firstName', $request);
         $name = OnclickUtils::getProperty('name', $request);

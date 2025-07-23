@@ -51,11 +51,10 @@ require(__DIR__ . '/../classes/email/NotificationEngine.php');
 
 //
 require(__DIR__ . '/../services/BaseService.php');
-require(__DIR__ . '/../services/CommonService.php');
+require(__DIR__ . '/../services/BookingService.php');
 require(__DIR__ . '/../services/ContactusService.php');
-require(__DIR__ . '/../services/SubscribeService.php');
 require(__DIR__ . '/../services/RegistrationService.php');
-require __DIR__ . '/../services/Greeter.php';
+require(__DIR__ . '/../services/SubscribeService.php');
 
 //
 LogHelper::init();

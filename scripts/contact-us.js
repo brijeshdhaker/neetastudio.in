@@ -13,14 +13,12 @@ $(function() {
             var email = $("input#email").val();
             var phone = $("input#phone").val();
             var message = $("textarea#message").val();
-            var session_type = $("select#session_type").val();
-            var firstName = name; // For Success/Failure Message
+                        
             var _data = { 
                 name: name, 
                 phone: phone, 
                 email: email, 
                 message:message,
-                session_type: session_type,
                 action: action
             };
             
@@ -28,23 +26,30 @@ $(function() {
             if (name.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
                 _data['firstName'] = firstName;
-            }
-            if (window.console) {
-                console.log(_data);
+            }else{
+                _data['firstName'] = name;
             }
             
+            //
             switch (action) {
                 case 'connect-us':
                   submit_url = "/controllers/contactus?_dc=6t45fc5&_src=site";
                   form_name  = "#contactForm";
+                  _data['firstName'] = firstName;
+                  var session_type = $("select#session_type").val();
+                  _data['session_type'] = session_type;
                   break;
                 case 'collaborate':
-                  submit_url = "/controllers/collaboration?_dc=6t46fc5&_src=site";
+                  submit_url = "/controllers/subcribe-services?_dc=6t47fc5&_src=site";
                   form_name  = "#collaborateForm";
+                  var service_type = $("select#service_type").val();
+                  _data['service_type'] = service_type;
                   break;
                 case 'newsletter':
                   submit_url = "/controllers/subcribe-services?_dc=6t47fc5&_src=site";
                   form_name  = "#subcribeForm";
+                  interest_type = $("select#interest_type").val();
+                  _data['interest_type'] = interest_type;
                   break;                  
                 case 'photosession':
                   submit_url = "/controllers/photo-session?_dc=6t48fc5&_src=site";
@@ -56,8 +61,13 @@ $(function() {
                   form_name  = "#contactForm";
             }
             
+            //
+            if (window.console) {
+                console.log(_data);
+            }
+            //
             $.ajax({
-                url: "/controllers/contactus?_dc=6t45fc5&key1=value",
+                url: submit_url,
                 type: "POST",
                 dataType: 'json',
                 contentType : 'application/json',
@@ -76,7 +86,7 @@ $(function() {
                     $('#success > .alert-success').append("<strong>" + _response['message'] + "</strong>");
                     $('#success > .alert-success').append('</div>');
                     //clear all fields
-                    $('#contactForm').trigger("reset");
+                    $(form_name).trigger("reset");
                 },
                 error: function() {
                     // Fail message
@@ -85,7 +95,7 @@ $(function() {
                     $('#success > .alert-danger').append("<strong>Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!");
                     $('#success > .alert-danger').append('</div>');
                     //clear all fields
-                    $('#contactForm').trigger("reset");
+                    $(form_name).trigger("reset");
                 }
             });
         },

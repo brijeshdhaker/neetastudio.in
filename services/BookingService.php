@@ -4,13 +4,13 @@
  *
  * @author brijeshdhaker
  */
-class CommonService extends BaseService {
+class BookingService extends BaseService {
     /**
      * 
      * @param type $request
      * @param type $response
      */
-    public function contactUs($request, &$response){
+    public function photoSession($request, &$response){
         //
         $logger = Logger::getLogger('RegistrationService');
         //$dbHelper = self::getDAOHelper();
