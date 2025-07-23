@@ -2,6 +2,9 @@
  * Author:  Brijesh K. Dhaker
  * Created: Jul 23, 2025
  */
+---
+--- mysql --user=root --password=p@SSW0rd --host=mysqlserver.sandbox.net --database=NEETASTUDIO
+---
 
 ---
 --- Add User
@@ -12,15 +15,11 @@ GRANT ALL PRIVILEGES ON *.* TO 'neetastudio'@'%' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 
 ---
---- Add User
+--- Validate User
 ---
-
-SHOW GRANTS FOR 'neetastudio'@'%';
-
----
---- mysql --user=root --password=p@SSW0rd --host=mysqlserver.sandbox.net --database=NEETASTUDIO
 --- mysql --user=neetastudio --password=Accoo7@k47 --host=mysqlserver.sandbox.net --database=NEETASTUDIO
 ---
+SHOW GRANTS FOR 'neetastudio'@'%';
 
 ---
 ---
@@ -270,7 +269,6 @@ CREATE PROCEDURE proc_add_customer_booking(
 )
 BEGIN
 
-    ---
     INSERT INTO `NEETASTUDIO`.`CUSTOMER_BOOKINGS` (
         `NAME`, 
         `EMAIL`, 

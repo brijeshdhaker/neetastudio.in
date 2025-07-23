@@ -8,6 +8,7 @@
 # docker compose -f docker-compose.yaml down mysqlserver
 #
 # docker exec -it mysqlserver mysql --user=root --password=p@SSW0rd --host=mysqlserver.sandbox.net --database=NEETASTUDIO
+# docker exec -it mysqlserver mysql --user=neetastudio --password=Accoo7@k47 --host=mysqlserver.sandbox.net --database=NEETASTUDIO
 #
 ---
 
