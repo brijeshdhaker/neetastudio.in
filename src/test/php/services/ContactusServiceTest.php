@@ -17,7 +17,7 @@ class ContactusServiceTest extends TestCase {
      */
     #[\Override]
     protected function setUp(): void {
-        $this->object = new ContactusServices();
+        $this->object = new ContactusService();
     }
 
     /**
@@ -35,9 +35,23 @@ class ContactusServiceTest extends TestCase {
      */
     public function testcontactUs() {
         
-        $this->assertEquals('', $this->object->contactUs());
+        $restResponse = new RestResponse();
+        $reqObj = array(
+            "firstName" => "Brijesh K.",
+            "name" => "Brijesh Dhaker",
+            "email" => "brijeshdhaker@gmail.com",
+            "phone" => "+919820937445",
+            "session_type"=> "Maternity",
+            "message" => "test message",
+            "rTyp" => "src",
+            "uTyp" => "site",
+        );
+        
+        $this->object->contactUs($reqObj, $restResponse);
+        $this->assertTrue($restResponse->getStatus());
+        
         // Remove the following lines when you implement this test.
-        $this->markTestIncomplete('This test has not been implemented yet.');
+        //$this->markTestIncomplete('This test has not been implemented yet.');
         
     }
 }

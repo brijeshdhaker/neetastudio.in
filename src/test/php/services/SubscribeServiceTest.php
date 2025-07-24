@@ -17,7 +17,7 @@ class SubscribeServiceTest extends TestCase {
      */
     #[\Override]
     protected function setUp(): void {
-        $this->object = new SubscribeServices();
+        $this->object = new SubscribeService();
     }
 
     /**
@@ -37,15 +37,19 @@ class SubscribeServiceTest extends TestCase {
         
         $restResponse = new RestResponse();
         $reqObj = array(
-            "firstName" => "Brijesh K.",
             "name" => "Brijesh Dhaker",
             "email" => "brijeshdhaker@gmail.com",
+            "interest_type" => "kids",
             "phone" => "+919820937445",
-            "message" => "test message",
+            "interest_type" => "Portraits",
+            "message" => "I am interested for Portraits photography newsletter.",
             "rTyp" => "src",
             "uTyp" => "site",
         );
-        $this->assertEquals('', $this->object->forNewletter($reqObj, $restResponse));
+        
+        $this->object->forNewletter($reqObj, $restResponse);
+        $this->assertTrue($restResponse->getStatus());
+        
         // Remove the following lines when you implement this test.
         //$this->markTestIncomplete('This test has not been implemented yet.');
     }
@@ -58,38 +62,21 @@ class SubscribeServiceTest extends TestCase {
         
         $restResponse = new RestResponse();
         $reqObj = array(
-            "firstName" => "Brijesh K.",
             "name" => "Brijesh Dhaker",
             "email" => "brijeshdhaker@gmail.com",
             "phone" => "+919820937445",
-            "message" => "test message",
+            "service_type" => "dress-rental",
+            "message" => "we are interested for partner collaboration.",
             "rTyp" => "src",
             "uTyp" => "site",
         );
         
-        $this->assertEquals('', $this->object->forCollaboration($reqObj, $restResponse));
-        // Remove the following lines when you implement this test.
-        //$this->markTestIncomplete('This test has not been implemented yet.');
-    }
-
-    /**
-     * @covers SubscribeServices::forWorkWithUs
-     * @todo   Implement testforWorkWithUs().
-     */
-    public function testforWorkWithUs() {
+        $this->object->forCollaboration($reqObj, $restResponse);
         
-        $restResponse = new RestResponse();
-        $reqObj = array(
-            "firstName" => "Brijesh K.",
-            "name" => "Brijesh Dhaker",
-            "email" => "brijeshdhaker@gmail.com",
-            "phone" => "+919820937445",
-            "message" => "test message",
-            "rTyp" => "src",
-            "uTyp" => "site",
-        );        
-        $this->assertEquals('', $this->object->forWorkWithUs($reqObj, $restResponse));
+        $this->assertTrue($restResponse->getStatus());
+        
         // Remove the following lines when you implement this test.
         //$this->markTestIncomplete('This test has not been implemented yet.');
     }
+    
 }

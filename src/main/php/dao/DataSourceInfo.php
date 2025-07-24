@@ -14,6 +14,19 @@ class DataSourceInfo {
      * @return the environment
      */
     function __construct($driver) {
+        
+        // Read the database connection parameters from environment variables
+        /*
+        $db_host = getenv('DB_HOST');
+        $db_name = getenv('DB_NAME');
+        $db_user = getenv('DB_USER');
+        $db_pass = getenv('DB_PASSWORD');
+        */
+        
+        // Read the password from the file
+        //$db_password_file_path = getenv('DB_PASSWORD_FILE_PATH');
+        //$db_pass = trim(file_get_contents($db_password_file_path));
+
         if(!is_null($driver)){
             $this->driver = $driver;    
         }

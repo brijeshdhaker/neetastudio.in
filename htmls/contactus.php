@@ -271,7 +271,7 @@
                                         <div class="col-sm-6">
                                             <div class="form-group"> 
                                                 <label>Your Name *</label>
-                                                <input id="first_name" name="name" type="text" class="form-control" required="">
+                                                <input id="name" name="name" type="text" class="form-control" required="">
                                             </div>
                                         </div>
 
@@ -286,10 +286,10 @@
                                             <div class="form-group"> 
                                                 <label>What is your interest ? *</label>
                                                 <select id="interest_type" name="interest_type" type="text" class="form-control" required="" data-validation-required-message="Please select interset type.">
-                                                    <option value="maternity">Maternity</option>
-                                                    <option value="newborn">New Born</option>
+                                                    <option value="Maternity">Maternity</option>
+                                                    <option value="Newborn">New Born</option>
                                                     <option value="kids">Kids</option>
-                                                    <option value="portraits">Portraits</option>
+                                                    <option value="Portraits">Portraits</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -378,10 +378,10 @@
                                         
                                         <div class="col-sm-6">
                                             <div class="form-group"> 
-                                                <label>Photo Session Type *</label>
-                                                <select id="session_type" name="session_type" type="text" class="form-control" required="" data-validation-required-message="Please select photo session type" value="portraits">
-                                                    <option value="maternity">Maternity</option>
-                                                    <option value="newborn">New Born</option>
+                                                <label>Interest Type *</label>
+                                                <select id="interest" name="interest" type="text" class="form-control" required="" data-validation-required-message="Please select photo session type" value="portraits">
+                                                    <option value="Maternity">Maternity</option>
+                                                    <option value="Newborn">New Born</option>
                                                     <option value="kids">Kids</option>
                                                     <option value="portraits">Portraits</option>
                                                 </select>
@@ -393,24 +393,15 @@
                                                 <label>Your Message *</label>
                                                 <textarea id="message" name="message" class="form-control" rows="6" required="" data-validation-required-message="Please enter a message."> Hello Test </textarea>
                                             </div>
-                                            <!--
-                                            <div class="form-group">
-                                                <a href="https://technext.github.io/pouseidon/index.html" class="btn btn-default">SEND MESSAGE <i class="fa fa-long-arrow-right"></i></a>
-                                                <button type="submit" class="btn btn-send">Send Message</button>
-                                            </div>
-                                            -->
                                         </div>
                                         
                                         <div class="clearfix"></div>
-                                        
                                         <div class="col-sm-12">
                                             <div id="success"></div>
                                         </div>
                                         
                                         <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <a href="#" class="btn btn-default">SEND MESSAGE <i class="fa fa-long-arrow-right"></i></a>
-                                            </div>
+                                            <button type="submit" class="btn btn-send btn-default">Send Message <i class="fa fa-long-arrow-right"></i></button> <!-- Send button -->
                                         </div>
 
                                     </div>

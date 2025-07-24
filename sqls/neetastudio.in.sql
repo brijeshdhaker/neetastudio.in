@@ -11,7 +11,9 @@
 ---
 CREATE USER 'neetastudio'@'%' IDENTIFIED BY 'Accoo7@k47';
 GRANT CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, SELECT, REFERENCES, RELOAD on *.* TO 'neetastudio'@'%' WITH GRANT OPTION;
+REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'neetastudio'@'%';
 GRANT ALL PRIVILEGES ON *.* TO 'neetastudio'@'%' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON NEETASTUDIO.* TO 'neetastudio'@'%' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 
 ---
@@ -98,19 +100,20 @@ SELECT @code, @message ;
 ----
 ---- CUSTOMER_ENQUIRIES
 ----
+DROP TABLE `NEETASTUDIO`.`CUSTOMER_ENQUIRIES`;
 
 CREATE TABLE `NEETASTUDIO`.`CUSTOMER_ENQUIRIES`(
     `ID` MEDIUMINT NOT NULL AUTO_INCREMENT,
     `NAME` VARCHAR(255) NOT NULL,
     `EMAIL` VARCHAR(64) NOT NULL,
     `PHONE` VARCHAR(16) NOT NULL,
-    `SESSION_TYPE` VARCHAR(16) NOT NULL,
+    `ENQUIRY_FOR` VARCHAR(16) NOT NULL,
     `MESSAGE` VARCHAR(512),
     `ADD_TS` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`ID`)
 );
 
-INSERT INTO `NEETASTUDIO`.`CUSTOMER_ENQUIRIES` (`NAME`, `EMAIL`, `PHONE`, `SESSION_TYPE`, `MESSAGE`, `ADD_TS`) VALUES
+INSERT INTO `NEETASTUDIO`.`CUSTOMER_ENQUIRIES` (`NAME`, `EMAIL`, `PHONE`, `ENQUIRY_FOR`, `MESSAGE`, `ADD_TS`) VALUES
     ('Deepika D.', 'deepikadhaker@gmail.com', '+91 9820937445', 'maternity', 'I am looking for maternity photoshoot', now()),
     ('Swati R.', 'swatir@gmail.com', '+91 9820937448', 'kids', 'I am looking for kid photography', now());
 
@@ -125,15 +128,15 @@ CREATE PROCEDURE proc_add_customer_enquiry(
     input_name VARCHAR(256), 
     input_email VARCHAR(64), 
     input_phone VARCHAR(16),
-    input_stype VARCHAR(16),
+    input_enquiry VARCHAR(16),
     input_message VARCHAR(512),   
     OUT out_code INT,
     OUT out_message VARCHAR(256)
 )
 BEGIN
     
-    INSERT INTO `NEETASTUDIO`.`CUSTOMER_ENQUIRIES` (`NAME`, `EMAIL`, `PHONE`, `SESSION_TYPE`, `MESSAGE`, `ADD_TS`) VALUES
-    (input_name, input_email, input_phone, input_stype, input_message, now());
+    INSERT INTO `NEETASTUDIO`.`CUSTOMER_ENQUIRIES` (`NAME`, `EMAIL`, `PHONE`, `ENQUIRY_FOR`, `MESSAGE`, `ADD_TS`) VALUES
+    (input_name, input_email, input_phone, input_enquiry, input_message, now());
 
     SET @code = (SELECT last_insert_id());
 

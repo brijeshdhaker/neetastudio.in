@@ -106,6 +106,8 @@ sudo apt install php-cli \
 
 sudo apt-get install php-mysql
 
+docker-php-ext-install php-json pdo pdo_mysql
+
 ```
 
 phpunit test.php
@@ -145,3 +147,10 @@ xdebug.idekey=netbeans-xdebug
 ### Run PhpUnit Test
 
 "/usr/bin/php" -d xdebug.mode="develop,debug,coverage" "/var/www/neetastudio.in/vendor/phpunit/phpunit/phpunit" "--colors" "--log-junit" "/tmp/nb-phpunit-log.xml" "--bootstrap" "/var/www/neetastudio.in/unit-tests/bootstrap.php" "--filter" "%\btestgetRepositoryPath\b%" "/var/www/neetastudio.in/unit-tests/classes/OnclickEnvTest.php"
+
+
+###
+
+ENV APACHE_DOCUMENT_ROOT /path/to/new/root
+RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
+RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf

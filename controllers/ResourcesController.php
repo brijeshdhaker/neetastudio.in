@@ -1,6 +1,5 @@
 <?php
 
-
 use DI\Container;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
@@ -141,11 +140,11 @@ $container->set('contactusService', function () {
     return new ContactusService();
 });
 
-$connectArgs = array('param' => "contactusServices");
+$connectArgs = array('param' => "contactusService");
 $app->post('/contactus', function (Request $request, Response $response, $connectArgs) {
     
     $logger = Logger::getLogger('ResourcesController');
-    $param = $connectArgs['param'] ?? "contactusService";
+    //$param = $connectArgs['param'] ?? "contactusService";
     $restResponse = new RestResponse();
     try {
         /*

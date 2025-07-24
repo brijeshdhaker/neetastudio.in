@@ -106,14 +106,14 @@
                                         <div class="col-sm-6">
                                             <div class="form-group"> 
                                                 <label>First Name *</label>
-                                                <input id="name" name="name" type="text" class="form-control" required="" data-validation-required-message="Please enter your name." value="Brijesh Dhaker">
+                                                <input id="first_name" name="first_name" type="text" class="form-control" required="" data-validation-required-message="Please enter your name." value="Brijesh K">
                                             </div>
                                         </div>
                                         
                                         <div class="col-sm-6">
                                             <div class="form-group"> 
                                                 <label>Last Name *</label>
-                                                <input id="name" name="name" type="text" class="form-control" required="" data-validation-required-message="Please enter your name." value="Brijesh Dhaker">
+                                                <input id="last_name" name="last_name" type="text" class="form-control" required="" data-validation-required-message="Please enter your name." value="Dhaker">
                                             </div>
                                         </div>
                                         
@@ -157,14 +157,14 @@
                                         <div class="col-sm-6">
                                             <div class="form-group"> 
                                                 <label>Preferred Shoot Date *</label>
-                                                <input class="form-control" id="session_date" name="session_date" type="date" value="" required="" data-validation-required-message="Please select preferred date.">
+                                                <input class="form-control" id="session_date" name="session_date" type="date" value="2025-07-24" required="" data-validation-required-message="Please select preferred date.">
                                             </div>
                                         </div>
                                         
                                         <div class="col-sm-6">
                                             <div class="form-group"> 
                                                 <label>Preferred Shoot Time *</label>
-                                                <input class="form-control" id="session_time" name="session_time" type="time" value="" required="" data-validation-required-message="Please select preferred time.">
+                                                <input class="form-control" id="session_time" name="session_time" type="time" value="16:30" required="" data-validation-required-message="Please select preferred time.">
                                             </div>
                                         </div>
 

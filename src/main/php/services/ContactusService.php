@@ -5,72 +5,149 @@
  * @author brijeshdhaker
  */
 class ContactusService extends BaseService {
+    
+    //
+    private $logger;
+    
+    /**
+     * @return the environment
+     */
+    function __construct() {
+        $this->logger = Logger::getLogger('ContactusServices');
+    }
+    
     /**
      * 
      * @param type $request
      * @param type $response
      */
     public function contactUs($request, &$response){
+        
         //
-        $logger = Logger::getLogger('ContactusServices');
-        $logger->info('-- ContactusServices -- ');
+        $this->logger->info('-- ContactusServices::contactUs -- ');
         
-        $firstName = OnclickUtils::getProperty('firstName', $request);
-        $name = OnclickUtils::getProperty('name', $request);
-        $email = OnclickUtils::getProperty('email', $request);
-        $phone = OnclickUtils::getProperty('phone', $request);
-        $session = OnclickUtils::getProperty('session_type', $request);
-        $message = OnclickUtils::getProperty('message', $request);
-        $rTyp = OnclickUtils::getProperty('rTyp', $request);
-        $uTyp = OnclickUtils::getProperty('uTyp', $request);
+        //
+        $status = TRUE;
+        $booking_id = rand(1000,9999);
         
-        $dbHelper = self::getDAOHelper();
+        try {
+            
+            if(OnclickUtils::isEmpty($request)){
+               throw new Exception("Request can't be blank."); 
+            }
+            
+            //
+            $results = $this->processEnquiry($request);
+            
+            //
+            $status = $this->sendEnquiryEmail($results);
+            
+        } catch (Exception $exc) {
+            $status = FALSE;
+            $this->message = $exc->getTraceAsString();
+            $this->logger->info("Error occurred - ". $exc->getTraceAsString());
+        }
+        
+        //
+        if ($status) {
+            $this->logger->info("Booking request successfully processed.");
+            $msg = Message::Success("Booking request successfully processed.");
+            $response->addMessages($msg);
+            $response->setMessage("Booking request successfully processed.");
+            $response->setStatus(TRUE);
+        } else {
+            $this->logger->error("Error occurred while sending Email Notification.");
+            $msg = Message::Warning("System error occurred while processing your request.");
+            $response->addMessages($msg);
+            $response->setMessage("System error occurred while processing your request.");
+            $response->setStatus(FALSE);
+        }
+        
+    }
+    
+    private function processEnquiry($request){
+        
+        $results = null;
+        
         if(!OnclickUtils::isEmpty($request)){
+            
+            $first_name = OnclickUtils::getProperty('first_name', $request);
+            $last_name = OnclickUtils::getProperty('last_name', $request);
+            $name = OnclickUtils::getProperty('name', $request);
+            $email = OnclickUtils::getProperty('email', $request);
+            $phone = OnclickUtils::getProperty('phone', $request);
+            $enquiry_for = OnclickUtils::getProperty('interest', $request);
+            $message = OnclickUtils::getProperty('message', $request);
+            $rTyp = OnclickUtils::getProperty('rTyp', $request);
+            $uTyp = OnclickUtils::getProperty('uTyp', $request);
+        
             $mapping = array(
-                "ID" => "id",
+                "ID" => "ticket_id",
                 "NAME" => "name",
                 "EMAIL" => "email",
                 "PHONE" => "phone",
-                "INTERSET_TYPE" => "interest",
+                "ENQUIRY_FOR" => "enquiry_for",
                 "MESSAGE" => "message",
                 "ADD_TS" => "addTs"
             );
-            $procedure = "call proc_add_customer_enquiry('".$name."', '".$email."', '".$phone."', '".$session."', '".$message. "', @code, @message);";
-            $results = $dbHelper->processQuery($procedure, $mapping);
-        }
-        
-        $tpl = file_get_contents(__DIR__ .'/../../resources/email-tpls/T_USER_CONTACTUS.html');
-        if (!OnclickUtils::isEmpty($tpl)) {
-
-            $tpl = str_replace("{{fname}}", $firstName, $tpl);
-            $tpl = str_replace("{{email}}", $email, $tpl);
-            $ticketno = rand(1000,9999);
+            $procedure = "call proc_add_customer_enquiry('".$name."', '".$email."', '".$phone."', '".$enquiry_for."', '".$message. "', @code, @message);";
             
             //
+            $dbHelper = self::getDAOHelper();
+            $results = $dbHelper->processQuery($procedure, $mapping);
+            
+        }else {
+            
+            $this->logger->error("Error occured while processing enquiry request.");
+            throw new Exception("Exception occured while processing enquiry request.");
+        }
+        
+        return $results;
+        
+    }
+    
+    
+    private function sendEnquiryEmail($results) {
+        
+        $status = TRUE;
+        
+        $tpl = file_get_contents(__DIR__ .'/../../resources/email-tpls/PHOTO_SESSION_ENQUIRY_EMAIL.html');
+        
+        $ticket_id = $results['ticket_id'];
+        
+        if (!OnclickUtils::isEmpty($ticket_id) && !OnclickUtils::isEmpty($tpl)) {
+            
+            $first_name = $results['name'];
+            $last_name = " ";
+            $parts = explode(" ", $results['name']);
+            if(count($parts) > 1) {
+                $last_name = array_pop($parts);
+                $first_name = implode(" ", $parts);
+            }
+            
+            $tpl = str_replace("{{first_name}}", $first_name, $tpl);
+            $tpl = str_replace("{{last_name}}", $last_name, $tpl);
+            $tpl = str_replace("{{name}}", $results['name'], $tpl);
+            $tpl = str_replace("{{email}}", $results['email'], $tpl);
+            $tpl = str_replace("{{ticket_id}}", $ticket_id, $tpl);
+            $tpl = str_replace("{{enquiry_for}}", $results['enquiry_for'], $tpl);
+
+            //
             $emailObj = new Notification();
-            $emailObj->setTo($email);
-            $emailObj->setFrom("brijeshdhaker@gmail.com", "Neeta Studio");
-            $emailObj->setReplyTo("brijeshdhaker@gmail.com", "Neeta Studio");
-            $emailObj->setSubject("Thanks for writing to neetastudio.in");
+            $emailObj->setTo($results['email']);
+            $emailObj->setFrom("brijeshdhaker@gmail.com", "Neeta Studio Photography");
+            $emailObj->setReplyTo("brijeshdhaker@gmail.com", "Neeta Studio Photography");
+            $emailObj->setSubject("Photo shoot enquiry with neetastudio.in # TICKET - 00".$ticket_id);
             $emailObj->setBody($tpl);
             //$emailObj->setFooter("This is Test Footer Message");
             //$emailObj->setCc("brijeshdhaker@gmail.com");
             $status = NotificationEngine::send($emailObj);
-            if ($status) {
-                $logger->info("Email Notification successfully send.");
-                $msg = Message::Success("Email Notification successfully send.");
-                $response->addMessages($msg);
-                $response->setMessage("You have successfully registered.");
-                $response->setStatus(TRUE);
-            } else {
-                $logger->error("Error occurred while sending Email Notification.");
-                $msg = Message::Warning("System error occurred while processing your request.");
-                $response->addMessages($msg);
-                $response->setMessage("System error occurred while processing your request.");
-                $response->setStatus(FALSE);
-            }
+
         } else {
-            throw new Exception("Email Template can not be blank.");
+            $status = FALSE;
+            throw new Exception("Error occurred while sending booking confirmation email.");
         }
+        
+        return $status;
     }
 }
