@@ -130,13 +130,18 @@ extension=mbstring
 
 ; xdebug-2.0
 xdebug.remote_enable=on
+xdebug.remote_mode=req
 xdebug.remote_handler=dbgp
-xdebug.remote_host=localhost
+xdebug.remote_host=127.0.0.1
 xdebug.remote_port=9003
-xdebug.idekey="netbeans-xdebug"
+xdebug.idekey=netbeans-xdebug
 
 ; xdebug-3.0
-xdebug.mode=debug
-xdebug.client_host=localhost
+xdebug.mode=develop,debug,coverage
+xdebug.client_host=127.0.0.1
 xdebug.client_port=9003
 xdebug.idekey=netbeans-xdebug
+
+### Run PhpUnit Test
+
+"/usr/bin/php" -d xdebug.mode="develop,debug,coverage" "/var/www/neetastudio.in/vendor/phpunit/phpunit/phpunit" "--colors" "--log-junit" "/tmp/nb-phpunit-log.xml" "--bootstrap" "/var/www/neetastudio.in/unit-tests/bootstrap.php" "--filter" "%\btestgetRepositoryPath\b%" "/var/www/neetastudio.in/unit-tests/classes/OnclickEnvTest.php"

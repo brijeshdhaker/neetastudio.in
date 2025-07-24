@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\Exception;
 
 //
 #require('phpmail/PHPMailerAutoload.php');
-require __DIR__ . '/../../vendor/autoload.php';
+#require __DIR__ . '/../../vendor/autoload.php';
 
 class MailHelper {
 

@@ -9,8 +9,7 @@ use Psr\Http\Server\RequestHandlerInterface as RequestHandler;
 use Slim\Factory\AppFactory;
 
 #
-require './BaseResource.php';
-
+require(__DIR__ . '/../bootstrap.php');
 
 /**
  * Create Container using PHP-DI

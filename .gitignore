@@ -30,3 +30,7 @@ yarn-error.log*
 #
 vendor
 nbproject
+
+#
+.phpunit.result.cache
+/src/test/reports/

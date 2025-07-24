@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/Tests/PHPUnitConfiguration.xml to edit this template
+-->
+<phpunit colors="true" 
+         bootstrap="./bootstrap.php" 
+         stopOnDefect="false"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         stopOnFailure="true">
+
+    <php>
+        <ini name="xdebug.mode" value="develop,debug,coverage"/>
+    </php>
+
+    <source>
+        <include>
+            <directory suffix=".php">./src/main/php</directory>
+        </include>
+        <exclude>
+            <directory suffix=".php">./vendor</directory>
+        </exclude>
+    </source>
+    
+    <coverage includeUncoveredFiles="true">
+        <report>
+            <clover outputFile="./src/test/reports/clover.xml"/>
+            <cobertura outputFile="./src/test/reports/cobertura.xml"/>
+            <crap4j outputFile="./src/test/reports/crap4j.xml" threshold="50"/>
+            <html outputDirectory="./src/test/reports/html-coverage" lowUpperBound="50" highLowerBound="90"/>
+            <php outputFile="./src/test/reports/coverage.php"/>
+            <text outputFile="./src/test/reports/coverage.txt" showUncoveredFiles="false" showOnlySummary="true"/>
+            <xml outputDirectory="./src/test/reports/xml-coverage"/>
+        </report>
+    </coverage>
+    
+    <logging>
+        <junit outputFile="./src/test/reports/junit.xml"/>
+        <teamcity outputFile="./src/test/reports/teamcity.txt"/>
+        <testdoxHtml outputFile="./src/test/reports/testdox.html"/>
+        <testdoxText outputFile="./src/test/reports/testdox.txt"/>
+    </logging>
+        
+</phpunit>

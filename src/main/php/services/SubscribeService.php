@@ -43,7 +43,7 @@ class SubscribeService extends BaseService {
             $results = $dbHelper->processQuery($procedure, $mapping);
         }
         
-        $tpl = file_get_contents('../email-tpl/T_USER_CONTACTUS.html');
+        $tpl = file_get_contents(__DIR__ .'/../../resources/email-tpls/T_USER_CONTACTUS.html');
         if (!OnclickUtils::isEmpty($tpl)) {
 
             $tpl = str_replace("{{fname}}", $firstName, $tpl);
@@ -110,7 +110,7 @@ class SubscribeService extends BaseService {
             $results = $dbHelper->processQuery($procedure, $mapping);
         }
         
-        $tpl = file_get_contents('../email-tpl/T_USER_CONTACTUS.html');
+        $tpl = file_get_contents(__DIR__ .'/../../resources/email-tpls/T_USER_CONTACTUS.html');
         if (!OnclickUtils::isEmpty($tpl)) {
 
             $tpl = str_replace("{{fname}}", $firstName, $tpl);

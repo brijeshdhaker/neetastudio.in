@@ -126,7 +126,7 @@ class BookingService extends BaseService {
         
         $status = TRUE;
         
-        $tpl = file_get_contents('../email-tpl/PHOTO_SESSION_BOOKING_EMAIL.html');
+        $tpl = file_get_contents(__DIR__ .'/../../resources/email-tpls/PHOTO_SESSION_BOOKING_EMAIL.html');
         
         $booking_id = $results['booking_id'];
         
