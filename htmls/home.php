@@ -703,6 +703,7 @@
 
                             <div class="col-md-6 sm-m-top-30">
                                 <form id="contactForm" name="contactForm" class="" action="/htmls/subcribe.php">
+                                    <input id="action" name="action" type="hidden" value="connect-us">
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group"> 
@@ -755,7 +756,7 @@
                                             <div id="success"></div>
                                         </div>
                                         <div class="col-sm-6">
-                                            <button type="submit" class="btn btn-send">Send Message</button> <!-- Send button -->
+                                            <button type="submit" class="btn btn-send btn-default">Send Message <i class="fa fa-long-arrow-right"></i></button> <!-- Send button -->
                                         </div>
                                     </div>
 
@@ -776,18 +777,7 @@
 
 
             <!--Company section-->
-            <section id="company" class="company bg-light">
-                <div class="container">
-                    <div class="row">
-                        <div class="main_company roomy-100 text-center">
-                            <h3 class="text-uppercase">neetastudio.in.</h3>
-                            <p>A2-803 - Acolade Building - Hadapsar Bypass - Pune - MH, India</p>
-                            <p>(+91). 9820937445/8  -  info@neetastudio.in</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
+            <?php include_once("company.php") ?>
 
             <!-- scroll up-->
             <div class="scrollup">

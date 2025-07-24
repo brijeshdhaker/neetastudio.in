@@ -7,37 +7,56 @@ $(function() {
         },
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
+            //
+            var formData = Object.fromEntries($form.serializeArray().map((t) => [t.name, t.value]));
             // get values from FORM
-            var name = $("input#name").val();
-            var email = $("input#email").val();
-            var phone = $("input#phone").val();
-            var message = $("textarea#message").val();
-            var session_type = $("select#session_type").val();
-            var firstName = name; // For Success/Failure Message
-            var _data = { 
-                name: name, 
-                phone: phone, 
-                email: email, 
-                message:message,
-                session_type: session_type
-            };
-            
-            // Check for white space in name for Success/Fail message
-            if (firstName.indexOf(' ') >= 0) {
-                firstName = name.split(' ').slice(0, -1).join(' ');
+            //var action = $("input#action").val();
+            //var name = $("input#name").val();
+            //var email = $("input#email").val();
+            //var phone = $("input#phone").val();
+            //var message = $("textarea#message").val();
+            //
+            switch (formData['action']) {
+                case 'connect-us':
+                  submit_url = "/controllers/contactus?_dc=6t45fc5&_src=site";
+                  break;
+                case 'collaborate':
+                  submit_url = "/controllers/subcribe-services?_dc=6t47fc5&_src=site";
+                  break;
+                case 'newsletter':
+                  submit_url = "/controllers/subcribe-services?_dc=6t47fc5&_src=site";
+                  //interest_type = $("select#interest_type").val();
+                  //_data['interest_type'] = interest_type;
+                  break;                  
+                case 'booksession':
+                    submit_url = "/controllers/book-session?_dc=6t48fc5&_src=site";
+                  break;
+                default:
+                  submit_url = "/controllers/contactus?_dc=6t45fc5&_src=site";
             }
+            if (!formData['first_name']) {
+                if (formData['name'].indexOf(' ') >= 0) {
+                    
+                    const nameParts = formData['name'].split(' ').filter(Boolean);
+                    const firstName = nameParts[0];
+                    const lastName = nameParts.slice(1).join(' ');
+                    formData['first_name'] = formData['name'].split(' ').slice(0, -1).join(' ');
+                    formData['last_name'] = formData['name'].split(' ').slice(1).join(' ');
+                }
+            }
+            //
             if (window.console) {
-                console.log(_data);
+                console.log(formData);
             }
+            //
             $.ajax({
-                url: "/controllers/contactus?_dc=6t45fc5&key1=value",
+                url: submit_url,
                 type: "POST",
                 dataType: 'json',
                 contentType : 'application/json',
-                data: JSON.stringify(_data),
+                data: JSON.stringify(formData),
                 cache: false,
                 success: function(_response) {
-                    
                     //$.parseJSON(_response);
                     var _data = _response['data'];
                     if (window.console) {
@@ -49,22 +68,22 @@ $(function() {
                     $('#success > .alert-success').append("<strong>" + _response['message'] + "</strong>");
                     $('#success > .alert-success').append('</div>');
                     //clear all fields
-                    $('#contactForm').trigger("reset");
+                    $form.trigger("reset");
                 },
                 error: function() {
                     // Fail message
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>");
-                    $('#success > .alert-danger').append("<strong>Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!");
+                    $('#success > .alert-danger').append("<strong>Sorry, it seems there are issue at server. Please try again later !");
                     $('#success > .alert-danger').append('</div>');
                     //clear all fields
-                    $('#contactForm').trigger("reset");
+                    $form.trigger("reset");
                 }
             });
         },
         filter: function() {
             return $(this).is(":visible");
-        },
+        }
     });
 
     $("a[data-toggle=\"tab\"]").click(function(e) {

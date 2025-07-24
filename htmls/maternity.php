@@ -108,9 +108,9 @@
                                 <br/>
                                 <br/>
                                 <br/>
-                                <a href="/htmls/aboutus.php?_dc=fdfs&page=about&sTgt=site" class="btn btn-default m-top-40">Availability <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site#contact" class="btn btn-default m-top-40">Availability <i class="fa fa-long-arrow-right"></i></a>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="/htmls/aboutus.php?_dc=fdfs&page=about&sTgt=site" class="btn btn-default m-top-40">Packages <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site#contact" class="btn btn-default m-top-40">Packages <i class="fa fa-long-arrow-right"></i></a>
                             </div>
 
                             <div class="col-md-6">
@@ -302,10 +302,10 @@
                     <div class="row">
                         <div class="main_simple text-center">
                             <div class="col-md-12">
-                                <h2>Simplicity isn’t simple</h2>
+                                <h2>Maternity Pictures by Neeta Studios</h2>
                                 <p>This is the day to celebrate how strong your body is and all the hard work it has done over the last 9 months. This time deserves to be documented.</p>
 
-                                <a href="/htmls/aboutus.php?_dc=fdfs&page=about&sTgt=site" class="btn btn-default m-top-40">Contact Us <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="/htmls/book-session.php?_dc=fdfs&page=contact&sTgt=site#contact" class="btn btn-default m-top-40">Contact Us <i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -315,17 +315,7 @@
             <?php include_once("testimonial.php") ?>
 
             <!--Company section-->
-            <section id="company" class="company bg-light">
-                <div class="container">
-                    <div class="row">
-                        <div class="main_company roomy-100 text-center">
-                            <h3 class="text-uppercase">neetastudio.in.</h3>
-                            <p>A2-803 - Acolade Building - Hadapsar Bypass - Pune - MH, India</p>
-                            <p>(+91). 9820937445/8  -  info@neetastudio.in</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <?php include_once("company.php") ?>
 
 
             <!-- scroll up-->

@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <!-- saved from url=(0051)/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site -->
 <html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" lang="en" style=""><!--<![endif]-->
     <head>
@@ -23,25 +22,21 @@
         <link rel="stylesheet" href="/css/magnific-popup.css">
         <link rel="stylesheet" href="/css/bootsnav.css">
 
-
-        <!--For Plugins external css-->
-        <!--<link rel="stylesheet" href="assets/css/plugins.css" />-->
-
         <!--Theme custom css -->
         <link rel="stylesheet" href="/css/style.css">
-        <!--<link rel="stylesheet" href="assets/css/colors/maron.css">-->
 
         <!--Theme Responsive css-->
         <link rel="stylesheet" href="/css/responsive.css">
-
         <script src="/scripts/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <!--google-map css-->
+        <link rel="stylesheet" type="text/css" href="/css/google-map.css" />
+        <script src="/scripts/google-map.js" type="module"></script>
     </head>
 
     <body data-spy="scroll" data-target=".navbar-collapse"><div class="wrapper">
 
 
         <!-- Preloader -->
-
         <div id="loading" style="display: none;">
             <div id="loading-center">
                 <div id="loading-center-absolute">
@@ -58,16 +53,13 @@
                 </div>
             </div>
         </div>
-
         <!--End off Preloader -->
-
-
+        
         <div class="culmn">
             <!--Home page style-->
             <?php include_once("nav.php") ?>
 
             <!--Home Sections-->
-
             <section id="hello" class="contact-banner bg-mega">
                 <div class="overlay"></div>
                 <div class="container">
@@ -89,6 +81,21 @@
             <!--Call To Action Section-->
             <section id="action" class="action roomy-100">
                 <div class="container">
+                    <div class="row">
+                        <div class="main_contact p-top-100">
+                            <div class="row">
+                                <div class="main_models text-center">
+                                    <div class="col-md-12">
+                                            <div class="head_title text-left sm-text-center wow fadeInDown" style="visibility: hidden; animation-name: none;">
+                                                <h2></h2>
+                                                <h5><em>Portraits and Commercial Photography Studio in Pune</em></h5>
+                                                <div class="separator_left"></div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="main_action text-center">
                             <div class="col-md-4">
@@ -121,12 +128,7 @@
             </section>
 
             <!-- map section-->
-            <div id="map" class="map">
-                <div class="ourmap"></div>
-            </div><!-- End off Map section-->
-
-            <!--Contact Us Section-->
-            <section id="contact" class="contact fix">
+            <section id="section-map" class="contact fix">
                 <div class="container">
                     <div class="row">
                         <div class="main_contact p-top-100">
@@ -134,7 +136,128 @@
                                 <div class="main_models text-center">
                                     <div class="col-md-12">
                                             <div class="head_title text-left sm-text-center wow fadeInDown" style="visibility: hidden; animation-name: none;">
-                                                <h2>Join the Exclusives list</h2>
+                                                <h2>Studio Google Location</h2>
+                                                <h5><em>Our studio is located in Kharadi, Pune, 411014</em></h5>
+                                                <div class="separator_left"></div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 sm-m-top-30">
+                                <div id="map" class="map"></div>
+                            </div>
+                        </div>
+                    </div><!--End off row -->
+                </div><!--End off container -->
+            </section>
+            
+            <!-- End off Map section-->
+
+            <!-- Collaborate With Us Section-->
+            <section id="collaborate" class="contact fix">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_contact p-top-100">
+                            <div class="row">
+                                <div class="main_models text-center">
+                                    <div class="col-md-12">
+                                            <div class="head_title text-left sm-text-center wow fadeInDown" style="visibility: hidden; animation-name: none;">
+                                                <h2>Collaborate with Us</h2>
+                                                <h5><em>Our way of working is highly collaborative. Our belief is that we can do more together. Get in touch with us at partners@neetastudio.in to see how we can join forces.</em></h5>
+                                                <div class="separator_left"></div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 sm-m-top-30">
+                                <form id="collaborateForm" name="collaborateForm" class="" action="/htmls/collaborate.php?_dc=fdfs&page=contact&sTgt=site">
+                                    <input id="action" name="action" type="hidden" value="collaborate">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group"> 
+                                                <label>Your Name *</label>
+                                                <input id="name" name="name" type="text" class="form-control" required="" data-validation-required-message="Please enter your name." value="Brijesh Dhaker">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>Your Email *</label>
+                                                <input id="email" name="email" type="email" class="form-control" required="" data-validation-required-message="Please enter your email address." value="brijeshdhaker@gmail.com">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-sm-6">
+                                            <div class="form-group"> 
+                                                <label>Your Phone *</label>
+                                                <input id="phone" name="phone" type="text" class="form-control" required="" data-validation-required-message="Please enter your email address." value="+919820937445">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-sm-6">
+                                            <div class="form-group"> 
+                                                <label>What services you provides ? *</label>
+                                                <select id="service_type" name="service_type" type="text" class="form-control" required="" data-validation-required-message="Please select service type.">
+                                                    <option value="photographer">Photographer</option>
+                                                    <option value="makeup-artist">Makeup Artist</option>
+                                                    <option value="beauty-products">Beauty Products</option>
+                                                    <option value="props-rental">Prop Rental</option>
+                                                    <option value="dress-rental">Dress Rental</option>
+                                                    <option value="studio-rental">Studio Rental</option>
+                                                    <option value="gears-rental">Gears Rental</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <label>Upload 5 images as a zip file of your best work *</label>
+                                                <input id="files" name="files" type="file" class="form-control" required="" data-validation-required-message="Please upload a file.">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12">
+                                            <div class="form-group"> 
+                                                <label>Your Message *</label>
+                                                <textarea id="message" name="message" class="form-control" rows="6" required="" data-validation-required-message="Please enter a message.">We want to collaborate for our services.</textarea>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="clearfix"></div>
+                                        <div class="col-sm-12">
+                                            <div id="success"></div>
+                                        </div>
+                                        
+                                        <div class="col-sm-6">
+                                            <button type="submit" class="btn btn-send btn-default">Send Message <i class="fa fa-long-arrow-right"></i></button> <!-- Send button -->
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="contact_img">
+                                    <img src="/images/collaboration-005.jpg" alt="">
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div><!--End off row -->
+                </div><!--End off container -->
+            </section><!--End off Contact Section-->
+            
+            <!--Newsletter Us Section-->
+            <section id="newsletter" class="contact fix">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_contact p-top-100">
+                            <div class="row">
+                                <div class="main_models text-center">
+                                    <div class="col-md-12">
+                                            <div class="head_title text-left sm-text-center wow fadeInDown" style="visibility: hidden; animation-name: none;">
+                                                <h2>Join the Exclusives NewsLetter</h2>
                                                 <h5><em>You will be the first to know about any limited edition sessions & exclusive offers and promotions.</em></h5>
                                                 <div class="separator_left"></div>
                                             </div>
@@ -142,12 +265,13 @@
                                 </div>
                             </div>
                             <div class="col-md-6 sm-m-top-30">
-                                <form class="" action="/subcribe.php">
+                                <form id="subcribeForm" name="subcribeForm" class=""  action="/controllers/subcribe-services?_dc=6t47fc5&_src=site">
+                                    <input id="action" name="action" type="hidden" value="newsletter">
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group"> 
                                                 <label>Your Name *</label>
-                                                <input id="first_name" name="name" type="text" class="form-control" required="">
+                                                <input id="name" name="name" type="text" class="form-control" required="">
                                             </div>
                                         </div>
 
@@ -160,12 +284,12 @@
 
                                         <div class="col-sm-6">
                                             <div class="form-group"> 
-                                                <label>What type of session are looking for ? *</label>
-                                                <select id="first_name" name="name" type="text" class="form-control" required="">
+                                                <label>What is your interest ? *</label>
+                                                <select id="interest_type" name="interest_type" type="text" class="form-control" required="" data-validation-required-message="Please select interset type.">
                                                     <option value="Maternity">Maternity</option>
-                                                    <option value="New Born">New Born</option>
-                                                    <option value="Baby">Kids</option>
-                                                    <option value="Family">Portraits</option>
+                                                    <option value="Newborn">New Born</option>
+                                                    <option value="kids">Kids</option>
+                                                    <option value="Portraits">Portraits</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -183,9 +307,15 @@
                                                 <label>Your Message *</label>
                                                 <textarea class="form-control" rows="6"></textarea>
                                             </div>
-                                            <div class="form-group">
-                                                <a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site" class="btn btn-default">SEND MESSAGE <i class="fa fa-long-arrow-right"></i></a>
-                                            </div>
+                                        </div>
+                                        
+                                        <div class="clearfix"></div>
+                                        <div class="col-sm-12">
+                                            <div id="success"></div>
+                                        </div>
+                                        
+                                        <div class="col-sm-6">
+                                            <button type="submit" class="btn btn-send btn-default">Send Message <i class="fa fa-long-arrow-right"></i></button> <!-- Send button -->
                                         </div>
 
                                     </div>
@@ -195,7 +325,7 @@
 
                             <div class="col-md-6">
                                 <div class="contact_img">
-                                    <img src="/images/porfolio-2.jpg" alt="">
+                                    <img src="/images/contact-us-005.jpg" alt="">
                                 </div>
                             </div>
 
@@ -214,7 +344,7 @@
                                 <div class="main_models text-center">
                                     <div class="col-md-12">
                                             <div class="head_title text-left sm-text-center wow fadeInDown" style="visibility: hidden; animation-name: none;">
-                                                <h2>Let’s Chat! </h2>
+                                                <h2>Let’s us know about your plan ! </h2>
                                                 <h5><em></em></h5>
                                                 <div class="separator_left"></div>
                                             </div>
@@ -222,44 +352,56 @@
                                 </div>
                             </div>
                             <div class="col-md-6 sm-m-top-30">
-                                <form class="" action="/subcribe.php">
+                                <form id="contactForm" name="contactForm" class="" action="/controllers/contactus?_dc=6t45fc5&_src=site">
+                                    <input id="action" name="action" type="hidden" value="connect-us">
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group"> 
                                                 <label>Your Name *</label>
-                                                <input id="first_name" name="name" type="text" class="form-control" required="">
+                                                <input id="name" name="name" type="text" class="form-control" required="" data-validation-required-message="Please enter your name." value="Brijesh Dhaker">
                                             </div>
                                         </div>
 
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>Your Email *</label>
-                                                <input id="email" name="email" type="text" class="form-control">
+                                                <input id="email" name="email" type="email" class="form-control" required="" data-validation-required-message="Please enter your email address." value="brijeshdhaker@gmail.com">
                                             </div>
                                         </div>
-
+                                        
                                         <div class="col-sm-6">
                                             <div class="form-group"> 
-                                                <label>What type of session are looking for ? *</label>
-                                                <input id="first_name" name="name" type="text" class="form-control" required="">
+                                                <label>Your Phone *</label>
+                                                <input id="phone" name="phone" type="text" class="form-control" required="" data-validation-required-message="Please enter your email address." value="+919820937445">
                                             </div>
                                         </div>
-
+                                        
                                         <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label>How did you hear about us ?</label>
-                                                <input id="email" name="email" type="text" class="form-control">
+                                            <div class="form-group"> 
+                                                <label>Interest Type *</label>
+                                                <select id="interest" name="interest" type="text" class="form-control" required="" data-validation-required-message="Please select photo session type" value="portraits">
+                                                    <option value="Maternity">Maternity</option>
+                                                    <option value="Newborn">New Born</option>
+                                                    <option value="kids">Kids</option>
+                                                    <option value="portraits">Portraits</option>
+                                                </select>
                                             </div>
                                         </div>
 
                                         <div class="col-sm-12">
                                             <div class="form-group"> 
                                                 <label>Your Message *</label>
-                                                <textarea class="form-control" rows="6"></textarea>
+                                                <textarea id="message" name="message" class="form-control" rows="6" required="" data-validation-required-message="Please enter a message."> Hello Test </textarea>
                                             </div>
-                                            <div class="form-group">
-                                                <a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site" class="btn btn-default">SEND MESSAGE <i class="fa fa-long-arrow-right"></i></a>
-                                            </div>
+                                        </div>
+                                        
+                                        <div class="clearfix"></div>
+                                        <div class="col-sm-12">
+                                            <div id="success"></div>
+                                        </div>
+                                        
+                                        <div class="col-sm-6">
+                                            <button type="submit" class="btn btn-send btn-default">Send Message <i class="fa fa-long-arrow-right"></i></button> <!-- Send button -->
                                         </div>
 
                                     </div>
@@ -269,7 +411,7 @@
 
                             <div class="col-md-6">
                                 <div class="contact_img">
-                                    <img src="/images/contact-img.png" alt="">
+                                    <img src="/images/lettalk-001.jpg" alt="">
                                 </div>
                             </div>
 
@@ -281,17 +423,7 @@
 
 
             <!--Company section-->
-            <section id="company" class="company bg-light">
-                <div class="container">
-                    <div class="row">
-                        <div class="main_company roomy-100 text-center">
-                            <h3 class="text-uppercase">neetastudio.in.</h3>
-                            <p>A2-803 - Acolade Building - Hadapsar Bypass - Pune - MH, India</p>
-                            <p>(+91). 9820937445/8  -  info@neetastudio.in</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <?php include_once("company.php") ?>
 
 
             <!-- scroll up-->
@@ -315,32 +447,16 @@
         <script src="/scripts/slick.min.js"></script>
         <script src="/scripts/jquery.collapse.js"></script>
         <script src="/scripts/bootsnav.js"></script>
-
-
-        <!-- paradise slider js -->
-        <script src="/scripts/js"></script>
-        <script src="/scripts/gmaps.min.js"></script>
-        <script>
-            var map = new GMaps({
-                el: '.ourmap',
-                lat: -12.043333,
-                lng: -77.028333,
-                scrollwheel: false,
-                zoom: 15,
-                zoomControl: true,
-                panControl: false,
-                
-                streetViewControl: false,
-                mapTypeControl: false,
-                overviewMapControl: false,
-                clickable: false,
-                styles: [{'stylers': [{'hue': 'gray'}, {saturation: -100}, {gamma: 0.80}]}]
-            });
-        </script>
-
         <script src="/scripts/plugins.js"></script>
         <script src="/scripts/main.js"></script>
 
+        <!-- Contact page AIzaSyBoT0dA7eeng8HA1wWfdlbN7_qWYTDlwxI -->
+        <script type="text/javascript" src="/scripts/jqBootstrapValidation.js"></script>
+        <script type="text/javascript" src="/scripts/contact-us.js"></script>
+        
         </div>
+        <!-- prettier-ignore -->
+        <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+            ({key: "AIzaSyBoT0dA7eeng8HA1wWfdlbN7_qWYTDlwxI", v: "weekly"});</script>
     </body>
 </html>

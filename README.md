@@ -71,6 +71,9 @@ sudo apt install php-xdebug
 
 #### Install required packages
 ```
+composer outdated --minor-only
+composer update
+
 #
 composer require slim/slim:"4.*"
 composer require slim/psr7
@@ -82,10 +85,32 @@ composer require apache/log4php "2.3.0"
 #
 composer require phpmailer/phpmailer "~6.0"
 #
+composer require phpfastcache/phpfastcache
+#
 composer require phpoffice/phpspreadsheet
 #
 composer require php-di/php-di
+#
+composer require --dev phpunit/phpunit
+composer require --dev phpunit/phpunit-skeleton-generator:*
 ```
+
+### PHPUnit Test Setup
+```
+sudo apt install php-cli \
+                 php-json \
+                 php-mbstring \
+                 php-xml \
+                 php-pcov \
+                 php-xdebug
+
+sudo apt-get install php-mysql
+
+docker-php-ext-install php-json pdo pdo_mysql
+
+```
+
+phpunit test.php
 
 ###
 http://neetastudio.in/phpinfo.php
@@ -95,3 +120,37 @@ http://neetastudio.in
 
 ###
 http://neetastudio.in/controllers/hello/brijesh
+
+#
+/etc/php/8.3/apache2/php.ini
+; PHPUnit
+error_reporting=-1
+zend.assertions=1
+assert.exception=1
+emory_limit=-1
+extension=mbstring
+
+; xdebug-2.0
+xdebug.remote_enable=on
+xdebug.remote_mode=req
+xdebug.remote_handler=dbgp
+xdebug.remote_host=127.0.0.1
+xdebug.remote_port=9003
+xdebug.idekey=netbeans-xdebug
+
+; xdebug-3.0
+xdebug.mode=develop,debug,coverage
+xdebug.client_host=127.0.0.1
+xdebug.client_port=9003
+xdebug.idekey=netbeans-xdebug
+
+### Run PhpUnit Test
+
+"/usr/bin/php" -d xdebug.mode="develop,debug,coverage" "/var/www/neetastudio.in/vendor/phpunit/phpunit/phpunit" "--colors" "--log-junit" "/tmp/nb-phpunit-log.xml" "--bootstrap" "/var/www/neetastudio.in/unit-tests/bootstrap.php" "--filter" "%\btestgetRepositoryPath\b%" "/var/www/neetastudio.in/unit-tests/classes/OnclickEnvTest.php"
+
+
+###
+
+ENV APACHE_DOCUMENT_ROOT /path/to/new/root
+RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
+RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf

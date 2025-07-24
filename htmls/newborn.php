@@ -107,9 +107,9 @@
                                 <br/>
                                 <br/>
                                 <br/>
-                                <a href="/htmls/aboutus.php?_dc=fdfs&page=about&sTgt=site" class="btn btn-default m-top-40">Availability <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site#contact" class="btn btn-default m-top-40">Availability <i class="fa fa-long-arrow-right"></i></a>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="/htmls/aboutus.php?_dc=fdfs&page=about&sTgt=site" class="btn btn-default m-top-40">Packages <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site#contact" class="btn btn-default m-top-40">Packages <i class="fa fa-long-arrow-right"></i></a>
                             </div>
 
                             <div class="col-md-6">
@@ -233,13 +233,11 @@
                     <div class="row">
                         <div class="main_simple text-center">
                             <div class="col-md-12">
-                                <h2>Simplicity isn’t simple</h2>
-                                <p>Eusus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere 
-                                    me lius quod ii legunt saepius. Duis autem vel eum iriure dolor in hendrerit vulputate velit esse
-                                    molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan blandit
-                                    praesent luptatum.</p>
+                                <h2>Welcome Your Little One: Newborn & Family Photography</h2>
+                                <p>Capture the precious moments of your newborn's arrival with delicate and heartwarming portraits. 
+                                    Our experienced photographers specialize in safely and gently capturing your baby's first days and creating beautiful family portraits that celebrate this special time.</p>
 
-                                <a href="/htmls/aboutus.php?_dc=fdfs&page=about&sTgt=site" class="btn btn-default m-top-40">Contact Us <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site#contact" class="btn btn-default m-top-40">Contact Us <i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -253,17 +251,7 @@
 
 
             <!--Company section-->
-            <section id="company" class="company bg-light">
-                <div class="container">
-                    <div class="row">
-                        <div class="main_company roomy-100 text-center">
-                            <h3 class="text-uppercase">neetastudio.in.</h3>
-                            <p>A2-803 - Acolade Building - Hadapsar Bypass - Pune - MH, India</p>
-                            <p>(+91). 9820937445/8  -  info@neetastudio.in</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <?php include_once("company.php") ?>
 
 
             <!-- scroll up-->
