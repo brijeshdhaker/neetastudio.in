@@ -157,14 +157,14 @@
                                         <div class="col-sm-6">
                                             <div class="form-group"> 
                                                 <label>Preferred Shoot Date *</label>
-                                                <input class="form-control" id="session_date" name="session_date" type="date" value="2021-02-12" required="">
+                                                <input class="form-control" id="session_date" name="session_date" type="date" value="" required="" data-validation-required-message="Please select preferred date.">
                                             </div>
                                         </div>
                                         
                                         <div class="col-sm-6">
                                             <div class="form-group"> 
                                                 <label>Preferred Shoot Time *</label>
-                                                <input class="form-control" id="session_time" name="session_time" type="time" value="18:00" required="">
+                                                <input class="form-control" id="session_time" name="session_time" type="time" value="" required="" data-validation-required-message="Please select preferred time.">
                                             </div>
                                         </div>
 

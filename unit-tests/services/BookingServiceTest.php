@@ -35,8 +35,27 @@ class BookingServiceTest extends TestCase {
      */
     public function testPhotoSession() {
         
-        $this->assertEquals('', $this->object->photoSession());
+        $restResponse = new RestResponse();
+        
+        $reqObj = array(
+            "firstName" => "Brijesh K.",
+            "name" => "Brijesh Dhaker",
+            "email" => "brijeshdhaker@gmail.com",
+            "phone" => "+919820937445",
+            "session_type" => "Maternity",
+            "package_type" => "Basic",
+            "session_date" => "2025-07-23",
+            "session_time" => "2:00 PM",
+            "message" => "this is test message",
+            "rTyp" => "src",
+            "uTyp" => "site",
+        );
+        
+        $this->object->photoSession($reqObj, $restResponse);
+        
+        $this->assertTrue($restResponse->getStatus());
+        
         // Remove the following lines when you implement this test.
-        $this->markTestIncomplete('This test has not been implemented yet.');
+        // $this->markTestIncomplete('This test has not been implemented yet.');
     }
 }
