@@ -903,45 +903,64 @@ Nav Menu style
 .service-banner,
 .model-banner,
 .contact-banner,
-.about-banner,
+.aboutus-banner,
 .blog-banner,
+.portfolio-banner,
+.maternity-banner,
+.newborn-banner,
+.kids-banner,
+.portraits-banner,
+.studio-banner,
 .home{
     background-size: cover;
     position: relative;
 }
 .home{
-    background: url(../images/maternity_008.jpg) no-repeat top center;
+    background: url(../images/banner/maternity_008.jpg) no-repeat top center;
 }
 .service-banner{
-    background: url(../images/background/services-bg.jpg) no-repeat bottom center;
+    background: url(../images/banner/services-bg.jpg) no-repeat bottom center;
 }
 .model-banner{
-    background: url(../images/background/model-bg.jpg) no-repeat bottom center;
+    background: url(../images/banner/model-bg.jpg) no-repeat bottom center;
 }
 .contact-banner{
-    background: url(../images/hero-contact-4cf9fa21.png) no-repeat bottom center;
+    background: url(../images/banner/contactus-banner-01.jpg) no-repeat bottom center;
 }
 .about-banner{
-    background: url(../images/nw_baby_001.jpg) no-repeat bottom center;
+    background: url(../images/banner/nw_baby_001.jpg) no-repeat bottom center;
 }
 .blog-banner{
-    background: url(../images/background/blog-bg.jpg) no-repeat bottom center;
+    background: url(../images/banner/blogs-banner_01.jpg) no-repeat bottom center;
 }
-.maternity-banner{
-    background: url(../images/nw_baby_001.jpg) no-repeat bottom center;
-}
+
 .aboutus-banner{
-    background: url(../images/photographersrightsUS.jpg) no-repeat bottom center;
+    background: url(../images/banner/photographersrightsUS.jpg) no-repeat bottom center;
 }
+
 .studio-banner{
-    background: url(../images/studio-005.jpg) no-repeat bottom center;
+    background: url(../images/banner/studio-banner_01.jpg) no-repeat top center;
 }
 
 .portfolio-banner{
-    background: url(../images/nw_baby_001.jpg) no-repeat bottom center;
+    background: url(../images/banner/portfolio-banner_01.jpg) no-repeat bottom center;
 }
 
+.maternity-banner{
+    background: url(../images/banner/maternity-banner_01.jpg) no-repeat top center;
+}
 
+.newborn-banner{
+    background: url(../images/banner/newborn-banner_02.jpg) no-repeat top center;
+}
+
+.kids-banner{
+    background: url(../images/banner/kids-banner_01.jpg) no-repeat top center;
+}
+
+.portraits-banner{
+    background: url(../images/banner/portraits-banner-01.jpg) no-repeat top center;
+}
 
 /*
 Home Section style

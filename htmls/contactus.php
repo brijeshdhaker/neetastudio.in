@@ -6,7 +6,7 @@
         <title>neetastudio.in - Maternity Photography Studio in Pune</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="/images/ns_logo_50.jpg">
+        <link rel="icon" type="image/png" href="/images/logo/ns_logo_50.jpg">
 
         <!--Google Fonts link-->
         <link href="/css/css" rel="stylesheet">
@@ -66,7 +66,7 @@
                     <div class="row">
                         <div class="main_home text-center">
                             <div class="contact_text">
-                                <h1 class="text-white text-uppercase">Contact Us</h1>
+                                <h1 class="text-white text-uppercase">Get in touch with us</h1>
                                 <ol class="breadcrumb">
                                     <li><a href="/htmls/home.php?_dc=fdfs&page=home&sTgt=site">Home</a></li>
                                     <li class="active"><a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site">Contact Us</a></li>
@@ -79,7 +79,7 @@
 
 
             <!--Call To Action Section-->
-            <section id="action" class="action roomy-100">
+            <section id="action" class="action roomy-40">
                 <div class="container">
                     <div class="row">
                         <div class="main_contact p-top-100">
@@ -88,7 +88,7 @@
                                     <div class="col-md-12">
                                             <div class="head_title text-left sm-text-center wow fadeInDown" style="visibility: hidden; animation-name: none;">
                                                 <h2></h2>
-                                                <h5><em>Portraits and Commercial Photography Studio in Pune</em></h5>
+                                                <h5><em>You are warmly welcomed in our maternity & kids atelier in Kharadi, green and peaceful suburbs of Pune, perfectly suited for candid and happy clicks!</em></h5>
                                                 <div class="separator_left"></div>
                                             </div>
                                         </div>
@@ -128,15 +128,15 @@
             </section>
 
             <!-- map section-->
-            <section id="section-map" class="contact fix">
+            <section id="section-map" class="contact roomy-40 fix">
                 <div class="container">
                     <div class="row">
-                        <div class="main_contact p-top-100">
+                        <div class="main_contact">
                             <div class="row">
                                 <div class="main_models text-center">
                                     <div class="col-md-12">
                                             <div class="head_title text-left sm-text-center wow fadeInDown" style="visibility: hidden; animation-name: none;">
-                                                <h2>Studio Google Location</h2>
+                                                <h2>Studio Location</h2>
                                                 <h5><em>Our studio is located in Kharadi, Pune, 411014</em></h5>
                                                 <div class="separator_left"></div>
                                             </div>
@@ -170,7 +170,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 sm-m-top-30">
-                                <form id="collaborateForm" name="collaborateForm" class="" action="/htmls/collaborate.php?_dc=fdfs&page=contact&sTgt=site">
+                                <form id="collaborateForm" name="collaborateForm" class="" action="/controllers/subcribe-services?_dc=6t47fc5&_src=site">
                                     <input id="action" name="action" type="hidden" value="collaborate">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -238,7 +238,7 @@
 
                             <div class="col-md-6">
                                 <div class="contact_img">
-                                    <img src="/images/collaboration-005.jpg" alt="">
+                                    <img src="/images/other/collaboration-005.jpg" alt="">
                                 </div>
                             </div>
 
@@ -265,7 +265,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 sm-m-top-30">
-                                <form id="subcribeForm" name="subcribeForm" class=""  action="/controllers/subcribe-services?_dc=6t47fc5&_src=site">
+                                <form id="newsletterForm" name="newsletterForm" class=""  action="/controllers/subcribe-services?_dc=6t47fc5&_src=site">
                                     <input id="action" name="action" type="hidden" value="newsletter">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -325,7 +325,7 @@
 
                             <div class="col-md-6">
                                 <div class="contact_img">
-                                    <img src="/images/contact-us-005.jpg" alt="">
+                                    <img src="/images/other/contact-us-005.jpg" alt="">
                                 </div>
                             </div>
 
@@ -411,7 +411,7 @@
 
                             <div class="col-md-6">
                                 <div class="contact_img">
-                                    <img src="/images/lettalk-001.jpg" alt="">
+                                    <img src="/images/other/lettalk-001.jpg" alt="">
                                 </div>
                             </div>
 

@@ -5,7 +5,7 @@
         <title>neetastudio.in - Maternity Photography Studio in Pune</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="/images/ns_logo_50.jpg">
+        <link rel="icon" type="image/png" href="/images/logo/ns_logo_50.jpg">
 
         <!--Google Fonts link-->
         <link href="/css/css" rel="stylesheet">
@@ -58,8 +58,10 @@
 
 
             <!--Home Sections-->
-            <section id="hello" class="about-banner bg-mega">
+            <section id="hello" class="newborn-banner bg-mega">
+                <!--
                 <div class="overlay"></div>
+                -->
                 <div class="container">
                     <div class="row">
                         <div class="main_home text-center">
@@ -77,7 +79,7 @@
 
 
             <!--About Sections-->
-            <section id="feature" class="ab_feature roomy-100">
+            <section id="feature" class="ab_feature roomy-40">
                 <div class="container">
                     <div class="row">
                         <div class="main_ab_feature">
@@ -107,9 +109,9 @@
                                 <br/>
                                 <br/>
                                 <br/>
-                                <a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site#contact" class="btn btn-default m-top-40">Availability <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site#contact" class="btn btn-default m-top-40">Request an appointment <i class="fa fa-long-arrow-right"></i></a>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site#contact" class="btn btn-default m-top-40">Packages <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="/htmls/package-details.php?_dc=fdfs&srcPage=Newborn&sTgt=site" class="btn btn-default m-top-40">Packages <i class="fa fa-long-arrow-right"></i></a>
                             </div>
 
                             <div class="col-md-6">
@@ -117,47 +119,47 @@
                                     <div class="row">
                                         <div class="col-md-4 col-sm-6">
                                             <div class="ab_feature_item sm-m-top-20">
-                                                <img src="/images/nw_baby_009.jpg" alt="">
+                                                <img src="/images/newborn/nw_baby_009.jpg" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-sm-6">
                                             <div class="ab_feature_item sm-m-top-20">
-                                                <img src="/images/nw_baby_010.jpg" alt="">
+                                                <img src="/images/newborn/nw_baby_010.jpg" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-sm-6">
                                             <div class="ab_feature_item sm-m-top-20">
-                                                <img src="/images/nw_baby_011.jpg" alt="">
+                                                <img src="/images/newborn/nw_baby_011.jpg" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-sm-6">
                                             <div class="ab_feature_item m-top-20">
-                                                <img src="/images/nw_baby_012.jpg" alt="">
+                                                <img src="/images/newborn/nw_baby_012.jpg" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-sm-6">
                                             <div class="ab_feature_item m-top-20">
-                                                <img src="/images/nw_baby_013.jpg" alt="">
+                                                <img src="/images/newborn/nw_baby_013.jpg" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-sm-6">
                                             <div class="ab_feature_item m-top-20">
-                                                <img src="/images/nw_baby_014.jpg" alt="">
+                                                <img src="/images/newborn/nw_baby_014.jpg" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-sm-6">
                                             <div class="ab_feature_item m-top-20">
-                                                <img src="/images/nw_baby_015.jpg" alt="">
+                                                <img src="/images/newborn/nw_baby_015.jpg" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-sm-6">
                                             <div class="ab_feature_item m-top-20">
-                                                <img src="/images/nw_baby_016.jpg" alt="">
+                                                <img src="/images/newborn/nw_baby_016.jpg" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-sm-6">
                                             <div class="ab_feature_item m-top-20">
-                                                <img src="/images/nw_baby_017.jpg" alt="">
+                                                <img src="/images/newborn/nw_baby_017.jpg" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -167,9 +169,13 @@
                     </div><!--End off row-->
                 </div><!--End off container -->
             </section>
-
-                        <!--Models section-->
-            <section id="teams" class="teams roomy-80">
+            
+            <!-- Newborn Package Details Section-->
+            <?php 
+            //include_once("newborn-packages.php");
+            ?>
+            <!-- Newborn Package Details Section-->
+            <section id="teams" class="teams roomy-40">
                 <div class="container">
                     <div class="row">
                         <div class="main_teams">
@@ -184,7 +190,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="team_item m-top-30">
                                     <div class="team_img">
-                                        <img src="/images/nw_baby_004.jpg" alt="">
+                                        <img src="/images/newborn/nw_baby_017.jpg" alt="">
                                         <div class="team_caption">
                                             <h4 class="">OPTION 1</h4>
                                             <h5><em>Setups: 1 for Baby, 1 for Family</em></h5>
@@ -193,12 +199,13 @@
                                         </div>
                                     </div>
                                 </div>
+                                <a href="/htmls/package-details.php?_dc=fdfs&srcPage=Newborn&sTgt=site" class="btn btn-default m-top-40">Show Details <i class="fa fa-long-arrow-right"></i></a>
                             </div><!-- End off col-md-3 -->
 
                             <div class="col-md-4 col-sm-6">
                                 <div class="team_item m-top-30">
                                     <div class="team_img">
-                                        <img src="/images/TEJAS_8103744.jpg" alt="">
+                                        <img src="/images/newborn/nw_baby_014.jpg" alt="">
                                         <div class="team_caption">
                                             <h4 class="">OPTION 2</h4>
                                             <h5><em>Setups: 2 for Baby, 1 for Family</em></h5>
@@ -207,12 +214,13 @@
                                         </div>
                                     </div>
                                 </div>
+                                <a href="/htmls/package-details.php?_dc=fdfs&srcPage=Newborn&sTgt=site" class="btn btn-default m-top-40">Show Details <i class="fa fa-long-arrow-right"></i></a>
                             </div><!-- End off col-md-3 -->
 
                             <div class="col-md-4 col-sm-6">
                                 <div class="team_item m-top-30">
                                     <div class="team_img">
-                                        <img src="/images/JINAYA DSC_1976.jpg" alt="">
+                                        <img src="/images/newborn/nw_baby_013.jpg" alt="">
                                         <div class="team_caption">
                                             <h4 class="">OPTION 3</h4>
                                             <h5><em>Setups: 3 for Baby, 1 for Family</em></h5>
@@ -221,12 +229,17 @@
                                         </div>
                                     </div>
                                 </div>
+                                <a href="/htmls/package-details.php?_dc=fdfs&srcPage=Newborn&sTgt=site" class="btn btn-default m-top-40">Show Details <i class="fa fa-long-arrow-right"></i></a>
                             </div><!-- End off col-md-3 -->
                         </div>
                     </div>
                 </div>
             </section>
 
+            <hr>
+            <!--Faqs Sections-->
+            <?php include 'newborn-faqs.php'; ?>
+            
             <!--Simple Section-->
             <section id="simple" class="simple bg-grey roomy-80">
                 <div class="container">
@@ -244,15 +257,10 @@
                 </div>
             </section>
 
-
-
-
             <?php include_once("testimonial.php") ?>
-
 
             <!--Company section-->
             <?php include_once("company.php") ?>
-
 
             <!-- scroll up-->
             <div class="scrollup">

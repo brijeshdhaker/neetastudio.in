@@ -53,30 +53,5 @@ class SubscribeServiceTest extends TestCase {
         // Remove the following lines when you implement this test.
         //$this->markTestIncomplete('This test has not been implemented yet.');
     }
-
-    /**
-     * @covers SubscribeServices::forCollaboration
-     * @todo   Implement testforCollaboration().
-     */
-    public function testforCollaboration() {
-        
-        $restResponse = new RestResponse();
-        $reqObj = array(
-            "name" => "Brijesh Dhaker",
-            "email" => "brijeshdhaker@gmail.com",
-            "phone" => "+919820937445",
-            "service_type" => "dress-rental",
-            "message" => "we are interested for partner collaboration.",
-            "rTyp" => "src",
-            "uTyp" => "site",
-        );
-        
-        $this->object->forCollaboration($reqObj, $restResponse);
-        
-        $this->assertTrue($restResponse->getStatus());
-        
-        // Remove the following lines when you implement this test.
-        //$this->markTestIncomplete('This test has not been implemented yet.');
-    }
     
 }

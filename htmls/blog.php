@@ -7,7 +7,7 @@
         <title>neetastudio.in - Maternity Photography Studio in Pune</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="/images/ns_logo_50.jpg">
+        <link rel="icon" type="image/png" href="/images/logo/ns_logo_50.jpg">
 
         <!--Google Fonts link-->
         <link href="/css/css" rel="stylesheet">
@@ -65,10 +65,10 @@
                     <div class="row">
                         <div class="main_home text-center">
                             <div class="about_text">
-                                <h1 class="text-white text-uppercase">Blog</h1>
+                                <h1 class="text-white text-uppercase">Stories</h1>
                                 <ol class="breadcrumb">
                                     <li><a href="/htmls/home.php?_dc=fdfs&page=home&sTgt=site">Home</a></li>
-                                    <li class="active"><a href="/htmls/blog.php?_dc=fdfs&page=blog&sTgt=site">Blog</a></li>
+                                    <li class="active"><a href="/htmls/blog.php?_dc=fdfs&page=blog&sTgt=site">Stories</a></li>
                                 </ol>
                             </div>
                         </div>
@@ -106,20 +106,17 @@
                             <div class="col-md-4">
                                 <div class="blog_fashion_right">
                                     <div class="fashion_test text-center">
-                                        <img class="img-circle" src="/images/blog-test-img1.jpg" alt="">
+                                        <img class="img-circle" src="/images/testimonial/sunil_dhaker.jpg" alt="">
 
-                                        <h6 class="m-top-20">Pouseidon - From OCean</h6>
-                                        <p class="m-top-20">With the waves from somewhere so far. 
-                                            We comes with elegants and beautiful. 
-                                            Just do what we love and always love what we do</p>
+                                        <h6 class="m-top-20">Sunil D.</h6>
+                                        <p class="m-top-20">Team of most talented photographer. I want one traditional look that was different from their style but team managed it so well and the pics were beyond amazing. Personally for my photoshoot they purchased theme backdrop as per my traditional looks</p>
                                         <img class="m-top-20" src="/images/blog-sign.png" alt="">
                                     </div>
 
                                     <div class="fashion_praspect m-top-40">
                                         <div class="fashion_praspect_inner bg-black">
-                                            <p class="text-white">Good design is making something intelligible and memorable. 
-                                                Great design is making something memorable and meaningful.</p>
-                                            <p class="text-white">_ Dieter Rams</p>
+                                            <p class="text-white">neeta studio is one of the best studio I’ve ever come across. team's dedication, patience, attention to minute details, confidence, attitude and approach towards photography is simply outstanding. We had awesome experience of our 3.5 months old baby boy photoshoot. It was really amazing to have complete support from her starting from costume selection, time flexibility as per baby’s convenience till completion.</p>
+                                            <p class="text-white">_ Sanjay Rams</p>
                                         </div>
                                     </div>
                                 </div>
@@ -135,13 +132,13 @@
                             <div class="col-md-4" style="position: absolute; left: 0px; top: 0px;">
                                 <div class="blog_item m-top-30">
                                     <div class="blog_item_img">
-                                        <img src="/images/1.jpg" alt="">
+                                        <img src="/images/kids/portraits-kids_013_sm.jpg" alt="">
                                     </div>
                                     <ol class="breadcrumb">
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Fashion</a></li>
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Feb 28th 2015</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Kids</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">July 18th 2025</a></li>
                                     </ol>
-                                    <h5>Street Girl with skate</h5>
+                                    <h5>Baby girl Jinayaa photo session</h5>
                                     <p class="m-top-20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
                                         nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat....</p>
                                 </div>
@@ -149,13 +146,13 @@
                             <div class="col-md-4" style="position: absolute; left: 390px; top: 0px;">
                                 <div class="blog_item m-top-30">
                                     <div class="blog_item_img">
-                                        <img src="/images/2.jpg" alt="">
+                                        <img src="/images/kids/portraits-kids_003_sm.jpg" alt="">
                                     </div>
                                     <ol class="breadcrumb">
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Fashion</a></li>
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Feb 28th 2015</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Kids</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Jun 28th 2025</a></li>
                                     </ol>
-                                    <h5>Street Girl with skate</h5>
+                                    <h5>Ivaan with cycle</h5>
                                     <p class="m-top-20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
                                         nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat....</p>
                                 </div>
@@ -163,13 +160,13 @@
                             <div class="col-md-4" style="position: absolute; left: 780px; top: 0px;">
                                 <div class="blog_item m-top-30">
                                     <div class="blog_item_img">
-                                        <img src="/images/3.jpg" alt="">
+                                        <img src="/images/kids/portraits-kids_004_sm.jpg" alt="">
                                     </div>
                                     <ol class="breadcrumb">
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Fashion</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Kids</a></li>
                                         <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Feb 28th 2015</a></li>
                                     </ol>
-                                    <h5>Street Girl with skate</h5>
+                                    <h5>It's my garden...</h5>
                                     <p class="m-top-20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
                                         nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat....</p>
                                 </div>
@@ -177,13 +174,13 @@
                             <div class="col-md-4" style="position: absolute; left: 780px; top: 408px;">
                                 <div class="blog_item m-top-30">
                                     <div class="blog_item_img">
-                                        <img src="/images/4.jpg" alt="">
+                                        <img src="/images/maternity/maternity_026.jpg" alt="">
                                     </div>
                                     <ol class="breadcrumb">
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Fashion</a></li>
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Feb 28th 2015</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Maternity</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">May 17th 2025</a></li>
                                     </ol>
-                                    <h5>Street Girl with skate</h5>
+                                    <h5>Eraa with Babybump & flowers</h5>
                                     <p class="m-top-20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
                                         nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat....</p>
                                 </div>
@@ -191,13 +188,13 @@
                             <div class="col-md-4" style="position: absolute; left: 0px; top: 409px;">
                                 <div class="blog_item m-top-30">
                                     <div class="blog_item_img">
-                                        <img src="/images/5.jpg" alt="">
+                                        <img src="/images/maternity/maternity_030.jpg" alt="">
                                     </div>
                                     <ol class="breadcrumb">
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Fashion</a></li>
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Feb 28th 2015</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Maternity</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Feb 28th 2025</a></li>
                                     </ol>
-                                    <h5>Street Girl with skate</h5>
+                                    <h5>Different Prospective for Maternity shoot</h5>
                                     <p class="m-top-20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
                                         nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat....</p>
                                 </div>
@@ -205,13 +202,13 @@
                             <div class="col-md-4" style="position: absolute; left: 390px; top: 528px;">
                                 <div class="blog_item m-top-30">
                                     <div class="blog_item_img">
-                                        <img src="/images/6.jpg" alt="">
+                                        <img src="/images/newborn/nw_baby_009.jpg" alt="">
                                     </div>
                                     <ol class="breadcrumb">
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Fashion</a></li>
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Feb 28th 2015</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Newborn</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Feb 14th 2025</a></li>
                                     </ol>
-                                    <h5>Street Girl with skate</h5>
+                                    <h5>Surya welcome his new sibling</h5>
                                     <p class="m-top-20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
                                         nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat....</p>
                                 </div>
@@ -219,13 +216,13 @@
                             <div class="col-md-4" style="position: absolute; left: 0px; top: 799px;">
                                 <div class="blog_item m-top-30">
                                     <div class="blog_item_img">
-                                        <img src="/images/7.jpg" alt="">
+                                        <img src="/images/maternity/maternity_031.jpg" alt="">
                                     </div>
                                     <ol class="breadcrumb">
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Fashion</a></li>
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Feb 28th 2015</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Maternity</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Feb 02th 2025</a></li>
                                     </ol>
-                                    <h5>Street Girl with skate</h5>
+                                    <h5>Simple Dreamy looks in maternity photos</h5>
                                     <p class="m-top-20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
                                         nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat....</p>
                                 </div>
@@ -233,13 +230,13 @@
                             <div class="col-md-4" style="position: absolute; left: 780px; top: 816px;">
                                 <div class="blog_item m-top-30">
                                     <div class="blog_item_img">
-                                        <img src="/images/8.jpg" alt="">
+                                        <img src="/images/newborn/nw_baby_014.jpg" alt="">
                                     </div>
                                     <ol class="breadcrumb">
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Fashion</a></li>
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Feb 28th 2015</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Newborn</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Dec 28th 2024</a></li>
                                     </ol>
-                                    <h5>Street Girl with skate</h5>
+                                    <h5>Baby's 1st Photo session</h5>
                                     <p class="m-top-20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
                                         nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat....</p>
                                 </div>
@@ -247,15 +244,31 @@
                             <div class="col-md-4" style="position: absolute; left: 390px; top: 922px;">
                                 <div class="blog_item m-top-30">
                                     <div class="blog_item_img">
-                                        <img src="/images/9.jpg" alt="">
+                                        <img src="/images/portraits/portraits-women_006_sm.jpg" alt="">
                                     </div>
                                     <ol class="breadcrumb">
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Fashion</a></li>
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Feb 28th 2015</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Portraits</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Dec 20th 2024</a></li>
                                     </ol>
-                                    <h5>Street Girl with skate</h5>
+                                    <h5>Lifestyle of photographer</h5>
                                     <p class="m-top-20">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
                                         nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat....</p>
+                                </div>
+                            </div><!-- End off col-md-4 -->
+                            <div class="col-md-4" style="position: absolute; left: 0px; top: 0px;">
+                                <div class="blog_item m-top-30">
+                                    <div class="blog_item_img">
+                                        <video width="300" height="300" controls>
+                                            <source src="/images/videos/Jinayaa.mov" width="300" height="300" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                    <ol class="breadcrumb">
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">Kids</a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#" class="text-black">July 18th 2025</a></li>
+                                    </ol>
+                                    <h5>Baby Girl Jinayaa photo session</h5>
+                                    <p class="m-top-20">Welcome to the world baby Jinayaa! This sweet girls session was full of smiles, love & rainbows.We set up mostly creams with touches of pink as well as a few deeper ruby red set ups for her Newborn photos</p>
                                 </div>
                             </div><!-- End off col-md-4 -->
                         </div>

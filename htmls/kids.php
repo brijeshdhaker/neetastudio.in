@@ -7,7 +7,7 @@
         <title>neetastudio.in - Maternity Photography Studio in Pune</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="/images/ns_logo_50.jpg">
+        <link rel="icon" type="image/png" href="/images/logo/ns_logo_50.jpg">
 
         <!--Google Fonts link-->
         <link href="/css/css" rel="stylesheet">
@@ -61,8 +61,10 @@
 
 
             <!--Home Sections-->
-            <section id="hello" class="about-banner bg-mega">
+            <section id="hello" class="kids-banner bg-mega">
+                <!--
                 <div class="overlay"></div>
+                -->
                 <div class="container">
                     <div class="row">
                         <div class="main_home text-center">
@@ -78,9 +80,8 @@
                 </div><!--End off container -->
             </section> <!--End off Home Sections-->
 
-
             <!--About Sections-->
-            <section id="feature" class="ab_feature roomy-100">
+            <section id="feature" class="ab_feature roomy-40">
                 <div class="container">
                     <div class="row">
                         <div class="main_ab_feature">
@@ -109,9 +110,9 @@
                                 </div>
                                 <br/>
                                 <br/>
-                                <a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site#contact" class="btn btn-default m-top-40">Availability <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site#contact" class="btn btn-default m-top-40">Request an appointment <i class="fa fa-long-arrow-right"></i></a>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site#contact" class="btn btn-default m-top-40">Packages <i class="fa fa-long-arrow-right"></i></a>
+                                <a href="/htmls/package-details.php?_dc=fdfs&srcPage=Kids&sTgt=site" class="btn btn-default m-top-40">Packages <i class="fa fa-long-arrow-right"></i></a>
 
                             </div>
 
@@ -120,47 +121,47 @@
                                     <div class="row">
                                         <div class="col-md-4 col-sm-6">
                                             <div class="ab_feature_item sm-m-top-20">
-                                                <img src="/images/portraits-kids_000_sm.jpg" alt="">
+                                                <img src="/images/kids/portraits-kids_000_sm.jpg" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-sm-6">
                                             <div class="ab_feature_item sm-m-top-20">
-                                                <img src="/images/portraits-kids_003_sm.jpg" alt="">
+                                                <img src="/images/kids/portraits-kids_003_sm.jpg" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-sm-6">
                                             <div class="ab_feature_item sm-m-top-20">
-                                                <img src="/images/portraits-kids_004_sm.jpg" alt="">
+                                                <img src="/images/kids/portraits-kids_004_sm.jpg" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-sm-6">
                                             <div class="ab_feature_item m-top-20">
-                                                <img src="/images/portraits-kids_005_sm.jpg" alt="">
+                                                <img src="/images/kids/portraits-kids_005_sm.jpg" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-sm-6">
                                             <div class="ab_feature_item m-top-20">
-                                                <img src="/images/portraits-kids_006_sm.jpg" alt="">
+                                                <img src="/images/kids/portraits-kids_006_sm.jpg" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-sm-6">
                                             <div class="ab_feature_item m-top-20">
-                                                <img src="/images/portraits-kids_007_sm.jpg" alt="">
+                                                <img src="/images/kids/portraits-kids_007_sm.jpg" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-sm-6">
                                             <div class="ab_feature_item m-top-20">
-                                                <img src="/images/portraits-kids_008_sm.jpg" alt="">
+                                                <img src="/images/kids/portraits-kids_008_sm.jpg" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-sm-6">
                                             <div class="ab_feature_item m-top-20">
-                                                <img src="/images/portraits-kids_009_sm.jpg" alt="">
+                                                <img src="/images/kids/portraits-kids_009_sm.jpg" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-sm-6">
                                             <div class="ab_feature_item m-top-20">
-                                                <img src="/images/TEJAS_8103744.jpg" alt="">
+                                                <img src="/images/kids/portraits-kids_010_sm.jpg" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -171,7 +172,79 @@
                 </div><!--End off container -->
             </section>
 
+            <hr>
+            <!--Models section-->
+            <section id="teams" class="teams roomy-40">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_teams">
+                            <div class="col-md-12">
+                                <div class="head_title text-left sm-text-center wow fadeInDown" style="visibility: hidden; animation-name: none;">
+                                    <h2>Premium Kids Portraits Packages</h2>
+                                    <h5><em>Behind the cussess of Pouseidon is not th one-man work but the work of many creative and smart people</em></h5>
+                                    <div class="separator_left"></div>
+                                </div>
+                            </div>
 
+                            <div class="col-md-4 col-sm-6">
+                                <div class="team_item m-top-30">
+                                    <div class="team_img">
+                                        <img src="/images/kids/portraits-kids_006_sm.jpg" alt="">
+                                        <div class="team_caption">
+                                            <h4 class="">OPTION 1</h4>
+                                            <h5><em>Outfilt: 1 </em></h5>
+                                            <h5><em>Total Images: 5 (Web-Res)</em></h5>
+                                            <h5><em>Duration: 4.5-6.0 hours</em></h5>
+                                            <h5><em>Weekends: ₹3,000 Weekdays: ₹2,500</em></h5>
+                                            <h5><em></em></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="/htmls/package-details.php?_dc=fdfs&srcPage=Kids&sTgt=site" class="btn btn-default m-top-40">Show Details <i class="fa fa-long-arrow-right"></i></a>
+                            </div><!-- End off col-md-3 -->
+
+                            <div class="col-md-4 col-sm-6">
+                                <div class="team_item m-top-30">
+                                    <div class="team_img">
+                                        <img src="/images/kids/portraits-kids_010_sm.jpg" alt="">
+                                        <div class="team_caption">
+                                            <h4 class="">OPTION 1</h4>
+                                            <h5><em>Outfilt: 1 </em></h5>
+                                            <h5><em>Total Images: 5 (Web-Res)</em></h5>
+                                            <h5><em>Duration: 4.5-6.0 hours</em></h5>
+                                            <h5><em>Weekends: ₹3,000 Weekdays: ₹2,500</em></h5>
+                                            <h5><em></em></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="/htmls/package-details.php?_dc=fdfs&srcPage=Kids&sTgt=site" class="btn btn-default m-top-40">Show Details <i class="fa fa-long-arrow-right"></i></a>
+                            </div><!-- End off col-md-3 -->
+
+                            <div class="col-md-4 col-sm-6">
+                                <div class="team_item m-top-30">
+                                    <div class="team_img">
+                                        <img src="/images/kids/portraits-kids_009_sm.jpg" alt="">
+                                        <div class="team_caption">
+                                            <h4 class="">OPTION 1</h4>
+                                            <h5><em>Outfilt: 1 </em></h5>
+                                            <h5><em>Total Images: 5 (Web-Res)</em></h5>
+                                            <h5><em>Duration: 4.5-6.0 hours</em></h5>
+                                            <h5><em>Weekends: ₹3,000 Weekdays: ₹2,500</em></h5>
+                                            <h5><em></em></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="/htmls/package-details.php?_dc=fdfs&srcPage=Kids&sTgt=site" class="btn btn-default m-top-40">Show Details <i class="fa fa-long-arrow-right"></i></a>
+                            </div><!-- End off col-md-3 -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <hr>
+            <!--Faqs Sections-->
+            <?php include 'newborn-faqs.php'; ?>
+            
             <!--Simple Section-->
             <section id="simple" class="simple bg-grey roomy-80">
                 <div class="container">
@@ -187,78 +260,13 @@
                     </div>
                 </div>
             </section>
-
-
-            <!--Models section-->
-            <section id="teams" class="teams roomy-80">
-                <div class="container">
-                    <div class="row">
-                        <div class="main_teams">
-                            <div class="col-md-12">
-                                <div class="head_title text-left sm-text-center wow fadeInDown" style="visibility: hidden; animation-name: none;">
-                                    <h2>Premium Kids Portraits Packages</h2>
-                                    <h5><em>Behind the cussess of Pouseidon is not th one-man work but the work of many creative and smart people</em></h5>
-                                    <div class="separator_left"></div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 col-sm-6">
-                                <div class="team_item m-top-30">
-                                    <div class="team_img">
-                                        <img src="/images/portraits-kids_006_sm.jpg" alt="">
-                                        <div class="team_caption">
-                                            <h4 class="">OPTION 1</h4>
-                                            <h5><em>Outfilt: 1 </em></h5>
-                                            <h5><em>Total Images: 5 (Web-Res)</em></h5>
-                                            <h5><em>Duration: 4.5-6.0 hours</em></h5>
-                                            <h5><em>Weekends: ₹3,000 Weekdays: ₹2,500</em></h5>
-                                            <h5><em></em></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- End off col-md-3 -->
-
-                            <div class="col-md-4 col-sm-6">
-                                <div class="team_item m-top-30">
-                                    <div class="team_img">
-                                        <img src="/images/TJAS_8103726.jpg" alt="">
-                                        <div class="team_caption">
-                                            <h4 class="">OPTION 1</h4>
-                                            <h5><em>Outfilt: 1 </em></h5>
-                                            <h5><em>Total Images: 5 (Web-Res)</em></h5>
-                                            <h5><em>Duration: 4.5-6.0 hours</em></h5>
-                                            <h5><em>Weekends: ₹3,000 Weekdays: ₹2,500</em></h5>
-                                            <h5><em></em></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- End off col-md-3 -->
-
-                            <div class="col-md-4 col-sm-6">
-                                <div class="team_item m-top-30">
-                                    <div class="team_img">
-                                        <img src="/images/portraits-kids_009_sm.jpg" alt="">
-                                        <div class="team_caption">
-                                            <h4 class="">OPTION 1</h4>
-                                            <h5><em>Outfilt: 1 </em></h5>
-                                            <h5><em>Total Images: 5 (Web-Res)</em></h5>
-                                            <h5><em>Duration: 4.5-6.0 hours</em></h5>
-                                            <h5><em>Weekends: ₹3,000 Weekdays: ₹2,500</em></h5>
-                                            <h5><em></em></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- End off col-md-3 -->
-                        </div>
-                    </div>
-                </div>
-            </section>
-
+            
+            <hr>
+            <!--Testimonial Section-->
             <?php include_once("testimonial.php") ?>
 
             <!--Company section-->
             <?php include_once("company.php") ?>
-
 
             <!-- scroll up-->
             <div class="scrollup">

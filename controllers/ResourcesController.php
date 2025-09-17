@@ -199,17 +199,11 @@ $app->post('/contactus', function (Request $request, Response $response, $connec
         $dataStr = "$jsonObj";
         $logger->info('$dataStr -- '. $dataStr);
         if (!is_null($dataStr) && isset($dataStr)) {
-            
+ 
             $dataObj = json_decode($dataStr);
-            
             $contactusService = $this->get('contactusService');
             $contactusService->contactUs($dataObj, $restResponse);
             
-            $msg = Message::Success("Email Notification successfully send.");
-            $restResponse->addMessages($msg);
-            $restResponse->setData($dataObj);
-            $restResponse->setMessage("You have successfully registered.");
-            $restResponse->setStatus(TRUE);
         } else {
             //header('HTTP/1.0 404 Not Found');
             //$app->notFound();
@@ -304,7 +298,7 @@ $app->post('/subcribe-services', function (Request $request, Response $response,
  */
 $container->set('collaborationService', function () {
     $settings = [];
-    return new SubscribeService();
+    return new CollaborationService();
 });
 $collaborationArgs = array('param' => "collaborationService");
 $app->post('/collaboration', function (Request $request, Response $response, $collaborationArgs) {

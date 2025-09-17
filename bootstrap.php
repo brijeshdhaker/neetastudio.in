@@ -55,7 +55,7 @@ require(__DIR__ . '/src/main/php/services/BookingService.php');
 require(__DIR__ . '/src/main/php/services/ContactusService.php');
 require(__DIR__ . '/src/main/php/services/RegistrationService.php');
 require(__DIR__ . '/src/main/php/services/SubscribeService.php');
-
+require(__DIR__ . '/src/main/php/services/CollaborationService.php');
 //
 LogHelper::init();
 

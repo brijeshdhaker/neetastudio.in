@@ -5,11 +5,12 @@ sudo chown -R $USER:$USER /var/www/neetastudio.in
 sudo chmod -R 755 /var/www/neetastudio.in
 
 sudo mkdir -p /var/log/neetastudio.in
+sudo chown -R $USER:$USER /var/log/neetastudio.in
+sudo chmod -R 777 /var/log/neetastudio.in
 sudo touch /var/log/neetastudio.in/neetastudio-2025-07-21.log
 sudo touch /var/log/neetastudio.in/neetastudio-default.log
 sudo touch /var/log/neetastudio.in/neetastudio-err.log
-sudo chown -R $USER:$USER /var/log/neetastudio.in
-sudo chmod -R 777 /var/log/neetastudio.in
+
 ```
 
 ### Setup Virtualhost
@@ -29,7 +30,7 @@ sudo vi /etc/apache2/sites-available/neetastudio.in.conf
         
         #
         <Directory /var/www/neetastudio.in>
-            Options Indexes FollowSymLinks
+            Options Indexes FollowSymLinks MultiViews
             AllowOverride All
             Require all granted
         </Directory>
@@ -54,20 +55,28 @@ sudo systemctl status apache2
 ```
 
 ### /var/www/neetastudio.in/controllers/.htaccess
+```
 RewriteEngine On
 RewriteBase /controllers
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ index.php [QSA,L]
+```
 
 ### /var/www/neetastudio.in/.htaccess (Optional)
+```
 RewriteEngine on
 RewriteRule ^$ neetastudio.in/ [L]
 RewriteRule (.*) neetastudio.in/$1 [L]
+```
 
 ### setup php-debugger
 sudo apt install php-xdebug
 
+#### Install Composer
+```
+sudo apt install composer
+```
 
 #### Install required packages
 ```
@@ -92,7 +101,8 @@ composer require phpoffice/phpspreadsheet
 composer require php-di/php-di
 #
 composer require --dev phpunit/phpunit
-composer require --dev phpunit/phpunit-skeleton-generator:*
+composer require --dev phpunit/phpunit-skeleton-generator:* --with-all-dependencies
+composer require --dev vitexsoftware/phpunit-skeleton-generator --with-all-dependencies
 ```
 
 ### PHPUnit Test Setup
@@ -121,8 +131,8 @@ http://neetastudio.in
 ###
 http://neetastudio.in/controllers/hello/brijesh
 
-#
-/etc/php/8.3/apache2/php.ini
+### PHPUnit Setup ; /etc/php/8.3/apache2/php.ini
+```
 ; PHPUnit
 error_reporting=-1
 zend.assertions=1
@@ -143,14 +153,16 @@ xdebug.mode=develop,debug,coverage
 xdebug.client_host=127.0.0.1
 xdebug.client_port=9003
 xdebug.idekey=netbeans-xdebug
+```
 
 ### Run PhpUnit Test
-
-"/usr/bin/php" -d xdebug.mode="develop,debug,coverage" "/var/www/neetastudio.in/vendor/phpunit/phpunit/phpunit" "--colors" "--log-junit" "/tmp/nb-phpunit-log.xml" "--bootstrap" "/var/www/neetastudio.in/unit-tests/bootstrap.php" "--filter" "%\btestgetRepositoryPath\b%" "/var/www/neetastudio.in/unit-tests/classes/OnclickEnvTest.php"
-
+```
+"/usr/bin/php" -d xdebug.mode="develop,debug,coverage" "/var/www/neetastudio.in/vendor/phpunit/phpunit/phpunit" "--colors" "--log-junit" "/tmp/nb-phpunit-log.xml" "--bootstrap" "/var/www/neetastudio.in/bootstrap.php" "--filter" "%\btestgetRepositoryPath\b%" "/var/www/neetastudio.in/src/test/php/OnclickEnvTest.php"
+```
 
 ###
-
-ENV APACHE_DOCUMENT_ROOT /path/to/new/root
+```
+ENV APACHE_DOCUMENT_ROOT /var/www/neetastudio.in
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
 RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
+```

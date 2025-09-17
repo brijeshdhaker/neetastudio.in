@@ -7,7 +7,7 @@
         <title>neetastudio.in - Maternity Photography Studio in Pune</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="/images/ns_logo_50.jpg">
+        <link rel="icon" type="image/png" href="/images/logo/ns_logo_50.jpg">
 
         <!--Google Fonts link-->
         <link href="/css/css" rel="stylesheet">
@@ -73,11 +73,9 @@
                     <div class="row">
                         <div class="main_home text-center">
                             <div class="home_text">
-                                <h4 class="text-white text-uppercase">a new creative studio</h4>
-                                <h1 class="text-white text-uppercase">Newborn & Maternity Photographer</h1>
-
+                                <h4 class="text-white text-uppercase">A creative</h4>
+                                <h1 class="text-white text-uppercase">Maternity & Newborn Photostudio</h1>
                                 <div class="separator"></div>
-
                                 <h5 class=" text-uppercase text-white"><em>Preserve your legacy with timeless, exquisite portraits</em></h5>
                             </div>
                         </div>
@@ -90,7 +88,6 @@
                 <div class="container">
                     <div class="row">
                         <div class="main_feature">
-
                             <div class="col-md-6 m-top-120">
                                 <!-- Head Title -->
                                 <div class="head_title">
@@ -100,16 +97,19 @@
                                 </div><!-- End off Head Title -->
 
                                 <div class="feature_content wow fadeIn m-top-40" style="visibility: hidden; animation-name: none;">
-                                    <p>Eusus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores
-                                        legere me lius quod ii legunt saepius. Duis autem vel eum iriure dolor in hendrerit vulputate
-                                        velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
-                                        accumsan et iusto odio dignissim qui blandit praesent luptatum</p>
+                                    <p>
+                                        There is nothing more so beautiful, fulfilling and admiring like the feeling of bearing your Baby.
+                                        Pregnancy is an extraordinary transformation of body and storm of emotions,
+                                        from happiness and worries, courage and fear, strength and weakness, 
+                                        but the most – endless Beauty. It is the time for you to admire every single curve, extra layer, 
+                                        fallen hair or even swollen feet, something only a pregnant woman can understand, hardly explain, 
+                                        and transition to that beautiful new development inside her. And it is amazing! Worth capturing!
+                                    </p>
 
-                                    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, 
-                                        vel illum dolore feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim</p>
+                                    <p>Through pictures, we can bring memories to life. Life is full of special moments that we would all love to revisit. Throughout my career as maternity and baby photographer at Edita photography, I have captured thousands of these moments which are here, being shared with the world for everyone to come and experience these moments together.</p>
 
                                     <div class="feature_btns m-top-30">
-                                        <a href="/aboutus.php?_dc=fdfs&page=about&sTgt=site" class="btn btn-default text-uppercase">more about us <i class="fa fa-long-arrow-right"></i></a>
+                                        <a href="/htmls/aboutus.php?_dc=fdfs&page=about&sTgt=site" class="btn btn-default text-uppercase">more about us <i class="fa fa-long-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -117,7 +117,7 @@
                                 <div class="feature_photo wow fadeIn sm-m-top-40 animated" style="visibility: visible; animation-name: fadeIn;">
                                     <div class="photo_border"></div>
                                     <div class="feature_img">
-                                        <img src="/images/maternity_020_hd.jpg" alt="">
+                                        <img src="/images/feature/maternity_020_hd.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -185,7 +185,7 @@
                                     <div class="row">
                                         <div class="col-md-7 col-sm-12 col-xs-12 text-right pull-right sm-text-center">
                                             <div class="work_item_img">
-                                                <img src="/images/maternity_011.jpg" alt="">
+                                                <img src="/images/maternity/maternity_017_sm.jpg" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-5 col-sm-12 col-xs-12 text-right pull-left sm-text-center">
@@ -204,7 +204,7 @@
                                     <div class="row">
                                         <div class="col-md-7 col-sm-12 col-xs-12">
                                             <div class="work_item_img sm-text-center sm-m-top-40">
-                                                <img src="/images/nw_baby_005.jpg" alt="">
+                                                <img src="/images/newborn/nw_baby_013.jpg" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-5 col-sm-12 col-xs-12 text-left pull-left sm-text-center">
@@ -224,7 +224,7 @@
                                     <div class="row">
                                         <div class="col-md-7 col-sm-12 col-xs-12 text-right pull-right sm-text-center">
                                             <div class="work_item_img sm-m-top-40">
-                                                <img src="/images/portraits-kids_003.jpg" alt="">
+                                                <img src="/images/kids/portraits-kids_003_sm.jpg" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-5 col-sm-12 col-xs-12 text-right pull-left sm-text-center">
@@ -243,7 +243,7 @@
                                     <div class="row">
                                         <div class="col-md-7 col-sm-12 col-xs-12">
                                             <div class="work_item_img sm-text-center sm-m-top-40">
-                                                <img src="/images/portraits-women_004.jpg" alt="">
+                                                <img src="/images/portraits/portraits-women_009_sm.jpg" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-5 col-sm-12 col-xs-12 text-left pull-left sm-text-center">
@@ -261,9 +261,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
                 <br>
                 <br>
                 <br>
@@ -271,7 +268,6 @@
                 <br>
                 <br>
                 <br>
-
                 <div class="container">
                     <div class="row">
 
@@ -356,7 +352,7 @@
                             <!-- PHONE IMAGE -->
                             <div class="col-md-4 sm-m-top-40 sm-text-center">
                                 <div class="service-img wow bounceIn" style="visibility: hidden; animation-name: none;">
-                                    <img src="/images/maternity_019.jpg" alt="Architect Img">
+                                    <img src="/images/feature/maternity_019.jpg" alt="Architect Img">
                                 </div>
                             </div>
 
@@ -386,8 +382,6 @@
                                     </div>
 
                                 </div> <!-- end Single Service item -->
-
-
 
                                 <!-- Service -->
                                 <div class="service_items">
@@ -445,153 +439,9 @@
                 </div>
 
             </section> <!--End off About section -->
-
-            <!--Gallery Section-->
-            <section id="gallery" class="light-bg">
-                <!-- Gallery container-->
-                <div class="container">
-                    <div class="row">
-                        <div class="main-gallery roomy-80">
-                            <div class="col-md-12">
-                                <div class="head_title text-left sm-text-center wow fadeInDown" style="visibility: hidden; animation-name: none;">
-                                    <h2>Our Gallery</h2>
-                                    <h5><em>Some our recent works is here. Discover them now!</em></h5>
-                                    <div class="separator_left"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 m-bottom-60">
-                                <div class="filters-button-group text-right sm-text-center">
-                                    <button class="button is-checked" data-filter="*">View all</button>
-                                    <button class="button" data-filter=".metal">Maternity</button>
-                                    <button class="button" data-filter=".transition">Newborn</button>
-                                    <button class="button" data-filter=".alkali">Kids</button>
-                                    <button class="button" data-filter=".ar">Portrait</button>
-                                </div>
-                            </div>
-
-                            <div style="clear: both;"></div>
-
-                            <div class="grid text-center" style="position: relative; height: 968.079px;">
-                                <div class="grid-item transition metal ium" style="position: absolute; left: 0px; top: 0px;">
-                                    <img alt="" src="/images/maternity-004.jpg">
-                                    <div class="grid_hover_area text-center">
-                                        <div class="grid_hover_text m-top-110">
-                                            <h4 class="text-white">Saloni’s collection</h4>
-                                            <h5 class="text-white"><em>Maternity</em></h5>
-                                            <a href="/images/maternity-004.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div><!-- End off grid Hover area -->
-                                </div><!-- End off grid item -->
-
-                                <div class="grid-item metalloid " style="position: absolute; left: 382px; top: 0px;">
-                                    <img alt="" src="/images/09c561_7e9dc548251749c7be6bde6f3374586a~mv2.avif">
-                                    <div class="grid_hover_area text-center">
-                                        <div class="grid_hover_text m-top-150">
-                                            <h4 class="text-white">Sloggi’s collection</h4>
-                                            <h5 class="text-white"><em>Maternity</em></h5>
-                                            <a href="/images/09c561_7e9dc548251749c7be6bde6f3374586a~mv2.avif" class="popup-img text-white m-top-50">View Project <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div><!-- End off grid Hover area -->
-                                </div><!-- End off grid item -->
-
-                                <div class="grid-item post-transition metal numberGreaterThan50" style="position: absolute; left: 764px; top: 0px;">
-                                    <img alt="" src="/images/maternity_005.jpg">
-                                    <div class="grid_hover_area text-center">
-                                        <div class="grid_hover_text m-top-50">
-                                            <h4 class="text-white">Sloggi’s collection</h4>
-                                            <h5 class="text-white"><em>Fashionista</em></h5>
-                                            <a href="/images/maternity_005.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div><!-- End off grid Hover area -->
-                                </div><!-- End off grid item -->
-                                
-                                <div class="grid-item alkali ar" style="position: absolute; left: 764px; top: 260px;">
-                                    <img alt="" src="/images/nw_baby_002.jpg">
-                                    <div class="grid_hover_area text-center">
-                                        <div class="grid_hover_text m-top-50">
-                                            <h4 class="text-white">Sloggi’s collection</h4>
-                                            <h5 class="text-white"><em>Fashionista</em></h5>
-                                            <a href="/images/nw_baby_002.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div><!-- End off grid Hover area -->
-                                </div><!-- End off grid item -->
-
-                                <div class="grid-item post-transition metal ium" style="position: absolute; left: 0px; top: 421px;">
-                                    <img alt="" src="/images/nw_baby_003.jpg">
-                                    <div class="grid_hover_area text-center">
-                                        <div class="grid_hover_text m-top-150">
-                                            <h4 class="text-white">Sloggi’s collection</h4>
-                                            <h5 class="text-white"><em>Fashionista</em></h5>
-                                            <a href="/images/nw_baby_003.jpg" class="popup-img text-white m-top-50">View Project <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div><!-- End off grid Hover area -->
-                                </div><!-- End off grid item -->
-
-
-                                <div class="grid-item metal ar" style="position: absolute; left: 382px; top: 595px;">
-                                    <img alt="" src="/images/nw_baby_006.jpg">
-                                    <div class="grid_hover_area text-center">
-                                        <div class="grid_hover_text m-top-110">
-                                            <h4 class="text-white">Sloggi’s collection</h4>
-                                            <h5 class="text-white"><em>Fashionista</em></h5>
-                                            <a href="/images/nw_baby_006.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div><!-- End off grid Hover area -->
-                                </div><!-- End off grid item -->
-
-                                <div class="grid-item metal ar" style="position: absolute; left: 382px; top: 595px;">
-                                    <img alt="" src="/images/portraits-kids_000.avif">
-                                    <div class="grid_hover_area text-center">
-                                        <div class="grid_hover_text m-top-110">
-                                            <h4 class="text-white">Sloggi’s collection</h4>
-                                            <h5 class="text-white"><em>Fashionista</em></h5>
-                                            <a href="/images/portraits-kids_000.avif" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div><!-- End off grid Hover area -->
-                                </div><!-- End off grid item -->
-
-                                <div class="grid-item metal ar" style="position: absolute; left: 382px; top: 595px;">
-                                    <img alt="" src="/images/portraits-women_004.jpg">
-                                    <div class="grid_hover_area text-center">
-                                        <div class="grid_hover_text m-top-110">
-                                            <h4 class="text-white">Sloggi’s collection</h4>
-                                            <h5 class="text-white"><em>Fashionista</em></h5>
-                                            <a href="/images/portraits-women_004.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div><!-- End off grid Hover area -->
-                                </div><!-- End off grid item -->
-
-                                <div class="grid-item metal ar" style="position: absolute; left: 382px; top: 595px;">
-                                    <img alt="" src="/images/portraits-kids_001.jpg">
-                                    <div class="grid_hover_area text-center">
-                                        <div class="grid_hover_text m-top-110">
-                                            <h4 class="text-white">Sloggi’s collection</h4>
-                                            <h5 class="text-white"><em>Fashionista</em></h5>
-                                            <a href="/images/portraits-kids_001.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div><!-- End off grid Hover area -->
-                                </div><!-- End off grid item --> 
-
-                                <div class="grid-item metal ar" style="position: absolute; left: 382px; top: 595px;">
-                                    <img alt="" src="/images/portraits-kids_003.jpg">
-                                    <div class="grid_hover_area text-center">
-                                        <div class="grid_hover_text m-top-110">
-                                            <h4 class="text-white">Sloggi’s collection</h4>
-                                            <h5 class="text-white"><em>Fashionista</em></h5>
-                                            <a href="/images/portraits-kids_003.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div><!-- End off grid Hover area -->
-                                </div><!-- End off grid item --> 
-
-                            </div>
-
-                            <div style="clear: both;"></div>
-
-                        </div>
-                    </div>
-                </div><!-- Portfolio container end -->
-            </section><!-- End off portfolio section -->
-
+            
+            <hr>
+            <!--Testimonial Section-->
             <?php include_once("testimonial.php") ?>
 
             <!--Models section-->
@@ -610,7 +460,7 @@
                             <div class="col-md-3 col-sm-6">
                                 <div class="model_item m-top-30">
                                     <div class="model_img">
-                                        <img src="/images/nikon-d500.jpg" alt="">
+                                        <img src="/images/gears/nikon-d500.jpg" alt="">
                                         <div class="model_caption">
                                             <h5 class="text-white">Nikon D500</h5>
                                         </div>
@@ -621,7 +471,7 @@
                             <div class="col-md-3 col-sm-6">
                                 <div class="model_item m-top-30">
                                     <div class="model_img">
-                                        <img src="/images/nikon-d810.jpg" alt="">
+                                        <img src="/images/gears/nikon-d810.jpg" alt="">
                                         <div class="model_caption">
                                             <h5 class="text-white">Nikon D810</h5>
                                         </div>
@@ -632,7 +482,7 @@
                             <div class="col-md-3 col-sm-6">
                                 <div class="model_item m-top-30">
                                     <div class="model_img">
-                                        <img src="/images/dji-mini-4.jpg" alt="">
+                                        <img src="/images/gears/dji-mini-4.jpg" alt="">
                                         <div class="model_caption">
                                             <h5 class="text-white">DJI Mini 4k Drone</h5>
                                         </div>
@@ -643,7 +493,7 @@
                             <div class="col-md-3 col-sm-6">
                                 <div class="model_item m-top-30">
                                     <div class="model_img">
-                                        <img src="/images/elinchrome-frx200.jpg" alt="">
+                                        <img src="/images/gears/elinchrome-frx200.jpg" alt="">
                                         <div class="model_caption">
                                             <h5 class="text-white">Studio Lights</h5>
                                         </div>
@@ -654,7 +504,7 @@
                             <div class="col-md-3 col-sm-6">
                                 <div class="model_item m-top-30">
                                     <div class="model_img">
-                                        <img src="/images/sekonic-lightmeter.jpg" alt="">
+                                        <img src="/images/gears/sekonic-lightmeter.jpg" alt="">
                                         <div class="model_caption">
                                             <h5 class="text-white">Light Meter</h5>
                                         </div>
@@ -665,7 +515,7 @@
                             <div class="col-md-3 col-sm-6">
                                 <div class="model_item m-top-30">
                                     <div class="model_img">
-                                        <img src="/images/remote-triggers.jpg" alt="">
+                                        <img src="/images/gears/remote-triggers.jpg" alt="">
                                         <div class="model_caption">
                                             <h5 class="text-white">Wireless Trigers</h5>
                                         </div>
@@ -676,7 +526,7 @@
                             <div class="col-md-3 col-sm-6">
                                 <div class="model_item m-top-30">
                                     <div class="model_img">
-                                        <img src="/images/studio-lights.jpg" alt="">
+                                        <img src="/images/gears/studio-lights.jpg" alt="">
                                         <div class="model_caption">
                                             <h5 class="text-white">Studio Lights</h5>
                                         </div>
@@ -686,7 +536,7 @@
 
                             <div class="col-md-3 col-sm-6">
                                 <div class="model_item meet_team m-top-30">
-                                    <a href="/studio-gears.php">Show All <i class="fa fa-long-arrow-right"></i></a>
+                                    <a href="/htmls/studio-gears.php">Show All <i class="fa fa-long-arrow-right"></i></a>
                                 </div>
                             </div><!-- End off col-md-3 -->
 

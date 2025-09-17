@@ -19,30 +19,36 @@
                             <li class="search"><a href="/htmls/home.php?_dc=fdfs&page=home&sTgt=site"><i class="fa fa-search"></i></a></li>
                             <li class="dropdown">
                                 <a href="/htmls/home.php?_dc=fdfs&page=home&sTgt=site" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-shopping-bag"></i>
-                                    <span class="badge">3</span>
+                                    <i class="fa fa-cloud-download"></i>
                                 </a>
                                 <ul class="dropdown-menu cart-list animated">
                                     <li>
-                                        <a href="/htmls/home.php?_dc=fdfs&page=home&sTgt=site" class="photo"><img src="/images/thumb01.jpg" class="cart-thumb" alt=""></a>
-                                        <h6><a href="/htmls/home.php?_dc=fdfs&page=home&sTgt=site">Delica omtantur </a></h6>
-                                        <p class="m-top-10">2x - <span class="price">$99.99</span></p>
+                                        <a href="/htmls/home.php?_dc=fdfs&page=home&sTgt=site" class="photo"><img src="/images/other/broucher.png" class="cart-thumb" alt=""></a>
+                                        <h6><a href="/htmls/home.php?_dc=fdfs&page=home&sTgt=site">Maternity Brochure </a></h6>
+                                        <p class="m-top-10">3x - <span class="price">₹4,500</span></p>
                                     </li>
                                     <li>
-                                        <a href="/htmls/home.php?_dc=fdfs&page=home&sTgt=site" class="photo"><img src="/images/thumb01.jpg" class="cart-thumb" alt=""></a>
-                                        <h6><a href="/htmls/home.php?_dc=fdfs&page=home&sTgt=site">Delica omtantur </a></h6>
-                                        <p class="m-top-10">2x - <span class="price">$99.99</span></p>
+                                        <a href="/htmls/home.php?_dc=fdfs&page=home&sTgt=site" class="photo"><img src="/images/other/broucher.png" class="cart-thumb" alt=""></a>
+                                        <h6><a href="/images/brochures/newborn-brochure-001.jpg?_dc=fdfs&page=home&sTgt=site">Newborn Brochure </a></h6>
+                                        <p class="m-top-10">3x - <span class="price">₹3,500</span></p>
                                     </li>
                                     <li>
-                                        <a href="/htmls/home.php?_dc=fdfs&page=home&sTgt=site" class="photo"><img src="/images/thumb01.jpg" class="cart-thumb" alt=""></a>
-                                        <h6><a href="/htmls/home.php?_dc=fdfs&page=home&sTgt=site">Delica omtantur </a></h6>
-                                        <p class="m-top-10">2x - <span class="price">$99.99</span></p>
+                                        <a href="/htmls/home.php?_dc=fdfs&page=home&sTgt=site" class="photo"><img src="/images/other/broucher.png" class="cart-thumb" alt=""></a>
+                                        <h6><a href="/images/brochures/kids-brochure-002.jpg?_dc=fdfs&page=home&sTgt=site">Kids Brochure </a></h6>
+                                        <p class="m-top-10">3x - <span class="price">₹2,500</span></p>
+                                    </li>
+                                    <li>
+                                        <a href="/htmls/home.php?_dc=fdfs&page=home&sTgt=site" class="photo"><img src="/images/other/broucher.png" class="cart-thumb" alt=""></a>
+                                        <h6><a href="/images/brochures/portraits-brochure-001.jpg?_dc=fdfs&page=home&sTgt=site">Portraits Brochure </a></h6>
+                                        <p class="m-top-10">3x - <span class="price">₹2,500</span></p>
                                     </li>
                                     <!---- More List ---->
+                                    <!--
                                     <li class="total">
                                         <span class="pull-right"><strong>Total</strong>: $0.00</span>
                                         <a href="/htmls/home.php?_dc=fdfs&page=home&sTgt=site" class="btn btn-cart">Cart</a>
                                     </li>
+                                    -->
                                 </ul>
                             </li>
 
@@ -58,7 +64,7 @@
                         <a class="navbar-brand" href="/index.html">
 
                             <img src="/images/ns_logo_000.png" class="logo logo-display" alt="">
-                            <img src="/images/ns_logo_50.jpg" class="logo logo-scrolled" alt="">
+                            <img src="/images/logo/ns_logo_50.jpg" class="logo logo-scrolled" alt="">
 
                         </a>
                     </div>
@@ -74,7 +80,7 @@
                             <li><a href="/htmls/portraits.php?_dc=fdfs&page=kids&sTgt=site">Portraits</a></li> 
                             <li><a href="/htmls/portfolio.php?_dc=fdfs&page=portfolio&sTgt=site">Our Portfolio</a></li> 							
                             <li><a href="/htmls/aboutus.php?_dc=fdfs&page=about&sTgt=site">About Us</a></li>
-                            <li><a href="/htmls/blog.php?_dc=fdfs&page=blog&sTgt=site">Blog</a></li>                                    
+                            <li><a href="/htmls/blog.php?_dc=fdfs&page=blog&sTgt=site">Stories</a></li>                                    
                             <li><a href="/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site">Contact</a></li>                    
                         </ul>
                     </div><!-- /.navbar-collapse -->

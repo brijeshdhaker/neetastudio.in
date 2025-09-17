@@ -1,3 +1,33 @@
+<?php
+
+$_source="direct";
+$session_type="Maternity";
+$package_type="Basic";
+
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    
+    if($_REQUEST["srcPage"]){
+        $_source=$_REQUEST["srcPage"];
+    }
+    
+    if($_REQUEST["sessionType"]){
+        $session_type=$_REQUEST["sessionType"];
+    }
+    
+    if($_REQUEST["packageType"]){
+        $package_type=$_REQUEST["packageType"];
+    }
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = htmlspecialchars($_REQUEST['fname']);
+  if (empty($name)) {
+    echo "Name is empty";
+  } else {
+    echo $name;
+  }
+}
+?>
 <!DOCTYPE html>
 <!-- saved from url=(0051)/htmls/contactus.php?_dc=fdfs&page=contact&sTgt=site -->
 <html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" lang="en" style=""><!--<![endif]-->
@@ -7,7 +37,7 @@
         <title>neetastudio.in - Maternity Photography Studio in Pune</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="/images/ns_logo_50.jpg">
+        <link rel="icon" type="image/png" href="/images/logo/ns_logo_50.jpg">
 
         <!--Google Fonts link-->
         <link href="/css/css" rel="stylesheet">
@@ -134,7 +164,7 @@
                                         <div class="col-sm-6">
                                             <div class="form-group"> 
                                                 <label>Photo Session Type *</label>
-                                                <select id="session_type" name="session_type" type="text" class="form-control" required="" data-validation-required-message="Please select photo session type" value="portraits">
+                                                <select id="session_type" name="session_type" type="text" class="form-control" required="" data-validation-required-message="Please select photo session type" value="<?php echo $session_type;?>">
                                                     <option value="Maternity">Maternity</option>
                                                     <option value="Newborn">New Born</option>
                                                     <option value="Kids">Kids</option>
@@ -146,9 +176,9 @@
                                         <div class="col-sm-6">
                                             <div class="form-group"> 
                                                 <label>Package Type *</label>
-                                                <select id="package_type" name="package_type" type="text" class="form-control" required="" data-validation-required-message="Please select photo session type" value="portraits">
+                                                <select id="package_type" name="package_type" type="text" class="form-control" required="" data-validation-required-message="Please select package type" value="<?php echo $package_type;?>">
                                                     <option value="Basic">Basic</option>
-                                                    <option value="Essential">Essential </option>
+                                                    <option value="Essential">Essential</option>
                                                     <option value="Advance">Advance</option>
                                                 </select>
                                             </div>
@@ -192,7 +222,23 @@
 
                             <div class="col-md-6">
                                 <div class="contact_img">
-                                    <img src="/images/lettalk-001.jpg" alt="">
+                            <?php
+                                if($session_type=="Maternity"){
+                                    echo '<img src="/images/feature/maternity_019.jpg" alt="">';
+                                }
+
+                                if($session_type=="Newborn"){
+                                    echo '<img src="/images/feature/nw_baby_006.jpg" alt="">';
+                                }
+
+                                if($session_type=="Kids"){
+                                    echo '<img src="/images/feature/portraits-kids_010.jpg" alt="">';
+                                }
+
+                                if($session_type=="Portraits"){
+                                    echo '<img src="/images/feature/portraits-women_005.jpg" alt="">';
+                                }
+                            ?>
                                 </div>
                             </div>
 
@@ -201,8 +247,9 @@
                     </div><!--End off row -->
                 </div><!--End off container -->
             </section><!--End off Contact Section-->
-
-
+            <br/>
+            <br/>
+            <br/>
             <!--Company section-->
             <?php include_once("company.php") ?>
 

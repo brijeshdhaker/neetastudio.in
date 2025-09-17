@@ -44,23 +44,27 @@ class ContactusService extends BaseService {
             
         } catch (Exception $exc) {
             $status = FALSE;
-            $this->message = $exc->getTraceAsString();
-            $this->logger->info("Error occurred - ". $exc->getTraceAsString());
+            $response->addMessages($exc->getTraceAsString());
+            $this->logger->error("Exception occurred - ". $exc->getTraceAsString());
         }
         
         //
         if ($status) {
-            $this->logger->info("Booking request successfully processed.");
-            $msg = Message::Success("Booking request successfully processed.");
+            
+            $this->logger->info("Enqiry request successfully processed.");
+            $msg = Message::Warning("System error occurred while processing enqiry request.");
             $response->addMessages($msg);
-            $response->setMessage("Booking request successfully processed.");
+            $response->setMessage("Enqiry request successfully processed.");
             $response->setStatus(TRUE);
+            
         } else {
-            $this->logger->error("Error occurred while sending Email Notification.");
-            $msg = Message::Warning("System error occurred while processing your request.");
+            
+            $this->logger->error("Error occurred while processing enqiry request.");
+            $msg = Message::Warning("System error occurred while processing enqiry request.");
             $response->addMessages($msg);
-            $response->setMessage("System error occurred while processing your request.");
+            $response->setMessage("System error occurred while processing enqiry request.");
             $response->setStatus(FALSE);
+            
         }
         
     }

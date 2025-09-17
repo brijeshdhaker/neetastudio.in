@@ -7,7 +7,7 @@
         <title>neetastudio.in - Maternity Photography Studio in Pune</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="/images/ns_logo_50.jpg">
+        <link rel="icon" type="image/png" href="/images/logo/ns_logo_50.jpg">
 
         <!--Google Fonts link-->
         <link href="/css/css" rel="stylesheet">
@@ -67,8 +67,10 @@
             <?php include_once("nav.php") ?>
 
             <!--Home Sections-->
-            <section id="hello" class="model-banner bg-mega">
+            <section id="hello" class="portfolio-banner bg-mega">
+                <!--
                 <div class="overlay"></div>
+                -->
                 <div class="container">
                     <div class="row">
                         <div class="main_home text-center">
@@ -83,7 +85,7 @@
                     </div><!--End off row-->
                 </div><!--End off container -->
             </section> <!--End off Home Sections-->
-
+            
             <!--Portfolio Section-->
             <section id="gallery" class="gallery margin-top-120 bg-white">
                 <!-- Portfolio container-->
@@ -93,10 +95,10 @@
                             <div class="col-md-12 m-bottom-60">
                                 <div class="filters-button-group text-right sm-text-center">
                                     <button class="button is-checked" data-filter="*">View all</button>
-                                    <button class="button" data-filter=".metal">Maternity</button>
-                                    <button class="button" data-filter=".transition">Newborn</button>
-                                    <button class="button" data-filter=".alkali">Kids</button>
-                                    <button class="button" data-filter=".ar">Portrait</button>
+                                    <button class="button" data-filter=".maternity">Maternity</button>
+                                    <button class="button" data-filter=".newborn">Newborn</button>
+                                    <button class="button" data-filter=".kids">Kids</button>
+                                    <button class="button" data-filter=".portrait">Portrait</button>
                                 </div>
                                 
                             </div>
@@ -104,65 +106,205 @@
                             <div style="clear: both;"></div>
 
                             <div class="grid models text-center" style="position: relative; height: 870px;">
-                                <div class="grid-item model-item transition metal ium" style="position: absolute; left: 0px; top: 0px;">
-                                    <img alt="" src="/images/maternity-004.jpg">
-									<a href="/htmls/portfolio-details.php?_dc=fdfs&page=portfolio&sTgt=site#" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
+                                
+                                <div class="grid-item transition maternity" style="position: absolute; left: 0px; top: 0px;">
+                                    <img alt="" src="/images/portfolio/maternity-004.jpg">
+                                    <div class="grid_hover_area text-center">
+                                        <div class="grid_hover_text m-top-110">
+                                            <h4 class="text-white">Saloni’s collection</h4>
+                                            <h5 class="text-white"><em>Maternity</em></h5>
+                                            <a href="/images/portfolio/maternity-004.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </div><!-- End off grid Hover area -->
                                 </div><!-- End off grid item -->
 
-                                <div class="grid-item model-item metalloid " style="position: absolute; left: 290px; top: 0px;">
-                                     <img alt="" src="/images/09c561_7e9dc548251749c7be6bde6f3374586a~mv2.avif">
-									<a href="/htmls/portfolio-details.php?_dc=fdfs&page=portfolio&sTgt=site#" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
+                                <div class="grid-item portrait" style="position: absolute; left: 382px; top: 0px;">
+                                    <img alt="" src="/images/portfolio/portraits-women_008.jpg">
+                                    <div class="grid_hover_area text-center">
+                                        <div class="grid_hover_text m-top-150">
+                                            <h4 class="text-white">Neeta’s collection</h4>
+                                            <h5 class="text-white"><em>Maternity</em></h5>
+                                            <a href="/images/portfolio/portraits-women_008.jpg" class="popup-img text-white m-top-50">View Project <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </div><!-- End off grid Hover area -->
                                 </div><!-- End off grid item -->
 
-                                <div class="grid-item model-item post-transition metal" style="position: absolute; left: 580px; top: 0px;">
-                                    <img alt="" src="/images/maternity_005.jpg">
-									<a href="/htmls/portfolio-details.php?_dc=fdfs&page=portfolio&sTgt=site#" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
+                                <div class="grid-item post-transition maternity" style="position: absolute; left: 764px; top: 0px;">
+                                    <img alt="" src="/images/portfolio/maternity_005.jpg">
+                                    <div class="grid_hover_area text-center">
+                                        <div class="grid_hover_text m-top-50">
+                                            <h4 class="text-white">Sloggi’s collection</h4>
+                                            <h5 class="text-white"><em>Fashionista</em></h5>
+                                            <a href="/images/portfolio/maternity_005.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </div><!-- End off grid Hover area -->
                                 </div><!-- End off grid item -->
 
-                                <div class="grid-item model-item post-transition metal ium" style="position: absolute; left: 870px; top: 0px;">
-                                    <img alt="" src="/images/nw_baby_002.jpg">
-									<a href="/htmls/portfolio-details.php?_dc=fdfs&page=portfolio&sTgt=site#" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
+                                <div class="grid-item alkali newborn" style="position: absolute; left: 764px; top: 260px;">
+                                    <img alt="" src="/images/portfolio/nw_baby_002.jpg">
+                                    <div class="grid_hover_area text-center">
+                                        <div class="grid_hover_text m-top-50">
+                                            <h4 class="text-white">Sloggi’s collection</h4>
+                                            <h5 class="text-white"><em>Fashionista</em></h5>
+                                            <a href="/images/portfolio/nw_baby_002.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </div><!-- End off grid Hover area -->
                                 </div><!-- End off grid item -->
 
-                                <div class="grid-item model-item metal ar" style="position: absolute; left: 0px; top: 290px;">
-                                    <img alt="" src="/images/nw_baby_003.jpg">
-									<a href="/htmls/portfolio-details.php?_dc=fdfs&page=portfolio&sTgt=site#" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
+                                <div class="grid-item post-transition newborn" style="position: absolute; left: 0px; top: 421px;">
+                                    <img alt="" src="/images/portfolio/nw_baby_003.jpg">
+                                    <div class="grid_hover_area text-center">
+                                        <div class="grid_hover_text m-top-150">
+                                            <h4 class="text-white">Sloggi’s collection</h4>
+                                            <h5 class="text-white"><em>Fashionista</em></h5>
+                                            <a href="/images/portfolio/nw_baby_003.jpg" class="popup-img text-white m-top-50">View Project <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </div><!-- End off grid Hover area -->
                                 </div><!-- End off grid item -->
 
-                                <div class="grid-item model-item alkali ar" style="position: absolute; left: 290px; top: 290px;">
-                                    <img alt="" src="/images/nw_baby_006.jpg">
-									<a href="/htmls/portfolio-details.php?_dc=fdfs&page=portfolio&sTgt=site#" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
+                                <div class="grid-item newborn ar" style="position: absolute; left: 382px; top: 595px;">
+                                    <img alt="" src="/images/portfolio/nw_baby_006.jpg">
+                                    <div class="grid_hover_area text-center">
+                                        <div class="grid_hover_text m-top-110">
+                                            <h4 class="text-white">Sloggi’s collection</h4>
+                                            <h5 class="text-white"><em>Fashionista</em></h5>
+                                            <a href="/images/portfolio/nw_baby_006.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </div><!-- End off grid Hover area -->
                                 </div><!-- End off grid item -->
 
-                                <div class="grid-item model-item alkali ar" style="position: absolute; left: 580px; top: 290px;">
-                                    <img alt="" src="/images/portraits-kids_000.avif">
-									<a href="/htmls/portfolio-details.php?_dc=fdfs&page=portfolio&sTgt=site#" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
+                                <div class="grid-item kids ar" style="position: absolute; left: 382px; top: 595px;">
+                                    <img alt="" src="/images/portfolio/portraits-kids_000.avif">
+                                    <div class="grid_hover_area text-center">
+                                        <div class="grid_hover_text m-top-110">
+                                            <h4 class="text-white">Sloggi’s collection</h4>
+                                            <h5 class="text-white"><em>Fashionista</em></h5>
+                                            <a href="/images/portfolio/portraits-kids_000.avif" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </div><!-- End off grid Hover area -->
                                 </div><!-- End off grid item -->
 
-                                <div class="grid-item model-item alkali ar" style="position: absolute; left: 870px; top: 290px;">
-                                    <img alt="" src="/images/portraits-women_004.jpg">
-									<a href="/htmls/portfolio-details.php?_dc=fdfs&page=portfolio&sTgt=site#" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
+                                <div class="grid-item portrait ar" style="position: absolute; left: 382px; top: 595px;">
+                                    <img alt="" src="/images/portfolio/portraits-women_004.jpg">
+                                    <div class="grid_hover_area text-center">
+                                        <div class="grid_hover_text m-top-110">
+                                            <h4 class="text-white">Sloggi’s collection</h4>
+                                            <h5 class="text-white"><em>Fashionista</em></h5>
+                                            <a href="/images/portfolio/portraits-women_004.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </div><!-- End off grid Hover area -->
                                 </div><!-- End off grid item -->
 
-                                <div class="grid-item model-item alkali ar" style="position: absolute; left: 0px; top: 580px;">
-                                    <img alt="" src="/images/portraits-kids_001.jpg">
-									<a href="/htmls/portfolio-details.php?_dc=fdfs&page=portfolio&sTgt=site#" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
-                                </div><!-- End off grid item -->
+                                <div class="grid-item kids ar" style="position: absolute; left: 382px; top: 595px;">
+                                    <img alt="" src="/images/portfolio/portraits-kids_001.jpg">
+                                    <div class="grid_hover_area text-center">
+                                        <div class="grid_hover_text m-top-110">
+                                            <h4 class="text-white">Sloggi’s collection</h4>
+                                            <h5 class="text-white"><em>Fashionista</em></h5>
+                                            <a href="/images/portraits-kids_001.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </div><!-- End off grid Hover area -->
+                                </div><!-- End off grid item --> 
 
-                                <div class="grid-item model-item alkali ar" style="position: absolute; left: 290px; top: 580px;">
-                                    <img alt="" src="/images/portraits-kids_003.jpg">
-									<a href="/htmls/portfolio-details.php?_dc=fdfs&page=portfolio&sTgt=site#" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
-                                </div><!-- End off grid item -->
+                                <div class="grid-item kids ar" style="position: absolute; left: 382px; top: 595px;">
+                                    <img alt="" src="/images/portfolio/portraits-kids_003.jpg">
+                                    <div class="grid_hover_area text-center">
+                                        <div class="grid_hover_text m-top-110">
+                                            <h4 class="text-white">Sloggi’s collection</h4>
+                                            <h5 class="text-white"><em>Fashionista</em></h5>
+                                            <a href="/images/portfolio/portraits-kids_003.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </div><!-- End off grid Hover area -->
+                                </div><!-- End off grid item --> 
 
-                                <div class="grid-item model-item alkali ar" style="position: absolute; left: 580px; top: 580px;">
-                                    <img alt="" src="/images/portraits-women_002.jpg">
-									<a href="/htmls/portfolio-details.php?_dc=fdfs&page=portfolio&sTgt=site#" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
+                                <div class="grid-item portrait ar" style="position: absolute; left: 382px; top: 595px;">
+                                    <img alt="" src="/images/portfolio/portraits-women_002.jpg">
+                                    <div class="grid_hover_area text-center">
+                                        <div class="grid_hover_text m-top-110">
+                                            <h4 class="text-white">Sloggi’s collection</h4>
+                                            <h5 class="text-white"><em>Fashionista</em></h5>
+                                            <a href="/images/portfolio/portraits-women_002.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </div><!-- End off grid Hover area -->
+                                </div><!-- End off grid item --> 
+                                
+                                <div class="grid-item maternity ar" style="position: absolute; left: 382px; top: 595px;">
+                                    <img alt="" src="/images/portfolio/maternity_001.jpg">
+                                    <div class="grid_hover_area text-center">
+                                        <div class="grid_hover_text m-top-110">
+                                            <h4 class="text-white">Sloggi’s collection</h4>
+                                            <h5 class="text-white"><em>Fashionista</em></h5>
+                                            <a href="/images/portfolio/maternity_001.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </div><!-- End off grid Hover area -->
+                                </div><!-- End off grid item --> 
+                                
+                                <div class="grid-item portrait ar" style="position: absolute; left: 382px; top: 595px;">
+                                    <img alt="" src="/images/portfolio/portraits-women_007.jpg">
+                                    <div class="grid_hover_area text-center">
+                                        <div class="grid_hover_text m-top-110">
+                                            <h4 class="text-white">Sloggi’s collection</h4>
+                                            <h5 class="text-white"><em>Fashionista</em></h5>
+                                            <a href="/images/portfolio/portraits-women_007.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </div><!-- End off grid Hover area -->
                                 </div><!-- End off grid item -->
-
-                                <div class="grid-item model-item alkali ar" style="position: absolute; left: 870px; top: 580px;">
-                                    <img alt="" src="/images/maternity_001.jpg">
-									<a href="/htmls/portfolio-details.php?_dc=fdfs&page=portfolio&sTgt=site#" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
+                                
+                                <div class="grid-item maternity ar" style="position: absolute; left: 382px; top: 595px;">
+                                    <img alt="" src="/images/portfolio/maternity_006.jpg">
+                                    <div class="grid_hover_area text-center">
+                                        <div class="grid_hover_text m-top-110">
+                                            <h4 class="text-white">Sloggi’s collection</h4>
+                                            <h5 class="text-white"><em>Fashionista</em></h5>
+                                            <a href="/images/portfolio/maternity_006.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </div><!-- End off grid Hover area -->
                                 </div><!-- End off grid item -->
+                                
+                                <div class="grid-item portrait ar" style="position: absolute; left: 382px; top: 595px;">
+                                    <img alt="" src="/images/portfolio/portraits-women_006.jpg">
+                                    <div class="grid_hover_area text-center">
+                                        <div class="grid_hover_text m-top-110">
+                                            <h4 class="text-white">Sloggi’s collection</h4>
+                                            <h5 class="text-white"><em>Fashionista</em></h5>
+                                            <a href="/images/portfolio/portraits-women_006.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </div><!-- End off grid Hover area -->
+                                </div><!-- End off grid item -->
+                                
+                                <div class="grid-item portrait ar" style="position: absolute; left: 382px; top: 595px;">
+                                    <img alt="" src="/images/portfolio/portraits-women_005.jpg">
+                                    <div class="grid_hover_area text-center">
+                                        <div class="grid_hover_text m-top-110">
+                                            <h4 class="text-white">Sloggi’s collection</h4>
+                                            <h5 class="text-white"><em>Fashionista</em></h5>
+                                            <a href="/images/portfolio/portraits-women_005.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </div><!-- End off grid Hover area -->
+                                </div><!-- End off grid item -->
+                                
+                                <div class="grid-item kids ar" style="position: absolute; left: 382px; top: 595px;">
+                                    <img alt="" src="/images/portfolio/portraits-kids_007.jpg">
+                                    <div class="grid_hover_area text-center">
+                                        <div class="grid_hover_text m-top-110">
+                                            <h4 class="text-white">Sloggi’s collection</h4>
+                                            <h5 class="text-white"><em>Fashionista</em></h5>
+                                            <a href="/images/portfolio/portraits-kids_007.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </div><!-- End off grid Hover area -->
+                                </div><!-- End off grid item -->
+                                
+                                <div class="grid-item maternity ar" style="position: absolute; left: 382px; top: 595px;">
+                                    <img alt="" src="/images/portfolio/maternity_009.jpg">
+                                    <div class="grid_hover_area text-center">
+                                        <div class="grid_hover_text m-top-110">
+                                            <h4 class="text-white">Sloggi’s collection</h4>
+                                            <h5 class="text-white"><em>Fashionista</em></h5>
+                                            <a href="/images/portfolio/maternity_009.jpg" class="popup-img text-white m-top-40">View Project <i class="fa fa-long-arrow-right"></i></a>
+                                        </div>
+                                    </div><!-- End off grid Hover area -->
+                                </div><!-- End off grid item -->
+                                
                             </div>
 
                             <div style="clear: both;"></div>

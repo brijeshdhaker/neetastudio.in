@@ -2,37 +2,37 @@
 <!-- saved from url=(0047)https://technext.github.io/pouseidon/model.html -->
 <html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" lang="en" style=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
-        <title>Model page</title>
+        <title>neetastudio.in - Maternity Photography Studio in Pune</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="https://technext.github.io/pouseidon/favicon.ico">
+        <link rel="icon" type="image/png" href="/images/logo/ns_logo_50.jpg">
 
         <!--Google Fonts link-->
-        <link href="./css/css" rel="stylesheet">
-        <link href="./css/css_01" rel="stylesheet">
-        <link href="./css/css_02" rel="stylesheet">
+        <link href="/css/css" rel="stylesheet">
+        <link href="/css/css_01" rel="stylesheet">
+        <link href="/css/css_02" rel="stylesheet">
 
-        <link rel="stylesheet" href="./css/slick.css">
-        <link rel="stylesheet" href="./css/slick-theme.css">
-        <link rel="stylesheet" href="./css/animate.css">
-        <link rel="stylesheet" href="./css/fonticons.css">
-        <link rel="stylesheet" href="./css/font-awesome.min.css">
-        <link rel="stylesheet" href="./css/bootstrap.css">
-        <link rel="stylesheet" href="./css/magnific-popup.css">
-        <link rel="stylesheet" href="./css/bootsnav.css">
+        <link rel="stylesheet" href="/css/slick.css">
+        <link rel="stylesheet" href="/css/slick-theme.css">
+        <link rel="stylesheet" href="/css/animate.css">
+        <link rel="stylesheet" href="/css/fonticons.css">
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/magnific-popup.css">
+        <link rel="stylesheet" href="/css/bootsnav.css">
 
 
         <!--For Plugins external css-->
         <!--<link rel="stylesheet" href="assets/css/plugins.css" />-->
 
         <!--Theme custom css -->
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="/css/style.css">
         <!--<link rel="stylesheet" href="assets/css/colors/maron.css">-->
 
         <!--Theme Responsive css-->
-        <link rel="stylesheet" href="./css/responsive.css">
+        <link rel="stylesheet" href="/css/responsive.css">
 
-        <script src="./scripts/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="/scripts/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
 
     <body data-spy="scroll" data-target=".navbar-collapse"><div class="wrapper">
@@ -67,15 +67,17 @@
             <!--Home Sections-->
 
             <section id="hello" class="studio-banner bg-mega">
+                <!--
                 <div class="overlay"></div>
+                -->
                 <div class="container">
                     <div class="row">
                         <div class="main_home text-center">
                             <div class="model_text">
                                 <h1 class="text-white text-uppercase">OUR Studio &amp; Gears</h1>
                                 <ol class="breadcrumb">
-                                    <li><a href="./home.php?_dc=fdfs&page=home&sTgt=site">Home</a></li>
-                                    <li class="active"><a href="./studio-gears.php?_dc=fdfs&page=portfolio&sTgt=site">OUR Gears</a></li>
+                                    <li><a href="/htmls/home.php?_dc=fdfs&page=home&sTgt=site">Home</a></li>
+                                    <li class="active"><a href="/htmls/studio-gears.php?_dc=fdfs&page=portfolio&sTgt=site">OUR Gears</a></li>
                                 </ol>
                             </div>
                         </div>
@@ -107,80 +109,80 @@
 
                             <div class="grid models text-center" style="position: relative; height: 870px;">
                                 <div class="grid-item model-item transition metal ium" style="position: absolute; left: 0px; top: 0px;">
-                                    <img alt="" src="./images/nikon-d500.jpg">
-									<a href="./portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
+                                    <img alt="" src="/images/gears/nikon-d500.jpg">
+                                    <a href="/htmls/portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item model-item metalloid " style="position: absolute; left: 290px; top: 0px;">
-                                     <img alt="" src="./images/nikon-d810.jpg">
-									<a href="./portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
+                                    <img alt="" src="/images/gears/nikon-d810.jpg">
+                                    <a href="/htmls/portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item model-item post-transition metal" style="position: absolute; left: 580px; top: 0px;">
-                                    <img alt="" src="./images/dji-mini-4.jpg">
-									<a href="./portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
+                                    <img alt="" src="/images/gears/dji-mini-4.jpg">
+                                    <a href="/htmls/portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item model-item post-transition metal ium" style="position: absolute; left: 870px; top: 0px;">
-                                    <img alt="" src="./images/elinchrome-frx200.jpg">
-									<a href="./portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
+                                    <img alt="" src="/images/gears/elinchrome-frx200.jpg">
+                                    <a href="/htmls/portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item model-item metal ar" style="position: absolute; left: 0px; top: 290px;">
-                                    <img alt="" src="./images/sekonic-lightmeter.jpg">
-									<a href="./portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
+                                    <img alt="" src="/images/gears/sekonic-lightmeter.jpg">
+                                    <a href="/htmls/portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item model-item alkali ar" style="position: absolute; left: 290px; top: 290px;">
-                                    <img alt="" src="./images/remote-triggers.jpg">
-									<a href="./portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
+                                    <img alt="" src="/images/gears/remote-triggers.jpg">
+                                    <a href="/htmls/portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item model-item alkali ar" style="position: absolute; left: 580px; top: 290px;">
-                                    <img alt="" src="./images/studio-lights.jpg">
-									<a href="./portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
+                                    <img alt="" src="/images/gears/studio-lights.jpg">
+                                    <a href="/htmls/portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item model-item alkali ar" style="position: absolute; left: 870px; top: 290px;">
-                                    <img alt="" src="./images/yongnuo-flash-yn560iv.jpg">
-									<a href="./portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
+                                    <img alt="" src="/images/gears/yongnuo-flash-yn560iv.jpg">
+                                    <a href="/htmls/portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item model-item alkali ar" style="position: absolute; left: 0px; top: 580px;">
-                                    <img alt="" src="./images/yongnuo-lampa-led.jpg">
-									<a href="./portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
+                                    <img alt="" src="/images/gears/yongnuo-lampa-led.jpg">
+                                    <a href="/htmls/portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item model-item alkali ar" style="position: absolute; left: 290px; top: 580px;">
-                                    <img alt="" src="./images/0001922_nikon-af-s-35mm-f14g-lens_500.jpeg">
-									<a href="./portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
+                                    <img alt="" src="/images/gears/0001922_nikon-af-s-35mm-f14g-lens_500.jpeg">
+                                    <a href="/htmls/portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item model-item alkali ar" style="position: absolute; left: 580px; top: 580px;">
-                                    <img alt="" src="./images/nikon-50mm.jpg">
-									<a href="./portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
+                                    <img alt="" src="/images/gears/nikon-50mm.jpg">
+                                    <a href="/htmls/portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item model-item alkali ar" style="position: absolute; left: 870px; top: 580px;">
-                                    <img alt="" src="./images/nikon-70-200.jpg">
-									<a href="./portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
+                                    <img alt="" src="/images/gears/nikon-70-200.jpg">
+                                    <a href="/htmls/portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item model-item alkali ar" style="position: absolute; left: 870px; top: 580px;">
-                                    <img alt="" src="./images/nikon-24-70mm.jpg">
-									<a href="./portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
+                                    <img alt="" src="/images/gears/nikon-24-70mm.jpg">
+                                    <a href="./portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
 
 
                                 <div class="grid-item model-item alkali ar" style="position: absolute; left: 870px; top: 580px;">
-                                    <img alt="" src="./images/camera-tripods.jpg">
-									<a href="./portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
+                                    <img alt="" src="/images/gears/camera-tripods.jpg">
+                                    <a href="/htmls/portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
                                 
 
                                 <div class="grid-item model-item alkali ar" style="position: absolute; left: 870px; top: 580px;">
-                                    <img alt="" src="./images/manfrotto-tripod.jpg">
-									<a href="./portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
+                                    <img alt="" src="/images/gears/manfrotto-tripod.jpg">
+                                    <a href="/htmls/portfolio-details.php?src=site" class="btn btn-default m-top-20">View Details<i class="fa fa-long-arrow-right"></i></a>
                                 </div><!-- End off grid item -->
                                 
                             </div>
@@ -197,7 +199,7 @@
 
             <!-- scroll up-->
             <div class="scrollup">
-                <a href="https://technext.github.io/pouseidon/model.html#"><i class="fa fa-chevron-up"></i></a>
+                <a href="#"><i class="fa fa-chevron-up"></i></a>
             </div>
             <!-- End off scroll up -->
 
@@ -207,15 +209,15 @@
 
         <!-- JS includes -->
 
-        <script src="./scripts/jquery-1.11.2.min.js"></script>
-        <script src="./scripts/bootstrap.min.js"></script>
+        <script src="/scripts/jquery-1.11.2.min.js"></script>
+        <script src="/scripts/bootstrap.min.js"></script>
 
-        <script src="./scripts/isotope.min.js"></script>
-        <script src="./scripts/jquery.magnific-popup.js"></script>
-        <script src="./scripts/jquery.easing.1.3.js"></script>
-        <script src="./scripts/slick.min.js"></script>
-        <script src="./scripts/jquery.collapse.js"></script>
-        <script src="./scripts/bootsnav.js"></script>
+        <script src="/scripts/isotope.min.js"></script>
+        <script src="/scripts/jquery.magnific-popup.js"></script>
+        <script src="/scripts/jquery.easing.1.3.js"></script>
+        <script src="/scripts/slick.min.js"></script>
+        <script src="/scripts/jquery.collapse.js"></script>
+        <script src="/scripts/bootsnav.js"></script>
 
 
         <!-- paradise slider js -->
@@ -243,8 +245,8 @@
 
 
 
-        <script src="./scripts/plugins.js"></script>
-        <script src="./scripts/main.js"></script>
+        <script src="/scripts/plugins.js"></script>
+        <script src="/scripts/main.js"></script>
 
     
 

@@ -7,7 +7,7 @@
         <title>neetastudio.in - Maternity Photography Studio in Pune</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="/images/ns_logo_50.jpg">
+        <link rel="icon" type="image/png" href="/images/logo/ns_logo_50.jpg">
 
         <!--Google Fonts link-->
         <link href="/css/css" rel="stylesheet">
@@ -59,25 +59,24 @@
 
 
             <!--Home Sections-->
-
             <section id="hello" class="model-banner bg-mega">
                 <div class="overlay"></div>
                 <div class="container">
                     <div class="row">
                         <div class="main_home text-center">
                             <div class="model_text">
-                                <h1 class="text-white text-uppercase"> Our Portfolio</h1>
+                                <h1 class="text-white text-uppercase">Recent Projects</h1>
                                 <ol class="breadcrumb text-uppercase">
                                     <li><a href="/htmls/home.php?_dc=fdfs&page=home&sTgt=site">Home</a></li>
                                     <li class="active"><a href="/htmls/portfolio.php?_dc=fdfs&page=portfolio&sTgt=site">Our Portfolio</a></li>
-                                    <li class="active"><a href="/htmls/portfolio-details.php?_dc=fdfs&page=portfolio&sTgt=site">Angela Baby</a></li>
+                                    <li class="active"><a href="/htmls/portfolio-details.php?_dc=fdfs&page=portfolio&sTgt=site">Recent Projects</a></li>
                                 </ol>
                             </div>
                         </div>
                     </div><!--End off row-->
                 </div><!--End off container -->
             </section> <!--End off Home Sections-->
-
+            
             <!--Model Details Section-->
             <section id="m_details" class="m_details roomy-100 fix">
                 <div class="container">
@@ -85,7 +84,7 @@
                         <div class="main_details">
                             <div class="col-md-6">
                                 <div class="m_details_img">
-                                    <img src="/images/angela-img.jpg" alt="">
+                                    <img src="/images/feature/maternity_019.jpg" alt="">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -168,144 +167,14 @@
                     </div><!-- End off row -->
                 </div> <!-- End off container -->
             </section> <!-- End off Model Details Section -->
-
-
-
-            <!--Testimonial Section-->
-            <section id="testimonial" class="testimonial fix roomy-100">
-                <div class="container">
-                    <div class="row">
-                        <div class="main_testimonial text-center">
-
-                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner" role="listbox">
-                                    <div class="item testimonial_item active">
-                                        <div class="col-sm-10 col-sm-offset-1">
-
-                                            <div class="test_authour">
-                                                <img class="img-circle" src="/images/test-img.jpg" alt="">
-                                                <h6 class="m-top-20">Laingockien</h6>
-                                                <h5><em>The most handsome men in the world</em> </h5>
-                                            </div>
-
-                                            <p class=" m-top-40">I’ve just wordked with Pouseidon last week. Uhm.  
-                                                I can say this is the best team that I have ever worked together. 
-                                                All of them are very, very professional and creative, their unbelieved 
-                                                plan made our concept become perfect. I recommend you to try one of
-                                                their solutions youself. Once again,  thanks so much, Pouseidon. 5 stars for you!! </p>
-
-
-                                        </div>
-                                    </div>
-                                    <div class="item testimonial_item">
-                                        <div class="col-sm-10 col-sm-offset-1">
-
-                                            <div class="test_authour">
-                                                <img class="img-circle" src="/images/test-img.jpg" alt="">
-                                                <h6 class="m-top-20">Laingockien</h6>
-                                                <h5><em>The most handsome men in the world</em> </h5>
-                                            </div>
-
-                                            <p class=" m-top-40">I’ve just wordked with Pouseidon last week. Uhm.  
-                                                I can say this is the best team that I have ever worked together. 
-                                                All of them are very, very professional and creative, their unbelieved 
-                                                plan made our concept become perfect. I recommend you to try one of
-                                                their solutions youself. Once again,  thanks so much, Pouseidon. 5 stars for you!! </p>
-
-
-                                        </div>
-                                    </div>
-                                    <div class="item testimonial_item">
-                                        <div class="col-sm-10 col-sm-offset-1">
-
-                                            <div class="test_authour">
-                                                <img class="img-circle" src="/images/test-img.jpg" alt="">
-                                                <h6 class="m-top-20">Laingockien</h6>
-                                                <h5><em>The most handsome men in the world</em> </h5>
-                                            </div>
-
-                                            <p class=" m-top-40">I’ve just wordked with Pouseidon last week. Uhm.  
-                                                I can say this is the best team that I have ever worked together. 
-                                                All of them are very, very professional and creative, their unbelieved 
-                                                plan made our concept become perfect. I recommend you to try one of
-                                                their solutions youself. Once again,  thanks so much, Pouseidon. 5 stars for you!! </p>
-
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <!-- Controls -->
-                                <a class="left carousel-control" href="/htmls/portfolio-details.php?_dc=fdfs&page=portfolio&sTgt=site#carousel-example-generic" role="button" data-slide="prev">
-                                    <span class="fa fa-long-arrow-left" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <span class="slash">/</span>
-                                <a class="right carousel-control" href="/htmls/portfolio-details.php?_dc=fdfs&page=portfolio&sTgt=site#carousel-example-generic" role="button" data-slide="next">
-                                    <span class="fa fa-long-arrow-right" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div><!--End off row-->
-                </div><!--End off container -->
-
-                <br>
-                <br>
-                <br>
-                <hr>
-                <br>
-                <br>
-                <br>
-
-                <div class="container">
-                    <div class="row">
-                        <div class="main_cbrand text-center">
-                            <div class="col-md-2 col-sm-4 col-xs-6">
-                                <div class="cbrand_item m-bottom-10">
-                                    <a href="/htmls/portfolio-details.php?_dc=fdfs&page=portfolio&sTgt=site#"><img src="/images/brand-img1.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-sm-4 col-xs-6">
-                                <div class="cbrand_item m-bottom-10">
-                                    <a href="/htmls/portfolio-details.php?_dc=fdfs&page=portfolio&sTgt=site#"><img src="/images/brand-img2.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-sm-4 col-xs-6">
-                                <div class="cbrand_item m-bottom-10">
-                                    <a href="/htmls/portfolio-details.php?_dc=fdfs&page=portfolio&sTgt=site#"><img class="" src="/images/brand-img3.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-sm-4 col-xs-6">
-                                <div class="cbrand_item m-bottom-10">
-                                    <a href="/htmls/portfolio-details.php?_dc=fdfs&page=portfolio&sTgt=site#"><img src="/images/brand-img4.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-sm-4 col-xs-6">
-                                <div class="cbrand_item m-bottom-10">
-                                    <a href="/htmls/portfolio-details.php?_dc=fdfs&page=portfolio&sTgt=site#"><img src="/images/brand-img5.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-sm-4 col-xs-6">
-                                <div class="cbrand_item m-bottom-10">
-                                    <a href="/htmls/portfolio-details.php?_dc=fdfs&page=portfolio&sTgt=site#"><img src="/images/brand-img1.png" alt=""></a> 
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- End off row -->
-                </div><!-- End off container -->
-            </section> <!--End off Testimonial section -->
-
-
-
-
+            
+            <hr>
             <!--Gallery Section-->
-            <section id="gallery" class="gallery margin-top-120 bg-grey">
+            <section id="gallery" class="gallery margin-top-50">
                 <!-- Gallery container-->
                 <div class="container">
                     <div class="row">
-                        <div class="main-gallery roomy-80">
+                        <div class="main-gallery roomy-40">
                             <div class="col-md-12 m-bottom-70">
                                 <div class="head_title text-left sm-text-center wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
                                     <h2>Recent Works</h2>
@@ -319,27 +188,27 @@
 
                             <div class="grid text-center" style="position: relative; height: 782.078px;">
                                 <div class="grid-item transition metal ium" style="position: absolute; left: 0px; top: 0px;">
-                                    <img alt="" src="/images/porfolio-1.jpg">
+                                    <img alt="" src="/images/kids/portraits-kids_013_sm.jpg">
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item metalloid " style="position: absolute; left: 382px; top: 0px;">
-                                    <img alt="" src="/images/porfolio-2.jpg">
+                                    <img alt="" src="/images/maternity/maternity_028.jpg">
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item post-transition metal numberGreaterThan50" style="position: absolute; left: 764px; top: 0px;">
-                                    <img alt="" src="/images/porfolio-3.jpg">
+                                    <img alt="" src="/images/newborn/nw_baby_013.jpg">
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item post-transition metal ium" style="position: absolute; left: 764px; top: 301px;">
-                                    <img alt="" src="/images/porfolio-4.jpg">
+                                    <img alt="" src="/images/portraits/portraits-women_006_sm.jpg">
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item metal ar" style="position: absolute; left: 0px; top: 359px;">
-                                    <img alt="" src="/images/porfolio-5.jpg">
+                                    <img alt="" src="/images/portraits/portraits-women_008_sm.jpg">
                                 </div><!-- End off grid item -->
 
                                 <div class="grid-item alkali ar" style="position: absolute; left: 382px; top: 499px;">
-                                    <img alt="" src="/images/porfolio-6.jpg">
+                                    <img alt="" src="/images/kids/portraits-kids_011_sm.jpg">
                                 </div><!-- End off grid item -->
 
                             </div>
@@ -350,6 +219,11 @@
                     </div>
                 </div><!-- Portfolio container end -->
             </section><!-- End off portfolio section -->
+            
+            <hr>
+            <!--Testimonial Section-->
+            <?php include_once("testimonial.php") ?>
+
 
             <!--Contact Us Section-->
             <section id="contact" class="contact fix">
@@ -425,12 +299,9 @@
         <script src="/scripts/slick.min.js"></script>
         <script src="/scripts/jquery.collapse.js"></script>
         <script src="/scripts/bootsnav.js"></script>
-
-
         <!-- paradise slider js -->
-
         <!--
-        <script src="http://maps.google.com/maps/api/js?key=AIzaSyD_tAQD36pKp9v4at5AnpGbvBUsLCOSJx8"></script>
+        <script src="http://maps.google.com/maps/api/js?key=AIzaSyBoT0dA7eeng8HA1wWfdlbN7_qWYTDlwxI"></script>
         <script src="assets/js/gmaps.min.js"></script>
 
         <script>
@@ -451,7 +322,10 @@
 
         <script src="/scripts/plugins.js"></script>
         <script src="/scripts/main.js"></script>
- 
-        </div>
+        
+        <!-- Contact page AIzaSyBoT0dA7eeng8HA1wWfdlbN7_qWYTDlwxI -->
+        <script type="text/javascript" src="/scripts/jqBootstrapValidation.js"></script>
+        <script type="text/javascript" src="/scripts/contact-us.js"></script>
+
     </body>
 </html>

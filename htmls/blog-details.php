@@ -7,7 +7,7 @@
         <title>neetastudio.in - Maternity Photography Studio in Pune</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="/images/ns_logo_50.jpg">
+        <link rel="icon" type="image/png" href="/images/logo/ns_logo_50.jpg">
 
         <!--Google Fonts link-->
         <link href="/css/css" rel="stylesheet">
@@ -65,10 +65,10 @@
                     <div class="row">
                         <div class="main_home text-center">
                             <div class="about_text">
-                                <h1 class="text-white text-uppercase">Blog</h1>
+                                <h1 class="text-white text-uppercase">Story Detail</h1>
                                 <ol class="breadcrumb">
                                     <li><a href="/htmls/home.php?_dc=fdfs&page=home&sTgt=site">Home</a></li>
-                                    <li class="active"><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">Blog Details</a></li>
+                                    <li class="active"><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">Story Detail</a></li>
                                 </ol>
                             </div>
                         </div>
@@ -96,10 +96,10 @@
                                                 <span>Jan</span>
                                             </div>
                                             <div class="head_text">
-                                                <h2>International Fashion week 2015</h2>
+                                                <h2>3 month baby girl photo session</h2>
                                                 <ul class="list-inline">
                                                     <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site##" class="text-black">Fashion</a></li>
-                                                    <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site##" class="text-black">Feb 28th 2015</a></li>
+                                                    <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site##" class="text-black">Feb 28th 2025</a></li>
                                                     <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site##" class="text-black">2 comments</a></li>
                                                 </ul>
                                             </div>
@@ -151,14 +151,14 @@
                                         <div class="comment_item">
                                             <div class="col-sm-2">
                                                 <div class="blog_comments_img">
-                                                    <img class="img-circle" src="/images/comment-img1.jpg" alt="">
+                                                    <img class="img-circle" src="/images/testimonial/brijesh_dhakaer.jpg" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-sm-8">
                                                 <div class="comments_top_tex">
                                                     <div class="row">
                                                         <div class="col-sm-8 pull-left">
-                                                            <h5 class="text-uppercase">laingockien</h5>
+                                                            <h5 class="text-uppercase">_brijesh</h5>
                                                             <small><em>Posted in Feb 29th 2016 at 16:50</em></small>
                                                         </div>
                                                         <div class="col-sm-2 pull-right">
@@ -183,14 +183,14 @@
                                         <div class="comment_item m-l-40">
                                             <div class="col-sm-2">
                                                 <div class="blog_comments_img">
-                                                    <img class="img-circle" src="/images/comment-img2.jpg" alt="">
+                                                    <img class="img-circle" src="/images/testimonial/sunil_dhaker.jpg" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-sm-8">
                                                 <div class="comments_top_tex">
                                                     <div class="row">
                                                         <div class="col-sm-8 pull-left">
-                                                            <h5 class="text-uppercase">kevin lee</h5>
+                                                            <h5 class="text-uppercase">_sunil </h5>
                                                             <small><em>Posted in Feb 29th 2016 at 16:50</em></small>
                                                         </div>
                                                         <div class="col-sm-2 pull-right">
@@ -213,14 +213,14 @@
                                         <div class="comment_item">
                                             <div class="col-sm-2">
                                                 <div class="blog_comments_img">
-                                                    <img class="img-circle" src="/images/comment-img1.jpg" alt="">
+                                                    <img class="img-circle" src="/images/testimonial/neeta_dhakad.jpg" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-sm-8">
                                                 <div class="comments_top_tex">
                                                     <div class="row">
                                                         <div class="col-sm-8 pull-left">
-                                                            <h5 class="text-uppercase">laingockien</h5>
+                                                            <h5 class="text-uppercase">_neeta</h5>
                                                             <small><em>Posted in Feb 29th 2016 at 16:50</em></small>
                                                         </div>
                                                         <div class="col-sm-2 pull-right">
@@ -289,12 +289,12 @@
                                 <div class="said_ctg fix">
                                     <h6 class="text-uppercase">CATEGORY</h6>
                                     <ul class="text-uppercase m-top-40">
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">Fashion <span class="pull-right">(29)</span></a></li>
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">Culinary <span class="pull-right">(29)</span></a></li>
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">Photography <span class="pull-right">(29)</span></a></li>
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">music <span class="pull-right">(29)</span></a></li>
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">graphics <span class="pull-right">(29)</span></a></li>
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">trend <span class="pull-right">(29)</span></a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">Maternity <span class="pull-right">(9)</span></a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">Newborn <span class="pull-right">(12)</span></a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">Kids <span class="pull-right">(13)</span></a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">Portraits <span class="pull-right">(7)</span></a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">Others <span class="pull-right">(9)</span></a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">Trend <span class="pull-right">(19)</span></a></li>
                                     </ul>
                                 </div>
 
@@ -306,7 +306,7 @@
                                         </div>
                                         <div class="item_text">
                                             <h6>it’s been a long day without you</h6>
-                                            <p><i class="fa fa-clock-o"></i>  July 20th, 2015</p>
+                                            <p><i class="fa fa-clock-o"></i>  July 20th, 2025</p>
                                         </div>
                                     </div>
                                     <div class="post_item">
@@ -315,7 +315,7 @@
                                         </div>
                                         <div class="item_text">
                                             <h6>it’s been a long day without you</h6>
-                                            <p><i class="fa fa-clock-o"></i>  July 20th, 2015</p>
+                                            <p><i class="fa fa-clock-o"></i>  July 20th, 2025</p>
                                         </div>
                                     </div>
                                     <div class="post_item">
@@ -324,7 +324,7 @@
                                         </div>
                                         <div class="item_text">
                                             <h6>it’s been a long day without you</h6>
-                                            <p><i class="fa fa-clock-o"></i>  July 20th, 2015</p>
+                                            <p><i class="fa fa-clock-o"></i>  July 20th, 2025</p>
                                         </div>
                                     </div>
                                     <div class="post_item">
@@ -333,7 +333,7 @@
                                         </div>
                                         <div class="item_text">
                                             <h6>it’s been a long day without you</h6>
-                                            <p><i class="fa fa-clock-o"></i>  July 20th, 2015</p>
+                                            <p><i class="fa fa-clock-o"></i>  July 20th, 2025</p>
                                         </div>
                                     </div>
                                     <div class="post_item">
@@ -342,7 +342,7 @@
                                         </div>
                                         <div class="item_text">
                                             <h6>it’s been a long day without you</h6>
-                                            <p><i class="fa fa-clock-o"></i>  July 20th, 2015</p>
+                                            <p><i class="fa fa-clock-o"></i>  July 20th, 2025</p>
                                         </div>
                                     </div>
                                 </div>
@@ -350,10 +350,10 @@
                                 <div class="said_arc fix m-top-70">
                                     <h6 class="text-uppercase">archives</h6>
                                     <ul class="m-top-40">
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">september 2015 <span class="pull-right">(29)</span></a></li>
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">august 2015 <span class="pull-right">(29)</span></a></li>
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">july 2015 <span class="pull-right">(29)</span></a></li>
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">june 2015 <span class="pull-right">(29)</span></a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">september 2025 <span class="pull-right">(29)</span></a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">august 2025 <span class="pull-right">(29)</span></a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">july 2025 <span class="pull-right">(29)</span></a></li>
+                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">june 2025 <span class="pull-right">(29)</span></a></li>
                                     </ul>
                                 </div>
 

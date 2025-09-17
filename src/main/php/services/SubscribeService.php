@@ -61,47 +61,6 @@ class SubscribeService extends BaseService {
         
     }
 
-    public function forCollaboration($request, &$response){
-        //
-        $this->logger->info('-- SubscribeServices::forCollaboration -- ');
-        //
-        $status = TRUE;
-        try {
-            
-            if(OnclickUtils::isEmpty($request)){
-               throw new Exception("Request can't be blank."); 
-            }
-            
-            //
-            $results = $this->processSubscriptionRequest($request, "collaboration");
-            
-            //
-            $status = $this->sendSubscriptionEmail($results, "collaboration");
-            
-        } catch (Exception $exc) {
-            $status = FALSE;
-            $this->message = $exc->getTraceAsString();
-            $this->logger->info("Error occurred - ". $exc->getTraceAsString());
-        }
-        
-        //
-        if ($status) {
-            $this->logger->info("Collaboration request successfully processed.");
-            $msg = Message::Success("Collaboration request successfully processed.");
-            $response->addMessages($msg);
-            $response->setMessage("Collaboration request successfully processed.");
-            $response->setStatus(TRUE);
-        } else {
-            $this->logger->error("Error occurred while sending email Notification.");
-            $msg = Message::Warning("System error occurred while processing your request.");
-            $response->addMessages($msg);
-            $response->setMessage("System error occurred while processing your request.");
-            $response->setStatus(FALSE);
-        }
-        
-    }
-    
-    
     private function processSubscriptionRequest($request, $type){
         
         $results = null;
@@ -130,12 +89,6 @@ class SubscribeService extends BaseService {
                 $interest_type = OnclickUtils::getProperty('interest_type', $request);
                 $mapping["INTERSET_TYPE"] = "interest_type";
                 $procedure = "call proc_add_customer_subscription('".$name."', '".$email."', '".$phone."', '".$interest_type."', '".$message. "', @code, @message);";
-            }
-            
-            if($type == "collaboration"){
-                $service_type = OnclickUtils::getProperty('service_type', $request);
-                $mapping["SERVICE"] = "service_type";
-                $procedure = "call proc_add_partner_collaboration('".$name."', '".$email."', '".$phone."', '".$service_type."', '".$message. "', @code, @message);";
             }
                         
             //
