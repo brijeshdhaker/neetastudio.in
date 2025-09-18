@@ -2,9 +2,13 @@
  * Author:  Brijesh K. Dhaker
  * Created: Jul 23, 2025
  */
+
 ---
---- mysql --user=root --password=p@SSW0rd --host=mysqlserver.sandbox.net --database=NEETASTUDIO
+--- mysql --user=root --password=p@SSW0rd --host=mysqlserver.sandbox.net
 ---
+
+create database IF NOT EXISTS NEETASTUDIO;
+
 
 ---
 --- Add User
@@ -16,25 +20,21 @@ GRANT ALL PRIVILEGES ON *.* TO 'neetastudio'@'%' WITH GRANT OPTION;
 GRANT ALL PRIVILEGES ON NEETASTUDIO.* TO 'neetastudio'@'%' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 
+SHOW GRANTS FOR 'neetastudio'@'%';
+
 ---
 --- Validate User
 ---
 --- mysql --user=neetastudio --password=Accoo7@k47 --host=mysqlserver.sandbox.net --database=NEETASTUDIO
 ---
-SHOW GRANTS FOR 'neetastudio'@'%';
-
----
----
----
-create database IF NOT EXISTS NEETASTUDIO;
 
 USE NEETASTUDIO;
-
 show tables;
 
 ---
 --- PARTNER_COLLABORATION
 ---
+DROP TABLE `NEETASTUDIO`.`PARTNER_COLLABORATION`;
 
 CREATE TABLE `NEETASTUDIO`.`PARTNER_COLLABORATION`(
     `ID` MEDIUMINT NOT NULL AUTO_INCREMENT,
@@ -166,6 +166,8 @@ SELECT @code, @message ;
 ----
 ---- CUSTOMER_SUBSCRIPTIONS
 ----
+
+DROP TABLE `NEETASTUDIO`.`CUSTOMER_SUBSCRIPTIONS`;
 
 CREATE TABLE `NEETASTUDIO`.`CUSTOMER_SUBSCRIPTIONS`(
     `ID` MEDIUMINT NOT NULL AUTO_INCREMENT,

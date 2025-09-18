@@ -131,7 +131,7 @@ http://neetastudio.in
 ###
 http://neetastudio.in/controllers/hello/brijesh
 
-### PHPUnit Setup ; /etc/php/8.3/apache2/php.ini
+### PHPUnit Setup ; /etc/php/8.3/apache2/php.ini /etc/php/8.3/cli/php.ini
 ```
 ; PHPUnit
 error_reporting=-1
