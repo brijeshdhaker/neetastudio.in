@@ -23,20 +23,44 @@ class LogHelper {
                 'level'=>'INFO',
                 'appenders' => array('file-appender')
             ),
-            'logger'=>array(
-                'name'=>'err-logger',
-                'level'=>'ERROR',
-                'appenders'=>array('err-appender')
+            'loggers' => array(
+                'default-logger' => array(
+                    'level' => 'DEBUG',
+                    'appenders' => array('console-appender'),
+                ),
+                'dev-logger' => array(
+                    'level' => 'INFO',
+                    'appenders' => array('file-appender'),
+                ),
+                'test-logger' => array(
+                    'level' => 'WARN',
+                    'appenders' => array('file-appender'),
+                ),
+                'prod-logger' => array(
+                    'level' => 'ERROR',
+                    'appenders' => array('err-file-appender'),
+                ),
             ),
             'appenders' => array(
                 'default' => array(
-                    'class' => 'LoggerAppenderFile',
+                    'class' => 'LoggerAppenderEcho',
                     'layout' => array(
-                        'class' => 'LoggerLayoutSimple'
+                        'class' => 'LoggerLayoutPattern',
+                        'conversionPattern' => "%d{Y-m-d H:i:s} %-5p %c %X{username}: %m in %F at %L%n",
+                    )
+                ),
+                'console-appender' => array(
+                    'class' => 'LoggerAppenderConsole',
+                    'layout' => array(
+                        'class' => 'LoggerLayoutPattern',
+                        'params' => array(
+                            'conversionPattern'=>'%date [%logger] [%level] %message%newline'
+                        )
                     ),
                     'params' => array(
-                        'file' => $logdir.$logfile.'-default.log',
-                        'append' => true
+                        'target' => 'STDOUT',
+                        'append' => true,
+                        'datePattern'=>'Y-m-d'
                     )
                 ),
                 'file-appender' => array(
@@ -44,7 +68,7 @@ class LogHelper {
                     'layout' => array(
                         'class' => 'LoggerLayoutPattern',
                         'params' => array(
-                            'conversionPattern'=>'%date [%logger] %message%newline'
+                            'conversionPattern'=>'%date [%logger] [%level] %message%newline'
                         )
                     ),
                     'params' => array(
@@ -53,12 +77,12 @@ class LogHelper {
                         'datePattern'=>'Y-m-d'
                     )
                 ),
-                'err-appender' => array(
+                'err-file-appender' => array(
                     'class' => 'LoggerAppenderDailyFile',
                     'layout' => array(
                         'class' => 'LoggerLayoutPattern',
                         'params' => array(
-                            'conversionPattern'=>'%date [%logger] %message%newline'
+                            'conversionPattern'=>'%date [%logger] [%level] %message%newline'
                         )
                     ),
                     'params' => array(

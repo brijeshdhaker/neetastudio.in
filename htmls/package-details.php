@@ -158,13 +158,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         <div class="said_arc fix m-top-70">
                                             <h5 class="text-uppercase">Notes:</h5>
                                             <ul class="m-top-40">
-                                                <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">• The weekday offers are valid only for weekday bookings, excluding Saturdays and Sundays and any national holidays.</a></li>
-                                                <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">• All our packages include basic retouching of the images and will be delivered in digital format within 7 working days after the shoot.</a></li>
-                                                <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">• Creative Edits or Signature Edits of images is possible if the background is a solid-coloured paper backdrop.</a></li>
-                                                <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">• Depending on the package, edited images will be delivered in a combination of high-resolution and web-resolution digital files.</a></li>
-                                                <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">• All outdoor shoots are done in the studio garden and are dependent on weather conditions and safety factors for the client and our dresses and equipment.</li>
-                                                <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">• Lying down solo/couple shots will be considered as a separate setup.</a></li>
-                                                <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">• No cancellations will be possible for any bookings. One rescheduling of the date is allowed in case of any special circumstances or emergencies.</a></li>
+                                                <li><a href="#">• The weekday offers are valid only for weekday bookings, excluding Saturdays and Sundays and any national holidays.</a></li>
+                                                <li><a href="#">• All our packages include basic retouching of the images and will be delivered in digital format within 7 working days after the shoot.</a></li>
+                                                <li><a href="#">• Creative Edits or Signature Edits of images is possible if the background is a solid-coloured paper backdrop.</a></li>
+                                                <li><a href="#">• Depending on the package, edited images will be delivered in a combination of high-resolution and web-resolution digital files.</a></li>
+                                                <li><a href="#">• All outdoor shoots are done in the studio garden and are dependent on weather conditions and safety factors for the client and our dresses and equipment.</li>
+                                                <li><a href="#">• Lying down solo/couple shots will be considered as a separate setup.</a></li>
+                                                <li><a href="#">• No cancellations will be possible for any bookings. One rescheduling of the date is allowed in case of any special circumstances or emergencies.</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -178,13 +178,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <div class="said_arc fix m-top-70">
                                     <h6 class="text-uppercase">All our packages include:</h6>
                                     <ul class="m-top-40">
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">• Premium maternity outfits for the shoot</a></li>
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">• Hair and makeup by an industry professional</a></li>
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">• Matching jewellery, headbands and tiaras</a></li>
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">• Maternity-specific handheld signs and placards</a></li>
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">• Posing guidance during the shoot</a></li>
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">• Pre-shoot meeting and consultation</a></li>
-                                        <li><a href="/htmls/blog-details.php?_dc=fdfs&page=blog&sTgt=site#">• Numerous set props and model props</a></li>
+                                        <li><a href="#">• Premium maternity outfits for the shoot</a></li>
+                                        <li><a href="#">• Hair and makeup by an industry professional</a></li>
+                                        <li><a href="#">• Matching jewellery, headbands and tiaras</a></li>
+                                        <li><a href="#">• Maternity-specific handheld signs and placards</a></li>
+                                        <li><a href="#">• Posing guidance during the shoot</a></li>
+                                        <li><a href="#">• Pre-shoot meeting and consultation</a></li>
+                                        <li><a href="#">• Numerous set props and model props</a></li>
                                     </ul>
                                 </div>
 

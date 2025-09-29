@@ -41,6 +41,14 @@ class DataSourceInfo {
                 $this->dbname = "NEETASTUDIO";
                 
                 break;
+            case CONSTANTS::ONCLICK_TEST:
+                
+                $this->dbhostname = "mysqlserver.sandbox.net";
+                $this->dbusername = "neetastudio";
+                $this->dbpassword = "Accoo7@k47";
+                $this->dbname = "NEETASTUDIO";
+                
+                break;
             case CONSTANTS::ONCLICK_SIT:
                 
                 $this->dbhostname = "mysqlserver.sandbox.net";

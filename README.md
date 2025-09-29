@@ -27,7 +27,11 @@ sudo vi /etc/apache2/sites-available/neetastudio.in.conf
         #
         SetEnv APP_ENV "DEV"
         SetEnv APP_NAME "ONLINE"
-        
+        SetEnv DB_HOST "mysqlserver.sandbox.net"
+        SetEnv DB_USER "neetastudio"
+        SetEnv DB_NAME "NEETASTUDIO"
+        SetEnv DB_PASSWORD_FILE_PATH "/run/secrets/mysql-root-password"
+
         #
         <Directory /var/www/neetastudio.in>
             Options Indexes FollowSymLinks MultiViews
@@ -38,6 +42,7 @@ sudo vi /etc/apache2/sites-available/neetastudio.in.conf
         #
         ErrorLog ${APACHE_LOG_DIR}/neetastudio_error.log
         CustomLog ${APACHE_LOG_DIR}/neetastudio_access.log combined
+
 </VirtualHost>
 ```
 
@@ -100,8 +105,7 @@ composer require phpoffice/phpspreadsheet
 #
 composer require php-di/php-di
 #
-composer require --dev phpunit/phpunit
-composer require --dev phpunit/phpunit-skeleton-generator:* --with-all-dependencies
+composer require --dev phpunit/phpunit "^9.5.2"
 composer require --dev vitexsoftware/phpunit-skeleton-generator --with-all-dependencies
 ```
 
@@ -119,45 +123,31 @@ sudo apt-get install php-mysql
 docker-php-ext-install php-json pdo pdo_mysql
 
 ```
-
-phpunit test.php
-
-###
-http://neetastudio.in/phpinfo.php
-
-###
-http://neetastudio.in
-
-###
-http://neetastudio.in/controllers/hello/brijesh
-
 ### PHPUnit Setup ; /etc/php/8.3/apache2/php.ini /etc/php/8.3/cli/php.ini
 ```
 ; PHPUnit
 error_reporting=-1
 zend.assertions=1
 assert.exception=1
-emory_limit=-1
-extension=mbstring
-
-; xdebug-2.0
-xdebug.remote_enable=on
-xdebug.remote_mode=req
-xdebug.remote_handler=dbgp
-xdebug.remote_host=127.0.0.1
-xdebug.remote_port=9003
-xdebug.idekey=netbeans-xdebug
+memory_limit=-1
 
 ; xdebug-3.0
 xdebug.mode=develop,debug,coverage
 xdebug.client_host=127.0.0.1
 xdebug.client_port=9003
 xdebug.idekey=netbeans-xdebug
+xdebug.start_with_request=yes
 ```
 
 ### Run PhpUnit Test
 ```
+
+./vendor/bin/phpunit "--bootstrap" "/var/www/neetastudio.in/bootstrap.php" "--filter" "%\btestgetRepositoryPath\b%" "/var/www/neetastudio.in/src/test/php/OnclickEnvTest.php"
+
 "/usr/bin/php" -d xdebug.mode="develop,debug,coverage" "/var/www/neetastudio.in/vendor/phpunit/phpunit/phpunit" "--colors" "--log-junit" "/tmp/nb-phpunit-log.xml" "--bootstrap" "/var/www/neetastudio.in/bootstrap.php" "--filter" "%\btestgetRepositoryPath\b%" "/var/www/neetastudio.in/src/test/php/OnclickEnvTest.php"
+
+"/usr/bin/php" "-d" "xdebug.mode=develop,debug,coverage" "./conf/phpunit-12.3.11.phar" "--colors" "--log-junit" "/tmp/nb-phpunit-log.xml" "--bootstrap" "/var/www/neetastudio.in/bootstrap.php" "--configuration" "/var/www/neetastudio.in/phpunit.xml" "--filter" "%\btestGetMapping\b%" "/var/www/neetastudio.in/src/test/php/dao/MappingHelperTest.php"
+
 ```
 
 ###
@@ -165,4 +155,20 @@ xdebug.idekey=netbeans-xdebug
 ENV APACHE_DOCUMENT_ROOT /var/www/neetastudio.in
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
 RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
+```
+
+###
+http://neetastudio.in/phpinfo.php
+
+###
+http://neetastudio.in
+
+### Rest End Points
+```
+http://neetastudio.in/controllers/hello/brijesh
+http://neetastudio.in/controllers/contactus
+http://neetastudio.in/controllers/subcribe-services
+http://neetastudio.in/controllers/collaboration
+http://neetastudio.in/controllers/book-session
+
 ```

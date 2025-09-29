@@ -1,3 +1,50 @@
+/*
 {
-    "postman.settings.dotenv-detection-notification-visibility": false
-}
+    "postman.settings.dotenv-detection-notification-visibility": false,
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        },
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "phpunit.php": "/usr/bin/php",
+    "phpunit.phpunit": "${workspaceFolder}/vendor/bin/phpunit",
+    "php.debug.ideKey": "netbeans-xdebug",
+    "phpunit.xdebugPort": 9003,
+    "phpunit.args": [
+        "--colors",
+        "--log-junit", 
+        "/tmp/nb-phpunit-log.xml", 
+        "--bootstrap ${workspaceFolder}/bootstrap.php", 
+        "--configuration ${workspaceFolder}/phpunit.xml",
+        "--filte %\btestGetMapping\b%"
+    ],
+    "phpunit.testExplorer.enabled": true,
+    "phpunit.environment": {
+        "XDEBUG_MODE": "develop,debug,coverage",
+        "XDEBUG_CONFIG": "remove_enable=1",
+        "APP_ENV": "testing",
+        "APP_DEBUG": "true",
+        "CACHE_DRIVER": "array",
+        "SESSION_DRIVER": "array",
+        "QUEUE_CONNECTION": "sync",
+        "DB_HOST": "mysqlserver.sandbox.net",
+        "DB_USER": "neetastudio",
+        "DB_NAME": "NEETASTUDIO",
+        "DB_PASSWORD": "Accoo7@k47",
+        "DB_PASSWORD_FILE_PATH": "/run/secrets/mysql-root-password"
+    },
+    "phpunit.colors": "--colors=always",
+    "phpunit.paths": {
+        "${workspaceFolder}": "/var/www/neetastudio.in",
+    },
+    "phpunit.debuggerConfig": "Listen for Xdebug",// This name of the launch configuration for PHP XDEBUG extension
+} */
