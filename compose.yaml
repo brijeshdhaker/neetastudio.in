@@ -11,7 +11,7 @@
 # docker compose -f compose.yaml down apacheserver
 #
 # docker exec -it mysqlserver mysql --user=root --password=p@SSW0rd --host=mysqlserver.sandbox.net --database=NEETASTUDIO
-# docker exec -it mysqlserver mysql --user=neetastudio --password=Accoo7@k47 --host=mysqlserver.sandbox.net --database=NEETASTUDIO
+# docker exec -it mysqlserver mysql --user=neetastudio --password=paSSW0rd --host=mysqlserver.sandbox.net --database=NEETASTUDIO
 #
 # docker exec -it mysqlserver /bin/bash
 # docker exec -it apacheserver /bin/bash
@@ -37,14 +37,13 @@ services:
       - sandbox_apps_path:/apps
       - sandbox_mysql_data:/var/lib/mysql
       - $PWD/conf/mysql:/etc/mysql/conf.d
-#      - ./conf/mysql/initdb:/docker-entrypoint-initdb.d
     user: root
     secrets:
       - mysql-root-password
     env_file:
       - $PWD/conf/mysql/envvars
     healthcheck:
-      test: ["CMD", 'mysqladmin', 'ping', '-h', 'localhost', '-u', 'root', '-p$$MYSQL_PASSWORD' ]
+      test: ["CMD", 'mysqladmin', 'ping', '-h', 'localhost', '-u', '$$MYSQL_ADMIN_USER', '-p$$MYSQL_ADMIN_PASSWORD' ]
       interval: 10s
       timeout: 20s
       retries: 10
@@ -54,21 +53,21 @@ services:
   #
   # Apache Server
   #
-  apacheserver:
-    image: neetastudio.in:php-8.3.6
-    build:
-      context: .
-      target: development
-    container_name: apacheserver
-    hostname: apacheserver.sandbox.net
+  neetastudio.in:
+    image: brijeshdhaker/php:8.4.13
+#    build:
+#      context: .
+#      target: development
+    container_name: neetastudio.in
+    hostname: neetastudio.in
     restart: always
     depends_on:
       mysqlserver:
         condition: service_healthy
     ports:
-      - "8080:80"
+      - "80:80"
     volumes:
-      - sandbox_apps_path:/apps
+      - /apps/var/logs/neetastudio.in:/var/log/neetastudio.in:rw
       - $PWD:/var/www/html
       - $PWD/conf/apache/apache2.conf:/etc/apache2/apache2.conf
       - $PWD/conf/apache/envvars:/etc/apache2/envvars
@@ -91,19 +90,6 @@ services:
           target: /var/www/html
     extra_hosts:
       - "docker.sandbox.net:172.18.0.1"      
-
-  #
-  #
-  #
-#  phpmyadmin:
-#    image: phpmyadmin
-#    ports:
-#      - 8090:80
-#    depends_on:
-#      mysqlserver:
-#        condition: service_healthy
-#    environment:
-#      - PMA_HOST=mysqlserver.sandbox.net
 
 
 #

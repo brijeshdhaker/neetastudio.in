@@ -172,3 +172,20 @@ http://neetastudio.in/controllers/collaboration
 http://neetastudio.in/controllers/book-session
 
 ```
+
+### Run App Using Docker
+```bash
+
+docker run -d -p 80:80 \
+    -v /apps/var/logs/neetastudio.in:/var/log/neetastudio.in:rw \
+    -v $PWD:/var/www/html \
+    -v $PWD/conf/apache/apache2.conf:/etc/apache2/apache2.conf \
+    -v $PWD/conf/apache/envvars:/etc/apache2/envvars \
+    -v $PWD/conf/mysql/password.txt:/run/secrets/mysql-root-password:ro \
+    --env-file $PWD/envvars \
+    --name neetastudio.in \
+    brijeshdhaker/php:8.4.13
+
+docker exec -it neetastudio.in /bin/bash
+
+```

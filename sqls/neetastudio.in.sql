@@ -13,7 +13,7 @@ create database IF NOT EXISTS NEETASTUDIO;
 ---
 --- Add User
 ---
-CREATE USER 'neetastudio'@'%' IDENTIFIED BY 'Accoo7@k47';
+CREATE USER 'neetastudio'@'%' IDENTIFIED BY 'paSSW0rd';
 GRANT CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, SELECT, REFERENCES, RELOAD on *.* TO 'neetastudio'@'%' WITH GRANT OPTION;
 REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'neetastudio'@'%';
 GRANT ALL PRIVILEGES ON *.* TO 'neetastudio'@'%' WITH GRANT OPTION;
@@ -25,7 +25,7 @@ SHOW GRANTS FOR 'neetastudio'@'%';
 ---
 --- Validate User
 ---
---- mysql --user=neetastudio --password=Accoo7@k47 --host=mysqlserver.sandbox.net --database=NEETASTUDIO
+--- mysql --user=neetastudio --password=paSSW0rd --host=mysqlserver.sandbox.net --database=NEETASTUDIO
 ---
 
 USE NEETASTUDIO;

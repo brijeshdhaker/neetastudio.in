@@ -37,7 +37,7 @@ class DataSourceInfo {
                 
                 $this->dbhostname = "mysqlserver.sandbox.net";
                 $this->dbusername = "neetastudio";
-                $this->dbpassword = "Accoo7@k47";
+                $this->dbpassword = "paSSW0rd";
                 $this->dbname = "NEETASTUDIO";
                 
                 break;
@@ -45,7 +45,7 @@ class DataSourceInfo {
                 
                 $this->dbhostname = "mysqlserver.sandbox.net";
                 $this->dbusername = "neetastudio";
-                $this->dbpassword = "Accoo7@k47";
+                $this->dbpassword = "paSSW0rd";
                 $this->dbname = "NEETASTUDIO";
                 
                 break;
@@ -53,7 +53,7 @@ class DataSourceInfo {
                 
                 $this->dbhostname = "mysqlserver.sandbox.net";
                 $this->dbusername = "neetastudio";
-                $this->dbpassword = "Accoo7@k47";
+                $this->dbpassword = "paSSW0rd";
                 $this->dbname = "NEETASTUDIO";
                 
                 break;
@@ -69,7 +69,7 @@ class DataSourceInfo {
                 
                 $this->dbhostname = "mysqlserver.sandbox.net";
                 $this->dbusername = "neetastudio";
-                $this->dbpassword = "Accoo7@k47";
+                $this->dbpassword = "paSSW0rd";
                 $this->dbname = "NEETASTUDIO";
                 
                 break;

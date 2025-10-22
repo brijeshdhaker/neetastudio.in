@@ -1,0 +1,10 @@
+#
+# MySql Server
+#
+APP_ENV=DEV
+APP_NAME=ONLINE
+DB_HOST=mysqlserver.sandbox.net
+DB_USER=neetastudio
+DB_NAME=NEETASTUDIO
+DB_PASSWORD=paSSW0rd
+DB_PASSWORD_FILE_PATH=/run/secrets/mysql-root-password
