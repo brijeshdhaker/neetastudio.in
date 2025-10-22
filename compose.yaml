@@ -55,7 +55,7 @@ services:
   # Apache Server
   #
   apacheserver:
-    image: neetastudio.in:php-8.2.29
+    image: neetastudio.in:php-8.3.6
     build:
       context: .
       target: development
@@ -70,8 +70,8 @@ services:
     volumes:
       - sandbox_apps_path:/apps
       - $PWD:/var/www/html
-      - ./conf/apache2.conf:/etc/apache2/apache2.conf
-      - ./conf/envvars:/etc/apache2/envvars
+      - $PWD/conf/apache/apache2.conf:/etc/apache2/apache2.conf
+      - $PWD/conf/apache/envvars:/etc/apache2/envvars
     env_file:
       - $PWD/envvars
     secrets:

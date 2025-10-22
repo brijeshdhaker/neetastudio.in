@@ -98,7 +98,7 @@ $errorMiddleware = $app->addErrorMiddleware(true, true, true);
 
 /**
  *
- * 
+ * http://neetastudio.in/controllers/
  * 
  */
 $app->get('/', function (Request $request, Response $response, $args) {
@@ -108,7 +108,7 @@ $app->get('/', function (Request $request, Response $response, $args) {
 
 /**
  *
- * 
+ * http://neetastudio.in/controllers/hello
  * 
  */
 // Define app routes
@@ -119,7 +119,7 @@ $app->get('/hello', function (Request $request, Response $response, $args) {
 
 /**
  *
- * 
+ * http://neetastudio.in/controllers/hello/brijesh
  * 
  */
 // Define app routes

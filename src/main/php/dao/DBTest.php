@@ -9,15 +9,15 @@ try {
     $db_pass = getenv('DB_PASSWORD');
     
     // Read the password file path from an environment variable
-    //$password_file_path = getenv('DB_PASSWORD_FILE_PATH');
+    $password_file_path = getenv('DB_PASSWORD_FILE_PATH');
 
     // Read the password from the file
-    //$db_pass = trim(file_get_contents($password_file_path));
+    $root_passwd = trim(file_get_contents($password_file_path));
 
-    $dbhost = 'mysqlserver.sandbox.net';
-    $dbname='NEETASTUDIO';
-    $dbuser = 'root';
-    $dbpass = 'p@SSW0rd';
+    //$dbhost = 'mysqlserver.sandbox.net';
+    //$dbname='NEETASTUDIO';
+    //$dbuser = 'root';
+    //$dbpass = 'p@SSW0rd';
 
     $db_handle = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
 

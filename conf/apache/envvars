@@ -1,3 +1,8 @@
+#
+# neetastudio.in env variables 
+# /etc/apache2/envvars
+# /etc/environment
+#
 # envvars - default environment variables for apache2ctl
 
 # this won't be correct after changing uid
@@ -53,9 +58,10 @@ export LANG
 ## installations which interact with Apache
 #export APACHE2_MAINTSCRIPT_DEBUG=1
 
-#
-# Custom Variables
-#
+##
+## Custom Variables
+##
+
 : ${APP_ENV:=DEV}
 export APP_ENV
 
@@ -63,13 +69,16 @@ export APP_ENV
 export APP_NAME
 
 : ${DB_HOST:=mysqlserver.sandbox.net}
-export APP_NAME
+export DB_HOST
 
-: ${DB_HOST:=neetastudio}
+: ${DB_USER:=neetastudio}
 export DB_USER
 
 : ${DB_NAME:=NEETASTUDIO}
 export DB_NAME
 
-: ${DB_HOST:=Accoo7@k47}
+: ${DB_PASSWORD:=Accoo7@k47}
 export DB_PASSWORD
+
+: ${DB_PASSWORD_FILE_PATH:=/run/secrets/mysql-root-password}
+export DB_PASSWORD_FILE_PATH

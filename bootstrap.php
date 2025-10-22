@@ -10,8 +10,9 @@
 //ini_set('include_path', ini_get('include_path').PATH_SEPARATOR.dirname(__FILE__).'/apps/php5.6/includes');
 ini_set('include_path', ini_get('include_path'));
 
-//set_include_path ('D:/export/vhosts/DEV/onclickonline.com/includes');
-//date_default_timezone_set('Asia/Kolkata');
+// Default Time Zone
+date_default_timezone_set('Asia/Kolkata');
+//date_default_timezone_set('UTC');
 
 //
 require __DIR__ . '/vendor/autoload.php';
@@ -56,14 +57,19 @@ require(__DIR__ . '/src/main/php/services/ContactusService.php');
 require(__DIR__ . '/src/main/php/services/RegistrationService.php');
 require(__DIR__ . '/src/main/php/services/SubscribeService.php');
 require(__DIR__ . '/src/main/php/services/CollaborationService.php');
-//
+
+// // Configure log4php 
 LogHelper::init();
+
+// Get a logger instance
+$logger = Logger::getLogger('default-logger'); // Or Logger::getLogger('root') for the root logger
 
 //
 //$cache = phpFastCache();
 //phpFastCache::setup("storage","auto");
 
 $script_tz = date_default_timezone_get();
+$logger->info("default timezone ". $script_tz);
 /*
 if (strcmp($script_tz, ini_get('date.timezone'))){
     echo 'Script timezone differs from ini-set timezone.';

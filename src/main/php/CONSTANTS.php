@@ -6,6 +6,7 @@
 interface CONSTANTS {
     
     const ONCLICK_DEV  = "DEV";
+    const ONCLICK_TEST = "TEST";
     const ONCLICK_SIT  = "SIT";
     const ONCLICK_UAT  = "UAT";
     const ONCLICK_PROD = "PRD";
