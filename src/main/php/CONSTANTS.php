@@ -12,6 +12,7 @@ interface CONSTANTS {
     const ONCLICK_PROD = "PRD";
     
     const ONCLICK_APP_NAME   = "neetastudio.in";
+    
     const ONCLICK_APP_ONLINE   = "ONLINE";
     const ONCLICK_APP_EMPLOYER = "EMPLOYER";
     

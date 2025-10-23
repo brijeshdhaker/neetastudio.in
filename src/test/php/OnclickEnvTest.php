@@ -34,9 +34,10 @@ class OnclickEnvTest extends TestCase {
      * @todo   Implement testgetEnvName().
      */
     public function testgetEnvName() {
-        $this->assertEquals('DEV', $this->object->getEnvName());
-        // Remove the following lines when you implement this test.
-        //$this->markTestIncomplete('This test has not been implemented yet.');
+    
+        $env = $this->object->getEnvName();
+        $this->assertEquals('TEST', $env);
+    
     }
 
     /**
@@ -44,9 +45,10 @@ class OnclickEnvTest extends TestCase {
      * @todo   Implement testisWebRequest().
      */
     public function testisWebRequest() {
-        $this->assertEquals(false, $this->object->isWebRequest());
-        // Remove the following lines when you implement this test.
-        //$this->markTestIncomplete('This test has not been implemented yet.');
+
+        $isWebRequest = $this->object->isWebRequest();
+        $this->assertEquals(false, $isWebRequest);
+        
     }
 
     /**
@@ -54,9 +56,10 @@ class OnclickEnvTest extends TestCase {
      * @todo   Implement testgetAppName().
      */
     public function testgetAppName() {
-        $this->assertEquals('ONLINE', $this->object->getAppName());
-        // Remove the following lines when you implement this test.
-        //$this->markTestIncomplete('This test has not been implemented yet.');
+        
+        $app_name = $this->object->getAppName();    
+        $this->assertEquals("neetastudio.in", $app_name);
+    
     }
 
     /**
@@ -64,9 +67,10 @@ class OnclickEnvTest extends TestCase {
      * @todo   Implement testgetRepositoryPath().
      */
     public function testgetRepositoryPath() {
-        $this->assertEquals('/export/repository/DEV/', $this->object->getRepositoryPath());
-        // Remove the following lines when you implement this test.
-        //$this->markTestIncomplete('This test has not been implemented yet.');
+
+        $repopath = $this->object->getRepositoryPath();
+        $this->assertEquals('/export/repository/TEST/', $repopath);
+    
     }
 
     /**
@@ -74,9 +78,9 @@ class OnclickEnvTest extends TestCase {
      * @todo   Implement testgetDomain().
      */
     public function testgetDomain() {
-        $this->assertEquals('http://neetastudio.in', $this->object->getDomain());
-        // Remove the following lines when you implement this test.
-        //$this->markTestIncomplete('This test has not been implemented yet.');
+        $domain = $this->object->getDomain();
+        $this->assertEquals('neetastudio.in', $domain);
+
     }
 
     /**
@@ -84,9 +88,9 @@ class OnclickEnvTest extends TestCase {
      * @todo   Implement testgetRepoDomain().
      */
     public function testgetRepoDomain() {
+
         $this->assertEquals('http://neetastudio.in', $this->object->getRepoDomain());
-        // Remove the following lines when you implement this test.
-        //$this->markTestIncomplete('This test has not been implemented yet.');
+
     }
 
     /**

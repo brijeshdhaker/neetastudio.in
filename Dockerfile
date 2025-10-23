@@ -10,8 +10,26 @@
 #
 
 FROM php:8.4-apache
-RUN docker-php-ext-install pdo pdo_mysql
+
+# Install necessary packages
+RUN apt-get update && \
+    apt-get install \
+    libzip-dev \
+    wget \
+    git \
+    unzip \
+    -y --no-install-recommends
+
+# Install PHP Extensions
+RUN docker-php-ext-install zip pdo pdo_mysql
+
+#RUN apt-get install -y php-json php-mbstring php-xml php-pcov php-xdebug
+RUN pecl install -o -f xdebug \
+    && docker-php-ext-enable xdebug
+
 RUN a2enmod rewrite
 RUN a2enmod actions
-RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
+
+COPY conf/php/php-apache.ini "$PHP_INI_DIR/php.ini"
+
 USER www-data

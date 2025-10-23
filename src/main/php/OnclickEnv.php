@@ -3,11 +3,11 @@
 class OnclickEnv {
 
     public static function getEnvName() {
-        if (self::isWebRequest()) {
+        //if (self::isWebRequest()) {
             return $_SERVER['APP_ENV'];
-        } else {
-            return CONSTANTS::ONCLICK_DEV;
-        }
+        //} else {
+        //    return CONSTANTS::ONCLICK_DEV;
+        //}
     }
 
     public static function isWebRequest() {
@@ -15,11 +15,7 @@ class OnclickEnv {
     }
 
     public static function getAppName() {
-        if (self::isWebRequest()) {
-            return $_SERVER['APP_NAME'];
-        } else {
-            return CONSTANTS::ONCLICK_APP_ONLINE;
-        }
+        return $_SERVER['APP_NAME'];
     }
 
     public static function getRepositoryPath() {
@@ -29,11 +25,10 @@ class OnclickEnv {
     }
 
     public static function getDomain() {
-        $domain = "http://neetastudio.in";
-        if (self::isWebRequest()) {
-            $domain = "http://".$_SERVER['SERVER_NAME'];
-        }
+
+        $domain = CONSTANTS::ONCLICK_APP_NAME;
         return $domain;
+    
     }
 
     public static function getRepoDomain() {
@@ -46,6 +41,9 @@ class OnclickEnv {
                 $domain = 'http://neetastudio.in';
                 break;
             case CONSTANTS::ONCLICK_SIT:
+                $domain = 'http://neetastudio.in';
+                break;
+            case CONSTANTS::ONCLICK_TEST:
                 $domain = 'http://neetastudio.in';
                 break;
             case CONSTANTS::ONCLICK_DEV:

@@ -89,7 +89,7 @@ services:
           path: $PWD
           target: /var/www/html
     extra_hosts:
-      - "docker.sandbox.net:172.18.0.1"      
+      - docker.sandbox.net:172.18.0.1      
 
 
 #

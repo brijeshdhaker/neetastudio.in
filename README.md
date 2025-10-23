@@ -55,6 +55,9 @@ sudo systemctl reload apache2
 #
 sudo a2enmod rewrite
 sudo a2enmod actions
+
+#
+sudo systemctl stop apache2
 sudo systemctl restart apache2
 sudo systemctl status apache2
 ```

@@ -1,4 +1,3 @@
-/*
 {
     "postman.settings.dotenv-detection-notification-visibility": false,
     "[dockercompose]": {
@@ -31,7 +30,8 @@
     "phpunit.environment": {
         "XDEBUG_MODE": "develop,debug,coverage",
         "XDEBUG_CONFIG": "remove_enable=1",
-        "APP_ENV": "testing",
+        "APP_ENV": "TEST",
+        "APP_NAME": "neetastudio.in",
         "APP_DEBUG": "true",
         "CACHE_DRIVER": "array",
         "SESSION_DRIVER": "array",
@@ -46,5 +46,5 @@
     "phpunit.paths": {
         "${workspaceFolder}": "/var/www/neetastudio.in",
     },
-    "phpunit.debuggerConfig": "Listen for Xdebug",// This name of the launch configuration for PHP XDEBUG extension
-} */
+    //"phpunit.debuggerConfig": "Listen for Xdebug",// This name of the launch configuration for PHP XDEBUG extension
+}

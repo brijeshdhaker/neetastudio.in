@@ -23,10 +23,24 @@ RUN --mount=type=bind,source=./composer.json,target=composer.json \
     --mount=type=cache,target=/tmp/cache \
     composer install --no-interaction
 
+
 FROM php:8.4-apache as base
-RUN docker-php-ext-install pdo pdo_mysql
+
+# Install necessary packages
+RUN apt-get update && \
+    apt-get install \
+    libzip-dev \
+    wget \
+    git \
+    unzip \
+    -y --no-install-recommends
+
+# Install PHP Extensions
+RUN docker-php-ext-install zip pdo pdo_mysql 
+
 RUN a2enmod rewrite
 RUN a2enmod actions
+
 COPY ./ /var/www/html
 
 FROM base as development
