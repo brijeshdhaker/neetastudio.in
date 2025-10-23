@@ -122,7 +122,7 @@ sudo apt install php-cli \
                  php-xdebug
 
 sudo apt-get install php-mysql
-
+sudo apt install php-ssh2 
 docker-php-ext-install php-json pdo pdo_mysql
 
 ```

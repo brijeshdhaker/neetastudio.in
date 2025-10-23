@@ -24,6 +24,14 @@ require(__DIR__ . '/src/main/php/CONSTANTS.php');
 require(__DIR__ . '/src/main/php/OnclickEnv.php');
 require(__DIR__ . '/src/main/php/userinfo.php');
 require(__DIR__ . '/src/main/php/onclickresponse.php');
+
+// File Transfer Processor
+require(__DIR__ . '/src/main/php/ftp/FTPInfo.php');
+require(__DIR__ . '/src/main/php/ftp/FTPUtil.php');
+require(__DIR__ . '/src/main/php/ftp/FTPProcessor.php');
+require(__DIR__ . '/src/main/php/ftp/SFTPConnection.php');
+require(__DIR__ . '/src/main/php/ftp/SFTPProcessor.php');
+
 //
 require(__DIR__ . '/src/main/php/dao/DBHelper.php');
 require(__DIR__ . '/src/main/php/dao/DataSourceInfo.php');

@@ -98,9 +98,9 @@ class OnclickEnvTest extends TestCase {
      * @todo   Implement testgetFtpHotInfo().
      */
     public function testgetFtpHotInfo() {
-        //$this->assertEquals('', $this->object->getFtpHotInfo());
-        // Remove the following lines when you implement this test.
-        //$this->markTestIncomplete('This test has not been implemented yet.');
+        $ftpInfo = $this->object->getFtpHotInfo();
+        $this->assertNotNull($ftpInfo);
+        
     }
 
     /**
