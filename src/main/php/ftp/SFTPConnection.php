@@ -122,9 +122,9 @@ class SFTPConnection {
 //ssh2_auth_password($SSH_CONNECTION, 'username', 'password');
 
 try {
-    $sftp = new SFTPConnection("cdc1pbvbatchdev01.svr.pbpcs.jpmchase.net", 22);
-    $sftp->login("i100121", "Dell1234$");
-    $sftp->uploadFile("C:/bkdhaker/onclick-projects/onclickbatches/sample.sql", "/tmp/i100121/sample.sql");
+    $sftp = new SFTPConnection("docker.sandbox.net", 22);
+    $sftp->login("brijeshdhaker", "Accoo7@k47");
+    $sftp->uploadFile("/var/www/neetastudio.in/compose.yaml", "/home/brijeshdhaker/Downloads/compose.yaml");
 } catch (Exception $e) {
     echo $e->getMessage() . "\n";
 }

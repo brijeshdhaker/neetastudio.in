@@ -16,8 +16,11 @@
     },
     "phpunit.php": "/usr/bin/php",
     "phpunit.phpunit": "${workspaceFolder}/vendor/bin/phpunit",
-    "php.debug.ideKey": "netbeans-xdebug",
+    "phpunit.clearOutputOnRun": true,
+    "php.debug.ideKey": "vscode",
     "phpunit.xdebugPort": 9003,
+    // "app" is the container name in the docker-compose.yml
+    // "phpunit.command": "docker compose -f compose.yaml exec -e 'XDEBUG_TRIGGER=vscode' neetastudio.in bash -c",
     "phpunit.args": [
         "--colors",
         "--log-junit", 
@@ -26,10 +29,11 @@
         "--configuration ${workspaceFolder}/phpunit.xml",
         "--filte %\btestGetMapping\b%"
     ],
-    "phpunit.testExplorer.enabled": true,
     "phpunit.environment": {
-        "XDEBUG_MODE": "develop,debug,coverage",
-        "XDEBUG_CONFIG": "remove_enable=1",
+        "XDEBUG_SESSION": "1",
+        "XDEBUG_SESSION_START": "vscode",
+        "XDEBUG_MODE": "develop,debug,coverage,profile",
+        "XDEBUG_CONFIG": "client_port=9003",
         "APP_ENV": "TEST",
         "APP_NAME": "neetastudio.in",
         "APP_DEBUG": "true",
@@ -42,9 +46,9 @@
         "DB_PASSWORD": "paSSW0rd",
         "DB_PASSWORD_FILE_PATH": "/run/secrets/mysql-root-password"
     },
-    "phpunit.colors": "--colors=always",
     "phpunit.paths": {
         "${workspaceFolder}": "/var/www/neetastudio.in",
     },
-    //"phpunit.debuggerConfig": "Listen for Xdebug",// This name of the launch configuration for PHP XDEBUG extension
+    // This name of the launch configuration for PHP XDEBUG extension
+    //"phpunit.debuggerConfig": "Listen for Xdebug",
 }

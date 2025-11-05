@@ -57,9 +57,13 @@ sudo a2enmod rewrite
 sudo a2enmod actions
 
 #
+sudo systemctl start apache2
 sudo systemctl stop apache2
 sudo systemctl restart apache2
 sudo systemctl status apache2
+
+sudo systemctl enable apache2
+sudo systemctl disable apache2
 ```
 
 ### /var/www/neetastudio.in/controllers/.htaccess
@@ -128,20 +132,31 @@ docker-php-ext-install php-json pdo pdo_mysql
 ```
 ### PHPUnit Setup ; /etc/php/8.3/apache2/php.ini /etc/php/8.3/cli/php.ini
 ```
-; PHPUnit
+[PHPUnit]
 error_reporting=-1
 zend.assertions=1
 assert.exception=1
 memory_limit=-1
+;extension=mbstring
 
-; xdebug-3.0
+[xdebug-3.0]
 xdebug.mode=develop,debug,coverage
-xdebug.client_host=127.0.0.1
-xdebug.client_port=9003
-xdebug.idekey=netbeans-xdebug
+;xdebug.client_host=docker.sandbox.net
+;xdebug.client_port=9003
+;xdebug.idekey=vscode
 xdebug.start_with_request=yes
-```
+;xdebug.start_with_request=trigger
+;xdebug.trigger_value=vscode
 
+```
+### dbgpProxy
+```bash
+
+./dbgpProxy -i 127.0.0.1:9001 -s 127.0.0.1:9003 
+
+./dbgpProxy -f
+
+```
 ### Run PhpUnit Test
 ```
 

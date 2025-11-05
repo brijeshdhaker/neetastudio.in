@@ -9,12 +9,14 @@
       "group": {
         "kind": "build",
         "isDefault": true
-      }
-    },{
-        "label": "Start PHP Server",
-        "type": "shell",
-        "command": "php -S localhost:8000 -t .",
-        "isBackground": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Start PHP Server",
+      "type": "shell",
+      "command": "php -S localhost:8000 -t .",
+      "isBackground": true
     }
   ]
 }

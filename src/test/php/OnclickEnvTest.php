@@ -88,8 +88,8 @@ class OnclickEnvTest extends TestCase {
      * @todo   Implement testgetRepoDomain().
      */
     public function testgetRepoDomain() {
-
-        $this->assertEquals('http://neetastudio.in', $this->object->getRepoDomain());
+        $repoDomain = $this->object->getRepoDomain();
+        $this->assertEquals('http://neetastudio.in', $repoDomain);
 
     }
 

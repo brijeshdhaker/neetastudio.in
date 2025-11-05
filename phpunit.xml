@@ -13,6 +13,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/Tests/PHPUnitConfigurat
 
     <php>
         <ini name="xdebug.mode" value="develop,debug,coverage"/>
+        <ini name="xdebug.client_host" value="docker.sandbox.net"/>
         <ini name="xdebug.client_port" value="9003"/>
     </php>
 

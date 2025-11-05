@@ -1,5 +1,5 @@
 #
-# Use root/p@SSW0rd user/password credentials
+# Use root/paSSW0rd user/password credentials
 #
 # docker volume create --name sandbox_apps_path --opt type=none --opt device=/apps --opt o=bind
 # docker volume create --name sandbox_mysql_data --opt type=none --opt device=/apps/sandbox/mysql/data --opt o=bind
@@ -7,14 +7,14 @@
 # docker compose -f compose.yaml up -d mysqlserver
 # docker compose -f compose.yaml down mysqlserver
 #
-# docker compose -f compose.yaml up -d apacheserver
-# docker compose -f compose.yaml down apacheserver
+# docker compose -f compose.yaml up -d neetastudio.in
+# docker compose -f compose.yaml down neetastudio.in
 #
-# docker exec -it mysqlserver mysql --user=root --password=p@SSW0rd --host=mysqlserver.sandbox.net --database=NEETASTUDIO
+# docker exec -it mysqlserver mysql --user=root --password=paSSW0rd --host=mysqlserver.sandbox.net --database=NEETASTUDIO
 # docker exec -it mysqlserver mysql --user=neetastudio --password=paSSW0rd --host=mysqlserver.sandbox.net --database=NEETASTUDIO
 #
 # docker exec -it mysqlserver /bin/bash
-# docker exec -it apacheserver /bin/bash
+# docker exec -it neetastudio.in /bin/bash
 # 
 # docker compose up --build
 # docker compose watch
@@ -48,7 +48,7 @@ services:
       timeout: 20s
       retries: 10
     extra_hosts:
-      - "docker.sandbox.net:172.18.0.1"
+      - docker.sandbox.net:172.18.0.1
 
   #
   # Apache Server
