@@ -65,7 +65,7 @@ export LANG
 : ${APP_ENV:=DEV}
 export APP_ENV
 
-: ${APP_NAME:=ONLINE}
+: ${APP_NAME:=neetastudio.in}
 export APP_NAME
 
 : ${DB_HOST:=mysqlserver.sandbox.net}

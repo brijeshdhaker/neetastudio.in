@@ -120,12 +120,13 @@ class SFTPConnection {
 
 //$SSH_CONNECTION = ssh2_connect('shell.example.com', 22);
 //ssh2_auth_password($SSH_CONNECTION, 'username', 'password');
-
+/*
 try {
     $sftp = new SFTPConnection("docker.sandbox.net", 22);
     $sftp->login("brijeshdhaker", "Accoo7@k47");
-    $sftp->uploadFile("/var/www/neetastudio.in/compose.yaml", "/home/brijeshdhaker/Downloads/compose.yaml");
+    $sftp->uploadFile("/var/www/docker-compose.yaml", "/apps/sandbox/sftp/dev/docker-compose.yaml");
 } catch (Exception $e) {
     echo $e->getMessage() . "\n";
 }
+*/
 ?>

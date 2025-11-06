@@ -2,13 +2,6 @@
 <log4php:configuration xmlns:log4php="http://logging.apache.org/log4php/" threshold="all">
     
     <!--Appender logs message to a file-->
-    <appender name="default" class="LoggerAppenderEcho">
-	    <layout class="LoggerLayoutPattern">
-            <param name="conversionPattern" value="%d{Y-m-d H:i:s} [%-5p] [%c] [%X{username}]: %m%n" />
-        </layout>
-    </appender>
-        
-    <!--Appender logs message to a file-->
     <appender name="default-appender" class="LoggerAppenderDailyFile">
                 <!--Layout of the message-->
         <layout class="LoggerLayoutPattern">
@@ -20,13 +13,13 @@
     </appender>
 
     <root>
-        <level value="trace" />
+        <level value="INFO" />
         <appender_ref ref="default-appender" />
     </root>
     
     <!--Logger used for logging-->
     <logger name="default-logger">
-        <level value="info" /> <!--Severity level-->
+        <level value="INFO" /> <!--Severity level-->
         <appender_ref ref="default-appender" /> <!--Reference to the Appender-->
     </logger>
     

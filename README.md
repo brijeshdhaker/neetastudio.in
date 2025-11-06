@@ -140,7 +140,7 @@ memory_limit=-1
 ;extension=mbstring
 
 [xdebug-3.0]
-xdebug.mode=develop,debug,coverage
+xdebug.mode=develop,debug,coverage,profile,trace
 ;xdebug.client_host=docker.sandbox.net
 ;xdebug.client_port=9003
 ;xdebug.idekey=vscode
@@ -149,6 +149,9 @@ xdebug.start_with_request=yes
 ;xdebug.trigger_value=vscode
 
 ```
+###
+http://neetastudio.in/index.php?_dc=fdfs&page=home&sTgt=site&XDEBUG_TRIGGER=vscode
+
 ### dbgpProxy
 ```bash
 
@@ -196,14 +199,29 @@ http://neetastudio.in/controllers/book-session
 
 docker run -d -p 80:80 \
     -v /apps/var/logs/neetastudio.in:/var/log/neetastudio.in:rw \
-    -v $PWD:/var/www/html \
-    -v $PWD/conf/apache/apache2.conf:/etc/apache2/apache2.conf \
-    -v $PWD/conf/apache/envvars:/etc/apache2/envvars \
-    -v $PWD/conf/mysql/password.txt:/run/secrets/mysql-root-password:ro \
-    --env-file $PWD/envvars \
+    -v ${PWD}:/var/www/html \
+    -v ${PWD}/conf/apache/apache2.conf:/etc/apache2/apache2.conf \
+    -v ${PWD}/conf/apache/envvars:/etc/apache2/envvars \
+    -v ${PWD}/conf/mysql/password.txt:/run/secrets/mysql-root-password:ro \
+    -v ${PWD}/conf/php/php.ini:/usr/local/etc/php/php.ini \
+    -w /var/www/html \
+    --env-file ${PWD}/envvars \
+    --add-host docker.sandbox.net:172.18.0.1 \
     --name neetastudio.in \
     brijeshdhaker/php:8.4.13
 
+
 docker exec -it neetastudio.in /bin/bash
+
+docker run --rm -it \
+-e 'XDEBUG_TRIGGER=vscode' \
+-v ${PWD}:/var/www/html \
+-v ${PWD}/conf/mysql/password.txt:/run/secrets/mysql-root-password:ro \
+-v ${PWD}/conf/php/php.ini:/usr/local/etc/php/php.ini \
+-w /var/www/html \
+--env-file ${PWD}/envvars \
+--add-host docker.sandbox.net:172.18.0.1 \
+--name phpunit-test \
+brijeshdhaker/php:8.4.13 /bin/bash ${php} ${phpargs} ${phpunit} ${phpunitargs}
 
 ```

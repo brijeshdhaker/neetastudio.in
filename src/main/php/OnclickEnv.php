@@ -4,7 +4,7 @@ class OnclickEnv {
 
     public static function getEnvName() {
         //if (self::isWebRequest()) {
-            return $_SERVER['APP_ENV'];
+            return $_ENV['APP_ENV'];
         //} else {
         //    return CONSTANTS::ONCLICK_DEV;
         //}
@@ -15,13 +15,13 @@ class OnclickEnv {
     }
 
     public static function getAppName() {
-        return $_SERVER['APP_NAME'];
+        return $_ENV['APP_NAME'];
     }
 
     public static function getRepositoryPath() {
         $env = OnclickEnv::getEnvName();
-        $repopath = "/export/repository/{$env}/";
-        return $repopath;
+        $repopath = "/apps/sandbox/sftp/{$env}/";
+        return strtolower($repopath);
     }
 
     public static function getDomain() {
@@ -60,29 +60,29 @@ class OnclickEnv {
         $ftpinfo = new FTPInfo();
         switch (self::getEnvName()) {
             case CONSTANTS::ONCLICK_PROD:
-                $ftpinfo->setRemoteHost("olprdsrv.neetastudio.in");
-                $ftpinfo->setRemoteUser("batchuser");
-                $ftpinfo->setRemotePasswd("accoo7ak47");
+                $ftpinfo->setRemoteHost("docker.sandbox.net");
+                $ftpinfo->setRemoteUser("brijeshdhaker");
+                $ftpinfo->setRemotePasswd("Accoo7@k47");
                 break;
             case CONSTANTS::ONCLICK_UAT:
-                $ftpinfo->setRemoteHost("oluatsrv.neetastudio.in");
-                $ftpinfo->setRemoteUser("batchuser");
-                $ftpinfo->setRemotePasswd("accoo7ak47");
+                $ftpinfo->setRemoteHost("docker.sandbox.net");
+                $ftpinfo->setRemoteUser("brijeshdhaker");
+                $ftpinfo->setRemotePasswd("Accoo7@k47");
                 break;
             case CONSTANTS::ONCLICK_SIT:
-                $ftpinfo->setRemoteHost("oluatsrv.neetastudio.in");
-                $ftpinfo->setRemoteUser("batchuser");
-                $ftpinfo->setRemotePasswd("accoo7ak47");
+                $ftpinfo->setRemoteHost("docker.sandbox.net");
+                $ftpinfo->setRemoteUser("brijeshdhaker");
+                $ftpinfo->setRemotePasswd("Accoo7@k47");
                 break;
             case CONSTANTS::ONCLICK_DEV:
-                $ftpinfo->setRemoteHost("oluatsrv.neetastudio.in");
-                $ftpinfo->setRemoteUser("batchuser");
-                $ftpinfo->setRemotePasswd("accoo7ak47");
+                $ftpinfo->setRemoteHost("docker.sandbox.net");
+                $ftpinfo->setRemoteUser("brijeshdhaker");
+                $ftpinfo->setRemotePasswd("Accoo7@k47");
                 break;
             default:
-                $ftpinfo->setRemoteHost("olprdsrv.neetastudio.in");
-                $ftpinfo->setRemoteUser("batchuser");
-                $ftpinfo->setRemotePasswd("accoo7ak47");
+                $ftpinfo->setRemoteHost("docker.sandbox.net");
+                $ftpinfo->setRemoteUser("brijeshdhaker");
+                $ftpinfo->setRemotePasswd("Accoo7@k47");
                 break;
         }
         return $ftpinfo;

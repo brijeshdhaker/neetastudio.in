@@ -36,12 +36,12 @@ services:
     volumes:
       - sandbox_apps_path:/apps
       - sandbox_mysql_data:/var/lib/mysql
-      - $PWD/conf/mysql:/etc/mysql/conf.d
+      - ${PWD}/conf/mysql:/etc/mysql/conf.d
     user: root
     secrets:
       - mysql-root-password
     env_file:
-      - $PWD/conf/mysql/envvars
+      - ${PWD}/conf/mysql/envvars
     healthcheck:
       test: ["CMD", 'mysqladmin', 'ping', '-h', 'localhost', '-u', '$$MYSQL_ADMIN_USER', '-p$$MYSQL_ADMIN_PASSWORD' ]
       interval: 10s
@@ -67,26 +67,26 @@ services:
     ports:
       - "80:80"
     volumes:
+      - sandbox_apps_path:/apps
+      - ${PWD}:/var/www/html
+      - ${PWD}/conf/apache/apache2.conf:/etc/apache2/apache2.conf
+      - ${PWD}/conf/apache/envvars:/etc/apache2/envvars
+      - ${PWD}/conf/php/php.ini:/usr/local/etc/php/php.ini
       - /apps/var/logs/neetastudio.in:/var/log/neetastudio.in:rw
-      - $PWD:/var/www/html
-      - $PWD/conf/apache/apache2.conf:/etc/apache2/apache2.conf
-      - $PWD/conf/apache/envvars:/etc/apache2/envvars
     env_file:
-      - $PWD/envvars
+      - ${PWD}/envvars
     secrets:
       - mysql-root-password
     environment:
-      - APP_ENV=DEV
-      - APP_NAME=ONLINE
+      - XDEBUG_MODE=develop,debug,coverage
     healthcheck:
       test: echo $(hostname -f) || exit 1
-      # test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
       timeout: 20s
       retries: 10
     develop:
       watch:
         - action: sync
-          path: $PWD
+          path: ${PWD}
           target: /var/www/html
     extra_hosts:
       - docker.sandbox.net:172.18.0.1      
@@ -102,7 +102,7 @@ volumes:
 #
 secrets:
   mysql-root-password:
-    file: $PWD/conf/mysql/password.txt
+    file: ${PWD}/conf/mysql/password.txt
 
 #
 networks:

@@ -25,8 +25,8 @@ class LogHelper {
             ),
             'loggers' => array(
                 'default-logger' => array(
-                    'level' => 'DEBUG',
-                    'appenders' => array('console-appender'),
+                    'level' => 'INFO',
+                    'appenders' => array('file-appender'),
                 ),
                 'dev-logger' => array(
                     'level' => 'INFO',

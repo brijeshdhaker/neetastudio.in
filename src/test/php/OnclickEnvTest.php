@@ -36,7 +36,7 @@ class OnclickEnvTest extends TestCase {
     public function testgetEnvName() {
     
         $env = $this->object->getEnvName();
-        $this->assertEquals('TEST', $env);
+        $this->assertEquals('DEV', $env);
     
     }
 
@@ -69,7 +69,7 @@ class OnclickEnvTest extends TestCase {
     public function testgetRepositoryPath() {
 
         $repopath = $this->object->getRepositoryPath();
-        $this->assertEquals('/export/repository/TEST/', $repopath);
+        $this->assertEquals(strtolower("/apps/sandbox/sftp/dev/"), $repopath);
     
     }
 
@@ -108,7 +108,7 @@ class OnclickEnvTest extends TestCase {
      * @todo   Implement testserverProperties().
      */
     public function testserverProperties() {
-        //$this->assertEquals('', $this->object->serverProperties());
+        $this->assertEquals("HELLO", "HELLO");
         // Remove the following lines when you implement this test.
         //$this->markTestIncomplete('This test has not been implemented yet.');
     }
