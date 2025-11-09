@@ -17,12 +17,12 @@
     // PHP Debug configuration
     "php.debug.ideKey": "vscode",
     // PHPUnit configuration
-    "phpunit.php": "php",
+    "phpunit.php": "/usr/local/bin/php",
     "phpunit.phpunit": "vendor/bin/phpunit",
     "phpunit.clearOutputOnRun": true,
     "phpunit.xdebugPort": 9003,
     // "neetastudio.in" is the container name in the docker-compose.yml
-    "phpunit.command": "docker exec -e 'XDEBUG_TRIGGER=vscode' -t neetastudio.in /bin/sh -c \"${php} ${phpargs} ${phpunit} ${phpunitargs}\"",
+    //"phpunit.command": "docker exec -e 'XDEBUG_TRIGGER=vscode' -t neetastudio.in /bin/sh -c \"${php} ${phpargs} ${phpunit} ${phpunitargs}\"",
     //"phpunit.command": "docker run --rm -t -e 'XDEBUG_TRIGGER=vscode' -v ${PWD}:/var/www/html -v ${PWD}/conf/php/php.ini:/usr/local/etc/php/php.ini -w /var/www/html --env-file ${PWD}/envvars --add-host docker.sandbox.net:172.18.0.1 --name phpunit-test brijeshdhaker/php:8.4.13 ${php} ${phpargs} ${phpunit} ${phpunitargs}",
     "phpunit.args": [
         "--colors",
@@ -37,8 +37,8 @@
         "QUEUE_CONNECTION": "sync",
     },
     "phpunit.paths": {
-        "${workspaceFolder}": "/var/www/html",
+        //"${workspaceFolder}": "/var/www/html",
     },
     // This name of the launch configuration for PHP XDEBUG extension
-    "phpunit.debuggerConfig": "Listen for Xdebug",
+    //"phpunit.debuggerConfig": "Listen for Xdebug",
 }

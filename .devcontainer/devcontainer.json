@@ -1,0 +1,32 @@
+{
+    "name": "PHP Development Container",
+    // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	//"image": "mcr.microsoft.com/devcontainers/php:1-8.4-apache-bullseye",
+    
+    "dockerComposeFile": ["../docker-compose.yaml"],
+    "service": "neetastudio.in",
+    "workspaceFolder": "/var/www/html",
+    "shutdownAction": "stopCompose",
+
+    // Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "sudo chmod a+x \"$(pwd)\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)\" /var/www/html",
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "xdebug.php-debug",
+                "xdebug.php-pack",
+	            "zobo.php-intellisense",
+                "recca0120.vscode-phpunit",
+                "esbenp.prettier-vscode",
+                "PKief.material-icon-theme"
+            ]
+        }
+    },
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+	//"forwardPorts": [5000],
+    
+    // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+    "remoteUser": 1000
+}

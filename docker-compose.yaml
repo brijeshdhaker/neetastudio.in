@@ -4,11 +4,11 @@
 # docker volume create --name sandbox_apps_path --opt type=none --opt device=/apps --opt o=bind
 # docker volume create --name sandbox_mysql_data --opt type=none --opt device=/apps/sandbox/mysql/data --opt o=bind
 #
-# docker compose -f compose.yaml up -d mysqlserver
-# docker compose -f compose.yaml down mysqlserver
+# docker compose -f docker-compose.yaml up -d mysqlserver
+# docker compose -f docker-compose.yaml down mysqlserver
 #
-# docker compose -f compose.yaml up -d neetastudio.in
-# docker compose -f compose.yaml down neetastudio.in
+# docker compose -f docker-compose.yaml up -d neetastudio.in
+# docker compose -f docker-compose.yaml down neetastudio.in
 #
 # docker exec -it mysqlserver mysql --user=root --password=paSSW0rd --host=mysqlserver.sandbox.net --database=NEETASTUDIO
 # docker exec -it mysqlserver mysql --user=neetastudio --password=paSSW0rd --host=mysqlserver.sandbox.net --database=NEETASTUDIO
@@ -36,12 +36,12 @@ services:
     volumes:
       - sandbox_apps_path:/apps
       - sandbox_mysql_data:/var/lib/mysql
-      - ${PWD}/conf/mysql:/etc/mysql/conf.d
+      - /home/brijeshdhaker/IdeaProjects/neetastudio.in/conf/mysql:/etc/mysql/conf.d
     user: root
     secrets:
       - mysql-root-password
     env_file:
-      - ${PWD}/conf/mysql/envvars
+      - /home/brijeshdhaker/IdeaProjects/neetastudio.in/conf/mysql/envvars
     healthcheck:
       test: ["CMD", 'mysqladmin', 'ping', '-h', 'localhost', '-u', '$$MYSQL_ADMIN_USER', '-p$$MYSQL_ADMIN_PASSWORD' ]
       interval: 10s
@@ -68,13 +68,13 @@ services:
       - "80:80"
     volumes:
       - sandbox_apps_path:/apps
-      - ${PWD}:/var/www/html
-      - ${PWD}/conf/apache/apache2.conf:/etc/apache2/apache2.conf
-      - ${PWD}/conf/apache/envvars:/etc/apache2/envvars
-      - ${PWD}/conf/php/php.ini:/usr/local/etc/php/php.ini
+      - /home/brijeshdhaker/IdeaProjects/neetastudio.in:/var/www/html
+#      - ${PWD}/conf/apache/apache2.conf:/etc/apache2/apache2.conf
+#      - ${PWD}/conf/apache/envvars:/etc/apache2/envvars
+#      - /home/brijeshdhaker/IdeaProjects/neetastudio.in/conf/php/php.ini:/usr/local/etc/php/php.ini
       - /apps/var/logs/neetastudio.in:/var/log/neetastudio.in:rw
     env_file:
-      - ${PWD}/envvars
+      - /home/brijeshdhaker/IdeaProjects/neetastudio.in/envvars
     secrets:
       - mysql-root-password
     environment:
@@ -83,11 +83,11 @@ services:
       test: echo $(hostname -f) || exit 1
       timeout: 20s
       retries: 10
-    develop:
-      watch:
-        - action: sync
-          path: ${PWD}
-          target: /var/www/html
+    # develop:
+    #   watch:
+    #     - action: sync
+    #       path: ${PWD}
+    #       target: /var/www/html
     extra_hosts:
       - docker.sandbox.net:172.18.0.1      
 
@@ -102,7 +102,7 @@ volumes:
 #
 secrets:
   mysql-root-password:
-    file: ${PWD}/conf/mysql/password.txt
+    file: /home/brijeshdhaker/IdeaProjects/neetastudio.in/conf/mysql/password.txt
 
 #
 networks:

@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  devcontainer:
+    #image: mcr.microsoft.com/devcontainers/php:1-8.4-bullseye
+    image: brijeshdhaker/php:8.4.13
+    build:
+      context: .
+      dockerfile: ../Dockerfile.dev
+    # Overrides default command so things don't shut down after the process ends.
+    command: sleep infinity
+    # Overrides default command so things don't shut down after the process ends.
+    #command: /bin/sh -c "while sleep 1000; do :; done"
+    volumes:
+      - .:/workspace:cached
+    # ports:
+    #   - "5000:5000" # Example port forwarding
+    depends_on:
+      - mysqlserver
+    extra_hosts:
+      - docker.sandbox.net:172.18.0.1
+    # Runs app on the same network as the database container, allows "forwardPorts" in devcontainer.json function.
+    #network_mode: service:mysqlserver
+    network_mode: "sandbox.net"
+    # [Optional] Required for ptrace-based debuggers like C++, Go, and Rust
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
