@@ -17,7 +17,7 @@ final class PDOHelperTest extends TestCase {
      * Sets up the fixture, for example, opens a network connection.
      * This method is called before a test is executed.
      */
-    #[\Override]
+    #[Override]
     protected function setUp() : void {
         $this->pdoHelper = new PDOHelper;
     }
@@ -27,7 +27,7 @@ final class PDOHelperTest extends TestCase {
      * Tears down the fixture, for example, closes a network connection.
      * This method is called after a test is executed.
      */
-    #[\Override]
+    #[Override]
     protected function tearDown(): void {
         
     }

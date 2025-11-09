@@ -55,9 +55,9 @@ services:
   #
   neetastudio.in:
     image: brijeshdhaker/php:8.4.13
-#    build:
-#      context: .
-#      target: development
+    build:
+      context: .
+      target: development
     container_name: neetastudio.in
     hostname: neetastudio.in
     restart: always
