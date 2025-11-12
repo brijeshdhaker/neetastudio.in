@@ -14,7 +14,8 @@
             "env": {
                 "XDEBUG_MODE": "develop,debug,coverage,profile",
                 "XDEBUG_CONFIG": "client_port=${port}"
-            }
+            },
+            "envFile": "${workspaceFolder}/envvars"
         },
         {
             "name": "Launch Built-in web server",
@@ -38,8 +39,16 @@
             "env": {
                 "XDEBUG_MODE": "develop,debug,coverage,profile",
                 "XDEBUG_CLIENT_PORT": "9000",
-                "XDEBUG_TRIGGER": "vscode"
-            }
+                "XDEBUG_TRIGGER": "vscode",
+                "APP_ENV": "DEV",
+                "APP_NAME": "neetastudio.in",
+                "DB_HOST": "mysqlserver.sandbox.net",
+                "DB_NAME": "NEETASTUDIO",
+                "DB_USER": "neetastudio",
+                "DB_PASSWORD": "paSSW0rd",
+                "DB_PASSWORD_FILE_PATH": "/run/secrets/mysql-root-password",
+            },
+            "envFile": "${workspaceFolder}/envvars"
         },
         {
             "name": "Listen for Xdebug",
@@ -51,7 +60,8 @@
             },
             "runtimeArgs": [
                 "-dxdebug.mode=debug,develop",
-            ]
+            ],
+            "envFile": "${workspaceFolder}/envvars"
         }
     ]
 }
