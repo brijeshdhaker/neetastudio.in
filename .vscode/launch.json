@@ -22,9 +22,10 @@
             "request": "launch",
             "runtimeArgs": [
                 "-dxdebug.mode=develop,debug,coverage,profile",
-                "-dxdebug.start_with_request=yes",
+                "-dxdebug.client_port=9000",
                 "-S",
-                "localhost:8000"
+                "localhost:8000",
+                "-c ${workspaceFolder}/conf/php/php.ini"
             ],
             "program": "",
             "cwd": "${workspaceRoot}",
@@ -33,6 +34,11 @@
                 "pattern": "Development Server \\(http://localhost:([0-9]+)\\) started",
                 "uriFormat": "http://neetastudio.in:%s",
                 "action": "openExternally"
+            },
+            "env": {
+                "XDEBUG_MODE": "develop,debug,coverage,profile",
+                "XDEBUG_CLIENT_PORT": "9000",
+                "XDEBUG_TRIGGER": "vscode"
             }
         },
         {
