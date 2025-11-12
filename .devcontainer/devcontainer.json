@@ -4,8 +4,11 @@
 	//"image": "mcr.microsoft.com/devcontainers/php:1-8.4-apache-bullseye",
     
     "dockerComposeFile": ["../docker-compose.yaml"],
+
     "service": "neetastudio.in",
+
     "workspaceFolder": "/var/www/html",
+    
     "shutdownAction": "stopCompose",
 
     // Use 'postCreateCommand' to run commands after the container is created.

@@ -17,10 +17,9 @@
     // PHP Debug configuration
     "php.debug.ideKey": "vscode",
     // PHPUnit configuration
-    "phpunit.php": "/usr/local/bin/php",
+    //"phpunit.php": "/usr/bin/php",
     "phpunit.phpunit": "vendor/bin/phpunit",
     "phpunit.clearOutputOnRun": true,
-    "phpunit.xdebugPort": 9000,
     // "neetastudio.in" is the container name in the docker-compose.yml
     //"phpunit.command": "docker exec -e 'XDEBUG_TRIGGER=vscode' -t neetastudio.in /bin/sh -c \"${php} ${phpargs} ${phpunit} ${phpunitargs}\"",
     //"phpunit.command": "docker run --rm -t -e 'XDEBUG_TRIGGER=vscode' -v ${PWD}:/var/www/html -v ${PWD}/conf/php/php.ini:/usr/local/etc/php/php.ini -w /var/www/html --env-file ${PWD}/envvars --add-host docker.sandbox.net:172.18.0.1 --name phpunit-test brijeshdhaker/php:8.4.13 ${php} ${phpargs} ${phpunit} ${phpunitargs}",
@@ -31,14 +30,15 @@
         "--configuration ./phpunit.xml"
     ],
     "phpunit.environment": {
-        "APP_DEBUG": "true",
-        "CACHE_DRIVER": "array",
-        "SESSION_DRIVER": "array",
-        "QUEUE_CONNECTION": "sync",
+        APP_ENV=DEV
+        APP_NAME=neetastudio.in
+        DB_HOST=mysqlserver.sandbox.net
+        DB_USER=neetastudio
+        DB_NAME=NEETASTUDIO
+        DB_PASSWORD=paSSW0rd
+        DB_PASSWORD_FILE_PATH=/run/secrets/mysql-root-password
     },
-    "phpunit.paths": {
-        //"${workspaceFolder}": "/var/www/html",
-    },
+    "php.validate.enable": false,
     // This name of the launch configuration for PHP XDEBUG extension
     //"phpunit.debuggerConfig": "Listen for Xdebug",
 }

@@ -15,6 +15,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/Tests/PHPUnitConfigurat
         <ini name="xdebug.mode" value="develop,debug,coverage"/>
         <ini name="xdebug.client_host" value="docker.sandbox.net"/>
         <ini name="xdebug.client_port" value="9003"/>
+        <env name="APP_ENV" value="DEV"/>
+        <env name="APP_NAME" value="neetastudio.in"/>
+        <env name="DB_CONNECTION" value="sqlite"/>
+        <env name="DB_HOST" value="mysqlserver.sandbox.net"/>
+        <env name="DB_USER" value="neetastudio"/>
+        <env name="DB_NAME" value="NEETASTUDIO"/>
+        <env name="DB_PASSWORD" value="paSSW0rd"/>
+        <env name="DB_PASSWORD_FILE_PATH" value="/run/secrets/mysql-root-password"/>
     </php>
 
     <source>
