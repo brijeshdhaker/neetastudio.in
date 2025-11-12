@@ -29,15 +29,6 @@
         "--bootstrap ./bootstrap.php", 
         "--configuration ./phpunit.xml"
     ],
-    "phpunit.environment": {
-        APP_ENV=DEV
-        APP_NAME=neetastudio.in
-        DB_HOST=mysqlserver.sandbox.net
-        DB_USER=neetastudio
-        DB_NAME=NEETASTUDIO
-        DB_PASSWORD=paSSW0rd
-        DB_PASSWORD_FILE_PATH=/run/secrets/mysql-root-password
-    },
     "php.validate.enable": false,
     // This name of the launch configuration for PHP XDEBUG extension
     //"phpunit.debuggerConfig": "Listen for Xdebug",
