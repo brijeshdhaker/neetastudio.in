@@ -1,3 +1,21 @@
+### PHP Installation
+```bash
+# apache setup
+sudo apt install -y apache2
+
+# disable site
+sudo a2ensite neetastudio.in
+sudo systemctl restart apache2.service
+
+# disable site
+sudo a2dissite mynewsite
+sudo systemctl restart apache2.service
+
+# install php
+sudo apt install -y libapache2-mod-php php php-cli php-common php-cgi php-mysql php-json php-mbstring php-xml php-pcov php-ssh2 php-xdebug 
+
+```
+
 ### Setup directories /var/www/neetastudio.in
 ```bash
 sudo mkdir -p /var/www/neetastudio.in
@@ -10,6 +28,37 @@ sudo chmod -R 777 /var/log/neetastudio.in
 sudo touch /var/log/neetastudio.in/neetastudio-2025-07-21.log
 sudo touch /var/log/neetastudio.in/neetastudio-default.log
 sudo touch /var/log/neetastudio.in/neetastudio-err.log
+
+```
+
+#### Install Composer
+```bash
+
+sudo apt -y install composer
+
+# Install required packages
+composer outdated --minor-only
+composer update
+
+#
+composer require slim/slim:"4.*"
+composer require slim/psr7
+composer require nyholm/psr7 nyholm/psr7-server
+composer require guzzlehttp/psr7 "^2"
+composer require laminas/laminas-diactoros
+#
+composer require apache/log4php "2.3.0"
+#
+composer require phpmailer/phpmailer "~6.0"
+#
+composer require phpfastcache/phpfastcache
+#
+composer require phpoffice/phpspreadsheet
+#
+composer require php-di/php-di
+#
+composer require --dev phpunit/phpunit "^10.0"
+composer require --dev vitexsoftware/phpunit-skeleton-generator --with-all-dependencies
 
 ```
 
@@ -26,7 +75,7 @@ sudo vi /etc/apache2/sites-available/neetastudio.in.conf
         
         #
         SetEnv APP_ENV "DEV"
-        SetEnv APP_NAME "ONLINE"
+        SetEnv APP_NAME "neetastudio.in"
         SetEnv DB_HOST "mysqlserver.sandbox.net"
         SetEnv DB_USER "neetastudio"
         SetEnv DB_NAME "NEETASTUDIO"
@@ -48,7 +97,7 @@ sudo vi /etc/apache2/sites-available/neetastudio.in.conf
 
 
 ### Restart Apache Server 
-```
+```bash
 sudo a2ensite neetastudio.in.conf
 sudo systemctl reload apache2
 
@@ -59,6 +108,8 @@ sudo a2enmod actions
 #
 sudo systemctl start apache2
 sudo systemctl stop apache2
+
+#
 sudo systemctl restart apache2
 sudo systemctl status apache2
 
@@ -83,55 +134,18 @@ RewriteRule (.*) neetastudio.in/$1 [L]
 ```
 
 ### setup php-debugger
-sudo apt install php-xdebug
-
-#### Install Composer
-```
-sudo apt install composer
-```
-
-#### Install required packages
-```
-composer outdated --minor-only
-composer update
-
-#
-composer require slim/slim:"4.*"
-composer require slim/psr7
-composer require nyholm/psr7 nyholm/psr7-server
-composer require guzzlehttp/psr7 "^2"
-composer require laminas/laminas-diactoros
-#
-composer require apache/log4php "2.3.0"
-#
-composer require phpmailer/phpmailer "~6.0"
-#
-composer require phpfastcache/phpfastcache
-#
-composer require phpoffice/phpspreadsheet
-#
-composer require php-di/php-di
-#
-composer require --dev phpunit/phpunit "^9.5.2"
-composer require --dev vitexsoftware/phpunit-skeleton-generator --with-all-dependencies
+```bash
+sudo apt -y install php-xdebug
 ```
 
 ### PHPUnit Test Setup
-```
-sudo apt install php-cli \
-                 php-json \
-                 php-mbstring \
-                 php-xml \
-                 php-pcov \
-                 php-xdebug
+```bash
 
-sudo apt-get install php-mysql
-sudo apt install php-ssh2 
 docker-php-ext-install php-json pdo pdo_mysql
+```
 
-```
 ### PHPUnit Setup ; /etc/php/8.3/apache2/php.ini /etc/php/8.3/cli/php.ini
-```
+```conf
 [PHPUnit]
 error_reporting=-1
 zend.assertions=1
@@ -142,7 +156,7 @@ memory_limit=-1
 [xdebug-3.0]
 xdebug.mode=develop,debug,coverage,profile,trace
 ;xdebug.client_host=docker.sandbox.net
-;xdebug.client_port=9003
+;xdebug.client_port=9000
 ;xdebug.idekey=vscode
 xdebug.start_with_request=yes
 ;xdebug.start_with_request=trigger
@@ -155,24 +169,24 @@ http://neetastudio.in/index.php?_dc=fdfs&page=home&sTgt=site&XDEBUG_TRIGGER=vsco
 ### dbgpProxy
 ```bash
 
-./dbgpProxy -i 127.0.0.1:9001 -s 127.0.0.1:9003 
+./dbgpProxy -i 127.0.0.1:9001 -s 127.0.0.1:9009 
 
 ./dbgpProxy -f
 
 ```
 ### Run PhpUnit Test
-```
+```bash
 
-./vendor/bin/phpunit "--bootstrap" "/var/www/neetastudio.in/bootstrap.php" "--filter" "%\btestgetRepositoryPath\b%" "/var/www/neetastudio.in/src/test/php/OnclickEnvTest.php"
+vendor/bin/phpunit "--bootstrap" "./bootstrap.php" "--filter" "%\btestgetRepositoryPath\b%" "./src/test/php/OnclickEnvTest.php"
 
-"/usr/bin/php" -d xdebug.mode="develop,debug,coverage" "/var/www/neetastudio.in/vendor/phpunit/phpunit/phpunit" "--colors" "--log-junit" "/tmp/nb-phpunit-log.xml" "--bootstrap" "/var/www/neetastudio.in/bootstrap.php" "--filter" "%\btestgetRepositoryPath\b%" "/var/www/neetastudio.in/src/test/php/OnclickEnvTest.php"
+/usr/bin/php -d xdebug.mode="develop,debug,coverage" "./vendor/bin/phpunit" "--colors" "--log-junit" "/tmp/nb-phpunit-log.xml" "--bootstrap" "./bootstrap.php" "--filter" "%\btestgetRepositoryPath\b%" "./src/test/php/OnclickEnvTest.php"
 
-"/usr/bin/php" "-d" "xdebug.mode=develop,debug,coverage" "./conf/phpunit-12.3.11.phar" "--colors" "--log-junit" "/tmp/nb-phpunit-log.xml" "--bootstrap" "/var/www/neetastudio.in/bootstrap.php" "--configuration" "/var/www/neetastudio.in/phpunit.xml" "--filter" "%\btestGetMapping\b%" "/var/www/neetastudio.in/src/test/php/dao/MappingHelperTest.php"
+/usr/bin/php -d xdebug.mode=develop,debug,coverage "./conf/phpunit-12.3.11.phar" "--colors" "--log-junit" "/tmp/nb-phpunit-log.xml" "--bootstrap" "./bootstrap.php" "--configuration" "./phpunit.xml" "--filter" "%\btestGetMapping\b%" "./src/test/php/dao/MappingHelperTest.php"
 
 ```
 
 ###
-```
+```conf
 ENV APACHE_DOCUMENT_ROOT /var/www/neetastudio.in
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
 RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
@@ -185,7 +199,8 @@ http://neetastudio.in/phpinfo.php
 http://neetastudio.in
 
 ### Rest End Points
-```
+```bash
+
 http://neetastudio.in/controllers/hello/brijesh
 http://neetastudio.in/controllers/contactus
 http://neetastudio.in/controllers/subcribe-services

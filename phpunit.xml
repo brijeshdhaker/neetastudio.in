@@ -6,9 +6,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/Tests/PHPUnitConfigurat
 <phpunit colors="true" 
          bootstrap="./bootstrap.php" 
          stopOnDefect="false"
-         convertErrorsToExceptions="true"
-         convertNoticesToExceptions="true"
-         convertWarningsToExceptions="true"
          stopOnFailure="true">
 
     <php>
