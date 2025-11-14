@@ -6,7 +6,7 @@ class OnclickEnv {
         if (self::isWebRequest()) {
             return $_SERVER['APP_ENV'];
         } else {
-            return CONSTANTS::ONCLICK_DEV;
+            return $_ENV['APP_ENV'];
         }
     }
 
@@ -15,7 +15,12 @@ class OnclickEnv {
     }
 
     public static function getAppName() {
-        return $_ENV['APP_NAME'];
+        if (self::isWebRequest()) {
+            return $_SERVER['APP_NAME'];
+        } else {
+            return $_ENV['APP_NAME'];;
+        }
+        
     }
 
     public static function getRepositoryPath() {

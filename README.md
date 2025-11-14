@@ -3,7 +3,7 @@
 # apache setup
 sudo apt install -y apache2
 
-# disable site
+# enable site
 sudo a2ensite neetastudio.in
 sudo systemctl restart apache2.service
 

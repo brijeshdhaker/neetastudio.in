@@ -60,8 +60,8 @@ class DataSourceInfo {
             case CONSTANTS::ONCLICK_UAT:
 
                 $this->dbhostname = "mysqlserver.sandbox.net";
-                $this->dbusername = "mysqladmin";
-                $this->dbpassword = "mysqladmin";
+                $this->dbusername = "neetastudio";
+                $this->dbpassword = "paSSW0rd";
                 $this->dbname = "NEETASTUDIO";
                 
                 break;

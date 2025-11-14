@@ -17,7 +17,7 @@ try {
     //$dbhost = 'mysqlserver.sandbox.net';
     //$dbname='NEETASTUDIO';
     //$dbuser = 'root';
-    //$dbpass = 'p@SSW0rd';
+    //$dbpass = 'p2SSW0rd';
 
     $db_handle = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
 
