@@ -132,7 +132,7 @@ $app->get('/hello/{name}', function (Request $request, Response $response, $args
 
 /**
  *
- * 
+ * http://neetastudio.in/controllers/contactus
  * 
  */
 $container->set('contactusService', function () {
@@ -228,7 +228,7 @@ $app->post('/contactus', function (Request $request, Response $response, $connec
 
 /**
  *
- * 
+ * http://neetastudio.in/controllers/subcribe-services
  * 
  */
 $container->set('subscribeService', function () {
@@ -293,7 +293,7 @@ $app->post('/subcribe-services', function (Request $request, Response $response,
 
 /**
  *
- * 
+ * http://neetastudio.in/controllers/collaboration
  * 
  */
 $container->set('collaborationService', function () {
@@ -349,7 +349,7 @@ $app->post('/collaboration', function (Request $request, Response $response, $co
 
 /**
  *
- * 
+ * http://neetastudio.in/controllers/book-session
  * 
  */
 $container->set('bookingService', function () {

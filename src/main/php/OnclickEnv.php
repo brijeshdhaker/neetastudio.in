@@ -3,11 +3,11 @@
 class OnclickEnv {
 
     public static function getEnvName() {
-        //if (self::isWebRequest()) {
-            return $_ENV['APP_ENV'];
-        //} else {
-        //    return CONSTANTS::ONCLICK_DEV;
-        //}
+        if (self::isWebRequest()) {
+            return $_SERVER['APP_ENV'];
+        } else {
+            return CONSTANTS::ONCLICK_DEV;
+        }
     }
 
     public static function isWebRequest() {

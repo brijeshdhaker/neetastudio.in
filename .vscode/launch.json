@@ -56,7 +56,7 @@
             "request": "launch",
             "port": 9000,
             "pathMappings": {
-                "/var/www/html": "${workspaceFolder}",
+                "/var/www/neetastudio.in": "${workspaceFolder}",
             },
             "runtimeArgs": [
                 "-dxdebug.mode=debug,develop",
