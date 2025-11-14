@@ -8,7 +8,7 @@ sudo a2ensite neetastudio.in
 sudo systemctl restart apache2.service
 
 # disable site
-sudo a2dissite mynewsite
+sudo a2dissite neetastudio.in
 sudo systemctl restart apache2.service
 
 # install php

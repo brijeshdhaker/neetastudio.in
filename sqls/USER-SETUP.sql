@@ -28,5 +28,14 @@ SHOW GRANTS FOR 'neetastudio'@'%';
 --- mysql --user=neetastudio --password=paSSW0rd --host=mysqlserver.sandbox.net --database=NEETASTUDIO
 ---
 
+--- Dupm database
+---
+--- docker exec mysqlserver sh -c 'mysqldump --user=root --password=$MYSQL_ADMIN_PASSWORD --routines --triggers --databases NEETASTUDIO' > sqls/NEETASTUDIO.sql
+---
+
+--- Restoring data from dump files
+--- mysql --user=root --password="$MYSQL_ADMIN_PASSWORD"  < sqls/NEETASTUDIO.sql
+--- docker exec -i mysqlserver sh -c 'exec mysql --user=root --password="$MYSQL_ADMIN_PASSWORD"' < sqls/NEETASTUDIO.sql
+
 USE NEETASTUDIO;
 show tables;
