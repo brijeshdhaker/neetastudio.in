@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 #
-# docker build --target development -t brijeshdhaker/php:8.4.13 -f Dockerfile .
-# docker build --target production -t brijeshdhaker/php:8.4.13 -f Dockerfile .
+# docker build --target development -t neetastudio.in:php-8.5.8 -f Dockerfile .
+# docker build --target production -t neetastudio.in:php-8.5.8 -f Dockerfile .
 #
 
 ## FROM composer:lts as prod-deps
@@ -21,11 +21,11 @@
 #
 # BASE STAGE
 #
-FROM mcr.microsoft.com/devcontainers/php:1-8.4-apache-bullseye AS base
+FROM php:8-apache AS base
 # Install necessary packages
 RUN apt-get update && \
     apt-get install -y \
-    libzip-dev libssh2-1-dev libmemcached-dev libssl-dev wget git unzip \
+    libzip-dev libssh2-1 libssh2-1-dev libmemcached-dev libssl-dev wget git unzip \
     --no-install-recommends && \
     rm -rf /var/lib/apt/lists/*
 
@@ -33,7 +33,7 @@ RUN apt-get update && \
 RUN docker-php-ext-install zip pdo pdo_mysql 
 
 # Install the ssh2-1.4 extension using pecl and enable it
-RUN pecl install -o -f ssh2-1.4 memcached \
+RUN pecl install -o -f ssh2-1.4.1 memcached \
     && docker-php-ext-enable ssh2 memcached
 
 RUN a2enmod rewrite

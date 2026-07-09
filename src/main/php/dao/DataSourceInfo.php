@@ -24,8 +24,8 @@ class DataSourceInfo {
         */
         
         // Read the password from the file
-        //$db_password_file_path = getenv('DB_PASSWORD_FILE_PATH');
-        //$db_pass = trim(file_get_contents($db_password_file_path));
+        $db_password_file_path = getenv('DB_PASSWORD_FILE_PATH');
+        $db_pass = trim(file_get_contents($db_password_file_path));
 
         if(!is_null($driver)){
             $this->driver = $driver;    
@@ -37,7 +37,7 @@ class DataSourceInfo {
                 
                 $this->dbhostname = "mysqlserver.sandbox.net";
                 $this->dbusername = "neetastudio";
-                $this->dbpassword = "paSSW0rd";
+                $this->dbpassword = $db_pass;
                 $this->dbname = "NEETASTUDIO";
                 
                 break;

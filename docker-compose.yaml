@@ -4,27 +4,26 @@
 # docker volume create --name sandbox_apps_path --opt type=none --opt device=/apps --opt o=bind
 # docker volume create --name sandbox_mysql_data --opt type=none --opt device=/apps/sandbox/mysql/data --opt o=bind
 #
-# docker compose -f docker-compose.yaml up -d mysqlserver
-# docker compose -f docker-compose.yaml down mysqlserver
+# docker compose -f compose.yaml up -d mysqlserver
+# docker compose -f compose.yaml down mysqlserver
 #
-# docker compose -f docker-compose.yaml up -d neetastudio.in
-# docker compose -f docker-compose.yaml down neetastudio.in
+# docker compose -f compose.yaml up -d apacheserver
+# docker compose -f compose.yaml down apacheserver
 #
 # docker exec -it mysqlserver mysql --user=root --password=paSSW0rd --host=mysqlserver.sandbox.net --database=NEETASTUDIO
-# docker exec -it mysqlserver mysql --user=neetastudio --password=paSSW0rd --host=mysqlserver.sandbox.net --database=NEETASTUDIO
+# docker exec -it mysqlserver mysql --user=neetastudio --password=Accoo7@k47 --host=mysqlserver.sandbox.net --database=NEETASTUDIO
 #
 # docker exec -it mysqlserver /bin/bash
-# docker exec -it neetastudio.in /bin/bash
+# docker exec -it apacheserver /bin/bash
 # 
 # docker compose up --build
 # docker compose watch
+#
 ---
 
 
 services:
-  #
-  # Mysql Server
-  #
+  ## Mysql Server
   mysqlserver:
     image: mysql:8.0.33
     container_name: mysqlserver
@@ -37,29 +36,28 @@ services:
       - sandbox_apps_path:/apps
       - sandbox_mysql_data:/var/lib/mysql
       - ./conf/mysql:/etc/mysql/conf.d
-    user: root
+      - ./conf/mysql/init-setup.sh:/docker-entrypoint-initdb.d/init-setup.sh
     secrets:
       - mysql-root-password
     env_file:
       - ./conf/mysql/envvars
     healthcheck:
-      test: ["CMD", 'mysqladmin', 'ping', '-h', 'localhost', '-u', '$$MYSQL_ADMIN_USER', '-p$$MYSQL_ADMIN_PASSWORD' ]
-      interval: 10s
+      test: "/usr/bin/mysql --user=root --password=$$MYSQL_ADMIN_PASSWORD --execute \"SHOW DATABASES;\""
+      # test: ["CMD", 'mysqladmin', 'ping', '-h', 'localhost', '-u', 'root', '-p$$MYSQL_ADMIN_PASSWORD']
       timeout: 20s
       retries: 10
+      interval: 10s
     extra_hosts:
-      - docker.sandbox.net:172.18.0.1
-
-  #
-  # Apache Server
-  #
-  neetastudio.in:
-    image: brijeshdhaker/php:8.4.13
+      - "docker.sandbox.net:172.18.0.1"
+      
+  ## Apache Server
+  apacheserver:
+    image: neetastudio.in:php-8.5.8
     build:
       context: .
       target: development
-    container_name: neetastudio.in
-    hostname: neetastudio.in
+    container_name: apacheserver
+    hostname: apacheserver.sandbox.net
     restart: always
     depends_on:
       mysqlserver:
@@ -68,28 +66,42 @@ services:
       - "80:80"
     volumes:
       - sandbox_apps_path:/apps
-      - .:/var/www/html
-#      - ${PWD}/conf/apache/apache2.conf:/etc/apache2/apache2.conf
-#      - ${PWD}/conf/apache/envvars:/etc/apache2/envvars
-#      - /home/brijeshdhaker/IdeaProjects/neetastudio.in/conf/php/php.ini:/usr/local/etc/php/php.ini
-      - /apps/var/logs/neetastudio.in:/var/log/neetastudio.in:rw
+      - $PWD:/var/www/html
+      - $PWD/conf/apache/apache2.conf:/etc/apache2/apache2.conf
+      - $PWD/conf/apache/envvars:/etc/apache2/envvars
+      - /apps/var/logs/neetastudio.in:/var/log/neetastudio.in:rw      
     env_file:
-      - ./envvars
+      - $PWD/.env
     secrets:
       - mysql-root-password
     environment:
+      - APP_ENV=DEV
+      - APP_NAME=ONLINE
+      - DB_PASSWORD_FILE_PATH=/run/secrets/mysql-root-password
       - XDEBUG_MODE=develop,debug,coverage
     healthcheck:
       test: echo $(hostname -f) || exit 1
+      # test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
       timeout: 20s
       retries: 10
-    # develop:
-    #   watch:
-    #     - action: sync
-    #       path: ${PWD}
-    #       target: /var/www/html
+    develop:
+      watch:
+        - action: sync
+          path: $PWD
+          target: /var/www/html
     extra_hosts:
-      - docker.sandbox.net:172.18.0.1      
+      - "docker.sandbox.net:172.18.0.1"      
+
+#  ##
+#  phpmyadmin:
+#    image: phpmyadmin
+#    ports:
+#      - 8090:80
+#    depends_on:
+#      mysqlserver:
+#        condition: service_healthy
+#    environment:
+#      - PMA_HOST=mysqlserver.sandbox.net
 
 
 #
@@ -102,7 +114,7 @@ volumes:
 #
 secrets:
   mysql-root-password:
-    file: ./conf/mysql/password.txt
+    file: $PWD/conf/mysql/password.txt
 
 #
 networks:
