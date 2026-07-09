@@ -1,5 +1,11 @@
 ### PHP Installation
 ```bash
+# Option : 1
+# install php
+sudo apt update && sudo apt install php
+sudo apt install -y libapache2-mod-php php php-cli php-common php-cgi php-mysql php-json php-mbstring php-xml php-pcov php-ssh2 php-xdebug 
+
+# Option : 2
 # apache setup
 sudo apt install -y apache2
 
@@ -11,8 +17,7 @@ sudo systemctl restart apache2.service
 sudo a2dissite neetastudio.in
 sudo systemctl restart apache2.service
 
-# install php
-sudo apt install -y libapache2-mod-php php php-cli php-common php-cgi php-mysql php-json php-mbstring php-xml php-pcov php-ssh2 php-xdebug 
+
 
 ```
 
@@ -57,7 +62,7 @@ composer require phpoffice/phpspreadsheet
 #
 composer require php-di/php-di
 #
-composer require --dev phpunit/phpunit "^10.0"
+composer require --dev phpunit/phpunit "^10.5.64"
 composer require --dev vitexsoftware/phpunit-skeleton-generator --with-all-dependencies
 
 ```
