@@ -41,7 +41,6 @@ class MappingHelper {
             "CATEGORY" => "category",
             "MARITAL" => "marital",
             "PHYSICAL" => "physical",
-            "EMAILID" => "emailid",
             "ADDRESS" => "address",
             "CITY" => "city",
             "PINCODE" => "pincode",

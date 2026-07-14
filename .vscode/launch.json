@@ -15,7 +15,7 @@
                 "XDEBUG_MODE": "develop,debug,coverage,profile",
                 "XDEBUG_CONFIG": "client_port=${port}"
             },
-            "envFile": "${workspaceFolder}/envvars"
+            "envFile": "${workspaceFolder}/.env"
         },
         {
             "name": "Launch Built-in web server",
@@ -48,7 +48,7 @@
                 "DB_PASSWORD": "paSSW0rd",
                 "DB_PASSWORD_FILE_PATH": "/run/secrets/mysql-root-password",
             },
-            "envFile": "${workspaceFolder}/envvars"
+            "envFile": "${workspaceFolder}/.env"
         },
         {
             "name": "Listen for Xdebug",
@@ -61,7 +61,7 @@
             "runtimeArgs": [
                 "-dxdebug.mode=debug,develop",
             ],
-            "envFile": "${workspaceFolder}/envvars"
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
