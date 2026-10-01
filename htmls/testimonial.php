@@ -23,7 +23,7 @@
                                     <h6 class="m-top-20">Deepika Dhakad</h6>
                                     <h5><em>Had an amazing experience during a maternity photoshoot</em> </h5>
                                 </div>
-                                <p class=" m-top-40">I wanted to express my sincere gratitude for the fantastic maternity photoshoot experience you provided. Working with you was truly a joy, and the final results exceeded my expectations. Your ability to create a comfortable and relaxed atmosphere made the photoshoot enjoyable. It significantly contributed to capturing genuine and beautiful moments. Thank you Sandeep and team for delivering the edited photos promptly. It made the entire experience seamless and stress-free. Highly recommended.!! </p>
+                                <p class=" m-top-40">I wanted to express my sincere gratitude for the fantastic maternity photoshoot experience you provided. Working with you was truly a joy, and the final results exceeded my expectations. Your ability to create a comfortable and relaxed atmosphere made the photoshoot enjoyable. It significantly contributed to capturing genuine and beautiful moments. Thank you Neeta D. and team for delivering the edited photos promptly. It made the entire experience seamless and stress-free. Highly recommended.!! </p>
                             </div>
                         </div>
 

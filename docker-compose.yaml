@@ -7,8 +7,8 @@
 # docker compose -f compose.yaml up -d mysqlserver
 # docker compose -f compose.yaml down mysqlserver
 #
-# docker compose -f compose.yaml up -d apacheserver
-# docker compose -f compose.yaml down apacheserver
+# docker compose -f /home/brijeshdhaker/IdeaProjects/neetastudio.in/docker-compose.yaml up -d neetastudio.in
+# docker compose -f /home/brijeshdhaker/IdeaProjects/neetastudio.in/docker-compose.yaml down neetastudio.in
 #
 # docker exec -it mysqlserver mysql --user=root --password=paSSW0rd --host=mysqlserver.sandbox.net --database=NEETASTUDIO
 # docker exec -it mysqlserver mysql --user=neetastudio --password=Accoo7@k47 --host=mysqlserver.sandbox.net --database=NEETASTUDIO
@@ -51,13 +51,13 @@ services:
       - "docker.sandbox.net:172.18.0.1"
       
   ## Apache Server
-  apacheserver:
+  neetastudio.in:
     image: neetastudio.in:php-8.5.8
-    build:
-      context: .
-      target: development
-    container_name: apacheserver
-    hostname: apacheserver.sandbox.net
+    # build:
+    #   context: .
+    #   target: development
+    container_name: neetastudio.in
+    hostname: neetastudio.in
     restart: always
     depends_on:
       mysqlserver:
@@ -70,8 +70,8 @@ services:
       - $PWD/conf/apache/apache2.conf:/etc/apache2/apache2.conf
       - $PWD/conf/apache/envvars:/etc/apache2/envvars
       - /apps/var/logs/neetastudio.in:/var/log/neetastudio.in:rw      
-    env_file:
-      - $PWD/.env
+    # env_file:
+    #   - $PWD/.env
     secrets:
       - mysql-root-password
     environment:
